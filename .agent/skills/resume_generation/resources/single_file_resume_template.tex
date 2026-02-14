@@ -1,0 +1,212 @@
+%----------------------------------------------------------------------------------------
+%   CLASS DEFINITIONS (EMBEDDED RESUME.CLS)
+%----------------------------------------------------------------------------------------
+\documentclass[9pt,letterpaper]{article} % Font size and paper type
+
+\usepackage[parfill]{parskip} % Remove paragraph indentation
+\usepackage{array} % Required for boldface (\bf and \bfseries) tabular columns
+\usepackage{ifthen} % Required for ifthenelse statements
+\usepackage{charter}
+\usepackage{enumitem}
+\usepackage{xcolor} 
+\usepackage[colorlinks=true, urlcolor=blue]{hyperref}
+\usepackage[left=0.5in,top=0.25in,right=0.4in,bottom=0.2in, columnsep=0.5cm]{geometry} 
+\input{glyphtounicode}
+\usepackage[none]{hyphenat}
+\usepackage{multicol}
+
+\pdfgentounicode=1
+\pagestyle{empty} % Suppress page numbers
+
+\makeatletter % Begin internal command redefinitions
+
+%----------------------------------------------------------------------------------------
+%	HEADINGS COMMANDS: Commands for printing name and address
+%----------------------------------------------------------------------------------------
+
+\def \name#1{\def\@name{#1}} % Defines the \name command to set name
+\def \@name {} % Sets \@name to empty by default
+
+\def \addressSep {$\diamond$} % Set default address separator to a diamond
+
+% One, two or three address lines can be specified 
+\let \@addressone \relax
+\let \@addresstwo \relax
+\let \@addressthree \relax
+
+% \address command can be used to set the first, second, and third address (last 2 optional)
+\def \address #1{
+  \@ifundefined{@addresstwo}{
+    \def \@addresstwo {#1}
+  }{
+  \@ifundefined{@addressthree}{
+  \def \@addressthree {#1}
+  }{
+     \def \@addressone {#1}
+  }}
+}
+
+% \printaddress is used to style an address line (given as input)
+\def \printaddress #1{
+  \begingroup
+    \def \\ {\addressSep\ }
+    \centerline{#1}
+  \endgroup
+  \par
+}
+
+% \printname is used to print the name as a page header
+\def \printname {
+  \begingroup
+    \hfil{{\namesize\bf \@name}}\hfil
+    \nameskip\break
+  \endgroup
+}
+
+%----------------------------------------------------------------------------------------
+%	PRINT THE HEADING LINES
+%----------------------------------------------------------------------------------------
+
+\let\ori@document=\document
+\renewcommand{\document}{
+  \ori@document  % Begin document
+  \printname % Print the name specified with \name
+  \@ifundefined{@addressone}{}{ % Print the first address if specified
+    \printaddress{\@addressone}}
+  \@ifundefined{@addresstwo}{}{ % Print the second address if specified
+    \printaddress{\@addresstwo}}
+     \@ifundefined{@addressthree}{}{ % Print the third address if specified
+    \printaddress{\@addressthree}}
+}
+
+%----------------------------------------------------------------------------------------
+%	SECTION FORMATTING
+%----------------------------------------------------------------------------------------
+
+% Defines the rSection environment for the large sections within the CV
+\newenvironment{rSection}[1]{ % 1 input argument - section name
+  \sectionskip
+ \textbf{\Large #1} % Section title
+  \sectionlineskip
+  \hrule % Horizontal line
+  \begin{list}{}{ % List for each individual item in the section
+    \setlength{\leftmargin}{-0em} % Margin within the section
+  }
+  \item[]
+}{
+  \end{list}
+}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE FORMATTING
+%----------------------------------------------------------------------------------------
+
+\newenvironment{rSubsection}[4]{ % 4 input arguments - company name, year(s) employed, job title and location
+ {\bf #1} \hfill {#2} % Bold company name and date on the right
+ \ifthenelse{\equal{#3}{}}{}{ % If the third argument is not specified, don't print the job title and location line
+  \\
+  {\em #3} \hfill {\em #4} % Italic job title and location
+  }\smallskip
+  \begin{list}{$\cdot$}{\leftmargin=0em} % \cdot used for bullets, no indentation
+   \itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
+  }{
+  \end{list}
+  \vspace{0em} % Some space after the list of bullet points
+}
+
+% The below commands define the whitespace after certain things in the document - they can be \smallskip, \medskip or \bigskip
+\def\namesize{\huge} % Size of the name at the top of the document
+\def\addressskip{} % The space between the two address (or phone/email) lines
+\def\sectionlineskip{\smallskip} % The space above the horizontal line for each section 
+\def\nameskip{\vspace{-0.5em}} % The space after your name at the top
+\def\sectionskip{} % The space after the heading section
+
+\makeatother % End internal command redefinitions
+
+%----------------------------------------------------------------------------------------
+%   DOCUMENT START
+%----------------------------------------------------------------------------------------
+\name{[First Name] [Last Name], ([Credentials]) \vspace{.2em} \hrule} % Your name
+
+\address{[City, State, Country] \textbullet\ [Email Address] \textbullet\ {\href{[Website URL]}{[Website URL]}} \textbullet\ {\href{[LinkedIn Profile URL]}{linkedin.com/in/[profile]}} }
+
+\begin{document}
+\textbf{[Professional Summary: A brief, high-impact statement summarizing your experience, key achievements, and core value proposition. Mention years of experience, key industries, and top skills. Example: Results-oriented Software Engineer with 5+ years of experience in...]}
+
+
+\begin{rSection}{Education}
+\begin{rSubsection}{[University Name]}{[Location]}{\textbf{[Degree Title]}}{[Start Date] - [End Date]}
+\item \textbf{[Minor / Specialization]} \hfill [Date]
+\end{rSubsection}
+
+\begin{rSubsection}{[University Name]}{[Location]}{\textbf{[Degree Title]}}{[Start Date] - [End Date]}
+\item[]
+\end{rSubsection}
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%   WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Work Experience}
+\begin{rSubsection}
+{[Job Title], \href{[Company URL]}{[Company Name]} - [Location]}{[Start Date] - [End Date]}{}{}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+\item Accomplished \textbf{[Result X]} as measured by \textbf{[Metric Y]}, by \textbf{[Action Z]}.
+\item Accomplished \textbf{[Result X]} as measured by \textbf{[Metric Y]}, by \textbf{[Action Z]}.
+\item Accomplished \textbf{[Result X]} as measured by \textbf{[Metric Y]}, by \textbf{[Action Z]}.
+\end{itemize}
+\end{rSubsection}
+
+\begin{rSubsection}
+{[Job Title], \href{[Company URL]}{\textit{[Company Name]}} - [Location]}{[Start Date] - [End Date]}{}{}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+\item Accomplished \textbf{[Result X]} as measured by \textbf{[Metric Y]}, by \textbf{[Action Z]}.
+\item Accomplished \textbf{[Result X]} as measured by \textbf{[Metric Y]}, by \textbf{[Action Z]}.
+\item Accomplished \textbf{[Result X]} as measured by \textbf{[Metric Y]}, by \textbf{[Action Z]}.
+\end{itemize}
+\end{rSubsection}
+
+\end{rSection}
+
+\begin{rSection}{Projects (Product Work) {\fontsize{8}{9}\selectfont (Details in portfolio.)}}
+\begin{rSubsection}{\href{[Project URL]}{[Project Name]}}{}{}{}
+\item[] \vspace{-0.5em}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+\item Accomplished \textbf{[Result X]} as measured by \textbf{[Metric Y]}, by \textbf{[Action Z]}.
+\item Accomplished \textbf{[Result X]} as measured by \textbf{[Metric Y]}, by \textbf{[Action Z]}.
+\end{itemize}
+\end{rSubsection}
+
+\begin{rSubsection}{\href{[Project URL]}{[Project Name]}}{}{}{}
+\item[] \vspace{-0.5em}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+\item Accomplished \textbf{[Result X]} as measured by \textbf{[Metric Y]}, by \textbf{[Action Z]}.
+\item Accomplished \textbf{[Result X]} as measured by \textbf{[Metric Y]}, by \textbf{[Action Z]}.
+\end{itemize}
+\end{rSubsection}
+\end{rSection}
+
+\begin{rSection}{Skills and Tools}
+
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+    \item \textbf{[Category 1]:} [Skill 1], [Skill 2], [Skill 3] | \textbf{[Sub-Category]}: [Skill], [Skill] | \textbf{[Platform]}: [Tool], [Tool]
+    \item \textbf{[Category 2]:} [Skill 1], [Skill 2], [Skill 3] | \textbf{[Sub-Category]}: [Skill], [Skill] | \textbf{[Platform]}: [Tool], [Tool]
+    \item \textbf{[Category 3]:} \textbf{[Attribute]}: [Trait], [Trait] | \textbf{[Strategy]}: [Strategy 1], [Strategy 2] | \textbf{[Management]}: [Mgmt Skill 1], [Mgmt Skill 2]
+    \item \textbf{[Category 4]:} Methodologies: [Agile/Scrum] | \textbf{Languages}: [Lang 1], [Lang 2] | \textbf{Technologies}: [Tech 1], [Tech 2] | \textbf{DevOps}: [Tool 1], [Tool 2]
+\end{itemize}
+
+\end{rSection}
+
+
+\begin{rSection}{Certification}
+\item[] \vspace{-1em}
+\begin{itemize}[left=-1.5em, labelwidth=.1cm, itemsep=0.0em]
+\item \href{[Certificate URL]}{[Certificate Name]}
+\item \href{[Certificate URL]}{[Certificate Name]}
+\item \href{[Certificate URL]}{[Certificate Name]}
+\item \href{[Certificate URL]}{[Certificate Name]}
+\end{itemize}
+\end{rSection}
+
+\end{document}

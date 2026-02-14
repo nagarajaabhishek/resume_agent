@@ -1,0 +1,265 @@
+%----------------------------------------------------------------------------------------
+%   CLASS DEFINITIONS (EMBEDDED RESUME.CLS)
+%----------------------------------------------------------------------------------------
+\documentclass[9pt,letterpaper]{article} % Font size and paper type
+
+\usepackage[parfill]{parskip} % Remove paragraph indentation
+\usepackage{array} % Required for boldface (\bf and \bfseries) tabular columns
+\usepackage{ifthen} % Required for ifthenelse statements
+\usepackage{charter}
+\usepackage{enumitem}
+\usepackage{xcolor} 
+\usepackage[colorlinks=true, urlcolor=blue]{hyperref}
+\usepackage[left=0.5in,top=0.25in,right=0.4in,bottom=0.2in, columnsep=0.5cm]{geometry} 
+\input{glyphtounicode}
+\usepackage[none]{hyphenat}
+\usepackage{multicol}
+
+\pdfgentounicode=1
+\pagestyle{empty} % Suppress page numbers
+
+\makeatletter % Begin internal command redefinitions
+
+%----------------------------------------------------------------------------------------
+%	HEADINGS COMMANDS: Commands for printing name and address
+%----------------------------------------------------------------------------------------
+
+\def \name#1{\def\@name{#1}} % Defines the \name command to set name
+\def \@name {} % Sets \@name to empty by default
+
+\def \addressSep {$\diamond$} % Set default address separator to a diamond
+
+% One, two or three address lines can be specified 
+\let \@addressone \relax
+\let \@addresstwo \relax
+\let \@addressthree \relax
+
+% \address command can be used to set the first, second, and third address (last 2 optional)
+\def \address #1{
+  \@ifundefined{@addresstwo}{
+    \def \@addresstwo {#1}
+  }{
+  \@ifundefined{@addressthree}{
+  \def \@addressthree {#1}
+  }{
+     \def \@addressone {#1}
+  }}
+}
+
+% \printaddress is used to style an address line (given as input)
+\def \printaddress #1{
+  \begingroup
+    \def \\ {\addressSep\ }
+    \centerline{#1}
+  \endgroup
+  \par
+}
+
+% \printname is used to print the name as a page header
+\def \printname {
+  \begingroup
+    \hfil{{\namesize\bf \@name}}\hfil
+    \nameskip\break
+  \endgroup
+}
+
+%----------------------------------------------------------------------------------------
+%	PRINT THE HEADING LINES
+%----------------------------------------------------------------------------------------
+
+\let\ori@document=\document
+\renewcommand{\document}{
+  \ori@document  % Begin document
+  \printname % Print the name specified with \name
+  \@ifundefined{@addressone}{}{ % Print the first address if specified
+    \printaddress{\@addressone}}
+  \@ifundefined{@addresstwo}{}{ % Print the second address if specified
+    \printaddress{\@addresstwo}}
+     \@ifundefined{@addressthree}{}{ % Print the third address if specified
+    \printaddress{\@addressthree}}
+}
+
+%----------------------------------------------------------------------------------------
+%	SECTION FORMATTING
+%----------------------------------------------------------------------------------------
+
+% Defines the rSection environment for the large sections within the CV
+\newenvironment{rSection}[1]{ % 1 input argument - section name
+  \sectionskip
+ \textbf{\Large #1} % Section title
+  \sectionlineskip
+  \hrule % Horizontal line
+  \begin{list}{}{ % List for each individual item in the section
+    \setlength{\leftmargin}{-0em} % Margin within the section
+  }
+  \item[]
+}{
+  \end{list}
+}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE FORMATTING
+%----------------------------------------------------------------------------------------
+
+\newenvironment{rSubsection}[4]{ % 4 input arguments - company name, year(s) employed, job title and location
+ {\bf #1} \hfill {#2} % Bold company name and date on the right
+ \ifthenelse{\equal{#3}{}}{}{ % If the third argument is not specified, don't print the job title and location line
+  \\
+  {\em #3} \hfill {\em #4} % Italic job title and location
+  }\smallskip
+  \begin{list}{$\cdot$}{\leftmargin=0em} % \cdot used for bullets, no indentation
+   \itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
+  }{
+  \end{list}
+  \vspace{0em} % Some space after the list of bullet points
+}
+
+% The below commands define the whitespace after certain things in the document - they can be \smallskip, \medskip or \bigskip
+\def\namesize{\huge} % Size of the name at the top of the document
+\def\addressskip{} % The space between the two address (or phone/email) lines
+\def\sectionlineskip{\smallskip} % The space above the horizontal line for each section 
+\def\nameskip{\vspace{-0.5em}} % The space after your name at the top
+\def\sectionskip{} % The space after the heading section
+
+\makeatother % End internal command redefinitions
+
+%----------------------------------------------------------------------------------------
+%   DOCUMENT START
+%----------------------------------------------------------------------------------------
+\name{Abhishek Nagaraja, (CSPO) \vspace{.2em} \hrule}
+
+
+\address{Arlington, Texas, USA \textbullet\ work.abhishekn@gmail.com \textbullet\ {\href{https://www.abhishekn.in}{www.abhishekn.in}} \textbullet\ {\href{https://linkedin.com/in/abhisheknagaraja}{linkedin.com/in/abhisheknagaraja}}}
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%   SUMMARY
+%----------------------------------------------------------------------------------------
+
+Technical Product Manager specializing in \textbf{Market Research} and \textbf{Customer Satisfaction} through data-driven strategy. Technical expert in leveraging AI to rapidly architect and ship \textbf{prototypes, applications, and autonomous agents} using agentic development workflows and \textbf{Cloud Architecture (AWS)}.
+
+
+\begin{rSection}{Education}
+\begin{rSubsection}{University of Texas at Arlington}{Texas, USA}{\textbf{Master of Science in Computer Science}}{August 2023 - May 2024}
+\item \textbf{Master of Science in Engineering Management} \hfill May 2024 - Current
+\end{rSubsection}
+
+\begin{rSubsection}{Jawaharlal Nehru Technological University}{Hyderabad, India}{\textbf{Bachelor of Technology in Computer Science and Engineering}}{August 2019 - July 2023}
+\item[] \vspace{-1em}
+\end{rSubsection}
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%   PROJECTS
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Projects}
+
+\begin{rSubsection}{Thara: Multi-Agent AI Ecosystem}{}{}{}
+\item[] \vspace{-0.5em}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+\item Accomplished \textbf{scalable AI infrastructure} as measured by \textbf{11 orchestrated agents}, by \textbf{architecting a Multi-Agent ecosystem} using \textbf{LangGraph} and \textbf{Cloud Architecture (AWS, Terraform)}.
+\item Accomplished \textbf{2x faster development cycles} as measured by \textbf{sprint velocity}, by \textbf{using Antigravity and Cursor} to engineer the \textbf{Back-end (FastAPI/PostgreSQL)}.
+\item Accomplished \textbf{99.9\% uptime} as measured by \textbf{prototype stress testing}, by \textbf{implementing a comprehensive testing suite} and validation scripts for agent interactions.
+\end{itemize}
+\end{rSubsection}
+
+\begin{rSubsection}{Google Maps: Product Teardown}{}{}{}
+\item[] \vspace{-0.5em}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+\item Accomplished \textbf{validated problem definition} as measured by \textbf{42 user interviews}, by \textbf{translating qualitative data} into core problem statements regarding menu accuracy.
+\item Accomplished \textbf{strategic roadmap alignment} as measured by \textbf{addressing validated user needs}, by \textbf{architecting a centralized menu system} strategy with granular filtering.
+\end{itemize}
+\end{rSubsection}
+
+\begin{rSubsection}{Clash of Clans: Product Teardown}{}{}{}
+\item[] \vspace{-0.5em}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+\item Accomplished \textbf{organic growth strategy} as measured by \textbf{5-10\% projected acquisition}, by \textbf{proposing a native social sharing feature} based on user research.
+\item Accomplished \textbf{retention optimization} as measured by \textbf{15-20\% projected join rate increase}, by \textbf{designing a revamped Clan Discovery engine} to improve onboarding.
+\end{itemize}
+\end{rSubsection}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%   WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Work Experience}
+
+\begin{rSubsection}
+{Program Manager Intern, University of Texas at Arlington - Texas, USA}{October 2023 - October 2025}{}{}
+\item[] \vspace{-0.5em}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+\item Accomplished \textbf{successful program launch} as measured by \textbf{5,000+ attendees and \$120,000 in revenue}, by \textbf{founding and managing the end-to-end product lifecycle} for 'MavMarket'.
+\item Accomplished \textbf{40\% reduction in overhead} as measured by \textbf{automated departmental workflows}, by \textbf{architecting an AI-powered Standard Operating Procedure (SOP)} using Google's Gemini models.
+\item Accomplished \textbf{35\% improvement in Net Promoter Score (NPS)} as measured by \textbf{stakeholder feedback}, by \textbf{designing a data analytics dashboard} to identify and resolve systemic friction points.
+\item Accomplished \textbf{community growth} as measured by \textbf{100+ active members}, by \textbf{founding the Entrepreneurship Club} and facilitating technical workshops.
+\end{itemize}
+\end{rSubsection}
+
+\begin{rSubsection}
+{Business Analyst Intern, NFC Solutions Private Limited - Hyderabad, India}{April 2022 - January 2023}{}{}
+\item[] \vspace{-0.5em}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+\item Accomplished \textbf{robust system architecture} as measured by \textbf{successful delivery of 4 key projects}, by \textbf{authoring technical Product Requirement Documents (PRDs)} and \textbf{API specifications}.
+\item Accomplished \textbf{20\% efficiency gain} as measured by \textbf{reduced regression cycles}, by \textbf{applying Lean-Agile principles} and automated testing as \textbf{Scrum Master}.
+\item Accomplished \textbf{optimized order lifecycle} as measured by \textbf{customer satisfaction}, by \textbf{overseeing API integrations} and database integrity for an e-commerce platform.
+\end{itemize}
+\end{rSubsection}
+
+\begin{rSubsection}
+{Founder and Community Lead, e-DAM Community - Hyderabad, India}{March 2021 - January 2025}{}{}
+\item[] \vspace{-0.5em}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+\item Accomplished \textbf{ecosystem leadership} as measured by \textbf{5,000+ members}, by \textbf{founding and leading Hyderabad's largest technical community} and orchestrating 200+ workshops.
+\item Accomplished \textbf{talent pipeline creation} as measured by \textbf{50+ internships}, by \textbf{facilitating technical projects} and strategic partnerships within the tech ecosystem.
+\item Accomplished \textbf{high-impact engagement} as measured by \textbf{500+ attendees}, by \textbf{orchestrating large-scale technical events} and producing founder-focused content.
+\end{itemize}
+\end{rSubsection}
+
+\end{rSection}
+
+\begin{rSection}{Skills and Tools}
+\item[] \vspace{-0.5em}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+    \item \textbf{AI \& Agentic Dev:} Models: Gemini, GPT-4o, Claude --- Platforms: LangGraph, LangChain, n8n, API Integration --- IDEs: \textbf{Antigravity, Cursor, Co-Pilot} --- Concepts: RAG, Prompt Engineering, Agentic Workflows.
+    \item \textbf{Cloud, DevOps & Infra:} AWS (EC2, S3, Lambda), \textbf{Kubernetes (K8s), Docker, Terraform (IaC)}, CI/CD Pipelines, Azure DevOps, Snowflake, REST APIs, PostgreSQL, Vector DBs.
+    \item \textbf{Product Management:} Lifecycle Management (PLM), BOM Management, Feature Prioritization (RICE), PRDs, \textbf{DFx (Design for Excellence)}, GTM Strategy, A/B Testing, Market Analysis.
+    \item \textbf{Software Development:} Languages: Python, JavaScript (ReactJS, NodeJS), SQL, HTML/CSS, LaTeX --- Testing: Automated Test Scripts, QA Validation, Regression Testing.
+    \item \textbf{Design \& Analytics:} UIUX Design (Figma), Wireframing, User Journey Mapping --- Analytics: Power BI, Google Analytics, Excel, Data-driven Decision Making.
+\end{itemize}
+\end{rSection}
+
+\begin{rSection}{Certification}
+\item[] \vspace{-1em}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+\item \href{https://drive.google.com/file/d/1W_00yFKzw16QAXMxebXWl7uEZn83txCp/view?usp=sharing}{Certified Scrum Product Owner (CSPO)}
+\item \href{https://www.coursera.org/account/accomplishments/verify/AZCR52ERTR6U}{Google: Foundation of Project Management}
+\item \href{https://www.coursera.org/account/accomplishments/verify/MP9MVNTL7E0B}{Google: Project Initiation: Starting a Successful Project}
+\item \href{https://www.credly.com/badges/dcc70b37-2ad0-4a2e-a5c1-55894dfd8acf/linked_in_profile}{McKinsey.org Forward Program}
+\item Google: Data Analytics Specialization
+\end{itemize}
+\end{rSection}
+
+\begin{rSection}{Other Projects}
+\begin{rSubsection}{Product-Pal: AI Strategy Specialist}{}{}{}
+\item[] \vspace{-0.5em}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+\item Accomplished \textbf{70\% faster analysis} as measured by \textbf{strategic throughput}, by \textbf{designing an AI agent} that automates the end-to-end product teardown process.
+\item Accomplished \textbf{intuitive user experience} as measured by \textbf{high-fidelity interactions}, by \textbf{leading UIUX design and React development} for the dashboard.
+\item Accomplished \textbf{30\% reduced latency} as measured by \textbf{API response time}, by \textbf{optimizing model performance} with Prompt Engineering and context caching.
+\end{itemize}
+\end{rSubsection}
+
+\begin{rSubsection}{Split-Wiser: AI-Powered Financial Automation}{}{}{}
+\item[] \vspace{-0.5em}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+\item Accomplished \textbf{high-accuracy data extraction} as measured by \textbf{OCR performance}, by \textbf{prototyping a bill-splitting solution} using OpenAI API and CustomGPTs.
+\item Accomplished \textbf{data integrity} as measured by \textbf{verified user workflows}, by \textbf{designing the end-to-end API workflow} for expense distribution.
+\end{itemize}
+\end{rSubsection}
+
+\end{rSection}
+
+\end{document}

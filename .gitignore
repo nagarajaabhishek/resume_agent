@@ -6,16 +6,9 @@
 *_cache
 
 # User Data (PII)
-Abhishek/
 Adarsh/
-Khachitri/
 Sneha/
 raw_resume_input.txt
-*.pdf
-*.log
-*.aux
-*.out
-*.docx
 
 # LaTeX Generated Files
 *.synctex.gz

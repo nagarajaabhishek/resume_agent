@@ -1,0 +1,16 @@
+
+Job Title: Senior Product Manager, AI Platform
+
+Responsibilities:
+- Define the product roadmap for our AI/ML platform.
+- Work closely with engineering teams to deploy scalable machine learning models.
+- Conduct user research and analyze data to inform product decisions.
+- Experience with Python, SQL, and data analysis tools.
+- Knowledge of LLMs, RAG, and generative AI technologies.
+- Strong communication skills and ability to lead cross-functional teams.
+
+Requirements:
+- 5+ years of experience in product management.
+- Background in Computer Science or related field.
+- Experience with Agile methodologies and JIRA.
+- Proven track record of launching successful AI products.

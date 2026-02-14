@@ -1,0 +1,259 @@
+%----------------------------------------------------------------------------------------
+%   CLASS DEFINITIONS (EMBEDDED RESUME.CLS)
+%----------------------------------------------------------------------------------------
+\documentclass[9pt,letterpaper]{article} % Font size and paper type
+
+\usepackage[parfill]{parskip} % Remove paragraph indentation
+\usepackage{array} % Required for boldface (\bf and \bfseries) tabular columns
+\usepackage{ifthen} % Required for ifthenelse statements
+\usepackage{charter}
+\usepackage{enumitem}
+\usepackage{xcolor} 
+\usepackage[colorlinks=true, urlcolor=blue]{hyperref}
+\usepackage[left=0.5in,top=0.25in,right=0.4in,bottom=0.2in, columnsep=0.5cm]{geometry} 
+\input{glyphtounicode}
+\usepackage[none]{hyphenat}
+\usepackage{multicol}
+
+\pdfgentounicode=1
+\pagestyle{empty} % Suppress page numbers
+
+\makeatletter % Begin internal command redefinitions
+
+%----------------------------------------------------------------------------------------
+%	HEADINGS COMMANDS: Commands for printing name and address
+%----------------------------------------------------------------------------------------
+
+\def \name#1{\def\@name{#1}} % Defines the \name command to set name
+\def \@name {} % Sets \@name to empty by default
+
+\def \addressSep {$\diamond$} % Set default address separator to a diamond
+
+% One, two or three address lines can be specified 
+\let \@addressone \relax
+\let \@addresstwo \relax
+\let \@addressthree \relax
+
+% \address command can be used to set the first, second, and third address (last 2 optional)
+\def \address #1{
+  \@ifundefined{@addresstwo}{
+    \def \@addresstwo {#1}
+  }{
+  \@ifundefined{@addressthree}{
+  \def \@addressthree {#1}
+  }{
+     \def \@addressone {#1}
+  }}
+}
+
+% \printaddress is used to style an address line (given as input)
+\def \printaddress #1{
+  \begingroup
+    \def \\ {\addressSep\ }
+    \centerline{#1}
+  \endgroup
+  \par
+}
+
+% \printname is used to print the name as a page header
+\def \printname {
+  \begingroup
+    \hfil{{\namesize\bf \@name}}\hfil
+    \nameskip\break
+  \endgroup
+}
+
+%----------------------------------------------------------------------------------------
+%	PRINT THE HEADING LINES
+%----------------------------------------------------------------------------------------
+
+\let\ori@document=\document
+\renewcommand{\document}{
+  \ori@document  % Begin document
+  \printname % Print the name specified with \name
+  \@ifundefined{@addressone}{}{ % Print the first address if specified
+    \printaddress{\@addressone}}
+  \@ifundefined{@addresstwo}{}{ % Print the second address if specified
+    \printaddress{\@addresstwo}}
+     \@ifundefined{@addressthree}{}{ % Print the third address if specified
+    \printaddress{\@addressthree}}
+}
+
+%----------------------------------------------------------------------------------------
+%	SECTION FORMATTING
+%----------------------------------------------------------------------------------------
+
+% Defines the rSection environment for the large sections within the CV
+\newenvironment{rSection}[1]{ % 1 input argument - section name
+  \sectionskip
+ \textbf{\Large #1} % Section title
+  \sectionlineskip
+  \hrule % Horizontal line
+  \begin{list}{}{ % List for each individual item in the section
+    \setlength{\leftmargin}{-0em} % Margin within the section
+  }
+  \item[]
+}{
+  \end{list}
+}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE FORMATTING
+%----------------------------------------------------------------------------------------
+
+\newenvironment{rSubsection}[4]{ % 4 input arguments - company name, year(s) employed, job title and location
+ {\bf #1} \hfill {#2} % Bold company name and date on the right
+ \ifthenelse{\equal{#3}{}}{}{ % If the third argument is not specified, don't print the job title and location line
+  \\
+  {\em #3} \hfill {\em #4} % Italic job title and location
+  }\smallskip
+  \begin{list}{$\cdot$}{\leftmargin=0em} % \cdot used for bullets, no indentation
+   \itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
+  }{
+  \end{list}
+  \vspace{0em} % Some space after the list of bullet points
+}
+
+% The below commands define the whitespace after certain things in the document - they can be \smallskip, \medskip or \bigskip
+\def\namesize{\huge} % Size of the name at the top of the document
+\def\addressskip{} % The space between the two address (or phone/email) lines
+\def\sectionlineskip{\smallskip} % The space above the horizontal line for each section 
+\def\nameskip{\vspace{-0.5em}} % The space after your name at the top
+\def\sectionskip{} % The space after the heading section
+
+\makeatother % End internal command redefinitions
+
+%----------------------------------------------------------------------------------------
+%   DOCUMENT START
+%----------------------------------------------------------------------------------------
+\name{Abhishek Nagaraja, (CSPO, LSSGB) \vspace{.2em} \hrule}
+
+\address{Arlington, Texas, USA \textbullet\ work.abhishekn@gmail.com \textbullet\ {\href{https://www.abhishekn.in}{www.abhishekn.in}} \textbullet\ {\href{https://linkedin.com/in/abhisheknagaraja}{linkedin.com/in/abhisheknagaraja}}}
+
+\begin{document}
+\textbf{Strategic Program and Operations Manager with a track record of building scalable systems and leading complex, cross-functional projects from ideation to launch. Expert in driving operational efficiency and reliable delivery through data-driven process improvement, stakeholder management, and team leadership.}
+
+
+\begin{rSection}{Education}
+\begin{rSubsection}{University of Texas at Arlington}{Texas, USA}{\textbf{Master of Science in Computer Science}}{August 2023 - May 2024}
+\item \textbf{Master of Science in Engineering Management} \hfill May 2024 - Current
+\end{rSubsection}
+
+\begin{rSubsection}{Jawaharlal Nehru Technological University Hyderabad}{Hyderabad, India}{\textbf{Bachelor of Technology in Computer Science and Engineering}}{August 2019 - July 2023}
+\item[]
+\end{rSubsection}
+\item[] \vspace{-1em}
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%   WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Work Experience}
+\begin{rSubsection}
+{Program Manager Intern, \href{https://www.uta.edu/research/centers/cetd}{University of Texas at Arlington} - Texas, USA}{October 2023 - October 2025}{}{}
+\item[] \vspace{-0.5em}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+\item \textbf{Delivered end-to-end program delivery} as measured by \textbf{scaling to 200+ vendors and \$120k revenue}, by \textbf{managing a \$120k P&L budget} and leading a cross-functional team of 7 for the 'MavMarket' campus marketplace, ensuring regulatory compliance.
+\item \textbf{Achieved 35\% increase in Net Promoter Score (NPS)} as measured by \textbf{vendor feedback loops}, by \textbf{tracking program KPIs} and visualizing insights via Power BI dashboards to drive real-time decision-making.
+\item \textbf{Maximized organizational efficiency} as measured by \textbf{consistent delivery across 4 event phases}, by \textbf{architecting a Standard Operating Procedure (SOP)} using Gemini AI to standardize workflows across all operational phases and reduce training time.
+\item \textbf{Secured \$4,000 in recurring sponsorship} as measured by \textbf{semester funding}, by \textbf{driving business development} and pitching strategic proposals to partners and cultivating long-term relationships with key regional stakeholders.
+\item \textbf{Boosted stakeholder engagement} as measured by \textbf{onboarding 24 local founders}, by \textbf{executing targeted GTM strategies} for the "1 Million Cups" community chapter to foster local innovation and founder connectivity.
+\item \textbf{Scaled community growth to 100+ members} as measured by \textbf{active membership}, by \textbf{directing a 10-member executive board} as President of the Entrepreneurship Club and orchestrating large-scale student initiatives.
+\end{itemize}
+\end{rSubsection}
+
+\begin{rSubsection}
+{Business Analyst Intern, \href{https://nfcsolutionsusa.com/}{\textit{NFC Solutions Private Limited}} - Hyderabad, India}{April 2022 - January 2023}{}{}
+\item[] \vspace{-0.5em}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+\item \textbf{Ensured on-time delivery of 4 key projects} as measured by \textbf{positive client feedback}, by \textbf{facilitating cross-functional collaboration} between Design, Dev, and QA teams as a Project Manager, mitigating communication gaps and aligning technical deliverables with client specs.
+\item \textbf{Drove 20\% improvement in development efficiency} as measured by \textbf{reduced sprint cycle time}, by \textbf{serving as Scrum Master} and applying Agile/Lean workflows to eliminate redundancies and optimize team resources.
+\item \textbf{Guaranteed timely project alignment} as measured by \textbf{executive approval of specs}, by \textbf{facilitating requirement gathering}, user stories, and test case reviews to ensure zero-defect deployments and adherence to quality standards.
+\item \textbf{Optimized operational efficiency} as measured by \textbf{streamlined inventory \& CRM processes}, by \textbf{managing social media and backend operations} for an e-commerce platform serving a growing customer base of 500+ daily users.
+\end{itemize}
+\end{rSubsection}
+
+\begin{rSubsection}
+{Founder and Community Lead, \href{https://www.abhishekn.in/e-dam}{\textit{e-DAM Community}} - Hyderabad, India}{March 2021 - January 2025}{}{}
+\item[] \vspace{-0.5em}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+\item \textbf{Expanded community scale to 5,000+ students} as measured by \textbf{attendance at 200+ workshops}, by \textbf{founding a technical community} and tailoring content for diverse user segments ranging from introductory coding to system design.
+\item \textbf{Spearheaded continuous product improvement} as measured by \textbf{adoption across 20+ institutions}, by \textbf{leading research and system integration} for a custom ERP solution tailored to the specific administrative and academic needs of partners.
+\item \textbf{Sustained high member retention} as measured by \textbf{viral campaign participation}, by \textbf{architecting a scalable program strategy} with 8 parallel content tracks.
+\item \textbf{Facilitated 50+ internship placements} as measured by \textbf{successful corporate matches}, by \textbf{initiating tech projects} and managing stakeholder relationships to bridge the gap between academic curriculum and industry needs.
+\item \textbf{Raised Rs.4,00,000+ in sponsorship} as measured by \textbf{event funding}, by \textbf{directing a team of 50} to execute the "Social Media Summit 2023".
+\item \textbf{Cultivated startup ecosystem engagement} as measured by \textbf{12 founder interviews}, by \textbf{producing the 'e-DAM Spotlight' podcast} to showcase inspiring entrepreneurial journeys and industry insights.
+\end{itemize}
+\end{rSubsection}
+
+
+\end{rSection}
+% Standardized spacing
+
+\begin{rSection}{Strategic Projects \& Analysis {\fontsize{8}{9}\selectfont (Details in portfolio.)}}
+\begin{rSubsection}{\href{https://nabhishek.notion.site/Google-Maps-2320afeb2ea88023bfa3dfc424175e15}{Google Maps : Process Gap Analysis}}{}{}{}
+\item[] \vspace{-0.5em}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+\item \textbf{Identified workflow failure} as measured by \textbf{drop-off data (42 interviews)}, by \textbf{conducting root cause analysis} on menu accuracy, uncovering specific pain points in the existing user journey.
+\item \textbf{Mitigated risk for dietary compliance} as measured by \textbf{validated user acceptance}, by \textbf{proposing a systemic process improvement} to centralize menu management.
+\end{itemize}
+\end{rSubsection}
+
+\begin{rSubsection}{\href{https://www.abhishekn.in/clashofclans}{Clash of Clans : Data-Driven Optimization Proposal}}{}{}{}
+\item[] \vspace{-0.5em}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+\item \textbf{Forecasted 5-10\% organic acquisition} as measured by \textbf{quantitative behavioral analysis}, by \textbf{formulating a growth strategy} with native social sharing to leverage network effects and reduce cost of acquisition.
+\item \textbf{Projected 20-30\% adoption} as measured by \textbf{engagement metrics}, by \textbf{designing a retention plan} to revamp the social feed.
+\end{itemize}
+\end{rSubsection}
+
+\begin{rSubsection}{\href{https://www.abhishekn.in/splitwiser}{Split-Wiser | Technical Program Delivery}}{}{}{}
+\item[] \vspace{-0.5em}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+\item \textbf{Enabled fair expense allocation} as measured by \textbf{precise parsing of complex bills}, by \textbf{managing end-to-end development} of an AI-powered engine using LLMs to automate data extraction and ensure high accuracy in splitting.
+\item \textbf{Accelerated user adoption} as measured by \textbf{completion of the workflow}, by \textbf{streamlining the financial process} into a repeatable 12-step guided journey.
+\end{itemize}
+\end{rSubsection}
+
+\begin{rSubsection}{\href{https://withthara.com/}{Thara - AI Personal Agent Ecosystem}}{}{}{}
+\item[] \vspace{-0.5em}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+\item \textbf{Orchestrated multi-agent coordination} as measured by \textbf{11-agent synchronization}, by \textbf{orchestrating the architecture} using LangGraph and FastAPI to enable complex reasoning and asynchronous task execution.
+\item \textbf{Aligned system with user goals} as measured by \textbf{real-time behavioral analysis}, by \textbf{automating complex workflows} for task and habit tracking.
+\end{itemize}
+\end{rSubsection}
+
+% Standardized spacing
+\end{rSection}
+
+\begin{rSection}{Skills and Tools}
+
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+    \item \textbf{Product and Project Management: Core:} Program Lifecycle Management, Risk Management, Stakeholder Communication, Roadmap Development, Feature Prioritization (RICE/MoSCoW), Process Improvement & SOPs, \textbf{SWOT Analysis, Working Backwards Framework}.
+    \item \textbf{Business Development \& Leadership:} \textbf{Attributes}: Problem-solving mindset, Cross-functional Leadership, Conflict Resolution, Start-up experience | \textbf{Strategy}: Business Development, Partnership \& Sponsorship | \textbf{Management}: Organization Building, Team Building, Resource Capacity Planning, Product Storytelling
+    \item \textbf{Software Development \& DevOps:} \textbf{Methodologies}: Agile, Scrum, Waterfall, Kanban, Sprint Planning \& Backlog Management | \textbf{Languages}: Python, JavaScript, SQL, C, HTML, CSS, LaTeX | \textbf{Technologies \& DB:} ReactJS, NodeJS, Git, GitHub, MongoDB | \textbf{DevOps \& Cloud:} Docker, AWS (S3, EC2), CI/CD Concepts
+      \item \textbf{Tools \& Analytics:} \textbf{PM Tools}: Jira, Asana, Notion, Microsoft Project, Figma, \textbf{Salesforce, Smartsheet, CMMS} | \textbf{BI \& Analytics:} Power BI, Google Analytics, Excel, \textbf{P\&L Management, ROI Analysis}. 
+    \item \textbf{AI \& Automation:} \textbf{Models}: Google LLMs (Gemini), OpenAI API (GPT-4o), CustomGPTs | \textbf{Concepts}: Prompt Engineering, System Design, AI Product Strategy, Model Evaluation Metrics | \textbf{Platforms}: n8n, API Integration, Cursor IDE, Google Antigravity.
+\end{itemize}
+
+\end{rSection}
+
+
+% Standardized spacing
+\begin{rSection}{Certification}
+\item[] \vspace{-1em}
+\begin{itemize}[left=-1.5em, labelwidth=.1cm, itemsep=0.0em]
+\item \href{https://drive.google.com/file/d/1W_00yFKzw16QAXMxebXWl7uEZn83txCp/view?usp=sharing}{Certified Scrum Product Owner (CSPO)}
+\item Lean Six Sigma Green Belt (LSSGB)
+\item \href{https://www.coursera.org/account/accomplishments/verify/AZCR52ERTR6U}{Google: Foundation of Project Management}
+\item \href{https://www.coursera.org/account/accomplishments/verify/MP9MVNTL7E0B}{Google: Project Initiation: Starting a Successful Project}
+\item Google: Project Planning: Putting It All Together 
+\item Google: Foundations of User Experience (UX) Design
+\item \href{https://www.credly.com/badges/dcc70b37-2ad0-4a2e-a5c1-55894dfd8acf/linked_in_profile}{McKinsey.org Forward Program}
+\item Google: Data Analytics: Foundations
+\end{itemize}
+\end{rSection}
+% Standardized spacing
+
+\end{document}
