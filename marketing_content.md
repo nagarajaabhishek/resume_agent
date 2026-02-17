@@ -52,3 +52,33 @@ A modular, high-impact resume generation engine that treats career data as code.
 *   **Deployment**: Version controlled via Git, treating career progress like software releases.
 
 **Stack:** Python, LaTeX, Jinja2, YAML, Git.
+
+---
+
+## 4. LinkedIn Post #2 (Master Context Focus)
+**Headline:** One File to Rule Them All. How I Generated 6 Resumes in 60 Seconds.
+
+I used to have 10 different Word docs named `Resume_Product_v3_FINAL_REAL.docx`. It was a mess.
+
+So I built a "Master Context" system.
+
+**The Concept:**
+1.  **Input:** A single YAML file (`master_context.yaml`) that contains *everything* I've ever done. Every project, every metric, every certification. It's my career database.
+2.  **Process:** I run a Python script: `generate_resume.py`
+3.  **Output:** The script pulls specific slices of data to build 6 distinct, targeted resumes instantly:
+    *   Technical Product Manager (TPM)
+    *   Product Manager (PM)
+    *   Engineering Manager
+    *   Product Owner
+    *   Scrum Master
+    *   GTM Strategy
+
+**Why it works:**
+*   **Memory:** The system remembers details I forget. I don't need to rewrite a bullet point from 3 years ago; I just toggle it "on" for the relevant role.
+*   **Consistency:** My dates and titles are the Single Source of Truth. No more conflicting info across different versions.
+*   **Speed:** I can pivot my entire application strategy in the time it takes to run a script.
+
+Stop managing documents. Start managing data.
+
+[Link to GitHub]
+#Productivity #Automation #Python #CareerEngineering #DataDriven
