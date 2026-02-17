@@ -3,15 +3,15 @@
 %----------------------------------------------------------------------------------------
 \documentclass[9pt,letterpaper]{article} % Font size and paper type
 
-\usepackage[parfill]{parskip} % Remove paragraph indentation
+\usepackage[parskip]{parskip} % Remove paragraph indentation
 \usepackage{array} % Required for boldface (\bf and \bfseries) tabular columns
 \usepackage{ifthen} % Required for ifthenelse statements
 \usepackage{charter}
 \usepackage{enumitem}
-\usepackage{xcolor} 
+\usepackage{xcolor}
 \usepackage[colorlinks=true, urlcolor=blue]{hyperref}
-\usepackage[left=0.5in,top=0.25in,right=0.4in,bottom=0.2in, columnsep=0.5cm]{geometry} 
-\input{glyphtounicode}
+\usepackage[left=0.5in,top=0.25in,right=0.4in,bottom=0.2in, columnsep=0.5cm]{geometry}
+% \input{glyphtounicode} % Commented out to prevent errors
 \usepackage[none]{hyphenat}
 \usepackage{multicol}
 
@@ -29,7 +29,7 @@
 
 \def \addressSep {$\diamond$} % Set default address separator to a diamond
 
-% One, two or three address lines can be specified 
+% One, two or three address lines can be specified
 \let \@addressone \relax
 \let \@addresstwo \relax
 \let \@addressthree \relax
@@ -126,120 +126,122 @@
 %----------------------------------------------------------------------------------------
 %   DOCUMENT START
 %----------------------------------------------------------------------------------------
-\name{[First Name] [Last Name], ([Credentials]) \vspace{.2em} \hrule}
+\name{ << name >> \vspace{.2em} \hrule}
 
-\address{[City, State, Country] \textbullet\ [Email Address] \textbullet\ {\href{[Website URL]}{[Website URL]}} \textbullet\ {\href{[LinkedIn Profile URL]}{linkedin.com/in/[profile]}}}
+\address{ << contact.location >> \textbullet\ << contact.email >> \textbullet\ \href{ << contact.linkedin_url >> }{ << contact.linkedin_display >> } \textbullet\ \href{ << contact.website_url >> }{ << contact.website_display >> }}
+
+{% if personal_details %}
+\address{Nationality: << personal_details.nationality >> \textbullet\ Location: << personal_details.current_location >> \textbullet\ Visa: << personal_details.visa_status >>}
+{% endif %}
 
 \begin{document}
 
 %----------------------------------------------------------------------------------------
 %   SUMMARY
 %----------------------------------------------------------------------------------------
-[Professional Summary: A brief, high-impact statement summarizing your experience, key achievements, and core value proposition. Mention years of experience, key industries, and top skills. Example: Results-oriented Software Engineer with 5+ years of experience in...]
+<< summary >>
 
+%----------------------------------------------------------------------------------------
+%   EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+%   EDUCATION SECTION
+%----------------------------------------------------------------------------------------
 \begin{rSection}{Education}
-\begin{rSubsection}{[University Name]}{[Location]}{\textbf{[Degree Title]}}{[Start Date] - [End Date]}
-\item \textbf{[Minor / Specialization]} \hfill [Date]
-\end{rSubsection}
-
-\begin{rSubsection}{[University Name]}{[Location]}{\textbf{[Degree Title]}}{[Start Date] - [End Date]}
+{% for edu in education %}
+\begin{rSubsection}{ {% if edu.url %}\href{<< edu.url >>}{<< edu.school >>}{% else %}<< edu.school >>{% endif %} }{ << edu.location >> }{\textbf{ << edu.degree >> }}{ << edu.dates >> }
+{% if edu.multi_degree %}
+{% for degree in edu.multi_degree %}
+{\textbf{<< degree.degree >>}}\hfill{<< degree.dates >>}
+{% endfor %}
+{% endif %}
+{% if edu.details %}
+{% for detail in edu.details %}
+\item << detail >>
+{% endfor %}
+{% else %}
+{% if not edu.multi_degree %}
 \item[] \vspace{-1em}
+{% endif %}
+{% endif %}
 \end{rSubsection}
+{% endfor %}
 \end{rSection}
-
 
 %----------------------------------------------------------------------------------------
 %   WORK EXPERIENCE SECTION
 %----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+%   MACROS FOR SECTIONS
+%----------------------------------------------------------------------------------------
+{% macro render_experience() %}
 \begin{rSection}{Work Experience}
-
+{% for exp in experience %}
 \begin{rSubsection}
-{[Job Title], [Company Name] - [Location]}{[Start Date] - [End Date]}{}{}
+{ << exp.role >>, << exp.company >>, << exp.location >> }{ << exp.dates >> }{}{}
 \item[] \vspace{-0.5em}
 \begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
-\item Accomplished \textbf{[Result X]} as measured by \textbf{[Metric Y]}, by \textbf{[Action Z]} for [Project/Initiative].
-\item Accomplished \textbf{[Result X]} as measured by \textbf{[Metric Y]}, by \textbf{[Action Z]} using [Tool/Skill].
-\item Accomplished \textbf{[Result X]} as measured by \textbf{[Metric Y]}, by \textbf{[Action Z]} leading to [Outcome].
-\item Accomplished \textbf{[Result X]} as measured by \textbf{[Metric Y]}, by \textbf{[Action Z]} for [Stakeholder].
+{% for bullet in exp.bullets %}
+\item << bullet >>
+{% endfor %}
 \end{itemize}
 \end{rSubsection}
-
-\begin{rSubsection}
-{[Job Title], [Company Name] - [Location]}{[Start Date] - [End Date]}{}{}
-\item[] \vspace{-0.5em}
-\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
-\item Accomplished \textbf{[Result X]} as measured by \textbf{[Metric Y]}, by \textbf{[Action Z]}.
-\item Accomplished \textbf{[Result X]} as measured by \textbf{[Metric Y]}, by \textbf{[Action Z]}.
-\item Accomplished \textbf{[Result X]} as measured by \textbf{[Metric Y]}, by \textbf{[Action Z]}.
-\end{itemize}
-\end{rSubsection}
-
-\begin{rSubsection}
-{[Job Title], [Company Name] - [Location]}{[Start Date] - [End Date]}{}{}
-\item[] \vspace{-0.5em}
-\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
-\item Accomplished \textbf{[Result X]} as measured by \textbf{[Metric Y]}, by \textbf{[Action Z]}.
-\item Accomplished \textbf{[Result X]} as measured by \textbf{[Metric Y]}, by \textbf{[Action Z]}.
-\item Accomplished \textbf{[Result X]} as measured by \textbf{[Metric Y]}, by \textbf{[Action Z]}.
-\end{itemize}
-\end{rSubsection}
-
+{% endfor %}
 \end{rSection}
+{% endmacro %}
+
+{% macro render_projects() %}
+\begin{rSection}{Projects}
+{% for project in projects %}
+{% if project.url %}
+\begin{rSubsection}{ \href{<< project.url >>}{<< project.name >>} }{}{}{}
+{% else %}
+\begin{rSubsection}{ << project.name >> }{}{}{}
+{% endif %}
+\item[] \vspace{-0.5em}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+{% for bullet in project.bullets %}
+\item << bullet >>
+{% endfor %}
+\end{itemize}
+\end{rSubsection}
+{% endfor %}
+\end{rSection}
+{% endmacro %}
 
 %----------------------------------------------------------------------------------------
-%   PROJECTS
+%   BODY SECTIONS (ORDERING)
 %----------------------------------------------------------------------------------------
-\begin{rSection}{Projects (Strategy \& Growth)}
+{% if meta is defined and meta.projects_first %}
+    << render_projects() >>
+    << render_experience() >>
+{% else %}
+    << render_experience() >>
+    << render_projects() >>
+{% endif %}
 
-\begin{rSubsection}{[Project Name]: [Project Tagline]}{}{}{}
-\item[] \vspace{-0.5em}
-\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
-\item Accomplished \textbf{[Result X]} as measured by \textbf{[Metric Y]}, by \textbf{[Action Z]}.
-\item Accomplished \textbf{[Result X]} as measured by \textbf{[Metric Y]}, by \textbf{[Action Z]}.
-\end{itemize}
-\end{rSubsection}
-
-\begin{rSubsection}{[Project Name]: [Project Tagline]}{}{}{}
-\item[] \vspace{-0.5em}
-\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
-\item Accomplished \textbf{[Result X]} as measured by \textbf{[Metric Y]}, by \textbf{[Action Z]}.
-\item Accomplished \textbf{[Result X]} as measured by \textbf{[Metric Y]}, by \textbf{[Action Z]}.
-\end{itemize}
-\end{rSubsection}
-
-\begin{rSubsection}{[Project Name]: [Project Tagline]}{}{}{}
-\item[] \vspace{-0.5em}
-\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
-\item Accomplished \textbf{[Result X]} as measured by \textbf{[Metric Y]}, by \textbf{[Action Z]}.
-\item Accomplished \textbf{[Result X]} as measured by \textbf{[Metric Y]}, by \textbf{[Action Z]}.
-\end{itemize}
-\end{rSubsection}
-
-\end{rSection}
 
 %----------------------------------------------------------------------------------------
 %   SKILLS
 %----------------------------------------------------------------------------------------
-\begin{rSection}{Skills and Tools}
+\begin{rSection}{Skills}
 \item[] \vspace{-0.5em}
 \begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
-    \item \textbf{[Category 1]:} [Skill 1], [Skill 2], [Skill 3], [Skill 4], [Skill 5].
-    \item \textbf{[Category 2]:} [Skill 1], [Skill 2], [Skill 3], [Skill 4], [Skill 5].
-    \item \textbf{[Category 3]:} [Skill 1], [Skill 2], [Skill 3], [Skill 4], [Skill 5].
-    \item \textbf{[Category 4]:} [Skill 1], [Skill 2], [Skill 3], [Skill 4], [Skill 5].
+{% for skill_cat in skills %}
+    \item \textbf{ << skill_cat.category >>:} << skill_cat.skill_list >>
+{% endfor %}
 \end{itemize}
 \end{rSection}
 
-\begin{rSection}{Certification}
+%----------------------------------------------------------------------------------------
+%   CERTIFICATIONS
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Certifications}
 \item[] \vspace{-1em}
 \begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
-\item \href{[Certificate URL]}{[Certificate Name]}
-\item \href{[Certificate URL]}{[Certificate Name]}
-\item \href{[Certificate URL]}{[Certificate Name]}
-\item \href{[Certificate URL]}{[Certificate Name]}
-\item \href{[Certificate URL]}{[Certificate Name]}
+{% for cert in certifications %}
+\item << cert >>
+{% endfor %}
 \end{itemize}
 \end{rSection}
-
 
 \end{document}

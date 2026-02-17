@@ -1,0 +1,98 @@
+name: Abhishek Nagaraja
+contact:
+  location: Arlington, Texas, USA - 76013
+  email: work.abhishekn@gmail.com
+  linkedin_url: https://www.linkedin.com/in/abhisheknagaraja/
+  linkedin_display: linkedin.com/in/abhisheknagaraja
+  website_url: https://www.abhishekn.in/
+  website_display: www.abhishekn.in
+meta:
+  projects_first: true
+summary: Technical Product Manager leveraging deep engineering expertise to drive \textbf{Product Strategy} and \textbf{Customer Satisfaction}. Adept at combining \textbf{Technical Market Research} with \textbf{Human Empathy} to build user-centric solutions. Expert in bridging the gap between complex engineering execution and business goals, ensuring product alignment with user needs and market demands.
+education:
+- school: University of Texas at Arlington
+  url: https://www.uta.edu/
+  location: Arlington, Texas, USA
+  degree: Master of Science in Computer Science
+  dates: Aug 2023 - May 2024
+  details:
+  - 'Specialization: Artificial Intelligence & Database Systems'
+- school: University of Texas at Arlington
+  location: Arlington, Texas, USA
+  degree: Master of Science in Engineering Management
+  dates: May 2024 - Current
+  details: []
+- school: Jawaharlal Nehru Technological University
+  url: https://www.jntuh.ac.in/
+  location: Hyderabad, India
+  degree: Bachelor of Technology in Computer Science and Engineering
+  dates: Aug 2019 - July 2023
+  details: []
+experience:
+- role: Program Manager Intern
+  company: University of Texas at Arlington
+  location: Texas, USA
+  dates: October 2023 - October 2025
+  bullets:
+  - Founded and managed the end-to-end \textbf{product lifecycle} for 'MavMarket', scaling the event to 200+ vendors and 5,000+ attendees while generating $120,000 in revenue, by executing a comprehensive \textbf{vendor acquisition strategy} and operational roadmap.
+  - Improved stakeholder NPS by 35% and engagement by 25% by designing and executing a feedback system for 100+ vendors and 200+ attendees, utilizing \textbf{empathy-driven user research} to identify and resolve key operational friction points.
+  - Reduced event planning time by 40% by architecting a 50+ page, \textbf{AI-powered Standard Operating Procedure (SOP)} in Gemini that improved organizational efficiency and delivered a consistent user experience for MavMarket.
+  - Grew the university’s Entrepreneurship Club from 100+ active members by founding the organization, leading a 10-member executive board, and facilitating over 20 workshops to foster a thriving student innovation ecosystem.
+  - Enhanced community engagement for the local '1 Million Cups' chapter by successfully attracting and onboarding 24 local founders through targeted \textbf{go-to-market strategies} and high-value networking events.
+- role: Business Analyst Intern
+  company: NFC Solutions Private Limited
+  location: Hyderabad, India
+  dates: April 2022 - Jan 2023
+  bullets:
+  - Authored \textbf{Product Requirement Documents (PRDs)} and managed task delegation as Project Manager for 4 key projects, serving as the primary bridge between business stakeholders and technical teams to ensure on-time delivery between Design, Dev, and QA teams.
+  - Improved development efficiency by 20% by serving as Scrum Master, applying Lean principles within an Agile framework to streamline workflows and daily scrums, reducing blockers and accelerating sprint velocity.
+  - Owned the end-to-end \textbf{order lifecycle} for an e-commerce platform to improve customer satisfaction and operational efficiency, overseeing inventory management, dynamic pricing logic components, and post-sale support workflows.
+- role: Founder and Community Lead
+  company: e-DAM Community
+  location: Hyderabad, India
+  dates: March 2021 - Jan 2025
+  bullets:
+  - Spearheaded community growth to 5,000+ members by performing \textbf{Market Analysis} and building a strategic network of industry partners, orchestrating 200+ technical workshops to foster a thriving developer ecosystem in Hyderabad.
+  - 'Iterated on technical curriculum content based on high-value \textbf{attendee satisfaction metrics}, collecting feedback and using narrative data to continuously improve learning outcomes and drive engagement for the #100DaysOfTech program.'
+projects:
+- name: 'Thara: Multi-Agent AI Ecosystem'
+  url: https://withthara.com/
+  bullets:
+  - Architected a scalable \textbf{Multi-Agent AI infrastructure} enabling 11 specialized autonomous agents to orchestrate complex workflows by engineering a LangGraph-based state machine synchronized with a FastAPI backend and PostgreSQL.
+  - Revolutionized the personal productivity experience by automating the holistic tracking of tasks, habits, and 'Ikigai' alignment by developing the 'Thara' ecosystem that combines proactive AI coaching with real-time \textbf{behavioral pattern recognition}.
+- name: 'Google Maps: Product Strategy'
+  url: https://abhishekn.in/content/google-maps-teardown
+  bullets:
+  - Translated qualitative data from 42 user interviews into two core problem statements, revealing a critical user need for guaranteed menu accuracy and granular dietary filters to reduce platform drop-off.
+  - Architected a \textbf{product strategy} to directly address validated user needs, proposing a roadmap for a centralized menu system with granular filtering to capture the high-value market segment with critical dietary requirements.
+- name: 'Clash of Clans: Growth Strategy'
+  url: https://abhishekn.in/content/clash-of-clans-teardown
+  bullets:
+  - Proposed a \textbf{viral growth strategy} driving 5-10% new organic user acquisition by creating a native social sharing feature for key in-game content, a recommendation validated by quantitative user research.
+  - Projected a 15-20% increase in join rates and 20-30% increase in feature adoption by designing a revamped Clan Discovery engine and transforming the 'Social' tab into a dynamic feed.
+- name: 'Split-Wiser: AI Expense Tool'
+  url: https://abhishekn.in/content/splitwise-teardown
+  bullets:
+  - Reduced manual expense splitting time by 76% (4.75 hours/month) and validated product stability by monitoring and validating the application in a pre-production environment, and by probing, isolating, and troubleshooting reported issues.
+  - Enabled fair and precise expense splitting by applying \textbf{context engineering} to design a conversational AI agent, building a CustomGPT that accurately parses unstructured data (PDFs, receipts) and guides users through a 12-step verification workflow.
+skills:
+- category: Product Management
+  skill_list: Product Strategy, Roadmap Development, Market Research, User Empathy, Customer Satisfaction, A/B Testing, Feature Prioritization, PRDs, Go-to-Market (GTM), Stakeholder Management, KPI Analysis, User Stories.
+- category: Technical Skills
+  skill_list: SDLC, API Design (REST), Cloud Architecture (AWS, Azure, GCP), System Design, Data Modeling, Python, SQL, Tableau, JavaScript, TypeScript, Go, Rust.
+- category: Agile & Methodologies
+  skill_list: Scrum, Kanban, SAFe, Linear, Jira, Confluence, User Story Mapping, Sprint Planning, Retrospectives.
+- category: AI & Analytics
+  skill_list: LLMs (GPT-4o, Claude, Gemini), RAG Architectures, LangChain/LangGraph, Prompt Engineering, Power BI, Amplitude, TensorFlow, PyTorch, Hugging Face.
+- category: Prototyping & Vibe Coding
+  skill_list: Antigravity, Cursor, Windsurf, Replit, v0, Bolt.new, Rapid Prototyping.
+certifications:
+- Certified Scrum Product Owner (CSPO)
+- AWS Certified Cloud Practitioner (In Progress)
+- 'Google: Agile Project Management'
+- Lean Six Sigma Green Belt (LSSGB)
+- 'Google: Data Analytics Specialization'
+- McKinsey.org Forward Program
+- 'Google: Foundation of Project Management'
+- 'Google: Project Initiation: Starting a Successful Project'
+- 'Google: Project Planning: Putting It All Together'

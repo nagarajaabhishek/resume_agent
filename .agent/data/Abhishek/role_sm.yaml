@@ -1,0 +1,76 @@
+name: Abhishek Nagaraja
+contact:
+  location: Arlington, Texas, USA - 76013
+  email: work.abhishekn@gmail.com
+  linkedin_url: https://www.linkedin.com/in/abhisheknagaraja/
+  linkedin_display: linkedin.com/in/abhisheknagaraja
+  website_url: https://www.abhishekn.in/
+  website_display: www.abhishekn.in
+summary: Certified Scrum Master (CSPO) and Agile Practitioner with a strong foundation in Servant Leadership, Stakeholder Networking, and Process Improvement. Proven ability to facilitate Scrum Ceremonies, remove Impediments, and improve Team Velocity by fostering a culture of collaboration. Skilled in leveraging Product Storytelling to align teams and Generative AI for backlog refinement.
+education:
+- school: University of Texas at Arlington
+  location: Arlington, Texas, USA
+  degree: Master of Science in Computer Science
+  dates: Aug 2023 - May 2024
+  details:
+  - Master of Science in Engineering Management \hfill May 2024 - Current
+  url: https://www.uta.edu/
+- school: Jawaharlal Nehru Technological University
+  location: Hyderabad, India
+  degree: Bachelor of Technology in Computer Science and Engineering
+  dates: Aug 2019 - July 2023
+  url: https://www.jntuh.ac.in/
+experience:
+- role: Program Manager Intern
+  company: University of Texas at Arlington
+  location: Texas, USA
+  dates: Oct 2023 - Oct 2025
+  bullets:
+  - Facilitated collaborative Sprint Planning sessions achieving 90% sprint commitment attainment for 'MavMarket' (scaling to 5,000+ users), utilizing Jira for capacity planning and ensuring all backlog items met the Definition of Ready (DoR).
+  - Orchestrated highly focused Daily Stand-ups across 7 workstreams to drive seamless cross-functional alignment, leveraging strategic network building to resolve inter-departmental impediments in real-time and reduced dependency blockers.
+  - Engineered an AI-powered SOP that reduced cycle time by 40%, by automating technical documentation workflows and proactively identifying process bottlenecks to streamline impediments.
+  - Conducted data-driven Sprint Retrospectives for 300+ stakeholders, resulting in a 35% increase in team satisfaction (NPS), by implementing actionable feedback loops and fostering a culture of continuous improvement.
+  - Coached the development team on Agile values and principles, ensuring strict adherence to Scrum ceremonies and significantly improving overall sprint completion rates through servant leadership.
+- role: Business Analyst Intern
+  company: NFC Solutions Private Limited
+  location: Hyderabad, India
+  dates: Apr 2022 - Jan 2023
+  bullets:
+  - Served as Junior Scrum Master for 4 high-priority technical projects, driving a 20% improvement in team velocity by removing non-technical impediments and protecting the development team from scope creep during active sprints.
+  - Accelerated backlog readiness and reduced refinement cycle time, by leveraging Large Language Models (LLMs) to draft comprehensive Acceptance Criteria and assisting the Product Owner in prioritizing high-value user stories according to WSJF.
+  - Managed the sprint board in Jira ensuring 100% visibility of work, by maintaining accurate burndown charts and tracking task progress to facilitate transparent communication with stakeholders.
+  - Coordinated interactive Sprint Reviews and demos to facilitate user feedback sessions, validating feature releases against business requirements and ensuring immediate value delivery.
+  - Collaborated with QA and Dev teams to resolve blockers, ensuring system integration met high-quality standards with zero production defects through rigorous definition of done (DoD) enforcement.
+- role: Founder and Community Lead
+  company: e-DAM Community
+  location: Hyderabad, India
+  dates: Mar 2021 - Jan 2025
+  bullets:
+  - Scaled the technical community to 5,000+ members by adopting an Agile approach to content strategy and building a robust network of student leaders and mentors.
+  - Facilitated community retrospectives as measured by high-value attendee feedback, by using narrative storytelling and active engagement to drive continuous improvement iterations.
+projects:
+- name: 'Thara: Multi-Agent AI Ecosystem'
+  bullets:
+  - Managed the Scrum Board for 11 system components achieving efficient sprint execution, by ensuring clear Acceptance Criteria and visibility for the development team on complex architectural dependencies.
+  - Secured 99.9% system uptime reliability by negotiating Technical Debt remediation during sprint planning, ensuring critical architectural fixes were prioritized in the Product Backlog alongside new feature development.
+  url: https://withthara.com/
+- name: 'Google Maps: Product Teardown'
+  bullets:
+  - Validated roadmap prioritization through 42 user interviews, conducting qualitative research to advocate for high-impact features and help the Product Owner align the backlog with user needs.
+  - Secured stakeholder buy-in through data storytelling, by assisting in Sprint Reviews and demonstrating value increments to key leadership stakeholders.
+  url: https://abhishekn.in/content/google-maps-teardown
+skills:
+- category: Agile Frameworks
+  skill_list: Scrum, Kanban, Lean, XP, SAFe (Concepts).
+- category: Scrum Mastery
+  skill_list: Facilitation, Servant Leadership, Conflict Resolution, Impediment Removal, Backlog Refinement, Retrospectives, Velocity Tracking, Burndown Charts.
+- category: Soft Skills
+  skill_list: Product Storytelling, Network Building, Stakeholder Management, Communication.
+- category: Tools
+  skill_list: Jira, Linear, Confluence, Trello, Asana, Mural, Miro, Slack, Zoom, Microsoft Office (Word, Excel, PowerPoint), Google Workspace (Docs, Sheets).
+- category: AI & Tech
+  skill_list: Generative AI (ChatGPT/Gemini) for Documentation, Predictive Analytics, SDLC, CI/CD, Clerk (Auth), NeonDB.
+certifications:
+- Certified Scrum Product Owner (CSPO)
+- 'Google: Project Management Professional Certificate'
+- 'Google: Agile Project Management'

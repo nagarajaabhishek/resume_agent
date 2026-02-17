@@ -1,0 +1,308 @@
+%----------------------------------------------------------------------------------------
+%   CLASS DEFINITIONS (EMBEDDED RESUME.CLS)
+%----------------------------------------------------------------------------------------
+\documentclass[9pt,letterpaper]{article} % Font size and paper type
+
+\usepackage[parskip]{parskip} % Remove paragraph indentation
+\usepackage{array} % Required for boldface (\bf and \bfseries) tabular columns
+\usepackage{ifthen} % Required for ifthenelse statements
+\usepackage{charter}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage[colorlinks=true, urlcolor=blue]{hyperref}
+\usepackage[left=0.5in,top=0.25in,right=0.4in,bottom=0.2in, columnsep=0.5cm]{geometry}
+% \input{glyphtounicode} % Commented out to prevent errors
+\usepackage[none]{hyphenat}
+\usepackage{multicol}
+
+\pdfgentounicode=1
+\pagestyle{empty} % Suppress page numbers
+
+\makeatletter % Begin internal command redefinitions
+
+%----------------------------------------------------------------------------------------
+%	HEADINGS COMMANDS: Commands for printing name and address
+%----------------------------------------------------------------------------------------
+
+\def \name#1{\def\@name{#1}} % Defines the \name command to set name
+\def \@name {} % Sets \@name to empty by default
+
+\def \addressSep {$\diamond$} % Set default address separator to a diamond
+
+% One, two or three address lines can be specified
+\let \@addressone \relax
+\let \@addresstwo \relax
+\let \@addressthree \relax
+
+% \address command can be used to set the first, second, and third address (last 2 optional)
+\def \address #1{
+  \@ifundefined{@addresstwo}{
+    \def \@addresstwo {#1}
+  }{
+  \@ifundefined{@addressthree}{
+  \def \@addressthree {#1}
+  }{
+     \def \@addressone {#1}
+  }}
+}
+
+% \printaddress is used to style an address line (given as input)
+\def \printaddress #1{
+  \begingroup
+    \def \\ {\addressSep\ }
+    \centerline{#1}
+  \endgroup
+  \par
+}
+
+% \printname is used to print the name as a page header
+\def \printname {
+  \begingroup
+    \hfil{{\namesize\bf \@name}}\hfil
+    \nameskip\break
+  \endgroup
+}
+
+%----------------------------------------------------------------------------------------
+%	PRINT THE HEADING LINES
+%----------------------------------------------------------------------------------------
+
+\let\ori@document=\document
+\renewcommand{\document}{
+  \ori@document  % Begin document
+  \printname % Print the name specified with \name
+  \@ifundefined{@addressone}{}{ % Print the first address if specified
+    \printaddress{\@addressone}}
+  \@ifundefined{@addresstwo}{}{ % Print the second address if specified
+    \printaddress{\@addresstwo}}
+     \@ifundefined{@addressthree}{}{ % Print the third address if specified
+    \printaddress{\@addressthree}}
+}
+
+%----------------------------------------------------------------------------------------
+%	SECTION FORMATTING
+%----------------------------------------------------------------------------------------
+
+% Defines the rSection environment for the large sections within the CV
+\newenvironment{rSection}[1]{ % 1 input argument - section name
+  \sectionskip
+ \textbf{\Large #1} % Section title
+  \sectionlineskip
+  \hrule % Horizontal line
+  \begin{list}{}{ % List for each individual item in the section
+    \setlength{\leftmargin}{-0em} % Margin within the section
+  }
+  \item[]
+}{
+  \end{list}
+}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE FORMATTING
+%----------------------------------------------------------------------------------------
+
+\newenvironment{rSubsection}[4]{ % 4 input arguments - company name, year(s) employed, job title and location
+ {\bf #1} \hfill {#2} % Bold company name and date on the right
+ \ifthenelse{\equal{#3}{}}{}{ % If the third argument is not specified, don't print the job title and location line
+  \\
+  {\em #3} \hfill {\em #4} % Italic job title and location
+  }\smallskip
+  \begin{list}{$\cdot$}{\leftmargin=0em} % \cdot used for bullets, no indentation
+   \itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
+  }{
+  \end{list}
+  \vspace{0em} % Some space after the list of bullet points
+}
+
+% The below commands define the whitespace after certain things in the document - they can be \smallskip, \medskip or \bigskip
+\def\namesize{\huge} % Size of the name at the top of the document
+\def\addressskip{} % The space between the two address (or phone/email) lines
+\def\sectionlineskip{\smallskip} % The space above the horizontal line for each section 
+\def\nameskip{\vspace{-0.5em}} % The space after your name at the top
+\def\sectionskip{} % The space after the heading section
+
+\makeatother % End internal command redefinitions
+
+%----------------------------------------------------------------------------------------
+%   DOCUMENT START
+%----------------------------------------------------------------------------------------
+\name{ Abhishek Nagaraja \vspace{.2em} \hrule}
+
+\address{ Arlington, Texas, USA - 76013 \textbullet\ work.abhishekn@gmail.com \textbullet\ \href{ https://www.linkedin.com/in/abhisheknagaraja/ }{ linkedin.com/in/abhisheknagaraja } \textbullet\ \href{ https://www.abhishekn.in/ }{ www.abhishekn.in }}
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%   SUMMARY
+%----------------------------------------------------------------------------------------
+Product \& Growth Professional specializing in GTM Strategy, Community Building, and Technical Product Marketing. Expert in orchestrating two-sided marketplace launches and bridging the gap between engineering innovation and commercial adoption. Proven ability to drive user acquisition, optimize revenue operations, and build thriving technical communities.
+
+
+%----------------------------------------------------------------------------------------
+%   EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Education}
+
+\begin{rSubsection}{ University of Texas at Arlington }{ Arlington, Texas, USA }{\textbf{ Master of Science in Computer Science }}{ Aug 2023 - May 2024 }
+
+
+\item Master of Science in Engineering Management \hfill May 2024 - Current
+
+
+\end{rSubsection}
+
+\begin{rSubsection}{ Jawaharlal Nehru Technological University }{ Hyderabad, India }{\textbf{ Bachelor of Technology in Computer Science and Engineering }}{ Aug 2019 - July 2023 }
+
+\item[] \vspace{-1em}
+
+\end{rSubsection}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%   WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Work Experience}
+
+
+\begin{rSubsection}
+{ Program Manager Intern, University of Texas at Arlington }{ October 2023 - Present }{ Texas, USA }{}
+\item[] \vspace{-0.5em}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+
+\item Orchestrated the Go-to-Market (GTM) strategy for 'MavMarket', scaling a two-sided marketplace to 5,000+ attendees and 200+ vendors, by identifying key user personas and executing a multi-channel acquisition campaign.
+
+\item Generated \$120,000 in collective revenue through data-driven vendor recruitment and strategic pricing optimization, analyzing historical transaction data to identify high-value segments and maximize vendor retention.
+
+\item Drove User Acquisition \& Engagement by designing feedback loops for 300+ stakeholders, increasing vendor NPS by 35\%, by implementing a real-time sentiment analysis dashboard that informed rapid product iteration cycles.
+
+\item Optimized Revenue Operations by architecting a 50+ page, AI-powered SOP, reducing event planning overhead by 40\% and streamlining cross-functional workflows to ensure consistent execution across all marketplace touchpoints.
+
+\item Led Community Growth for the Entrepreneurship Club, growing active membership to 100+ through targeted outreach, by developing a 'Founder First' content strategy that resonated with the university's aspiring builder demographic.
+
+\item Facilitated Product Storytelling workshops to align technical workstreams with market-facing value propositions, ensuring that engineering features were translated into compelling user benefits for external stakeholders.
+
+\end{itemize}
+\end{rSubsection}
+
+\begin{rSubsection}
+{ Founder and Community Lead, e-DAM Community }{ March 2021 - January 2025 }{ Hyderabad, India }{}
+\item[] \vspace{-0.5em}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+
+\item Engineered a Community-Led Growth engine, scaling the Hyderabad Technical Community to 5,000+ students, by creating a viral loop of peer-to-peer referral incentives and high-value exclusive content drops.
+
+\item Delivered 200+ technical sessions and workshops to drive brand awareness and facilitate peer-to-peer learning, establishing e-DAM as the premier destination for upskilling in the regional student developer ecosystem.
+
+\item Executed Strategic Partnerships with 7+ institutions, fostering a talent pipeline and generating 50+ internships, by negotiating mutually beneficial MOUs that aligned corporate hiring needs with student skill development.
+
+\item Managed Brand \& Event Strategy for 'Social Media Summit 2023', securing Rs. 4,00,000+ in sponsorship and 500+ attendees, by crafting a compelling sponsorship deck that highlighted audience demographics and engagement metrics.
+
+\item Launched the 'e-DAM Spotlight' podcast to amplify founder stories, driving engagement across the startup ecosystem, by curating a diverse guest list of regional innovators to inspire the next generation of builders.
+
+\item Built a robust network of 10+ influencers and industry mentors to support community initiatives and growth, leveraging their social reach to amplify campaign messaging and attract high-quality speakers.
+
+\end{itemize}
+\end{rSubsection}
+
+\begin{rSubsection}
+{ Business Analyst Intern, NFC Solutions Private Limited }{ April 2022 - January 2023 }{ Hyderabad, India }{}
+\item[] \vspace{-0.5em}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+
+\item Managed Client Delivery for 4 high-priority projects, authoring detailed PRDs to align engineering with business goals, ensuring that all functional requirements were mapped directly to client success metrics.
+
+\item Enhanced Operational Efficiency by 20\% as Scrum Master, implementing Lean-Agile workflows for faster time-to-market, by removing process bottlenecks and optimizing sprint ceremonies for maximum team velocity.
+
+\item Optimized the Customer Journey for an e-commerce platform, overseeing order lifecycles and backend integrations, by mapping the end-to-end user flow to identify high-friction drop-off points and implement UX improvements.
+
+\item Conducted Market Research and user requirement gathering sessions to inform feature prioritization and roadmap planning, synthesizing key qualitative insights into actionable user stories for the development team.
+
+\item Drafted Technical Whitepapers and documentation to support the GTM rollout of new platform capabilities, translating complex technical specifications into accessible marketing collateral for non-technical decision makers.
+
+\item Collaborated with QA and Sales teams to ensure product releases met high-quality standards and market expectations, facilitating knowledge transfer sessions to enable sales readiness for new feature launches.
+
+\end{itemize}
+\end{rSubsection}
+
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%   PROJECTS
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Projects}
+
+
+\begin{rSubsection}{ Thara: AI Personal Agent Ecosystem }{}{}{}
+\item[] \vspace{-0.5em}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+
+\item Defined the Product Vision \& Value Proposition for a multi-agent AI ecosystem, targeting the personal productivity market by addressing the fragmentation of task and habit tracking.
+
+\item Validated Technical Feasibility by prototyping the core infrastructure (LangGraph/FastAPI), ensuring the product roadmap was grounded in realistic engineering constraints.
+
+\end{itemize}
+\end{rSubsection}
+
+\begin{rSubsection}{ Google Maps: Product Strategy Teardown }{}{}{}
+\item[] \vspace{-0.5em}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+
+\item Conducted Market Analysis involving 42 user interviews, identifying a critical gap in menu accuracy and dietary filtering that caused platform drop-off.
+
+\item Formulated a Strategic Roadmap to capture a high-value market segment by proposing a centralized menu system, directly addressing verified user pain points.
+
+\end{itemize}
+\end{rSubsection}
+
+\begin{rSubsection}{ Clash of Clans: Growth Strategy Teardown }{}{}{}
+\item[] \vspace{-0.5em}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+
+\item Developed a Growth Strategy to drive 5-10\% organic user acquisition by proposing a native social sharing feature, validated by quantitative player behavior analysis.
+
+\item Projected a 15-20\% increase in conversion (join rates) by redesigning the Clan Discovery engine to improve user onboarding and community discovery.
+
+\end{itemize}
+\end{rSubsection}
+
+
+\end{rSection}
+
+
+%----------------------------------------------------------------------------------------
+%   SKILLS
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Skills}
+\item[] \vspace{-0.5em}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+
+    \item \textbf{ GTM \& Strategy:} Go-to-Market Strategy, Product Positioning, User Acquisition, Community-Led Growth, Competitive Analysis.
+
+    \item \textbf{ Growth Engineering:} n8n (Workflow Automation), Python (Scripting), SQL, Zapier, API Integration, Cursor IDE.
+
+    \item \textbf{ Content \& Operations:} Technical Writing, Notion (SOPs), Figma (Assets), Brand Strategy, Event Management.
+
+    \item \textbf{ Analytics \& Research:} Market Research, User Interviews, NPS Analysis, A/B Testing, Google Analytics.
+
+\end{itemize}
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%   CERTIFICATIONS
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Certifications}
+\item[] \vspace{-1em}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+
+\item Certified Scrum Product Owner (CSPO)
+
+\item AWS Certified Cloud Practitioner (In Progress)
+
+\item Google: Data Analytics Specialization
+
+\end{itemize}
+\end{rSection}
+
+\end{document}

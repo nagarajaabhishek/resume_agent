@@ -1,0 +1,250 @@
+%----------------------------------------------------------------------------------------
+%   CLASS DEFINITIONS (EMBEDDED RESUME.CLS)
+%----------------------------------------------------------------------------------------
+\documentclass[9pt,letterpaper]{article} % Font size and paper type
+
+\usepackage[parfill]{parskip} % Remove paragraph indentation
+\usepackage{array} % Required for boldface (\bf and \bfseries) tabular columns
+\usepackage{ifthen} % Required for ifthenelse statements
+\usepackage{charter}
+\usepackage{enumitem}
+\usepackage{xcolor} 
+\usepackage[colorlinks=true, urlcolor=blue]{hyperref}
+\usepackage[left=0.5in,top=0.25in,right=0.4in,bottom=0.2in, columnsep=0.5cm]{geometry} 
+\input{glyphtounicode}
+\usepackage[none]{hyphenat}
+\usepackage{multicol}
+
+\pdfgentounicode=1
+\pagestyle{empty} % Suppress page numbers
+
+\makeatletter % Begin internal command redefinitions
+
+%----------------------------------------------------------------------------------------
+%	HEADINGS COMMANDS: Commands for printing name and address
+%----------------------------------------------------------------------------------------
+
+\def \name#1{\def\@name{#1}} % Defines the \name command to set name
+\def \@name {} % Sets \@name to empty by default
+
+\def \addressSep {$\diamond$} % Set default address separator to a diamond
+
+% One, two or three address lines can be specified 
+\let \@addressone \relax
+\let \@addresstwo \relax
+\let \@addressthree \relax
+
+% \address command can be used to set the first, second, and third address (last 2 optional)
+\def \address #1{
+  \@ifundefined{@addresstwo}{
+    \def \@addresstwo {#1}
+  }{
+  \@ifundefined{@addressthree}{
+  \def \@addressthree {#1}
+  }{
+     \def \@addressone {#1}
+  }}
+}
+
+% \printaddress is used to style an address line (given as input)
+\def \printaddress #1{
+  \begingroup
+    \def \\ {\addressSep\ }
+    \centerline{#1}
+  \endgroup
+  \par
+}
+
+% \printname is used to print the name as a page header
+\def \printname {
+  \begingroup
+    \hfil{{\namesize\bf \@name}}\hfil
+    \nameskip\break
+  \endgroup
+}
+
+%----------------------------------------------------------------------------------------
+%	PRINT THE HEADING LINES
+%----------------------------------------------------------------------------------------
+
+\let\ori@document=\document
+\renewcommand{\document}{
+  \ori@document  % Begin document
+  \printname % Print the name specified with \name
+  \@ifundefined{@addressone}{}{ % Print the first address if specified
+    \printaddress{\@addressone}}
+  \@ifundefined{@addresstwo}{}{ % Print the second address if specified
+    \printaddress{\@addresstwo}}
+     \@ifundefined{@addressthree}{}{ % Print the third address if specified
+    \printaddress{\@addressthree}}
+}
+
+%----------------------------------------------------------------------------------------
+%	SECTION FORMATTING
+%----------------------------------------------------------------------------------------
+
+% Defines the rSection environment for the large sections within the CV
+\newenvironment{rSection}[1]{ % 1 input argument - section name
+  \sectionskip
+ \textbf{\Large #1} % Section title
+  \sectionlineskip
+  \hrule % Horizontal line
+  \begin{list}{}{ % List for each individual item in the section
+    \setlength{\leftmargin}{-0em} % Margin within the section
+  }
+  \item[]
+}{
+  \end{list}
+}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE FORMATTING
+%----------------------------------------------------------------------------------------
+
+\newenvironment{rSubsection}[4]{ % 4 input arguments - company name, year(s) employed, job title and location
+ {\bf #1} \hfill {#2} % Bold company name and date on the right
+ \ifthenelse{\equal{#3}{}}{}{ % If the third argument is not specified, don't print the job title and location line
+  \\
+  {\em #3} \hfill {\em #4} % Italic job title and location
+  }\smallskip
+  \begin{list}{$\cdot$}{\leftmargin=0em} % \cdot used for bullets, no indentation
+   \itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
+  }{
+  \end{list}
+  \vspace{0em} % Some space after the list of bullet points
+}
+
+% The below commands define the whitespace after certain things in the document - they can be \smallskip, \medskip or \bigskip
+\def\namesize{\huge} % Size of the name at the top of the document
+\def\addressskip{} % The space between the two address (or phone/email) lines
+\def\sectionlineskip{\smallskip} % The space above the horizontal line for each section 
+\def\nameskip{\vspace{-0.5em}} % The space after your name at the top
+\def\sectionskip{} % The space after the heading section
+
+\makeatother % End internal command redefinitions
+
+%----------------------------------------------------------------------------------------
+%   DOCUMENT START
+%----------------------------------------------------------------------------------------
+\name{Abhishek Nagaraja, (CSPO) \vspace{.2em} \hrule}
+
+\address{Arlington, Texas, USA \textbullet\ work.abhishekn@gmail.com \textbullet\ {\href{https://www.abhishekn.in}{www.abhishekn.in}} \textbullet\ {\href{https://linkedin.com/in/abhisheknagaraja}{linkedin.com/in/abhisheknagaraja}}}
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%   SUMMARY
+%----------------------------------------------------------------------------------------
+Certified \textbf{Product Owner (CSPO)} with a track record of driving \textbf{Agile Product Delivery} and \textbf{Backlog Management}. Expert in translating business needs into actionable \textbf{User Stories} and technical requirements. Skilled in facilitating Scrum ceremonies and leveraging \textbf{Agentic Workflows} and \textbf{Generative AI} to accelerate product velocity and automate discovery at scale.
+
+\begin{rSection}{Education}
+\begin{rSubsection}{University of Texas at Arlington}{Arlington, Texas, USA}{\textbf{Master of Science in Computer Science}}{Aug 2023 - May 2024}
+\item \textbf{Master of Science in Engineering Management} \hfill May 2024 - Current
+\end{rSubsection}
+
+\begin{rSubsection}{Jawaharlal Nehru Technological University}{Hyderabad, India}{\textbf{Bachelor of Technology in Computer Science and Engineering}}{Aug 2019 - July 2023}
+\item[] \vspace{-1em}
+\end{rSubsection}
+\end{rSection}
+
+
+%----------------------------------------------------------------------------------------
+%   WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Work Experience}
+
+\begin{rSubsection}
+{Program Manager Intern, University of Texas at Arlington - Texas, USA}{October 2023 - October 2025}{}{}
+\item[] \vspace{-0.5em}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+\item \textbf{Orchestrated the end-to-end product lifecycle} for ‘MavMarket’, scaling the two-sided campus marketplace to \textbf{5,000+ users and 200+ active vendors} by executing a comprehensive Go-to-Market (GTM) strategy and vendor acquisition roadmap.
+\item \textbf{Led a cross-functional agile team} of 7 (Engineers, Designers, Marketing) using \textbf{Jira} for sprint planning and backlog refinement, maintaining high velocity through rigorous acceptance criteria definition and impediment removal.
+\item \textbf{Architected a data-driven feedback loop} effectively improving stakeholder satisfaction by \textbf{35\% (NPS)}, by visualizing actionable insights through \textbf{Power BI dashboards} and iterating on product features based on user sentiment.
+\item \textbf{Engineered automated departmental workflows} achieving a \textbf{40\% reduction in operational overhead}, by deploying \textbf{Gemini-powered SOPs} and custom validation scripts to streamline manual administrative processes.
+\item \textbf{Spearheaded strategic business development} securing \textbf{\$4,000 in recurring sponsorship} and onboarding 24 local founders, by establishing value-driven corporate partnerships that ensured the ecosystem's financial sustainability.
+\item \textbf{Aligned the product roadmap} with university strategic goals by collaborating with campus leadership, ensuring long-term program viability and securing executive buy-in for key feature expansions.
+\end{itemize}
+\end{rSubsection}
+
+\begin{rSubsection}
+{Business Analyst Intern, NFC Solutions Private Limited - Hyderabad, India}{April 2022 - January 2023}{}{}
+\item[] \vspace{-0.5em}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+\item \textbf{Stabilized critical system architecture} for 4 high-priority projects by authoring comprehensive \textbf{Business Requirement Documents (BRDs)} and \textbf{API specifications}, serving as the primary bridge between business stakeholders and technical teams.
+\item \textbf{Boosted development velocity by 20\%} as measured by sprint metrics, by serving as \textbf{Junior Scrum Master}, applying Lean-Agile principles to remove blockers, and facilitating efficient daily stand-ups.
+\item \textbf{Optimized order lifecycle integrity} for an e-commerce platform by overseeing complex \textbf{API integrations} and pricing logic, ensuring data consistency and reducing transaction errors during peak load.
+\item \textbf{Orchestrated rigorous UAT sessions} and coordinated sign-offs between technical teams and business stakeholders, ensuring \textbf{zero production defects} by strictly enforcing the Definition of Done (DoD).
+\item \textbf{Streamlined CRM workflows} by mapping 'As-Is' and 'To-Be' business processes to identify automation opportunities, resulting in reduced manual data entry and improved operational efficiency.
+\end{itemize}
+\end{rSubsection}
+
+\begin{rSubsection}
+{Founder and Community Lead, e-DAM Community - Hyderabad, India}{March 2021 - January 2025}{}{}
+\item[] \vspace{-0.5em}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+\item \textbf{Engineered a community-led growth engine} scaling the ecosystem to \textbf{5,000+ members}, by implementing targeted outreach campaigns and value-driven engagement strategies that positioned the community as a premier technical hub.
+\item \textbf{Directed the full event lifecycle} for 200+ technical workshops, managing content strategy to post-event analysis, ensuring high attendee retention and consistent delivery of high-quality educational material.
+\item \textbf{Validated product-market fit} for a \textbf{custom ERP solution} across 20+ institutions, by leading user research workstreams and synthesizing feedback into actionable technical requirements for system integration.
+\item \textbf{Delivered the 'Social Media Summit 2023'} architecting 8 parallel content tracks for \textbf{500+ attendees}, securing \textbf{Rs. 4,00,000+ in sponsorship} through strategic vendor negotiations and high-value partnership proposals.
+\item \textbf{Built a robust talent pipeline} connecting \textbf{50+ students with internships}, by initiating strategic corporate partnerships and defining technical project scopes that aligned student skills with industry needs.
+\end{itemize}
+\end{rSubsection}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%   PROJECTS
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Projects}
+
+\begin{rSubsection}{Thara: Multi-Agent AI Ecosystem}{}{}{}
+\item[] \vspace{-0.5em}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+\item \textbf{Architected streamlined development workflows} as measured by \textbf{actionable User Stories for 11 components}, by defining and prioritizing the Product Backlog to ensure clear developer understanding of complex AI agent interactions.
+\item \textbf{Operated as Technical Product Owner} during sprint execution ensuring \textbf{99.9\% system stability}, by managing automated validation scripts for Cloud and Backend workstreams and prioritizing technical debt reduction.
+\end{itemize}
+\end{rSubsection}
+
+\begin{rSubsection}{Google Maps: Product Teardown}{}{}{}
+\item[] \vspace{-0.5em}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+\item \textbf{Prioritized high-impact features} verified by \textbf{42 user interviews}, by translating qualitative feedback into prioritized Epics focused on "Menu Accuracy" and aligning the roadmap with critical user pain points.
+\item \textbf{Secured executive stakeholder buy-in} achieving \textbf{roadmap approval}, by developing a robust business case for a centralized menu management system and calculating projected ROI.
+\end{itemize}
+\end{rSubsection}
+
+\begin{rSubsection}{Clash of Clans: Product Teardown}{}{}{}
+\item[] \vspace{-0.5em}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+\item \textbf{Spurred targeted user growth} achieving a \textbf{5-10\% acquisition increase}, by prioritizing features based on quantitative impact analysis of social sharing workflows and optimizing the viral loop mechanics.
+\end{itemize}
+\end{rSubsection}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%   SKILLS
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Skills and Tools}
+\item[] \vspace{-0.5em}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+    \item \textbf{Product Management (Methodologies):} Roadmap Development, \textbf{Backlog Refinement (DoR)}, User Story Mapping, Feature Prioritization (\textbf{RICE/MoSCoW}), GTM Strategy, \textbf{A/B Testing}, Market Research, \textbf{Product Discovery}.
+    \item \textbf{Agile \& Leadership (Strategy):} Scrum Facilitation, Kanban, \textbf{Lean Methodologies}, Stakeholder Management, Servant Leadership, Team Building, \textbf{Conflict Resolution}.
+    \item \textbf{Cloud \& DevOps (Tools/Concepts):} \textbf{AWS (S3, EC2, Lambda)}, Docker, Terraform (IaC), Kubernetes, \textbf{CI/CD Pipelines}, API Integration, SQL, Python.
+    \item \textbf{Project Tools:} \textbf{Jira}, \textbf{Linear}, Confluence, Asana, Miro, Notion, Figma | \textbf{BI/Analytics}: \textbf{Power BI}, Tableau, Google Analytics, Excel.
+    \item \textbf{AI \& Automation (Enhancement):} \textbf{AI Product Strategy}, \textbf{Gemini}, \textbf{GPT-4o}, \textbf{n8n Workflows}, Prompt Engineering, \textbf{Multi-Agent Systems}, \textbf{Automated Discovery Analysis}.
+\end{itemize}
+\end{rSection}
+
+\begin{rSection}{Certification}
+\item[] \vspace{-1em}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+\item Certified Scrum Product Owner (CSPO)
+\item Lean Six Sigma Green Belt
+\item Google: Foundation of Project Management
+\item McKinsey.org Forward Program
+\end{itemize}
+\end{rSection}
+
+
+\end{document}

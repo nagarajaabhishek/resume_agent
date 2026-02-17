@@ -1,0 +1,338 @@
+%----------------------------------------------------------------------------------------
+%   CLASS DEFINITIONS (EMBEDDED RESUME.CLS)
+%----------------------------------------------------------------------------------------
+\documentclass[9pt,letterpaper]{article} % Font size and paper type
+
+\usepackage[parskip]{parskip} % Remove paragraph indentation
+\usepackage{array} % Required for boldface (\bf and \bfseries) tabular columns
+\usepackage{ifthen} % Required for ifthenelse statements
+\usepackage{charter}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage[colorlinks=true, urlcolor=blue]{hyperref}
+\usepackage[left=0.5in,top=0.25in,right=0.4in,bottom=0.2in, columnsep=0.5cm]{geometry}
+% \input{glyphtounicode} % Commented out to prevent errors
+\usepackage[none]{hyphenat}
+\usepackage{multicol}
+
+\pdfgentounicode=1
+\pagestyle{empty} % Suppress page numbers
+
+\makeatletter % Begin internal command redefinitions
+
+%----------------------------------------------------------------------------------------
+%	HEADINGS COMMANDS: Commands for printing name and address
+%----------------------------------------------------------------------------------------
+
+\def \name#1{\def\@name{#1}} % Defines the \name command to set name
+\def \@name {} % Sets \@name to empty by default
+
+\def \addressSep {$\diamond$} % Set default address separator to a diamond
+
+% One, two or three address lines can be specified
+\let \@addressone \relax
+\let \@addresstwo \relax
+\let \@addressthree \relax
+
+% \address command can be used to set the first, second, and third address (last 2 optional)
+\def \address #1{
+  \@ifundefined{@addresstwo}{
+    \def \@addresstwo {#1}
+  }{
+  \@ifundefined{@addressthree}{
+  \def \@addressthree {#1}
+  }{
+     \def \@addressone {#1}
+  }}
+}
+
+% \printaddress is used to style an address line (given as input)
+\def \printaddress #1{
+  \begingroup
+    \def \\ {\addressSep\ }
+    \centerline{#1}
+  \endgroup
+  \par
+}
+
+% \printname is used to print the name as a page header
+\def \printname {
+  \begingroup
+    \hfil{{\namesize\bf \@name}}\hfil
+    \nameskip\break
+  \endgroup
+}
+
+%----------------------------------------------------------------------------------------
+%	PRINT THE HEADING LINES
+%----------------------------------------------------------------------------------------
+
+\let\ori@document=\document
+\renewcommand{\document}{
+  \ori@document  % Begin document
+  \printname % Print the name specified with \name
+  \@ifundefined{@addressone}{}{ % Print the first address if specified
+    \printaddress{\@addressone}}
+  \@ifundefined{@addresstwo}{}{ % Print the second address if specified
+    \printaddress{\@addresstwo}}
+     \@ifundefined{@addressthree}{}{ % Print the third address if specified
+    \printaddress{\@addressthree}}
+}
+
+%----------------------------------------------------------------------------------------
+%	SECTION FORMATTING
+%----------------------------------------------------------------------------------------
+
+% Defines the rSection environment for the large sections within the CV
+\newenvironment{rSection}[1]{ % 1 input argument - section name
+  \sectionskip
+ \textbf{\Large #1} % Section title
+  \sectionlineskip
+  \hrule % Horizontal line
+  \begin{list}{}{ % List for each individual item in the section
+    \setlength{\leftmargin}{-0em} % Margin within the section
+  }
+  \item[]
+}{
+  \end{list}
+}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE FORMATTING
+%----------------------------------------------------------------------------------------
+
+\newenvironment{rSubsection}[4]{ % 4 input arguments - company name, year(s) employed, job title and location
+ {\bf #1} \hfill {#2} % Bold company name and date on the right
+ \ifthenelse{\equal{#3}{}}{}{ % If the third argument is not specified, don't print the job title and location line
+  \\
+  {\em #3} \hfill {\em #4} % Italic job title and location
+  }\smallskip
+  \begin{list}{$\cdot$}{\leftmargin=0em} % \cdot used for bullets, no indentation
+   \itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
+  }{
+  \end{list}
+  \vspace{0em} % Some space after the list of bullet points
+}
+
+% The below commands define the whitespace after certain things in the document - they can be \smallskip, \medskip or \bigskip
+\def\namesize{\huge} % Size of the name at the top of the document
+\def\addressskip{} % The space between the two address (or phone/email) lines
+\def\sectionlineskip{\smallskip} % The space above the horizontal line for each section 
+\def\nameskip{\vspace{-0.5em}} % The space after your name at the top
+\def\sectionskip{} % The space after the heading section
+
+\makeatother % End internal command redefinitions
+
+%----------------------------------------------------------------------------------------
+%   DOCUMENT START
+%----------------------------------------------------------------------------------------
+\name{ Abhishek Nagaraja \vspace{.2em} \hrule}
+
+\address{ Arlington, Texas, USA - 76013 \textbullet\ work.abhishekn@gmail.com \textbullet\ \href{ https://www.linkedin.com/in/abhisheknagaraja/ }{ linkedin.com/in/abhisheknagaraja } \textbullet\ \href{ https://www.abhishekn.in/ }{ www.abhishekn.in }}
+
+
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%   SUMMARY
+%----------------------------------------------------------------------------------------
+Technical Program Manager specializing in AI/ML Infrastructure and Scalable Systems with a background in Computer Science. Expert in architecting Multi-Agent Systems, reducing Operational Overhead, and driving Cross-Functional Alignment across engineering and business teams. Proficient in Cloud Architecture (AWS), API Design, and Agile Delivery to ship high-reliability products.
+
+%----------------------------------------------------------------------------------------
+%   EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+%   EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Education}
+
+\begin{rSubsection}{ \href{https://www.uta.edu/}{University of Texas at Arlington} }{ Arlington, Texas, USA }{\textbf{ Master of Science in Computer Science }}{ August 2023 - May 2024 }
+
+
+{\textbf{Master of Science in Engineering Management}}\hfill{May 2024 - Current}
+
+
+
+
+
+\end{rSubsection}
+
+\begin{rSubsection}{ \href{https://www.jntuh.ac.in/}{Jawaharlal Nehru Technological University} }{ Hyderabad, India }{\textbf{ Bachelor of Technology in Computer Science and Engineering }}{ August 2019 - July 2023 }
+
+
+
+\item[] \vspace{-1em}
+
+
+\end{rSubsection}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%   WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+%   MACROS FOR SECTIONS
+%----------------------------------------------------------------------------------------
+
+
+
+
+%----------------------------------------------------------------------------------------
+%   BODY SECTIONS (ORDERING)
+%----------------------------------------------------------------------------------------
+
+    
+\begin{rSection}{Work Experience}
+
+\begin{rSubsection}
+{ Program Manager Intern, MavMarket, Arlington, Texas, USA }{ October 2023 - October 2025 }{}{}
+\item[] \vspace{-0.5em}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+
+\item Founded and managed the end-to-end product lifecycle for 'MavMarket', scaling the event to 200+ vendors and 5,000+ attendees while generating \$120,000 in revenue, by executing a comprehensive vendor acquisition strategy and operational roadmap.
+
+\item Improved stakeholder NPS by 35\% and engagement by 25\% by designing and executing a feedback system for 100+ vendors and 200+ attendees, analyzing quantitative and qualitative data to identify and resolve key operational friction points.
+
+\item Reduced event planning time by 40\% by architecting a 50+ page, AI-powered Standard Operating Procedure (SOP) in Gemini that improved organizational efficiency and delivered a consistent user experience for MavMarket.
+
+\item Grew the university’s Entrepreneurship Club from 100+ active members by founding the organization, leading a 10-member executive board, and facilitating over 20 workshops to foster a thriving student innovation ecosystem.
+
+\item Enhanced community engagement for the local '1 Million Cups' chapter by successfully attracting and onboarding 24 local founders through targeted go-to-market strategies and high-value networking events.
+
+\end{itemize}
+\end{rSubsection}
+
+\begin{rSubsection}
+{ Business Analyst Intern, NFC Solutions Private Limited, Hyderabad, India }{ April 2022 - January 2023 }{}{}
+\item[] \vspace{-0.5em}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+
+\item Authored Product Requirement Documents (PRDs) and managed task delegation as Project Manager for 4 key projects, serving as the primary bridge between business stakeholders and technical teams to ensure on-time delivery between Design, Dev, and QA teams.
+
+\item Improved development efficiency by 20\% by serving as Scrum Master, applying Lean principles within an Agile framework to streamline workflows and daily scrums, reducing blockers and accelerating sprint velocity.
+
+\item Owned the end-to-end order lifecycle for an e-commerce platform to improve customer satisfaction and operational efficiency, overseeing inventory management, dynamic pricing logic components, and post-sale support workflows.
+
+\end{itemize}
+\end{rSubsection}
+
+\begin{rSubsection}
+{ Founder and Community Lead, e-DAM Community, Hyderabad, India }{ March 2021 - January 2025 }{}{}
+\item[] \vspace{-0.5em}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+
+\item Spearheaded community growth to 5,000+ members by performing Market Analysis and building a strategic network of industry partners, orchestrating 200+ technical workshops to foster a thriving developer ecosystem in Hyderabad.
+
+\item Iterated on technical curriculum content based on high-value attendee satisfaction metrics, collecting feedback and using narrative data to continuously improve learning outcomes and drive engagement for the \#100DaysOfTech program.
+
+\end{itemize}
+\end{rSubsection}
+
+\end{rSection}
+
+    
+\begin{rSection}{Projects}
+
+
+\begin{rSubsection}{ \href{https://withthara.com/}{Thara: Multi-Agent AI Ecosystem} }{}{}{}
+
+\item[] \vspace{-0.5em}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+
+\item Architected a scalable Multi-Agent AI infrastructure enabling 11 specialized autonomous agents to orchestrate complex workflows by engineering a LangGraph-based state machine synchronized with a FastAPI backend and PostgreSQL.
+
+\item Revolutionized the personal productivity experience by automating the holistic tracking of tasks, habits, and 'Ikigai' alignment by developing the 'Thara' ecosystem that combines proactive AI coaching with real-time behavioral pattern recognition.
+
+\end{itemize}
+\end{rSubsection}
+
+
+\begin{rSubsection}{ \href{https://abhishekn.in/content/google-maps-teardown}{Google Maps: Product Strategy} }{}{}{}
+
+\item[] \vspace{-0.5em}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+
+\item Translated qualitative data from 42 user interviews into two core problem statements, revealing a critical user need for guaranteed menu accuracy and granular dietary filters to reduce platform drop-off.
+
+\item Architected a product strategy to directly address validated user needs, proposing a roadmap for a centralized menu system with granular filtering to capture the high-value market segment with critical dietary requirements.
+
+\end{itemize}
+\end{rSubsection}
+
+
+\begin{rSubsection}{ \href{https://abhishekn.in/content/clash-of-clans-teardown}{Clash of Clans: Growth Strategy} }{}{}{}
+
+\item[] \vspace{-0.5em}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+
+\item Proposed a viral growth strategy driving 5-10\% new organic user acquisition by creating a native social sharing feature for key in-game content, a recommendation validated by quantitative user research.
+
+\item Projected a 15-20\% increase in join rates and 20-30\% increase in feature adoption by designing a revamped Clan Discovery engine and transforming the 'Social' tab into a dynamic feed.
+
+\end{itemize}
+\end{rSubsection}
+
+
+\begin{rSubsection}{ \href{https://abhishekn.in/content/splitwise-teardown}{Split-Wiser: AI Expense Tool} }{}{}{}
+
+\item[] \vspace{-0.5em}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+
+\item Reduced manual expense splitting time by 76\% (4.75 hours/month) and validated product stability by monitoring and validating the application in a pre-production environment, and by probing, isolating, and troubleshooting reported issues.
+
+\item Enabled fair and precise expense splitting by applying context engineering to design a conversational AI agent, building a CustomGPT that accurately parses unstructured data (PDFs, receipts) and guides users through a 12-step verification workflow.
+
+\end{itemize}
+\end{rSubsection}
+
+\end{rSection}
+
+
+
+
+%----------------------------------------------------------------------------------------
+%   SKILLS
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Skills}
+\item[] \vspace{-0.5em}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+
+    \item \textbf{ Technical Program Management:} SDLC, CI/CD Pipelines, API Design (REST), Cloud Architecture (AWS), System Design, Data Modeling, Requirement Engineering, Release Management.
+
+    \item \textbf{ Agile \& Methodologies:} Scrum, Kanban, SAFe, Linear, Jira, Confluence, User Story Mapping, Sprint Planning, Retrospectives.
+
+    \item \textbf{ DevOps \& Infrastructure:} Docker, Kubernetes (K8s) concepts, Terraform (IaC), GitHub Actions, PostgreSQL, MongoDB.
+
+    \item \textbf{ AI \& Analytics:} LLMs (GPT-4o, Claude, Gemini), RAG Architectures, LangChain/LangGraph, Prompt Engineering, Python (Pandas, NumPy), Power BI, Tableau.
+
+    \item \textbf{ Languages:} Python, SQL, JavaScript/TypeScript, HTML/CSS.
+
+\end{itemize}
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%   CERTIFICATIONS
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Certifications}
+\item[] \vspace{-1em}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+
+\item Certified Scrum Product Owner (CSPO)
+
+\item AWS Certified Cloud Practitioner (In Progress)
+
+\item Google: Agile Project Management
+
+\item Lean Six Sigma Green Belt (LSSGB)
+
+\item Google: Data Analytics Specialization
+
+\item McKinsey.org Forward Program
+
+\item Google: Foundation of Project Management
+
+\end{itemize}
+\end{rSection}
+
+\end{document}

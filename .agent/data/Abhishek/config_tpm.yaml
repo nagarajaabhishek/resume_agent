@@ -1,0 +1,26 @@
+# Configuration to generate Technical Product Manager Resume
+output_file: "role_tpm_generated.yaml"
+master_file: "master_context.yaml"
+
+meta:
+  projects_first: true
+
+summary: "Technical Product Manager leveraging deep engineering expertise to drive \\textbf{Product Strategy} and \\textbf{Customer Satisfaction}. Adept at combining \\textbf{Technical Market Research} with \\textbf{Human Empathy} to build user-centric solutions. Expert in bridging the gap between complex engineering execution and business goals, ensuring product alignment with user needs and market demands."
+
+experience:
+  - "uta_pm_intern"
+  - "nfc_ba_intern"
+  - "edam_founder"
+
+projects:
+  - "thara_ai"
+  - "google_maps_strategy"
+  - "coc_growth"
+  - "splitwiser_ai"
+
+skills:
+  - "Product Management"
+  - "Technical Skills"
+  - "Agile & Methodologies"
+  - "AI & Analytics"
+  - "Prototyping & Vibe Coding"

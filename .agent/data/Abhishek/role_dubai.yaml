@@ -1,0 +1,102 @@
+meta:
+  filename: Resume_Abhishek_Nagaraja_Dubai.tex
+name: Abhishek Nagaraja
+contact:
+  location: Arlington, Texas, USA - 76013
+  email: work.abhishekn@gmail.com
+  linkedin_url: https://www.linkedin.com/in/abhisheknagaraja/
+  linkedin_display: linkedin.com/in/abhisheknagaraja
+  website_url: https://www.abhishekn.in/
+  website_display: www.abhishekn.in
+personal_details:
+  nationality: Indian
+  current_location: Chicago, IL
+  visa_status: Requires Visa Sponsorship
+summary: Technical Product Manager with a strong technical background in Computer Science and a user-centric approach to building scalable products. Expert in driving product strategy through technical and market research, leveraging human empathy to solve complex user problems, and ensuring customer satisfaction by aligning technical execution with business goals. diverse experience in cross-functional leadership and agile delivery.
+education:
+- school: University of Texas at Arlington
+  location: Arlington, Texas, USA
+  degree: Master of Science in Computer Science
+  dates: Aug 2023 - May 2024
+  details:
+  - Master of Science in Engineering Management \hfill May 2024 - Current
+  url: https://www.uta.edu/
+- school: Jawaharlal Nehru Technological University
+  location: Hyderabad, India
+  degree: Bachelor of Technology in Computer Science and Engineering
+  dates: Aug 2019 - July 2023
+  url: https://www.jntuh.ac.in/
+experience:
+- role: Program Manager Intern
+  company: University of Texas at Arlington
+  location: Texas, USA
+  dates: October 2023 - Present
+  bullets:
+  - Orchestrated end-to-end program delivery for 'MavMarket', scaling the platform to 200+ vendors and 5,000+ attendees through cross-functional leadership, managing the critical path timeline and orchestrating logistics to ensure zero downtime.
+  - Improved vendor and stakeholder satisfaction by 35% (NPS), by tracking program KPIs and visualizing insights via Power BI dashboards, enabling the executive team to make data-driven decisions on resource allocation.
+  - Maximized organizational efficiency by architecting a Standard Operating Procedure (SOP) using Gemini, reducing manual planning time by 40% and standardizing cross-departmental workflows to eliminate communication silos.
+  - Secured $4,000 in recurring sponsorship as measured by semester funding, by driving business development and pitching strategic proposals to corporate partners, aligning their brand goals with university student engagement initiatives.
+  - Boosted stakeholder engagement by onboarding 24 local founders and executing targeted GTM strategies for the '1 Million Cups' community, fostering a robust ecosystem of mentorship and peer-to-peer learning for student entrepreneurs.
+  - Directed a 10-member executive board as President of the Entrepreneurship Club, scaling active membership to 100+ and facilitating 20+ workshops, by implementing a structured leadership development pipeline and defining clear role accountabilities.
+- role: Business Analyst Intern
+  company: NFC Solutions Private Limited
+  location: Hyderabad, India
+  dates: April 2022 - Jan 2023
+  bullets:
+  - Ensured on-time delivery of 4 key projects by facilitating daily stand-ups and cross-functional collaboration between Design, Dev, and QA, proactively identifying critical path dependencies and mitigating schedule variance risks.
+  - Drove 20% improvement in development efficiency as measured by reduced sprint cycle time, by serving as Scrum Master and applying Lean-Agile principles to remove systemic impediments and optimize team velocity metrics.
+  - Guaranteed timely project alignment by authoring detailed technical Requirement Documents (PRDs) and coordinating executive sign-offs, ensuring clear traceability between business objectives and technical implementation deliverables.
+  - Managed backend operations and CRM workflows for an e-commerce platform, ensuring 100% data integrity and streamlined inventory processes by implementing automated validation rules that reduced manual data entry errors.
+  - Facilitated UAT sessions to validate feature releases, ensuring technical execution met client business requirements and quality standards, resulting in a zero-defect production launch for high-priority modules.
+- role: Founder and Community Lead
+  company: e-DAM Community
+  location: Hyderabad, India
+  dates: March 2021 - Jan 2025
+  bullets:
+  - Expanded community scale to 5,000+ students as measured by attendance at 200+ workshops, by founding a technical community and tailoring content for diverse user segments to bridge the gap between academic theory and industry application.
+  - Spearheaded continuous product improvement as measured by adoption across 20+ institutions, by leading research and system integration for a custom ERP solution that centralized student data management and simplified administrative reporting.
+  - Sustained high member retention as measured by viral campaign participation, by architecting a scalable program strategy with 8 parallel content tracks that catered to varying skill levels from novice to expert developers.
+  - Facilitated 50+ internship placements as measured by successful corporate matches, by initiating tech projects and managing stakeholder relationships to create direct career pathways for high-performing community members.
+  - Raised Rs.4,00,000+ in sponsorship as measured by event funding, by directing a team of 50 to execute the 'Social Media Summit 2023', overseeing budget allocation, vendor negotiations, and on-site event logistics.
+  - Cultivated startup ecosystem engagement as measured by 12 founder interviews, by producing the 'e-DAM Spotlight' podcast to highlight regional success stories and inspire the next generation of student entrepreneurs.
+projects:
+- name: 'Thara: AI Personal Agent Ecosystem'
+  bullets:
+  - Orchestrated multi-agent coordination as measured by 11-agent synchronization, by orchestrating the architecture using LangGraph and FastAPI to handle asynchronous state handoffs between specialized finance and health agents.
+  - Aligned system with user goals as measured by real-time behavioral analysis, by automating complex workflows for task and habit tracking using vector-based context retrieval to reduce cognitive load for 15+ beta users.
+  url: https://withthara.com/
+- name: 'Google Maps: Process Gap Analysis'
+  bullets:
+  - Identified workflow failure as measured by drop-off data (42 interviews), by conducting root cause analysis on menu accuracy using heuristic evaluation and user journey mapping to pinpoint friction in the dietary filter flow.
+  - Mitigated risk for dietary compliance as measured by validated user acceptance, by proposing a systemic process improvement to centralize menu management through a standardized vendor portal UI and automated validation schemas.
+  url: https://abhishekn.in/content/google-maps-teardown
+- name: 'Clash of Clans: Optimization Proposal'
+  bullets:
+  - Forecasted 5-10% organic acquisition as measured by quantitative behavioral analysis, by formulating a growth strategy with native social sharing that leveraged incentivized referral loops and guild-based challenges to drive virality.
+  - Projected 20-30% adoption as measured by engagement metrics, by designing a retention plan to revamp the social feed using personalized content algorithms and strategic push notification timing to re-engage dormant players.
+  url: https://abhishekn.in/content/clash-of-clans-teardown
+- name: 'Split-Wiser: Technical Program Delivery'
+  bullets:
+  - Enabled fair expense allocation as measured by precise parsing of complex bills, by managing end-to-end development of an AI-powered engine using LLMs.
+  - Accelerated user adoption as measured by completion of the workflow, by streamlining the financial process into a repeatable 12-step guided journey.
+  url: https://abhishekn.in/content/splitwise-teardown
+skills:
+- category: Product & Project Management
+  skill_list: Program Lifecycle Management, Risk Management, Stakeholder Communication, Roadmap Development, Feature Prioritization (RICE/MoSCoW), Process Improvement, SOP Design, GTM Strategy, A/B Testing, Market & User Research.
+- category: Business Development & Leadership
+  skill_list: Cross-functional Leadership, Conflict Resolution, Startup Operations, Business Development, Partnership & Sponsorship, Resource Capacity Planning, Product Storytelling.
+- category: Software & Systems
+  skill_list: Python, SQL, ReactJS, Git/GitHub, Docker, AWS (S3, EC2), CI/CD Concepts, API Strategy.
+- category: Project Tools
+  skill_list: Jira, Asana, Notion, Microsoft Project, Figma, Power BI, Google Analytics, Excel.
+- category: AI Enhancement
+  skill_list: AI-Powered SOP Architecture, Generative AI (Gemini, GPT-4o), n8n Automation, Prompt Engineering, AI Product Strategy, Model Evaluation Metrics, Automated Workflow Orchestration.
+- category: Agile Frameworks
+  skill_list: Agile, Scrum, Waterfall, Kanban, Sprint Planning, Backlog Management.
+certifications:
+- Certified Scrum Product Owner (CSPO)
+- Lean Six Sigma Green Belt (LSSGB)
+- 'Google: Foundation of Project Management'
+- 'Google: Project Initiation: Starting a Successful Project'
+- 'Google: Project Planning: Putting It All Together'
+- McKinsey.org Forward Program
