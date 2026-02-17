@@ -8,7 +8,9 @@ This repository hosts a sophisticated **Resume Engineering System** designed to 
 1.  **Strict XYZ Pattern**: Every bullet point must follow the formula: *"Accomplished [X] as measured by [Y], by doing [Z]"*. Weak verbs and vague claims are banned.
 2.  **Line Efficiency Algorithm**: The system calculates character density to ensure every bullet point maximizes its readable space (approx. 115-120 chars/line).
 3.  **Role-Based Tailoring**: Data is separated from formatting, allowing you to "fork" your experience into diverse roles (e.g., TPM vs. Product Manager) without duplicating effort.
-4.  **ATS-Safe LaTeX**: The underlying `resume.cls` uses standard fonts, clear headings, and parse-friendly structures to ensure perfect keyword extraction.
+4.  **ATS-Safe LaTeX & .tex Templates**:
+    *   **Structure**: We use a custom `resume.cls` (LaTeX class) to enforce rigid structure, margins, and hierarchy.
+    *   **Styling**: All design logic is locked in the `.tex` templates. You write data (YAML), and LaTeX renders the pixel-perfect PDF. This eliminates formatting errors and ensures 100% parseability.
 
 ## 📂 System Architecture
 ```

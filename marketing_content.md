@@ -10,10 +10,11 @@ Instead of guessing keywords, I built a strict Python + LaTeX pipeline that trea
 **The Architecture:**
 *   **The Brain**: A YAML-based "Single Source of Truth" for my entire career history.
 *   **The Engine**: A Python script that enforces the "XYZ Strategy" ("Accomplished [X] as measured by [Y], by doing [Z]").
-*   **The Face**: A LaTeX rendering engine that separates content from formatting, ensuring perfect parsing every time.
+*   **The Face (LaTeX)**: I use **LaTeX (.tex)** and a custom class file (`resume.cls`) to handle all styling and structure. This ensures pixel-perfect formatting, consistent headers, and rigorous ATS-compliance without me ever touching a margin or font manually.
 
 **The Results:**
 *   **ATS Score:** Consistently >90% on standard checkers.
+*   **Structure:** The `.tex` templates enforce a clean, single-column layout that parsers love.
 *   **Efficiency:** I can generate a tailored, role-specific resume (e.g., TPM vs. Product Manager) in seconds.
 *   **Quality Control:** Automated audits prevent me from submitting resumes with weak verbs or missing metrics.
 
