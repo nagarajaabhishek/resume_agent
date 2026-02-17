@@ -89,6 +89,15 @@ experience:
       - "Iterated on technical curriculum content based on high-value \\textbf{attendee satisfaction metrics}, collecting feedback and using narrative data to continuously improve learning outcomes and drive engagement for the #100DaysOfTech program."
 
 projects:
+  - id: "resume_agent"
+    name: "Resume Agent - AI Resume Engineering System"
+    url: "https://github.com/nagarajaabhishek/resume_agent"
+    date: "Feb 2026 - Present"
+    description: "Architected a Python-based resume generation system that achieves >90% ATS optimization scores."
+    bullets:
+      - "Orchestrated a 'Single Source of Truth' architecture using YAML and Jinja2, reducing resume tailoring time by 95% for multiple job families (TPM, Product, Engineering)."
+      - "Engineered an automated Quality Assurance protocol that enforces the Google 'XYZ' formula, rejecting content that lacks measurable impact or strong action verbs."
+      - "Achieved consistent >90% parsing scores across standard ATS checkers by decoupling data from design using a custom LaTeX class structure."
   - id: "thara_ai"
     name: "Thara: Multi-Agent AI Ecosystem"
     url: "https://withthara.com/"
