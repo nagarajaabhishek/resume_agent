@@ -55,30 +55,28 @@ A modular, high-impact resume generation engine that treats career data as code.
 
 ---
 
-## 4. LinkedIn Post #2 (Master Context Focus)
-**Headline:** One File to Rule Them All. How I Generated 6 Resumes in 60 Seconds.
+## 4. LinkedIn Post #2 (The "How-To" Follow-up)
+**Headline:** Part 2: How I built the "One File" Career Database.
 
-I used to have 10 different Word docs named `Resume_Product_v3_FINAL_REAL.docx`. It was a mess.
+Yesterday, I shared how I built an AI agent to hit >90% ATS scores. Today, I want to show you the *engine* behind it.
 
-So I built a "Master Context" system.
+Most people have 10 different Word docs named `Resume_Product_v3_FINAL.docx`. I have **zero**.
 
-**The Concept:**
-1.  **Input:** A single YAML file (`master_context.yaml`) that contains *everything* I've ever done. Every project, every metric, every certification. It's my career database.
-2.  **Process:** I run a Python script: `generate_resume.py`
-3.  **Output:** The script pulls specific slices of data to build 6 distinct, targeted resumes instantly:
-    *   Technical Product Manager (TPM)
-    *   Product Manager (PM)
-    *   Engineering Manager
-    *   Product Owner
-    *   Scrum Master
-    *   GTM Strategy
+Instead, I have one file: `master_context.yaml`.
 
-**Why it works:**
-*   **Memory:** The system remembers details I forget. I don't need to rewrite a bullet point from 3 years ago; I just toggle it "on" for the relevant role.
-*   **Consistency:** My dates and titles are the Single Source of Truth. No more conflicting info across different versions.
-*   **Speed:** I can pivot my entire application strategy in the time it takes to run a script.
+**The "Single Source of Truth" Workflow:**
+1.  **The Master File:** This YAML file contains *everything* I've ever done. Every project, metric, and certification goes here first. It’s my career database.
+2.  **The Selector:** I don't "write" a resume. I run a script that *queries* my career.
+    *   *Need a TPM resume?* -> It pulls my technical delivery metrics.
+    *   *Need a Product Strategy resume?* -> It pulls my market research & GTM bullets.
+3.  **The Generation:** In 60 seconds, I generated **6 distinct, role-specific resumes** (TPM, PM, EM, PO, Scrum Master, GTM)—all from that one file.
+
+**Why this wins:**
+*   **Memory:** It remembers details I forget. I just toggle them "on" when needed.
+*   **Consistency:** My dates and titles are always perfect. No version control nightmares.
+*   **Speed:** I can pivot my entire application strategy in one command.
 
 Stop managing documents. Start managing data.
 
-[Link to GitHub]
-#Productivity #Automation #Python #CareerEngineering #DataDriven
+**The Code:** [Link to GitHub]
+#Engineering #CareerHacking #Python #DataDriven #OpenSource
