@@ -37,6 +37,8 @@ To ensure high-impact resumes, follow this specific order of operations during a
 4.  **AI Enhancement**: Explicitly show how Generative AI or Agentic Workflows were used as force multipliers for that specific role.
 5.  **Skills Triple-Threat**: Ensure the Skills section includes **Methodologies/Strategies** + **Tools** + **Hard Concepts**.
 6.  **Line Efficiency (Formatting)**: Only after the content is rich, adjust for [Line Efficiency](file:///Users/abhisheknagaraja/Documents/Resume_Agent/.agent/skills/resume_generation/rules/line_efficiency.md). Ensure second lines are **80%+ full** and no orphaned words exist.
+7.  **Comprehensive Experience**: All resumes MUST include **every** professional experience listed in the Master Profile. Prioritize their order based on relevance to the specific role, but never omit valid work history.
+8.  **Project Prioritization**: Resumes should list a comprehensive set of projects (6+). Projects MUST be ordered by relevance to the target role. **Content Tailoring**: Primarily achieve this through ordering. If a role requires a completely different angle, **create a new project entry** in the Master Profile rather than editing an existing one in place.
 
 ## 4. Master Agent Prompt (For External Interaction)
 Use the [Master Agent Prompt](file:///Users/abhisheknagaraja/Documents/Resume_Agent/.agent/skills/resume_generation/rules/content_strategy.md#master-agent-prompt) logic when using external AI tools to rewrite content.
