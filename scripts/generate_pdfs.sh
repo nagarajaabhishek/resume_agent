@@ -3,6 +3,8 @@
 # Resume Generation Script using Tectonic
 # Usage: ./generate_pdfs.sh
 
+cd "$(dirname "$0")/.."
+
 # Check if tectonic is installed
 if ! command -v tectonic &> /dev/null; then
     echo "Error: tectonic is not installed. Please run 'brew install tectonic' first."
@@ -10,7 +12,7 @@ if ! command -v tectonic &> /dev/null; then
 fi
 
 echo "Starting Verification..."
-python3 verify_resume.py
+python3 scripts/verify_resume.py
 
 echo "Starting PDF generation..."
 

@@ -1,0 +1,364 @@
+%----------------------------------------------------------------------------------------
+%   CLASS DEFINITIONS (EMBEDDED RESUME.CLS)
+%----------------------------------------------------------------------------------------
+\documentclass[9pt,letterpaper]{article} % Font size and paper type
+
+\usepackage[parskip]{parskip} % Remove paragraph indentation
+\usepackage{array} % Required for boldface (\bf and \bfseries) tabular columns
+\usepackage{ifthen} % Required for ifthenelse statements
+\usepackage{charter}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage[colorlinks=true, urlcolor=blue]{hyperref}
+\usepackage[left=0.5in,top=0.25in,right=0.4in,bottom=0.2in, columnsep=0.5cm]{geometry}
+% \input{glyphtounicode} % Commented out to prevent errors
+\usepackage[none]{hyphenat}
+\usepackage{multicol}
+
+\pdfgentounicode=1
+\pagestyle{empty} % Suppress page numbers
+
+\makeatletter % Begin internal command redefinitions
+
+%----------------------------------------------------------------------------------------
+%	HEADINGS COMMANDS: Commands for printing name and address
+%----------------------------------------------------------------------------------------
+
+\def \name#1{\def\@name{#1}} % Defines the \name command to set name
+\def \@name {} % Sets \@name to empty by default
+
+\def \addressSep {$\diamond$} % Set default address separator to a diamond
+
+% One, two or three address lines can be specified
+\let \@addressone \relax
+\let \@addresstwo \relax
+\let \@addressthree \relax
+
+% \address command can be used to set the first, second, and third address (last 2 optional)
+\def \address #1{
+  \@ifundefined{@addresstwo}{
+    \def \@addresstwo {#1}
+  }{
+  \@ifundefined{@addressthree}{
+  \def \@addressthree {#1}
+  }{
+     \def \@addressone {#1}
+  }}
+}
+
+% \printaddress is used to style an address line (given as input)
+\def \printaddress #1{
+  \begingroup
+    \def \\ {\addressSep\ }
+    \centerline{#1}
+  \endgroup
+  \par
+}
+
+% \printname is used to print the name as a page header
+\def \printname {
+  \begingroup
+    \hfil{{\namesize\bf \@name}}\hfil
+    \nameskip\break
+  \endgroup
+}
+
+%----------------------------------------------------------------------------------------
+%	PRINT THE HEADING LINES
+%----------------------------------------------------------------------------------------
+
+\let\ori@document=\document
+\renewcommand{\document}{
+  \ori@document  % Begin document
+  \printname % Print the name specified with \name
+  \@ifundefined{@addressone}{}{ % Print the first address if specified
+    \printaddress{\@addressone}}
+  \@ifundefined{@addresstwo}{}{ % Print the second address if specified
+    \printaddress{\@addresstwo}}
+     \@ifundefined{@addressthree}{}{ % Print the third address if specified
+    \printaddress{\@addressthree}}
+}
+
+%----------------------------------------------------------------------------------------
+%	SECTION FORMATTING
+%----------------------------------------------------------------------------------------
+
+% Defines the rSection environment for the large sections within the CV
+\newenvironment{rSection}[1]{ % 1 input argument - section name
+  \sectionskip
+ \textbf{\Large #1} % Section title
+  \sectionlineskip
+  \hrule % Horizontal line
+  \begin{list}{}{ % List for each individual item in the section
+    \setlength{\leftmargin}{-0em} % Margin within the section
+  }
+  \item[]
+}{
+  \end{list}
+}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE FORMATTING
+%----------------------------------------------------------------------------------------
+
+\newenvironment{rSubsection}[4]{ % 4 input arguments - company name, year(s) employed, job title and location
+ {\bf #1} \hfill {#2} % Bold company name and date on the right
+ \ifthenelse{\equal{#3}{}}{}{ % If the third argument is not specified, don't print the job title and location line
+  \\
+  {\em #3} \hfill {\em #4} % Italic job title and location
+  }\smallskip
+  \begin{list}{$\cdot$}{\leftmargin=0em} % \cdot used for bullets, no indentation
+   \itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
+  }{
+  \end{list}
+  \vspace{0em} % Some space after the list of bullet points
+}
+
+% The below commands define the whitespace after certain things in the document - they can be \smallskip, \medskip or \bigskip
+\def\namesize{\huge} % Size of the name at the top of the document
+\def\addressskip{} % The space between the two address (or phone/email) lines
+\def\sectionlineskip{\smallskip} % The space above the horizontal line for each section 
+\def\nameskip{\vspace{-0.5em}} % The space after your name at the top
+\def\sectionskip{} % The space after the heading section
+
+\makeatother % End internal command redefinitions
+
+%----------------------------------------------------------------------------------------
+%   DOCUMENT START
+%----------------------------------------------------------------------------------------
+\name{ Yuvraj K \vspace{.2em} \hrule}
+
+\address{ Hyderabad, Telangana, India \textbullet\ work.kyuvraj@gmail.com \textbullet\ \href{ https://www.linkedin.com/in/kyuvraj/ }{ linkedin.com/in/kyuvraj } \textbullet\ \href{ https://k-yuvraj.github.io/kyuvraj/ }{ k-yuvraj.github.io/kyuvraj }}
+
+
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%   SUMMARY
+%----------------------------------------------------------------------------------------
+Product Analyst bridging data insights with product strategy, leveraging KPI analysis and A/B testing to optimize user experience and drive growth.
+
+%----------------------------------------------------------------------------------------
+%   EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+%   EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Education}
+
+\begin{rSubsection}{ \href{https://www.iare.ac.in/}{Institute of Aeronautical Engineering} }{ Hyderabad, India }{\textbf{ Bachelor of Technology in Mechanical Engineering }}{ Sep 2021 - Sep 2024 }
+
+
+
+\item Vice-President, Entrepreneurship Cell (E-Cell): Guided startups through mentorship and workshops.
+
+
+\end{rSubsection}
+
+\begin{rSubsection}{ TKR College of Engineering and Technology }{ Hyderabad, India }{\textbf{ Diploma in Mechanical Engineering }}{ June 2018 - May 2021 }
+
+
+
+\item Department Representative: Acted as liaison between students and faculty.
+
+
+\end{rSubsection}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%   WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+%   MACROS FOR SECTIONS
+%----------------------------------------------------------------------------------------
+
+
+
+
+%----------------------------------------------------------------------------------------
+%   BODY SECTIONS (ORDERING)
+%----------------------------------------------------------------------------------------
+
+    
+\begin{rSection}{Work Experience}
+
+\begin{rSubsection}
+{ Co-Founder \& CTO, Marktech Creations (Padverse), Hyderabad, India }{ Aug 2022 - Jan 2026 }{}{}
+\item[] \vspace{-0.5em}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+
+\item Secured ₹20L+ in capital by conducting extensive \textbf{financial analysis} and preparing data-driven pitch materials, effectively managing liquidity and allocating funds for operational growth.
+
+\item Scaled operations from 0 to 1 by implementing robust financial tracking and KPI monitoring systems, ensuring 100\% fund utilization efficiency and achieving key quarterly business milestones.
+
+\item Spearheaded the end-to-end \textbf{product lifecycle} for a sustainable menstrual hygiene ecosystem, scaling deployment to multiple locations and securing 5+ key partnerships.
+
+\item Reduced material waste by 30\% and improved recycling efficiency by designing and manufacturing custom machinery to process used sanitary napkins, recovering raw materials for up-cycling initiatives.
+
+\item Optimized inventory tracking and product lifecycle metrics by 25\% by implementing Python-based data analytics scripts to monitor stock levels and predict maintenance schedules.
+
+\end{itemize}
+\end{rSubsection}
+
+\begin{rSubsection}
+{ Human Resources Intern, Aveha Solutions (e-DAM), Hyderabad, India }{ Oct 2022 - Jan 2023 }{}{}
+\item[] \vspace{-0.5em}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+
+\item Optimized recruitment workflows by analyzing applicant tracking data, reducing average time-to-hire by 30\% and streamlining onboarding processes to support a 2x growth in headcount.
+
+\item Conducted \textbf{skill-gap analysis} on employee performance data to design targeted training programs, resulting in a 20\% measurable increase in team productivity and output.
+
+\end{itemize}
+\end{rSubsection}
+
+\begin{rSubsection}
+{ Engineering Trainee, Srikrishnaa Process Technologies Pvt Ltd, Hyderabad, India }{ July 2022 - July 2022 }{}{}
+\item[] \vspace{-0.5em}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+
+\item Optimized chemical reactor design workflows, improving design accuracy by 15\%, by utilizing AutoCAD and Fusion 360 to create precise 3D models and technical drawings for manufacturing synthesis.
+
+\item Acquired in-depth knowledge of chemical reactor operations and machining processes, ensuring compliance with industry safety standards and operational efficiency.
+
+\end{itemize}
+\end{rSubsection}
+
+\begin{rSubsection}
+{ CNC Programmer Trainee, National Small Industries Corp (NSIC), Hyderabad, India }{ Apr 2020 - Dec 2020 }{}{}
+\item[] \vspace{-0.5em}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+
+\item Enhanced manufacturing precision, achieving <0.05mm tolerance in machined parts, by programming and operating 3-axis CNC machines using industry-standard G-code and CAD/CAM software.
+
+\item Improved machining efficiency by optimizing toolpaths and cutting parameters, reducing cycle times by 10\% while maintaining strict quality control standards.
+
+\end{itemize}
+\end{rSubsection}
+
+\end{rSection}
+
+    
+\begin{rSection}{Projects}
+
+
+\begin{rSubsection}{ Strategy \& Market Demographics Monitor }{}{}{}
+
+\item[] \vspace{-0.5em}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+
+\item Derived actionable customer insights by segmenting sales data into Age Groups, enabling targeted marketing strategies for the dominant 'Adult (35-64)' demographic.
+
+\item Conducted geospatial market analysis to map revenue concentration, pinpointing the US as the primary revenue engine and identifying underperforming regions.
+
+\end{itemize}
+\end{rSubsection}
+
+
+\begin{rSubsection}{ Netflix User Content Consumption Analysis }{}{}{}
+
+\item[] \vspace{-0.5em}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+
+\item Built a strategic Power BI dashboard to visualize content consumption patterns, performing \textbf{Root Cause Analysis (RCA)} on viewership drops to drive content strategy decisions.
+
+\item Performed exploratory data analysis (EDA) on the Netflix dataset to segment content by maturity ratings, revealing a critical preference for mature content in key markets.
+
+\end{itemize}
+\end{rSubsection}
+
+
+\begin{rSubsection}{ Automotive Sales \& Profitability Dashboard }{}{}{}
+
+\item[] \vspace{-0.5em}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+
+\item Engineered advanced DAX measures to calculate time-intelligence metrics (YTD, MoM\%), enabling precise temporal performance tracking for global sales trends.
+
+\item Implemented AI-driven visuals (Decomposition Tree) to allow stakeholders to conduct root-cause analysis of Net Profit by drilling down into Country and Product Line segments.
+
+\end{itemize}
+\end{rSubsection}
+
+
+\begin{rSubsection}{ Electric Vehicle (EV) Adoption Tracker }{}{}{}
+
+\item[] \vspace{-0.5em}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+
+\item Designed a geospatial Tableau dashboard to visualize EV ownership density, leveraging Mapbox integration to drill down from County to Census Tract level for 50,000+ records.
+
+\item Engineered calculated fields to categorize vehicles based on CAFV eligibility, enabling stakeholders to assess the impact of legislative incentives on sales volume.
+
+\end{itemize}
+\end{rSubsection}
+
+
+\begin{rSubsection}{ Cyber Scooter (e-Scooter) Design }{}{}{}
+
+\item[] \vspace{-0.5em}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+
+\item Designed an ergonomic electric scooter prototype, enhancing battery efficiency by 15\%, by integrating lightweight materials and optimizing motor drive systems in a detailed 3D CAD model using Fusion 360.
+
+\item Developed modular components for easy maintenance and assembly, focusing on sustainability and user-centric design principles.
+
+\end{itemize}
+\end{rSubsection}
+
+
+\begin{rSubsection}{ Mobile Drone Ambulance }{}{}{}
+
+\item[] \vspace{-0.5em}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+
+\item Designed a rapid response drone concept, potentially reducing emergency response time by 50\% in remote areas, by modeling a modular, autonomous payload system in SolidWorks.
+
+\end{itemize}
+\end{rSubsection}
+
+\end{rSection}
+
+
+
+
+%----------------------------------------------------------------------------------------
+%   SKILLS
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Skills}
+\item[] \vspace{-0.5em}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+
+    \item \textbf{ Data Visualization \& BI:} Power BI (DAX, Power Query), Tableau, Google Analytics, Looker Studio.
+
+    \item \textbf{ Data Analysis \& Programming:} Python (Pandas, NumPy), SQL (PostgreSQL, MySQL), Excel (Advanced Macros, VBA), ETL Pipelines, A/B Testing.
+
+    \item \textbf{ Product Management:} Product Lifecycle Management (PLM), MVP Development, User Research, Market Analysis, Requirement Gathering, SVGP Strategy.
+
+    \item \textbf{ Soft Skills \& Leadership:} Cross-functional Leadership, Stakeholder Management, Grant Writing, Public Speaking, Strategic Planning.
+
+\end{itemize}
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%   CERTIFICATIONS
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Certifications}
+\item[] \vspace{-1em}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+
+\item Data Analyst (Udemy, 2025)
+
+\item Python for Data Science (Udemy, 2025)
+
+\item McKinsey Forward Program (2025)
+
+\item National Entrepreneurship Challenge Finalist (AIR 4th)
+
+\item Best Innovation Award (IIC Regional Meet)
+
+\end{itemize}
+\end{rSection}
+
+\end{document}

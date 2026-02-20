@@ -1,0 +1,192 @@
+name: Yuvraj K
+contact:
+  location: Hyderabad, Telangana, India
+  email: work.kyuvraj@gmail.com
+  phone: +91 6301421537
+  linkedin_url: https://www.linkedin.com/in/kyuvraj/
+  linkedin_display: linkedin.com/in/kyuvraj
+  website_url: https://k-yuvraj.github.io/kyuvraj/
+  website_display: k-yuvraj.github.io/kyuvraj
+education:
+- id: iae_btech
+  school: Institute of Aeronautical Engineering
+  url: https://www.iare.ac.in/
+  location: Hyderabad, India
+  degree: Bachelor of Technology in Mechanical Engineering
+  dates: Sep 2021 - Sep 2024
+  details:
+  - 'Vice-President, Entrepreneurship Cell (E-Cell): Guided startups through mentorship
+    and workshops.'
+- id: tkr_diploma
+  school: TKR College of Engineering and Technology
+  location: Hyderabad, India
+  degree: Diploma in Mechanical Engineering
+  dates: June 2018 - May 2021
+  details:
+  - 'Department Representative: Acted as liaison between students and faculty.'
+certifications:
+- name: Data Analyst (Udemy, 2025)
+  date: ''
+- name: Python for Data Science (Udemy, 2025)
+  date: ''
+- name: McKinsey Forward Program (2025)
+  date: ''
+- name: National Entrepreneurship Challenge Finalist (AIR 4th)
+  date: ''
+- name: Best Innovation Award (IIC Regional Meet)
+  date: ''
+awards: []
+publications: []
+meta:
+  filename: Yuvraj_K_Operations_Manager_Resume
+summary: Operations Manager with a strong background in process improvement, team
+  leadership, and data-driven decision making to streamline workflows and enhance
+  productivity.
+experience:
+- id: marktech_cofounder
+  role: Co-Founder & CTO
+  company: Marktech Creations (Padverse)
+  location: Hyderabad, India
+  dates: Aug 2022 - Jan 2026
+  tags:
+  - product
+  - analytics
+  - startup
+  - leadership
+  bullets:
+  - "Secured \u20B920L+ in capital by conducting extensive \\textbf{financial analysis}\
+    \ and preparing data-driven pitch materials, effectively managing liquidity and\
+    \ allocating funds for operational growth."
+  - Scaled operations from 0 to 1 by implementing robust financial tracking and KPI
+    monitoring systems, ensuring 100% fund utilization efficiency and achieving key
+    quarterly business milestones.
+  - Spearheaded the end-to-end \textbf{product lifecycle} for a sustainable menstrual
+    hygiene ecosystem, scaling deployment to multiple locations and securing 5+ key
+    partnerships.
+  - Reduced material waste by 30% and improved recycling efficiency by designing and
+    manufacturing custom machinery to process used sanitary napkins, recovering raw
+    materials for up-cycling initiatives.
+  - Optimized inventory tracking and product lifecycle metrics by 25% by implementing
+    Python-based data analytics scripts to monitor stock levels and predict maintenance
+    schedules.
+- id: avhea_hr_intern
+  role: Human Resources Intern
+  company: Aveha Solutions (e-DAM)
+  location: Hyderabad, India
+  dates: Oct 2022 - Jan 2023
+  tags:
+  - analytics
+  - hr
+  - operations
+  bullets:
+  - Optimized recruitment workflows by analyzing applicant tracking data, reducing
+    average time-to-hire by 30% and streamlining onboarding processes to support a
+    2x growth in headcount.
+  - Conducted \textbf{skill-gap analysis} on employee performance data to design targeted
+    training programs, resulting in a 20% measurable increase in team productivity
+    and output.
+- id: srikrishnaa_trainee
+  role: Engineering Trainee
+  company: Srikrishnaa Process Technologies Pvt Ltd
+  location: Hyderabad, India
+  dates: July 2022 - July 2022
+  tags:
+  - manufacturing
+  - chemical
+  - design
+  bullets:
+  - Optimized chemical reactor design workflows, improving design accuracy by 15%,
+    by utilizing AutoCAD and Fusion 360 to create precise 3D models and technical
+    drawings for manufacturing synthesis.
+  - Acquired in-depth knowledge of chemical reactor operations and machining processes,
+    ensuring compliance with industry safety standards and operational efficiency.
+projects:
+- id: market_monitor
+  name: Strategy & Market Demographics Monitor
+  url: ''
+  tags:
+  - data
+  - tableau
+  - strategy
+  bullets:
+  - Derived actionable customer insights by segmenting sales data into Age Groups,
+    enabling targeted marketing strategies for the dominant 'Adult (35-64)' demographic.
+  - Conducted geospatial market analysis to map revenue concentration, pinpointing
+    the US as the primary revenue engine and identifying underperforming regions.
+- id: netflix_analysis
+  name: Netflix User Content Consumption Analysis
+  url: ''
+  tags:
+  - data
+  - powerbi
+  - analytics
+  bullets:
+  - Built a strategic Power BI dashboard to visualize content consumption patterns,
+    performing \textbf{Root Cause Analysis (RCA)} on viewership drops to drive content
+    strategy decisions.
+  - Performed exploratory data analysis (EDA) on the Netflix dataset to segment content
+    by maturity ratings, revealing a critical preference for mature content in key
+    markets.
+- id: automotive_dashboard
+  name: Automotive Sales & Profitability Dashboard
+  url: ''
+  tags:
+  - data
+  - powerbi
+  - finance
+  bullets:
+  - Engineered advanced DAX measures to calculate time-intelligence metrics (YTD,
+    MoM%), enabling precise temporal performance tracking for global sales trends.
+  - Implemented AI-driven visuals (Decomposition Tree) to allow stakeholders to conduct
+    root-cause analysis of Net Profit by drilling down into Country and Product Line
+    segments.
+- id: cyber_scooter
+  name: Cyber Scooter (e-Scooter) Design
+  url: ''
+  tags:
+  - design
+  - fusion360
+  - sustainability
+  bullets:
+  - Designed an ergonomic electric scooter prototype, enhancing battery efficiency
+    by 15%, by integrating lightweight materials and optimizing motor drive systems
+    in a detailed 3D CAD model using Fusion 360.
+  - Developed modular components for easy maintenance and assembly, focusing on sustainability
+    and user-centric design principles.
+- id: grass_cutter
+  name: Grass Cutting Machine
+  url: ''
+  tags:
+  - agriculture
+  - design
+  - prototyping
+  bullets:
+  - Engineered a low-cost agricultural tool for small-scale farmers, reducing operational
+    cost by 20%, by designing a copper-wire blade mechanism and validating structural
+    integrity via stress analysis.
+- id: ev_adoption
+  name: Electric Vehicle (EV) Adoption Tracker
+  url: ''
+  tags:
+  - data
+  - tableau
+  - visualization
+  bullets:
+  - Designed a geospatial Tableau dashboard to visualize EV ownership density, leveraging
+    Mapbox integration to drill down from County to Census Tract level for 50,000+
+    records.
+  - Engineered calculated fields to categorize vehicles based on CAFV eligibility,
+    enabling stakeholders to assess the impact of legislative incentives on sales
+    volume.
+skills:
+- category: Data Visualization & BI
+  skill_list: Power BI (DAX, Power Query), Tableau, Google Analytics, Looker Studio.
+- category: Product Management
+  skill_list: Product Lifecycle Management (PLM), MVP Development, User Research,
+    Market Analysis, Requirement Gathering, SVGP Strategy.
+- category: Project Management Tools
+  skill_list: Jira, Confluence, Microsoft Project, Trello, Asana, Slack, Microsoft
+    Teams.
+- category: Soft Skills & Leadership
+  skill_list: Cross-functional Leadership, Stakeholder Management, Grant Writing,
+    Public Speaking, Strategic Planning.
