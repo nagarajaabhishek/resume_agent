@@ -22,9 +22,10 @@ This repository hosts a sophisticated **Resume Engineering System** designed to 
     /skills/resume_generation  # The "Brain" (Rules & Logic)
       SKILL.md                 # The Master Index
     /workflows                 # Process Documentation
-    /scripts                   # Python Generation Engine
-  /Resume_Building
-    /Generated                 # Output PDFs and LaTeX files
+  /scripts                     # Auxiliary management scripts (verify, audit)
+  /docs                        # Marketing and public content
+  /Resume_Building             # LaTeX Generation Directory
+    /Abhishek                  # End-user specific template profiles
 ```
 
 ## 🛠️ Mandatory Workflows
