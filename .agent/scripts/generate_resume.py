@@ -8,9 +8,13 @@ import re
 TEMPLATE_FILE = ".agent/templates/resume_template.tex.j2"
 OUTPUT_DIR = "Resume_Building/Generated"
 
-# Validation Rules
-MIN_BULLET_LENGTH = 100 # eased slightly from 150 to allow for punchy intro bullets, but strict on average
-FORBIDDEN_WORDS = ["Accomplished", "Responsible for", "Tasked with", "Helped"]
+# Validation Rules (Strict SKILL.md Compliance)
+MIN_BULLET_LENGTH = 215 
+MAX_BULLET_LENGTH = 245 # Optimized for 2-line visual symmetry
+FORBIDDEN_WORDS = [
+    "Accomplished", "Responsible for", "Tasked with", "Helped", 
+    "Managed", "Participated", "Worked on", "Involved in", "Assisted"
+]
 
 def escape_latex(text):
     """
@@ -31,27 +35,8 @@ def escape_latex(text):
         '^': r'\textasciicircum{}',
     }
     
-    # regex to avoid double escaping if already escaped (simple check)
-    # This is a basic escaper. For a resume, we mostly care about & and %
-    
-    # We will use a simple replacement, but we need to be careful not to escape 
-    # macros if we allow them. However, our goal is strict data, so macros 
-    # might not be in the YAML.
-    # If the user puts \textbf{...} in the yaml, we SHOULD escape the backslash 
-    # to prevent them from breaking the build, unless we decide the YAML contains 
-    # trusted LaTeX. 
-    # DECISION: The YAML should be PLAIN TEXT. Formatting belongs in the template.
-    # So we escape EVERYTHING.
-    
-    # But wait, looking at the GTM resume, there are bolded parts in bullets:
-    # \textbf{Orchestrated the Go-to-Market (GTM) strategy}
-    # If we escape backslashes, we break this.
-    #
     # STRATEGY: We will ALLOW LaTeX formatting commands in the YAML (bold, italic)
     # but strictly escape special chars like & and %.
-    
-    # To do this safely, we can just replace & and % and $ which are the most common offenders.
-    # We will NOT escape \ or { or } to allow \textbf{}.
     
     text = text.replace('&', r'\&')
     text = text.replace('%', r'\%')
@@ -70,14 +55,61 @@ def validate_bullets(bullets, context=""):
         # 1. Check Forbidden Words
         for word in FORBIDDEN_WORDS:
             if re.search(r'\b' + re.escape(word) + r'\b', bullet, re.IGNORECASE):
-                errors.append(f"[{context} Bullet {i+1}] Contains forbidden word: '{word}'")
+                errors.append(f"[{context} Bullet {i+1}] Contains weak/forbidden word: '{word}'")
         
-        # 2. Check Length (Warning for now, strict later?)
+        # 2. Check Length (Strict SKILL.md 190-230 rule)
         # Clean latex commands for length check
         clean_text = re.sub(r'\\[a-zA-Z]+{([^}]*)}', r'\1', bullet)
         if len(clean_text) < MIN_BULLET_LENGTH:
              errors.append(f"[{context} Bullet {i+1}] Too short ({len(clean_text)} chars). Minimum {MIN_BULLET_LENGTH}.")
+        if len(clean_text) > MAX_BULLET_LENGTH:
+             errors.append(f"[{context} Bullet {i+1}] Too long ({len(clean_text)} chars). Maximum {MAX_BULLET_LENGTH}.")
              
+        # 3. XYZ Check (Basic heuristic: must contain "by" and some metrics/keywords)
+        # This is hard to do perfectly, but we can check for "by" as a proxy for 'How'
+        if "by" not in bullet.lower() and "utilizing" not in bullet.lower() and "leveraging" not in bullet.lower():
+            errors.append(f"[{context} Bullet {i+1}] Missing 'How' component (by/leveraging/utilizing). Does not follow XYZ.")
+
+    return errors
+
+def validate_dates(data):
+    """
+    Validates that dates use full month names.
+    """
+    errors = []
+    short_months = ["Jan ", "Feb ", "Mar ", "Apr ", "Jun ", "Jul ", "Aug ", "Sep ", "Oct ", "Nov ", "Dec "]
+    
+    def check_value(val, context):
+        if isinstance(val, str):
+            for sm in short_months:
+                if sm in val:
+                    errors.append(f"[{context}] Date contains abbreviated month: '{sm.strip()}'")
+        elif isinstance(val, list):
+            for item in val:
+                check_value(item, context)
+        elif isinstance(val, dict):
+            for k, v in val.items():
+                check_value(v, f"{context} -> {k}")
+
+    if 'education' in data:
+        for i, edu in enumerate(data['education']):
+            check_value(edu.get('dates', ''), f"Education {i+1} dates")
+            if 'multi_degree' in edu:
+                for j, md in enumerate(edu['multi_degree']):
+                    check_value(md.get('dates', ''), f"Education {i+1} multi_degree {j+1} dates")
+
+    if 'experience' in data:
+        for i, exp in enumerate(data['experience']):
+            check_value(exp.get('dates', ''), f"Experience {i+1} dates")
+
+    if 'products' in data:
+        for i, prod in enumerate(data['products']):
+            check_value(prod.get('dates', ''), f"Product {i+1} dates")
+
+    if 'projects' in data:
+        for i, proj in enumerate(data['projects']):
+            check_value(proj.get('dates', ''), f"Project {i+1} dates")
+
     return errors
 
 def validate_data(data):
@@ -86,13 +118,22 @@ def validate_data(data):
     """
     errors = []
     
-    # Validate Experience
+    # 1. Validate Dates (Full Month Names)
+    errors.extend(validate_dates(data))
+    
+    # 2. Validate Experience
     if 'experience' in data:
         for exp in data['experience']:
-            role = exp.get('role', 'Unknown Role')
+            role = exp.get('role', exp.get('company', 'Unknown Role'))
             errors.extend(validate_bullets(exp.get('bullets', []), context=f"Experience: {role}"))
 
-    # Validate Projects
+    # 3. Validate Products (New Structure)
+    if 'products' in data:
+        for prod in data['products']:
+            name = prod.get('name', 'Unknown Product')
+            errors.extend(validate_bullets(prod.get('bullets', []), context=f"Product: {name}"))
+
+    # 4. Validate Projects
     if 'projects' in data:
         for proj in data['projects']:
             name = proj.get('name', 'Unknown Project')
@@ -177,14 +218,22 @@ def main():
         if output_dir:
             os.makedirs(output_dir, exist_ok=True)
     else:
-        # Ensure output directory exists
-        os.makedirs(OUTPUT_DIR, exist_ok=True)
+        # Determine output filename/path from metadata
+        # The meta.filename in our YAMLs already contains the folder (e.g., Resume_Building/Abhishek/Product/...)
+        output_path = data.get("meta", {}).get("filename", "Generated_Resume.tex")
         
-        # Determine output filename
-        output_filename = data.get("meta", {}).get("filename", "Generated_Resume.tex")
-        if not output_filename.endswith(".tex"):
-            output_filename += ".tex"
-        output_file = os.path.join(OUTPUT_DIR, output_filename)
+        # If the filename contains path separators, it's already a structured path
+        if "/" in output_path or "\\" in output_path:
+            output_file = output_path
+            output_dir = os.path.dirname(output_file)
+            if output_dir:
+                os.makedirs(output_dir, exist_ok=True)
+        else:
+            # Fallback to default OUTPUT_DIR if it's just a filename
+            os.makedirs(OUTPUT_DIR, exist_ok=True)
+            if not output_path.endswith(".tex"):
+                output_path += ".tex"
+            output_file = os.path.join(OUTPUT_DIR, output_path)
     
     print(f"Writing to {output_file}...")
     with open(output_file, 'w') as f:

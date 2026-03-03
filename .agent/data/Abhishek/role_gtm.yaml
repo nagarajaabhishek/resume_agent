@@ -1,88 +1,186 @@
 name: Abhishek Nagaraja
 meta:
-  filename: Abhishek_Nagaraja_GTM_Generated_Resume
+  filename: Resume_Building/Abhishek/GTM/Abhishek_Nagaraja_GTM_Resume.tex
+  projects_first: true
 contact:
-  location: Arlington, Texas, USA - 76013
+  location: Dallas, Texas, USA
   email: work.abhishekn@gmail.com
   linkedin_url: https://www.linkedin.com/in/abhisheknagaraja/
   linkedin_display: linkedin.com/in/abhisheknagaraja
   website_url: https://www.abhishekn.in/
   website_display: www.abhishekn.in
-summary: 'Product & Growth Professional specializing in GTM Strategy, Community Building, and Technical Product Marketing. Expert in orchestrating two-sided marketplace launches and bridging the gap between engineering innovation and commercial adoption. Proven ability to drive user acquisition, optimize revenue operations, and build thriving technical communities.
-
-  '
+summary: 'Product & Growth Professional specializing in GTM Strategy, Community Building,
+  and Technical Product Marketing. Expert in orchestrating two-sided marketplace launches
+  and bridging the gap between engineering innovation and commercial adoption. Proven
+  ability to drive user acquisition and optimize revenue operations. '
 education:
 - school: University of Texas at Arlington
   location: Arlington, Texas, USA
   degree: Master of Science in Computer Science
-  dates: Aug 2023 - May 2024
-  details:
-  - Master of Science in Engineering Management \hfill May 2024 - Current
+  dates: August 2023 - May 2024
+  multi_degree:
+  - degree: Master of Science in Engineering Management
+    dates: May 2024 - Current
   url: https://www.uta.edu/
 - school: Jawaharlal Nehru Technological University
   location: Hyderabad, India
   degree: Bachelor of Technology in Computer Science and Engineering
-  dates: Aug 2019 - July 2023
+  dates: August 2019 - July 2023
   url: https://www.jntuh.ac.in/
 experience:
 - company: University of Texas at Arlington
   role: Program Manager Intern
   location: Texas, USA
-  dates: October 2023 - Present
+  dates: October 2023 - October 2025
   bullets:
-  - Orchestrated the Go-to-Market (GTM) strategy for 'MavMarket', scaling a two-sided marketplace to 5,000+ attendees and 200+ vendors, by identifying key user personas and executing a multi-channel acquisition campaign.
-  - Generated $120,000 in collective revenue through data-driven vendor recruitment and strategic pricing optimization, analyzing historical transaction data to identify high-value segments and maximize vendor retention.
-  - Drove User Acquisition & Engagement by designing feedback loops for 300+ stakeholders, increasing vendor NPS by 35%, by implementing a real-time sentiment analysis dashboard that informed rapid product iteration cycles.
-  - Optimized Revenue Operations by architecting a 50+ page, AI-powered SOP, reducing event planning overhead by 40% and streamlining cross-functional workflows to ensure consistent execution across all marketplace touchpoints.
-  - Led Community Growth for the Entrepreneurship Club, growing active membership to 100+ through targeted outreach, by developing a 'Founder First' content strategy that resonated with the university's aspiring builder demographic.
-  - Facilitated Product Storytelling workshops to align technical workstreams with market-facing value propositions, ensuring that engineering features were translated into compelling user benefits for external stakeholders.
-- company: e-DAM Community
-  role: Founder and Community Lead
+  - Launched the end-to-end \textbf{product lifecycle} for 'MavMarket', scaling the
+    commercial adoption to 200+ vendors and 5,000+ attendees by executing a comprehensive
+    \textbf{vendor acquisition strategy} and generating $120,000 in revenue.
+  - Accelerated stakeholder \textbf{Net Promoter Score (NPS)} by 35% by executing
+    a technical feedback system for 300+ participants, leveraging \textbf{user research}
+    to identify and resolve critical friction points in the commercial GTM funnel.
+  - Monetized organizational efficiency by architecting a 50+ page, \textbf{AI-powered
+    SOP} in Gemini that reduced event planning time by 40% and delivered a consistent,
+    professional experience for all MavMarket stakeholders, users, and partners.
+  - Grew the university’s Entrepreneurship Club to 100+ active members by founding
+    the organization and leading a 10-member executive board, by utilizing a high-velocity
+    \textbf{peer-to-peer mentorship pipeline} to drive community-led growth.
+  - Captured significant community engagement for the local '1 Million Cups' chapter
+    by onboarding 24 local founders, by utilizing targeted \textbf{GTM strategies}
+    to build a student builder brand and align founders with networking opportunities.
+  id: uta_pm_intern
+- role: Founder and Community Lead
+  company: e-DAM Community
   location: Hyderabad, India
-  dates: March 2021 - January 2025
+  dates: March 2021 - July 2023
   bullets:
-  - Engineered a Community-Led Growth engine, scaling the Hyderabad Technical Community to 5,000+ students, by creating a viral loop of peer-to-peer referral incentives and high-value exclusive content drops.
-  - Delivered 200+ technical sessions and workshops to drive brand awareness and facilitate peer-to-peer learning, establishing e-DAM as the premier destination for upskilling in the regional student developer ecosystem.
-  - Executed Strategic Partnerships with 7+ institutions, fostering a talent pipeline and generating 50+ internships, by negotiating mutually beneficial MOUs that aligned corporate hiring needs with student skill development.
-  - Managed Brand & Event Strategy for 'Social Media Summit 2023', securing Rs. 4,00,000+ in sponsorship and 500+ attendees, by crafting a compelling sponsorship deck that highlighted audience demographics and engagement metrics.
-  - Launched the 'e-DAM Spotlight' podcast to amplify founder stories, driving engagement across the startup ecosystem, by curating a diverse guest list of regional innovators to inspire the next generation of builders.
-  - Built a robust network of 10+ influencers and industry mentors to support community initiatives and growth, leveraging their social reach to amplify campaign messaging and attract high-quality speakers.
+  - Spearheaded community growth to 5,000+ members by performing \textbf{Market Analysis}
+    and building a strategic network of industry partners, by utilizing \textbf{200+
+    technical workshops} to foster a thriving, scalable, and inclusive developer ecosystem.
+  - Iterated on technical curriculum content based on high-value \textbf{attendee
+    satisfaction metrics}, by utilizing narrative data and feedback loops to continuously
+    improve learning outcomes and drive professional builder engagement for community
+    members.
+  id: edam_founder
 - company: NFC Solutions Private Limited
   role: Business Analyst Intern
   location: Hyderabad, India
   dates: April 2022 - January 2023
   bullets:
-  - Managed Client Delivery for 4 high-priority projects, authoring detailed PRDs to align engineering with business goals, ensuring that all functional requirements were mapped directly to client success metrics.
-  - Enhanced Operational Efficiency by 20% as Scrum Master, implementing Lean-Agile workflows for faster time-to-market, by removing process bottlenecks and optimizing sprint ceremonies for maximum team velocity.
-  - Optimized the Customer Journey for an e-commerce platform, overseeing order lifecycles and backend integrations, by mapping the end-to-end user flow to identify high-friction drop-off points and implement UX improvements.
-  - Conducted Market Research and user requirement gathering sessions to inform feature prioritization and roadmap planning, synthesizing key qualitative insights into actionable user stories for the development team.
-  - Drafted Technical Whitepapers and documentation to support the GTM rollout of new platform capabilities, translating complex technical specifications into accessible marketing collateral for non-technical decision makers.
-  - Collaborated with QA and Sales teams to ensure product releases met high-quality standards and market expectations, facilitating knowledge transfer sessions to enable sales readiness for new feature launches.
-projects:
-- name: 'Thara: AI Personal Agent Ecosystem'
+  - Directed GTM alignment and \textbf{PRD documentation} for 4 key enterprise projects,
+    by serving as the commercial lead between stakeholders and technical teams to
+    ensure market-ready delivery through high-fidelity \textbf{Jira} backlog management.
+  - Accelerated development throughput by serving as Scrum Master, applying \textbf{Lean-Agile
+    principles} to streamline the commercialization process and leveraging \textbf{bi-weekly
+    retrospectives} to remove blockers and mitigate risk in the launch cycle.
+  - Monetized the \textbf{order lifecycle} for an e-commerce platform by leveraging
+    \textbf{automated inventory triggers} and pricing logic, reducing processing errors
+    by 15% and increasing baseline customer, user, and stakeholder retention.
+  id: nfc_ba_intern
+products:
+- name: 'Google Maps: Product Strategy'
   bullets:
-  - Defined the Product Vision & Value Proposition for a multi-agent AI ecosystem, targeting the personal productivity market by addressing the fragmentation of task and habit tracking.
-  - Validated Technical Feasibility by prototyping the core infrastructure (LangGraph/FastAPI), ensuring the product roadmap was grounded in realistic engineering constraints.
-  url: https://withthara.com/
-- name: 'Google Maps: Product Strategy Teardown'
-  bullets:
-  - Conducted Market Analysis involving 42 user interviews, identifying a critical gap in menu accuracy and dietary filtering that caused platform drop-off.
-  - Formulated a Strategic Roadmap to capture a high-value market segment by proposing a centralized menu system, directly addressing verified user pain points.
+  - Translated qualitative data from \textbf{42 user interviews} into two core problem
+    statements, revealing a critical user need for guaranteed \textbf{menu accuracy}
+    by utilizing \textbf{UX journey mapping} to identify high-friction drop-off points.
+  - Architected a \textbf{product strategy} to directly address validated user needs,
+    by utilizing a roadmap for a \textbf{centralized menu system} with granular filtering
+    to capture the high-value market segment with critical dietary requirements.
   url: https://abhishekn.in/content/google-maps-teardown
-- name: 'Clash of Clans: Growth Strategy Teardown'
+  id: google_maps_strategy
+  dates: null
+- name: 'Clash of Clans: Growth Strategy'
   bullets:
-  - Developed a Growth Strategy to drive 5-10% organic user acquisition by proposing a native social sharing feature, validated by quantitative player behavior analysis.
-  - Projected a 15-20% increase in conversion (join rates) by redesigning the Clan Discovery engine to improve user onboarding and community discovery.
+  - Proposed a \textbf{viral growth strategy} driving \textbf{5-10% new organic user
+    acquisition} by creating a native social sharing feature for key in-game content,
+    by utilizing \textbf{referral loop optimization} and player behavioral data patterns.
+  - Projected a \textbf{15-20% increase in join rates} and \textbf{20-30% increase
+    in feature adoption} by designing a revamped \textbf{Clan Discovery engine} and
+    transforming the feed by utilizing \textbf{data-driven insights}, metrics, and
+    predictive UX patterns.
   url: https://abhishekn.in/content/clash-of-clans-teardown
+  id: coc_growth
+  dates: null
+projects:
+- name: 'Thara: Multi-Agent AI Ecosystem'
+  bullets:
+  - Defined the \textbf{Product Vision & Value Proposition} for a multi-agent AI ecosystem,
+    targeting the \textbf{personal productivity market} by addressing the fragmentation
+    of task and habit tracking through a unified, high-performance technical platform.
+  - Validated \textbf{Technical Feasibility} by prototyping the core infrastructure
+    using \textbf{LangGraph and FastAPI}, ensuring the product roadmap was grounded
+    in realistic engineering constraints and a scalable, high-fidelity system architecture.
+  - Aligned system with user goals as measured by \textbf{real-time behavioral analysis},
+    by automating complex workflows for task and habit tracking using \textbf{vector-based
+    context retrieval} and indexed metadata to reduce cognitive load for all beta
+    users.
+  - Orchestrated a 'Single Source of Truth' architecture using \textbf{YAML and Jinja2},
+    reducing resume tailoring time by \textbf{95%} for multiple job families (TPM,
+    Product) by decoupling content from layout and utilizing modular data inheritance.
+  - Engineered an automated \textbf{Quality Assurance protocol} that enforces the
+    Google \textbf{'XYZ' formula}, by leveraging \textbf{Python-based validation logic}
+    to identify, audit, and reject experienced content lacking measurable impact,
+    metrics, or depth.
+  url: https://withthara.com/
+  id: thara_ai
+  dates: null
+- name: Resume Agent - AI Resume Engineering System
+  bullets:
+  - Orchestrated a 'Single Source of Truth' architecture using \textbf{YAML and Jinja2},
+    reducing resume tailoring time by \textbf{95%} for multiple job families (TPM,
+    Product) by decoupling content from layout and utilizing modular data inheritance.
+  - Engineered an automated \textbf{Quality Assurance protocol} that enforces the
+    Google \textbf{'XYZ' formula}, by leveraging \textbf{Python-based validation logic}
+    to identify, audit, and reject localized experience content lacking measurable
+    impact, metrics, or depth.
+  - Achieved consistent \textbf{>90% parsing scores} across standard ATS checkers
+    by decoupling data from design using a custom \textbf{LaTeX class structure} that
+    prioritizes machine readability, accessibility, and semantic document structure.
+  id: resume_agent
+  dates: February 2026 - Present
+  url: https://github.com/nagarajaabhishek/resume_agent
+- name: 'Split-Wiser: AI Expense Tool'
+  bullets:
+  - Reduced splitting time by \textbf{76%} and validated stability by monitoring the
+    app in a \textbf{pre-production environment}, and by isolating and troubleshooting
+    reported issues using strict \textbf{QA protocols} to ensure zero defects and
+    high uptime.
+  - Enabled fair and precise expense splitting by applying \textbf{context engineering}
+    to design a conversational AI agent, building a \textbf{CustomGPT} that accurately
+    parses unstructured data to guide users through a guided, step-by-step verification
+    workflow.
+  id: splitwiser_ai
+  dates: null
+  url: https://abhishekn.in/content/splitwise-teardown
+- name: 'Product-Pal: AI Product Teardown Specialist'
+  bullets:
+  - Reduced product analysis time by \textbf{70%} and increased strategic throughput
+    by \textbf{3x} by designing an \textbf{AI agent} that utilizing \textbf{n8n workflows}
+    to automate the end-to-end teardown process from discovery research to GTM strategy.
+  - Applied \textbf{context engineering} to design a \textbf{multi-step analytical
+    workflow}, by utilizing structured prompts that guide the LLM to specific, \textbf{actionable
+    recommendations} while mitigating technical hallucination and consistency risks.
+  id: product_pal
+  dates: null
+  url: ''
 skills:
-- category: GTM & Strategy
-  skill_list: Go-to-Market Strategy, Product Positioning, User Acquisition, Community-Led Growth, Competitive Analysis.
-- category: Growth Engineering
-  skill_list: n8n (Workflow Automation), Python (Scripting), SQL, Zapier, API Integration, Cursor IDE.
-- category: Content & Operations
-  skill_list: Technical Writing, Notion (SOPs), Figma (Assets), Brand Strategy, Event Management.
-- category: Analytics & Research
-  skill_list: Market Research, User Interviews, NPS Analysis, A/B Testing, Google Analytics.
+- category: GTM & Growth Strategy
+  skill_list: Go-to-Market (GTM) Strategy, Product Positioning, User Acquisition,
+    Market Adoption, Revenue Operations, Competitive Analysis, Brand Strategy, Event
+    Monetization.
+- category: AI-Powered Marketing & Sales
+  skill_list: AI-Powered Revenue Ops, Automated Lead Scoring, GTM Bot Development,
+    Generative AI (Gemini/GPT-4o), Prompt Engineering, n8n Automation, Context Engineering.
+- category: Technical Growth Tools
+  skill_list: Python (Scripting), SQL, Zapier, API Integration, Google Analytics,
+    Amplitude, Power BI, Excel (Advanced), GitHub, Antigravity, Cursor, Windsurf,
+    v0.
+- category: Soft Skills & Messaging
+  skill_list: Product Storytelling, Market Messaging, Cross-functional Leadership,
+    Stakeholder Management, Narrative Data, Strategic Communication.
+- category: Methodologies
+  skill_list: Agile, Scrum (CSPO), Lean-Agile, SDLC, SEO/SEM, Customer Retention (LTV/CAC),
+    SOP Architecture.
 certifications:
 - Certified Scrum Product Owner (CSPO)
 - AWS Certified Cloud Practitioner (In Progress)

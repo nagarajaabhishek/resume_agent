@@ -1,0 +1,92 @@
+%----------------------------------------------------------------------------------------
+%   PREMIUM COVER LETTER TEMPLATE (Version 2.0)
+%----------------------------------------------------------------------------------------
+\documentclass[11pt,letterpaper]{article} % Font size 11pt for premium readability
+
+\usepackage[parfill]{parskip} % Remove paragraph indentation
+\usepackage{array} % Required for boldface
+\usepackage{xcolor}
+\usepackage[colorlinks=true, urlcolor=blue]{hyperref}
+\usepackage[left=1.0in,top=0.75in,right=1.0in,bottom=0.75in]{geometry}
+\usepackage{ifthen}
+\usepackage{setspace} % For line spacing adjustments
+
+\setstretch{1.15} % Slightly increased line spacing for an elegant feel
+\pagestyle{empty} % Suppress page numbers
+
+\makeatletter % Begin internal command redefinitions
+
+%----------------------------------------------------------------------------------------
+%	HEADINGS COMMANDS (Matches Resume Header Exactly)
+%----------------------------------------------------------------------------------------
+\def \name#1{\def\@name{#1}}
+\def \@name {}
+\def \addressSep {$\diamond$}
+\let \@addressone \relax
+\let \@addresstwo \relax
+\let \@addressthree \relax
+\def \address #1{
+  \@ifundefined{@addresstwo}{
+    \def \@addresstwo {#1}
+  }{
+  \@ifundefined{@addressthree}{
+  \def \@addressthree {#1}
+  }{
+     \def \@addressone {#1}
+  }}
+}
+\def \printaddress #1{
+  \begingroup
+    \def \\ {\addressSep\ }
+    \centerline{#1}
+  \endgroup
+  \par
+}
+\def \printname {
+  \begingroup
+    \hfil{{\namesize\bf \@name}}\hfil
+    \nameskip\break
+  \endgroup
+}
+\let\ori@document=\document
+\renewcommand{\document}{
+  \ori@document
+  \printname
+  \@ifundefined{@addressone}{}{
+    \printaddress{\@addressone}}
+  \@ifundefined{@addresstwo}{}{
+    \printaddress{\@addresstwo}}
+  \@ifundefined{@addressthree}{}{
+    \printaddress{\@addressthree}}
+}
+\def\namesize{\huge}
+\def\nameskip{\vspace{-0.5em}}
+\makeatother
+
+%----------------------------------------------------------------------------------------
+%   DOCUMENT DATA
+%----------------------------------------------------------------------------------------
+\name{Abhishek Nagaraja, {\fontsize{13}{9}\selectfont (CSPO, LSSGB)}\vspace{.2em} \hrule}
+
+\address{Arlington, Texas, USA - 76013 \textbullet\ work.abhishekn@gmail.com \textbullet\ \url{www.abhishekn.in} \textbullet\ {\href{https://www.linkedin.com/in/abhisheknagaraja/}{linkedin.com/in/abhisheknagaraja}} }
+
+\begin{document}
+\vspace{1.5em}
+
+\textbf{Hello Hiring Manager,}
+
+As a Technical Product Manager with a strong engineering background and a Master's in Computer Science, I specialize in bridging the gap between complex engineering execution and business goals to deliver user-centric solutions.
+
+I leverage deep technical expertise to drive product strategy and customer satisfaction. My experience spans architecting multi-agent AI infrastructures, executing technical market research, and designing AI-powered standard operating procedures that significantly reduce operational friction while maintaining high alignment with user needs.
+
+I founded and managed the end-to-end product lifecycle for \textbf{'MavMarket'}, scaling the platform to 200+ vendors and 5,000+ attendees while generating \$120,000 in revenue. By architecting an AI-powered SOP in Gemini and implementing an empathy-driven feedback system, I reduced event planning time by 40\\% and improved stakeholder satisfaction (NPS) by 35\\%.
+
+I am eager to apply my technical acumen and product leadership to help your team build the next generation of high-impact products. I look forward to discussing how my background in engineering and strategic product management can contribute to your team's innovative culture.
+
+\vspace{1.5em}
+Sincerely,
+
+\vspace{1.2em} % Strictly 1.2em per cover_letter_rules.md
+\textbf{Abhishek Nagaraja}
+
+\end{document}

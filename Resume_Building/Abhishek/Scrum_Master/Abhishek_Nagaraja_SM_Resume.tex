@@ -8,9 +8,9 @@
 \usepackage{ifthen} % Required for ifthenelse statements
 \usepackage{charter}
 \usepackage{enumitem}
-\usepackage{xcolor} 
+\usepackage{xcolor} % Recommended for more color options
 \usepackage[colorlinks=true, urlcolor=blue]{hyperref}
-\usepackage[left=0.5in,top=0.25in,right=0.4in,bottom=0.2in, columnsep=0.5cm]{geometry} 
+\usepackage[left=0.5in,top=0.25in,right=0.4in,bottom=0.2in, columnsep=0.5cm]{geometry} % Tightened margins slightly
 \input{glyphtounicode}
 \usepackage[none]{hyphenat}
 \usepackage{multicol}
@@ -106,12 +106,9 @@
  \ifthenelse{\equal{#3}{}}{}{ % If the third argument is not specified, don't print the job title and location line
   \\
   {\em #3} \hfill {\em #4} % Italic job title and location
-  }\smallskip
-  \begin{list}{$\cdot$}{\leftmargin=0em} % \cdot used for bullets, no indentation
-   \itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
-  }{
-  \end{list}
-  \vspace{0em} % Some space after the list of bullet points
+  }
+}{
+  \par \vspace{0.1em}
 }
 
 % The below commands define the whitespace after certain things in the document - they can be \smallskip, \medskip or \bigskip
@@ -126,112 +123,118 @@
 %----------------------------------------------------------------------------------------
 %   DOCUMENT START
 %----------------------------------------------------------------------------------------
-\name{Abhishek Nagaraja, (CSPO) \vspace{.2em} \hrule}
+\name{Abhishek Nagaraja \vspace{.2em} \hrule} % Your name
 
-\address{Arlington, Texas, USA \textbullet\ work.abhishekn@gmail.com \textbullet\ {\href{https://www.abhishekn.in}{www.abhishekn.in}} \textbullet\ {\href{https://linkedin.com/in/abhisheknagaraja}{linkedin.com/in/abhisheknagaraja}}}
+\address{Dallas, Texas, USA \textbullet\ work.abhishekn@gmail.com \textbullet\ {\href{https://www.linkedin.com/in/abhisheknagaraja/}{linkedin.com/in/abhisheknagaraja}} \textbullet\ {\href{https://www.abhishekn.in/}{www.abhishekn.in}}}
 
 \begin{document}
+
 
 %----------------------------------------------------------------------------------------
 %   SUMMARY
 %----------------------------------------------------------------------------------------
-Certified \textbf{Scrum Master (CSPO)} and \textbf{Agile Practitioner} with a strong foundation in \textbf{Servant Leadership}, \textbf{Stakeholder Networking}, and \textbf{Process Improvement}. Proven ability to facilitate \textbf{Scrum Ceremonies}, remove \textbf{Impediments}, and improve \textbf{Team Velocity} by fostering a culture of collaboration. Skilled in leveraging \textbf{Product Storytelling} to align teams and \textbf{Generative AI} for backlog refinement.
-
-\begin{rSection}{Education}
-\begin{rSubsection}{University of Texas at Arlington}{Arlington, Texas, USA}{\textbf{Master of Science in Computer Science}}{Aug 2023 - May 2024}
-\item \textbf{Master of Science in Engineering Management} \hfill May 2024 - Current
-\end{rSubsection}
-
-\begin{rSubsection}{Jawaharlal Nehru Technological University}{Hyderabad, India}{\textbf{Bachelor of Technology in Computer Science and Engineering}}{Aug 2019 - July 2023}
-\item[] \vspace{-1em}
-\end{rSubsection}
-\end{rSection}
-
+Certified Scrum Master (CSPO) and Agile Practitioner with a strong foundation in Servant Leadership, Stakeholder Networking, and Process Improvement. Proven ability to facilitate Scrum Ceremonies, remove Impediments, and improve Team Velocity by fostering a culture of collaboration. Skilled in leveraging Product Storytelling to align teams and Generative AI for backlog refinement.
 
 %----------------------------------------------------------------------------------------
+%   EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Education \vspace{.1em}}
+\begin{rSubsection}{University of Texas at Arlington}{Arlington, Texas, USA}{\textbf{Master of Science in Computer Science}}{August 2023 - May 2024}
+{\\ \textbf{Master of Science in Engineering Management}} \hfill {May 2024 - Current}
+\end{rSubsection}
+\begin{rSubsection}{Jawaharlal Nehru Technological University}{Hyderabad, India}{\textbf{Bachelor of Technology in Computer Science and Engineering}}{August 2019 - July 2023}
+\end{rSubsection}
+\end{rSection}%----------------------------------------------------------------------------------------
 %   WORK EXPERIENCE SECTION
 %----------------------------------------------------------------------------------------
 \begin{rSection}{Work Experience}
-
-\begin{rSubsection}
-{Program Manager Intern, University of Texas at Arlington - Texas, USA}{October 2023 - October 2025}{}{}
-\item[] \vspace{-0.5em}
-\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
-\item \textbf{Facilitated collaborative Sprint Planning sessions} achieving \textbf{90\% sprint commitment attainment} for 'MavMarket' (scaling to 5,000+ users), utilizing \textbf{Jira} for capacity planning and ensuring all backlog items met the \textbf{Definition of Ready (DoR)}.
-\item \textbf{Orchestrated highly focused Daily Stand-ups} across 7 workstreams to drive \textbf{seamless cross-functional alignment}, leveraging strategic network building to resolve inter-departmental impediments in real-time and reduced dependency blockers.
-\item \textbf{Engineered an AI-powered SOP} that \textbf{reduced cycle time by 40\%}, by automating technical documentation workflows and proactively identifying process bottlenecks to streamline impediments.
-\item \textbf{Conducted data-driven Sprint Retrospectives} for 300+ stakeholders, resulting in a \textbf{35\% increase in team satisfaction (NPS)}, by implementing actionable feedback loops and fostering a culture of continuous improvement.
-\item \textbf{Coached the development team} on \textbf{Agile values and principles}, ensuring strict adherence to Scrum ceremonies and significantly improving overall sprint completion rates through servant leadership.
+\begin{rSubsection}{Program Manager Intern, University of Texas at Arlington - Texas, USA}{October 2023 - October 2025}{}{}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em, topsep=0pt]
+\item Facilitated the end-to-end \textbf{product lifecycle} for 'MavMarket', scaling the event to 200+ vendors and 5,000+ attendees while generating \$120,000 in revenue, by coordinating cross-functional teams and vendor acquisition.
+\item Improved stakeholder \textbf{Net Promoter Score (NPS)} by 35\% through a transparent feedback loop for 300+ participants, utilizing \textbf{user research} to identify and remove impediments in the end-to-end vendor onboarding and registration journey.
+\item Empowered cross-functional teams by architecting a 50+ page, \textbf{AI-powered SOP} in Gemini that streamlined event planning time by 40\% and standardized organizational delivery efficiency for all MavMarket stakeholders, teams, and vendors.
+\item Founded and led the university’s Entrepreneurship Club, growing it to 100+ active members by facilitating 20+ workshops and coaching a 10-member executive board through a high-impact \textbf{servant leadership} and mentorship model.
+\item Enhanced community alignment for the local '1 Million Cups' chapter by successfully onboarding 24 founders, by utilizing high-value networking events and \textbf{GTM strategies} to foster a thriving, multi-disciplinary student builder ecosystem.
 \end{itemize}
 \end{rSubsection}
-
-\begin{rSubsection}
-{Business Analyst Intern, NFC Solutions Private Limited - Hyderabad, India}{April 2022 - January 2023}{}{}
-\item[] \vspace{-0.5em}
-\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
-\item \textbf{Served as Junior Scrum Master} for 4 high-priority technical projects, driving a \textbf{20\% improvement in team velocity} by removing non-technical impediments and protecting the development team from scope creep during active sprints.
-\item \textbf{Accelerated backlog readiness} and reduced refinement cycle time, by \textbf{leveraging Large Language Models (LLMs)} to draft comprehensive Acceptance Criteria and assisting the Product Owner in prioritizing high-value user stories according to \textbf{WSJF (Weighted Shortest Job First)}.
-\item \textbf{Managed the sprint board in Jira} ensuring \textbf{100\% visibility} of work, by maintaining accurate burndown charts and tracking task progress to facilitate transparent communication with stakeholders.
-\item \textbf{Coordinated interactive Sprint Reviews} and demos to facilitate user feedback sessions, validating feature releases against business requirements and ensuring immediate value delivery.
-\item \textbf{Collaborated with QA and Dev teams} to resolve blockers, ensuring system integration met high-quality standards with \textbf{zero production defects} through rigorous definition of done (DoD) enforcement.
+\begin{rSubsection}{Business Analyst Intern, NFC Solutions Private Limited - Hyderabad, India}{April 2022 - January 2023}{}{}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em, topsep=0pt]
+\item Facilitated technical delivery for 4 key enterprise projects, acting as the primary servant leader for engineering teams and utilizing \textbf{Jira} to manage the product backlog and ensure predictable, high-velocity delivery cycles.
+\item Improved team velocity and development efficiency by serving as Scrum Master, applying \textbf{Lean-Agile principles} and facilitating \textbf{bi-weekly retrospectives} to remove blockers and enhance collaborative sprint output and team maturity.
+\item Optimized the complex \textbf{order lifecycle} for an enterprise e-commerce platform by removing process impediments and leveraging \textbf{automated inventory triggers} to reduce manual processing errors and improve data accuracy by 15\%.
 \end{itemize}
 \end{rSubsection}
-
-\begin{rSubsection}{Founder and Community Lead, e-DAM Community - Hyderabad, India}{March 2021 - January 2025}{}{}
-\item[] \vspace{-0.5em}
-\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
-\item \textbf{Scaled the technical community} to \textbf{5,000+ members} by \textbf{adopting an Agile approach} to content strategy and \textbf{building a robust network} of student leaders and mentors.
-\item \textbf{Facilitated community retrospectives} as measured by \textbf{high-value attendee feedback}, by using \textbf{narrative storytelling} and active engagement to drive continuous improvement iterations.
+\begin{rSubsection}{Founder and Community Lead, e-DAM Community - Hyderabad, India}{March 2021 - July 2023}{}{}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em, topsep=0pt]
+\item Spearheaded community growth to 5,000+ members by performing \textbf{Market Analysis} and building a strategic network of industry partners, by utilizing \textbf{200+ technical workshops} to foster a thriving, scalable, and inclusive developer ecosystem.
+\item Iterated on technical curriculum content based on high-value \textbf{attendee satisfaction metrics}, by utilizing narrative data and feedback loops to continuously improve learning outcomes and drive professional builder engagement for community members.
 \end{itemize}
 \end{rSubsection}
-
-\end{rSection}
-
+\end{rSection}%----------------------------------------------------------------------------------------
+%   PRODUCTS / STRATEGIC PROJECTS
 %----------------------------------------------------------------------------------------
-%   PROJECTS
-%----------------------------------------------------------------------------------------
-\begin{rSection}{Projects}
-
-\begin{rSubsection}{Thara: Multi-Agent AI Ecosystem}{}{}{}
-\item[] \vspace{-0.5em}
-\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
-\item \textbf{Managed the Scrum Board} for \textbf{11 system components} achieving efficient sprint execution, by ensuring clear \textbf{Acceptance Criteria} and visibility for the development team on complex architectural dependencies.
-\item \textbf{Secured 99.9\% system uptime reliability} by \textbf{negotiating Technical Debt remediation} during sprint planning, ensuring critical architectural fixes were prioritized in the \textbf{Product Backlog} alongside new feature development.
+\begin{rSection}{Strategic Projects \& Analysis \vspace{.1em}}
+\begin{rSubsection}{\href{https://abhishekn.in/content/google-maps-teardown}{Google Maps: Product Strategy}}{}{}{}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em, topsep=0pt]
+\item Translated qualitative data from \textbf{42 user interviews} into two core problem statements, revealing a critical user need for guaranteed \textbf{menu accuracy} by utilizing \textbf{UX journey mapping} to identify high-friction drop-off points.
+\item Architected a \textbf{product strategy} to directly address validated user needs, by utilizing a roadmap for a \textbf{centralized menu system} with granular filtering to capture the high-value market segment with critical dietary requirements.
 \end{itemize}
 \end{rSubsection}
-
-\begin{rSubsection}{Google Maps: Product Teardown}{}{}{}
-\item[] \vspace{-0.5em}
-\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
-\item \textbf{Validated roadmap prioritization} through \textbf{42 user interviews}, conducting qualitative research to advocate for high-impact features and help the Product Owner align the backlog with user needs.
-\item \textbf{Secured stakeholder buy-in} through \textbf{data storytelling}, by \textbf{assisting in Sprint Reviews} and demonstrating value increments to key leadership stakeholders.
+\begin{rSubsection}{\href{https://abhishekn.in/content/clash-of-clans-teardown}{Clash of Clans: Growth Strategy}}{}{}{}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em, topsep=0pt]
+\item Proposed a \textbf{viral growth strategy} driving \textbf{5-10\% new organic user acquisition} by creating a native social sharing feature for key in-game content, by utilizing \textbf{referral loop optimization} and player behavioral data patterns.
+\item Projected a \textbf{15-20\% increase in join rates} and \textbf{20-30\% increase in feature adoption} by designing a revamped \textbf{Clan Discovery engine} and transforming the feed by utilizing \textbf{data-driven insights}, metrics, and predictive UX patterns.
 \end{itemize}
 \end{rSubsection}
-
-\end{rSection}
-
+\end{rSection}%----------------------------------------------------------------------------------------
+%   TECHNICAL PROJECTS
 %----------------------------------------------------------------------------------------
-%   SKILLS
+\begin{rSection}{Technical Projects \vspace{.1em}}
+\begin{rSubsection}{\href{https://withthara.com/}{Thara: Multi-Agent AI Ecosystem}}{}{}{}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em, topsep=0pt]
+\item Architected a scalable \textbf{Multi-Agent AI infrastructure} enabling \textbf{11 specialized autonomous agents} to orchestrate complex workflows by engineering a high-performance \textbf{LangGraph-based state machine} synchronized with a \textbf{FastAPI} backend and \textbf{PostgreSQL}.
+\item Revolutionized the productivity experience by automating tasks, habits, and \textbf{'Ikigai' alignment} via the \textbf{'Thara'} ecosystem that combine proactive \textbf{AI coaching} with real-time \textbf{behavioral recognition} to ensure consistent goal attainment.
+\end{itemize}
+\end{rSubsection}
+\begin{rSubsection}{\href{https://github.com/nagarajaabhishek/resume\_agent}{Resume Agent - AI Resume Engineering System}}{February 2026 - Present}{}{}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em, topsep=0pt]
+\item Orchestrated a 'Single Source of Truth' architecture using \textbf{YAML and Jinja2}, reducing resume tailoring time by \textbf{95\%} for multiple job families (TPM, Product) by decoupling content from layout and utilizing modular data inheritance.
+\item Engineered an automated \textbf{Quality Assurance protocol} that enforces the Google \textbf{'XYZ' formula}, by leveraging \textbf{Python-based validation logic} to identify, audit, and reject localized experience content lacking measurable impact, metrics, or depth.
+\item Achieved consistent \textbf{>90\% parsing scores} across standard ATS checkers by decoupling data from design using a custom \textbf{LaTeX class structure} that prioritizes machine readability, accessibility, and semantic document structure.
+\end{itemize}
+\end{rSubsection}
+\begin{rSubsection}{\href{https://abhishekn.in/content/splitwise-teardown}{Split-Wiser: AI Expense Tool}}{}{}{}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em, topsep=0pt]
+\item Reduced splitting and verification time by \textbf{76\%} and validated stability by monitoring the app in a \textbf{pre-production environment}, and by isolating and troubleshooting reported issues using strict \textbf{QA protocols} to ensure zero defects.
+\item Enabled fair and precise expense splitting by applying \textbf{context engineering} to design a conversational AI agent, building a \textbf{CustomGPT} that accurately parses unstructured data to guide users through a guided, step-by-step verification workflow.
+\end{itemize}
+\end{rSubsection}
+\begin{rSubsection}{Product-Pal: AI Product Teardown Specialist}{}{}{}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em, topsep=0pt]
+\item Reduced product analysis time by \textbf{70\%} and increased strategic throughput by \textbf{3x} by designing an \textbf{AI agent} that utilizing \textbf{n8n workflows} to automate the end-to-end teardown process from discovery research to GTM strategy.
+\item Applied \textbf{context engineering} to design a \textbf{multi-step analytical workflow}, by utilizing structured prompts that guide the LLM to specific, \textbf{actionable recommendations} while mitigating technical hallucination and consistency risks.
+\end{itemize}
+\end{rSubsection}
+\end{rSection}%----------------------------------------------------------------------------------------
+%   SKILLS SECTION
 %----------------------------------------------------------------------------------------
 \begin{rSection}{Skills and Tools}
-\item[] \vspace{-0.5em}
-\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
-    \item \textbf{Agile Frameworks:} Scrum, Kanban, Lean, XP, SAFe (Concepts).
-    \item \textbf{Scrum Mastery:} Facilitation, Servant Leadership, Conflict Resolution, Impediment Removal, Backlog Refinement, Retrospectives, Velocity Tracking, Burndown Charts.
-    \item \textbf{Soft Skills:} \textbf{Product Storytelling}, \textbf{Network Building}, Stakeholder Management, Communication.
-    \item \textbf{Tools:} Jira, \textbf{Linear}, Confluence, Trello, Asana, Mural, Miro, Slack, Zoom, \textbf{Microsoft Office (Word, Excel, PowerPoint)}, \textbf{Google Workspace (Docs, Sheets)}.
-    \item \textbf{AI \& Tech:} \textbf{Generative AI (ChatGPT/Gemini)} for Documentation, \textbf{Predictive Analytics}, SDLC, CI/CD, \textbf{Clerk (Auth)}, \textbf{NeonDB}.
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em, topsep=0pt]
+\item \textbf{Scrum Mastery \& Agile Facilitation:} Scrum (Ceremony Facilitation), Kanban, Servant Leadership, Impediment Removal, Backlog Refinement, Velocity Tracking, Retrospective Design, Lean-Agile Principles.
+\item \textbf{Leadership \& Communication:} Stakeholder Management, Conflict Resolution, Product Storytelling, Strategic Communication, Team Coaching, Executive Presence, Cross-functional Aligment.
+\item \textbf{AI-Powered Productivity:} AI-Driven Backlog Refinement, Automated Sprint Recaps, Agentic Workflows (n8n), Generative AI (GPT-4o, Gemini), Prompt Engineering, RAG Architectures.
+\item \textbf{Technical Tools \& Platforms:} Jira, Confluence, Linear, Trello, Asana, Mural, Miro, Python, SQL, Git/GitHub, AWS Concepts, CI/CD, Cursor, Windsurf.
+\item \textbf{Analysis \& Operations:} Requirements Elicitation, Gap Analysis, SDLC Management, KPI Tracking, SOP Architecture, Data-Driven Decision Making.
 \end{itemize}
-\end{rSection}
-
-\begin{rSection}{Certification}
-\item[] \vspace{-1em}
-\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+\end{rSection}%----------------------------------------------------------------------------------------
+%   CERTIFICATIONS SECTION
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Certifications}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em, topsep=0pt]
 \item Certified Scrum Product Owner (CSPO)
 \item Google: Project Management Professional Certificate
-\item Google: Agile Project Management 
+\item Google: Agile Project Management
 \end{itemize}
 \end{rSection}
-
 
 \end{document}

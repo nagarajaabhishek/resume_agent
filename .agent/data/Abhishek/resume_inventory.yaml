@@ -1,0 +1,44 @@
+person: Abhishek Nagaraja
+last_updated: 2026-03-01
+active_resumes:
+  - role: Technical Product Manager
+    yaml_source: .agent/data/Abhishek/role_tpm.yaml
+    tex_output: Resume_Building/Abhishek/Product/Abhishek_Nagaraja_TPM_Resume.tex
+    domain: Product
+    status: Active
+
+  - role: Business Analyst
+    yaml_source: .agent/data/Abhishek/role_ba.yaml
+    tex_output: Resume_Building/Abhishek/Business_Analyst/Abhishek_Nagaraja_BA_Resume.tex
+    domain: Business Analyst
+    status: Active
+
+  - role: Scrum Master
+    yaml_source: .agent/data/Abhishek/role_sm.yaml
+    tex_output: Resume_Building/Abhishek/Scrum_Master/Abhishek_Nagaraja_SM_Resume.tex
+    domain: Scrum Master
+    status: Active
+
+  - role: Go-to-Market (GTM)
+    yaml_source: .agent/data/Abhishek/role_gtm.yaml
+    tex_output: Resume_Building/Abhishek/GTM/Abhishek_Nagaraja_GTM_Resume.tex
+    domain: GTM
+    status: Active
+
+  - role: Product Owner
+    yaml_source: .agent/data/Abhishek/role_po.yaml
+    tex_output: Resume_Building/Abhishek/Product_Owner/Abhishek_Nagaraja_PO_Resume.tex
+    domain: Product Owner
+    status: Active
+
+  - role: Manager
+    yaml_source: .agent/data/Abhishek/role_manager.yaml
+    tex_output: Resume_Building/Abhishek/Manager/Abhishek_Nagaraja_Manager_Resume.tex
+    domain: Manager
+    status: Active
+
+  - role: Dubai Market
+    yaml_source: .agent/data/Abhishek/role_dubai.yaml
+    tex_output: Resume_Building/Abhishek/Dubai/Abhishek_Nagaraja_Dubai_Resume.tex
+    domain: Regional
+    status: Active

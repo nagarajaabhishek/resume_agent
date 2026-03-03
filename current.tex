@@ -1,0 +1,108 @@
+\documentclass{resume} % Use the custom resume.cls style
+\usepackage{xcolor} % Recommended for more color options
+\usepackage[colorlinks=true, urlcolor=blue]{hyperref}
+\usepackage[left=0.5in,top=0.25in,right=0.4in,bottom=0.2in, columnsep=0.5cm]{geometry} % Tightened margins slightly
+\usepackage{enumitem} % For customizing lists
+\input{glyphtounicode}
+\usepackage[none]{hyphenat}
+\usepackage{multicol}
+
+\pdfgentounicode=1
+ 
+%----------------------------------------------------------------------------------------
+%   DOCUMENT START
+%----------------------------------------------------------------------------------------
+\name{Sneha Vellelath \vspace{.2em} \hrule} % Your name
+
+\address{Washington, D.C. \textbullet\ velsneha@umd.edu \textbullet\ {\href{https://linkedin.com/in/snehavellelath}{linkedin.com/in/snehavellelath}} \textbullet\ {\href{https://github.com/vellsneha}{github.com/vellsneha}}}
+
+\begin{document}
+
+\begin{rSection}{Education \vspace{.1em}}
+\begin{rSubsection}{University of Maryland}{College Park, MD}{\textbf{Master of Science in Applied Machine Learning}}{Expected May 2026}
+\end{rSubsection}
+
+\begin{rSubsection}{Jawaharlal Nehru Technological University Hyderabad}{Hyderabad, India}{Bachelor of Technology in Computer Science and Engineering}{May 2024}
+\end{rSubsection}
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%   WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Work Experience}
+
+\begin{rSubsection}
+{Software Engineer Intern, \href{https://venkys.io}{VENKYS.IO} - Hyderabad, India}{April 2023 - June 2024}{}{}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+\item Architected a production-grade in-browser IDE using \textbf{JavaScript and REST APIs}, achieving \textbf{scalability for 1,000+ active users} through sustained system stability \textbf{by implementing efficient load balancing and state management strategies}.
+\item Engineered automated \textbf{Jenkins CI/CD pipelines} to ensure 24/7 global availability, accomplishing a \textbf{70\% reduction in release turnaround time} \textbf{by integrating automated unit testing and containerized build verification steps}.
+\item Co-authored a comprehensive \textbf{Data Structures \& Algorithms} textbook published by PHI Learning, establishing technical authority in algorithmic foundations.
+\end{itemize}
+\end{rSubsection}
+
+\begin{rSubsection}
+{Research Volunteer, UMD Department of Mathematics - College Park, MD}{October 2024 - January 2025}{}{}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+\item Recovered four governing ecological equations with \textbf{near-zero RMSE} (stability errors below $10^{-15}$) by engineering high-precision ODE solvers using \textbf{Symbolic Regression (FEX) in Python and MATLAB} \textbf{to analyze complex non-linear dynamical systems with high computational accuracy}.
+\end{itemize}
+\end{rSubsection}
+
+\begin{rSubsection}
+{UI UX Design Intern, NFC USA Solutions - Hyderabad, India}{April 2022 - October 2022}{}{}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+\item Redesigned navigation flows and visual hierarchies using \textbf{Figma}, accomplishing a \textbf{15\% increase in user engagement} and reduced post-deployment defects by \textbf{25\%} via structured QA testing \textbf{focused on cross-browser compatibility, accessibility compliance, and responsive design verification}.
+\end{itemize}
+\end{rSubsection}
+
+\begin{rSubsection}
+{Math Coach, UMD AAP \& Cleaning Center - College Park, MD}{January 2025 - Present}{}{}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+\item Achieved a \textbf{100\% course pass rate for 100+ students} by implementing data-informed coaching strategies and translating complex mathematical theories into intuitive real-world applications \textbf{in physics and economics, fostering a deeper conceptual understanding of abstract topics}.
+\end{itemize}
+\end{rSubsection}
+
+\end{rSection}
+
+\begin{rSection}{Projects \& Hackathons \vspace{.1em}}
+
+\begin{rSubsection}{IntelliRAGs: Enterprise Retrieval-Augmented Generation System}{}{}{}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+{\item Architected a secure \textbf{RAG pipeline} using \textbf{FastAPI, ChromaDB, and Cohere LLMs}, achieving \textbf{zero-loss ingestion integrity} and reduction in hallucinations via a custom semantic retrieval engine \textbf{utilizing hybrid search algorithms and cosine similarity ranking for context validation}.}
+{\item Engineered persistent state management and a \textbf{Streamlit dashboard}, enabling \textbf{sub-second historical retrieval} and real-time monitoring of chat workflows.}
+\end{itemize}
+\end{rSubsection}
+
+\begin{rSubsection}{Weather Kinesis: Real-Time Weather Data Processing Pipeline}{}{}{}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+{\item Architected a real-time producer-consumer pipeline using \textbf{Python, AWS Kinesis, and DynamoDB}, achieving \textbf{100\% data integrity} and \textbf{99.9\% reliability} for \textbf{6,600+ daily observations}.}
+{\item Optimized cost to \textbf{\$0.13 total opex} and achieved sub-second query latency by modeling \textbf{DynamoDB time-series schemas} and implementing auto-scaling policies \textbf{triggered by throughput metrics to dynamically manage partition capacity during traffic spikes}.}
+\end{itemize}
+\end{rSubsection}
+
+\begin{rSubsection}{FinGraph: Financial Identity \& Multi-Agent Reasoning (Hackathon)}{}{}{}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+{\item Built a financial identity platform with \textbf{Neo4j AuraDB} (87k+ nodes) and enabled automated risk explanation by engineering a \textbf{multi-agent reasoning pipeline} using \textbf{Google ADK and Gemini} \textbf{to automate the detection of financial anomalies and generate natural language risk reports}.}
+\end{itemize}
+\end{rSubsection}
+
+\begin{rSubsection}{FeedForward: Multimodal AI Agent (Hackathon)}{}{}{}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+{\item Architected a **multilingual AI platform** integrating \textbf{GPT-4o and Twilio}, achieving \textbf{24/7 multimodal accessibility} (Voice, Chat, Web) and a \textbf{35\% increase in task completion}.}
+{\item Engineered a real-time hybrid-cloud backend using \textbf{Flask, AWS RDS, and GCP} to ensure \textbf{sub-second data retrieval} and scalable performance \textbf{capable of handling concurrent voice-to-text streams with minimal latency degradation}.}
+\end{itemize}
+\end{rSubsection}
+
+\end{rSection}
+
+\begin{rSection}{Skills and Tools}
+
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
+    \item \textbf{Languages:} Python, C++, Java, JavaScript, SQL, HTML, CSS, LaTeX
+    \item \textbf{AI/ML Frameworks:} PyTorch, TensorFlow, Deep Learning, NLP, RAG, Transformers, LLM Fine-Tuning, Computer Vision
+    \item \textbf{Cloud \& Tools:} AWS (Kinesis, DynamoDB), GCP, Docker, Kubernetes, Jenkins, FastAPI, LangChain, MLflow, Git
+\end{itemize}
+
+\end{rSection}
+
+\end{document}

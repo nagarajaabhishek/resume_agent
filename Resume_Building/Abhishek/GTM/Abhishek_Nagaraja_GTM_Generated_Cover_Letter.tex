@@ -1,0 +1,92 @@
+%----------------------------------------------------------------------------------------
+%   PREMIUM COVER LETTER TEMPLATE (Version 2.0)
+%----------------------------------------------------------------------------------------
+\documentclass[11pt,letterpaper]{article} % Font size 11pt for premium readability
+
+\usepackage[parfill]{parskip} % Remove paragraph indentation
+\usepackage{array} % Required for boldface
+\usepackage{xcolor}
+\usepackage[colorlinks=true, urlcolor=blue]{hyperref}
+\usepackage[left=1.0in,top=0.75in,right=1.0in,bottom=0.75in]{geometry}
+\usepackage{ifthen}
+\usepackage{setspace} % For line spacing adjustments
+
+\setstretch{1.15} % Slightly increased line spacing for an elegant feel
+\pagestyle{empty} % Suppress page numbers
+
+\makeatletter % Begin internal command redefinitions
+
+%----------------------------------------------------------------------------------------
+%	HEADINGS COMMANDS (Matches Resume Header Exactly)
+%----------------------------------------------------------------------------------------
+\def \name#1{\def\@name{#1}}
+\def \@name {}
+\def \addressSep {$\diamond$}
+\let \@addressone \relax
+\let \@addresstwo \relax
+\let \@addressthree \relax
+\def \address #1{
+  \@ifundefined{@addresstwo}{
+    \def \@addresstwo {#1}
+  }{
+  \@ifundefined{@addressthree}{
+  \def \@addressthree {#1}
+  }{
+     \def \@addressone {#1}
+  }}
+}
+\def \printaddress #1{
+  \begingroup
+    \def \\ {\addressSep\ }
+    \centerline{#1}
+  \endgroup
+  \par
+}
+\def \printname {
+  \begingroup
+    \hfil{{\namesize\bf \@name}}\hfil
+    \nameskip\break
+  \endgroup
+}
+\let\ori@document=\document
+\renewcommand{\document}{
+  \ori@document
+  \printname
+  \@ifundefined{@addressone}{}{
+    \printaddress{\@addressone}}
+  \@ifundefined{@addresstwo}{}{
+    \printaddress{\@addresstwo}}
+  \@ifundefined{@addressthree}{}{
+    \printaddress{\@addressthree}}
+}
+\def\namesize{\huge}
+\def\nameskip{\vspace{-0.5em}}
+\makeatother
+
+%----------------------------------------------------------------------------------------
+%   DOCUMENT DATA
+%----------------------------------------------------------------------------------------
+\name{Abhishek Nagaraja, {\fontsize{13}{9}\selectfont (CSPO, LSSGB)}\vspace{.2em} \hrule}
+
+\address{Arlington, Texas, USA - 76013 \textbullet\ work.abhishekn@gmail.com \textbullet\ \url{www.abhishekn.in} \textbullet\ {\href{https://www.linkedin.com/in/abhisheknagaraja/}{linkedin.com/in/abhisheknagaraja}} }
+
+\begin{document}
+\vspace{1.5em}
+
+\textbf{Hello Hiring Manager,}
+
+As a Product and Growth Professional specializing in Go-To-Market (GTM) strategy and community building, I excel at bridging the gap between engineering innovation and commercial adoption through data-driven launches and cross-functional leadership.
+
+My background in Computer Science and Engineering Management allows me to maintain high technical literacy while navigating business operations. I have a proven track record of orchestrating complex product rollouts, optimizing revenue operations, and using AI-powered workflows to scale user acquisition in competitive markets.
+
+At the University of Texas at Arlington, I led the GTM strategy for 'MavMarket', a two-sided marketplace where I scaled attendee numbers to over 5,000 and managed 200+ vendors. By identifying key user personas and executing multi-channel acquisition campaigns, I generated \$120,000 in collective revenue and increased vendor NPS by 35\% through real-time sentiment analysis and rapid product iteration cycles.
+
+I am eager to bring my builder mindset and experience in scaling high-impact products to your team. I thrive in environments that value deep ownership and technical depth, and I look forward to the possibility of contributing to your continued growth.
+
+\vspace{1.5em}
+Sincerely,
+
+\vspace{1.2em} % Strictly 1.2em per cover_letter_rules.md
+\textbf{Abhishek Nagaraja}
+
+\end{document}

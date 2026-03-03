@@ -1,6 +1,6 @@
 name: Abhishek Nagaraja
 meta:
-  filename: Resume_Building/Abhishek/Manager/Abhishek_Nagaraja_Manager_Resume.tex
+  filename: Resume_Building/Abhishek/Business_Analyst/Abhishek_Nagaraja_BA_Resume.tex
   projects_first: false
 contact:
   location: Dallas, Texas, USA
@@ -9,13 +9,12 @@ contact:
   linkedin_display: linkedin.com/in/abhisheknagaraja
   website_url: https://www.abhishekn.in/
   website_display: www.abhishekn.in
-summary: 'Program Manager with expert-level proficiency in driving multi-million dollar
-  global projects within fast-paced Tech environments. background in computer science
-  enabling a deep understanding of technical complex environments. Proven expert in
-  process improvement and stakeholder management. '
+summary: Business Analyst with a focus on streamlining workflows and driving data-driven
+  decision making. Experienced in gathering requirements, architecting Standard Operating
+  Procedures, and improving organizational efficiency through AI-powered automation.
 education:
 - school: University of Texas at Arlington
-  location: Arlington, Texas, USA
+  location: Dallas, Texas, USA
   degree: Master of Science in Computer Science
   dates: August 2023 - May 2024
   multi_degree:
@@ -33,36 +32,39 @@ experience:
   location: Texas, USA
   dates: October 2023 - October 2025
   bullets:
-  - Directed the end-to-end \textbf{program lifecycle} for 'MavMarket', scaling operations
-    to 200+ vendors and 5,000+ attendees while generating $120,000 in revenue, by
-    executing a high-impact \textbf{vendor acquisition strategy} and roadmap.
-  - Improved stakeholder \textbf{Net Promoter Score (NPS)} by 35% through a centralized
-    feedback system for 300+ participants, utilizing \textbf{user research} to mitigate
-    operational friction and streamline the end-to-end vendor onboarding journey.
-  - Reduced event planning time by 40% by architecting a 50+ page, \textbf{AI-powered
-    SOP} in Gemini that standardized complex organizational workflows and delivered
-    a consistent, high-fidelity experience for MavMarket stakeholders and users.
-  - Grew the university’s Entrepreneurship Club to 100+ active members by founding
-    the organization and leading a 10-member executive board, by utilizing a high-velocity
-    \textbf{peer-to-peer mentorship pipeline} to drive student engagement.
-  - Standardized community engagement for the local '1 Million Cups' chapter by successfully
-    onboarding 24 local founders, by utilizing targeted \textbf{go-to-market strategies}
-    and high-value networking events for student and professional builders.
+  - Elicited and documented \textbf{comprehensive requirements} for the 'MavMarket'
+    lifecycle, scaling the event to 200+ vendors and 5,000+ attendees while generating
+    $120,000 in revenue, by executing a detailed \textbf{market analysis and vendor
+    strategy}.
+  - Validated stakeholder \textbf{Net Promoter Score (NPS)} improvements of 35% through
+    a detailed \textbf{gap analysis} of 300+ feedback records, utilizing \textbf{user
+    research} and heatmaps to bridge friction points in the end-to-end vendor experience.
+  - Streamlined operations by architecting a 50+ page, \textbf{AI-powered SOP} in
+    Gemini that reduced event planning time by 40% and provided a \textbf{Standardized
+    Operating Procedure} for all MavMarket stakeholders, teams, and vendors.
+  - Facilitated the founding of the university’s Entrepreneurship Club, leading a
+    10-member executive board by analyzing workshop engagement data to optimize a
+    high-velocity \textbf{peer-to-peer mentorship pipeline} for over 100 members.
+  - Performed extensive \textbf{Market Research} for the local '1 Million Cups' chapter,
+    successfully onboarding 24 local founders by utilizing \textbf{GTM analysis} to
+    align student and technical builders with high-value networking events.
   id: uta_pm_intern
 - role: Business Analyst Intern
   company: NFC Solutions Private Limited
   location: Hyderabad, India
   dates: April 2022 - January 2023
   bullets:
-  - Directed technical delivery and \textbf{PRD documentation} for 4 key enterprise
+  - Translated business needs into \textbf{PRD/BRD documentation} for 4 key cross-functional
     projects, serving as the primary bridge between stakeholders and engineering teams
-    by utilizing \textbf{Jira} and Linear to ensure on-time delivery cycles.
-  - Drove operational excellence by serving as Scrum Master, applying \textbf{Lean-Agile
-    principles} to streamline ceremonies and utilizing \textbf{bi-weekly retrospectives}
-    to proactively identify, document, and mitigate complex project risks.
-  - Standardized the end-to-end \textbf{order lifecycle} for an e-commerce platform,
-    by leveraging \textbf{automated inventory triggers} and pricing logic to reduce
-    manual processing errors and improve overall resource and data efficiency.
+    by utilizing \textbf{Jira} and Linear to manage and prioritize requirements.
+  - Improved development efficiency by 20% by facilitating Scrum ceremonies as an
+    Agile Analyst, applying \textbf{Lean principles} and utilizing \textbf{bi-weekly
+    retrospectives} to identify, document, and mitigate complex process gaps and team
+    bottlenecks.
+  - Optimized the end-to-end \textbf{order lifecycle} for a large-scale e-commerce
+    platform through \textbf{Gap Analysis}, leveraging \textbf{automated inventory
+    triggers} and pricing logic to reduce data processing errors and improve efficiency
+    by 15%.
   id: nfc_ba_intern
 - role: Founder and Community Lead
   company: e-DAM Community
@@ -80,15 +82,17 @@ experience:
 projects:
 - name: 'Thara: Multi-Agent AI Ecosystem'
   bullets:
-  - Orchestrated multi-agent coordination as measured by \textbf{11-agent synchronization},
-    by managing the core architecture using \textbf{LangGraph and FastAPI} to handle
-    complex asynchronous state handoffs between specialized finance and health agents.
-  - Aligned system with user goals as measured by \textbf{real-time behavioral analysis},
-    by automating complex workflows for task and habit tracking using \textbf{vector-based
-    context retrieval} and indexed metadata to reduce cognitive load for beta users.
-  url: https://withthara.com/
+  - Architected a scalable \textbf{Multi-Agent AI infrastructure} enabling \textbf{11
+    specialized autonomous agents} to orchestrate complex workflows by engineering
+    a high-performance \textbf{LangGraph-based state machine} synchronized with a
+    FastAPI backend.
+  - Revolutionized the productivity experience by automating tasks, habits, and \textbf{'Ikigai'
+    alignment} via the \textbf{'Thara'} ecosystem that combine proactive \textbf{AI
+    coaching} with real-time \textbf{behavioral recognition} to ensure consistent
+    goal attainment.
   id: thara_ai
   dates: null
+  url: https://withthara.com/
 - name: Resume Agent - AI Resume Engineering System
   bullets:
   - Orchestrated a 'Single Source of Truth' architecture using \textbf{YAML and Jinja2},
@@ -106,15 +110,17 @@ projects:
   url: https://github.com/nagarajaabhishek/resume_agent
 - name: 'Split-Wiser: AI Expense Tool'
   bullets:
-  - Enabled fair expense allocation as measured by \textbf{precise parsing of complex
-    bills}, by managing end-to-end development of an \textbf{AI-powered engine} using
-    LLMs to automate multi-party debt reconciliation and multi-modal data mapping.
-  - Accelerated user adoption as measured by completion of the workflow, by streamlining
-    the financial process into a repeatable \textbf{12-step guided journey} that reduced
-    manual splitting and verification time by \textbf{76% (4.75 hours every month)}.
-  url: https://abhishekn.in/content/splitwise-teardown
+  - Reduced splitting and verification time by \textbf{76%} and validated stability
+    by monitoring the app in a \textbf{pre-production environment}, and by isolating
+    and troubleshooting reported issues using strict \textbf{QA protocols} to ensure
+    zero defects.
+  - Enabled fair and precise expense splitting by applying \textbf{context engineering}
+    to design a conversational AI agent, building a \textbf{CustomGPT} that accurately
+    parses unstructured data to guide users through a guided, step-by-step verification
+    workflow.
   id: splitwiser_ai
   dates: null
+  url: https://abhishekn.in/content/splitwise-teardown
 - name: 'Product-Pal: AI Product Teardown Specialist'
   bullets:
   - Reduced product analysis time by \textbf{70%} and increased strategic throughput
@@ -127,34 +133,27 @@ projects:
   dates: null
   url: ''
 skills:
-- category: Program & Operations Management
-  skill_list: Program Lifecycle Management, Risk Mitigation, Stakeholder Alignment,
-    Strategic Planning, Resource Allocation, SOP Architecture, GTM Strategy, Operational
-    Efficiency, Budgeting, Change Management.
-- category: Leadership & Strategy
-  skill_list: Cross-functional Leadership, Conflict Resolution, Mentorship Pipelines,
-    Executive Presence, Startup Operations, Business Development, Product Storytelling,
-    Strategic Communication.
-- category: AI-Powered Operations
-  skill_list: Agentic Workfows (n8n, LangGraph), AI-Powered SOPs, Generative AI (Gemini,
-    GPT-4o), Prompt Engineering, Automated Reporting, Predictive Analytics, AI Governance
-    & Ethics.
-- category: Technical Systems
-  skill_list: Python, SQL, REST APIs, AWS (EC2, S3), CI/CD Pipelines, Docker, System
-    Design Concepts, Database Management.
-- category: Project Mastery Tools
-  skill_list: Jira, Asana, Notion, Microsoft Project, Power BI, Excel (Advanced),
-    Google Analytics, Figma, Antigravity, Cursor.
-- category: Agile & Lean Frameworks
-  skill_list: Agile, Scrum, Lean Six Sigma (Green Belt), Kanban, Waterfall, OKR Planning,
-    Sprint Governance.
+- category: Business Analysis & Strategy
+  skill_list: Requirements Elicitation, Gap Analysis, PRD/BRD Documentation, Process
+    Modeling (BPMN), Stakeholder Translation, Data Storytelling, Market Research,
+    UAT Coordination.
+- category: AI & Data Analysis
+  skill_list: Predictive Data Modeling, SQL-to-Insights (LLMs), Automated Reporting,
+    Predictive Analytics, Generative AI (Gemini/GPT-4o), Prompt Engineering, n8n Automation.
+- category: Technical Tools & Platforms
+  skill_list: Power BI, Tableau, SQL, Python, Excel (Advanced), Jira, Visio, Lucidchart,
+    Asana, Notion, GitHub, AWS (Basic).
+- category: Soft Skills & Collaboration
+  skill_list: Cross-functional Alignment, Conflict Resolution, Product Storytelling,
+    Strategic Communication, Agile Facilitation, Mentorship.
+- category: Methodologies
+  skill_list: Agile, Scrum, Lean-Agile, SDLC, SOP Architecture, Waterfall, Process
+    Improvement.
 certifications:
 - Certified Scrum Product Owner (CSPO)
 - Lean Six Sigma Green Belt (LSSGB)
 - 'Google: Foundation of Project Management'
-- 'Google: Project Initiation: Starting a Successful Project'
-- 'Google: Project Planning: Putting It All Together'
-- McKinsey.org Forward Program
+- 'Google: Data Analytics: Foundations'
 products:
 - name: 'Google Maps: Product Strategy'
   bullets:
@@ -164,9 +163,9 @@ products:
   - Architected a \textbf{product strategy} to directly address validated user needs,
     by utilizing a roadmap for a \textbf{centralized menu system} with granular filtering
     to capture the high-value market segment with critical dietary requirements.
-  url: https://abhishekn.in/content/google-maps-teardown
   id: google_maps_strategy
   dates: null
+  url: https://abhishekn.in/content/google-maps-teardown
 - name: 'Clash of Clans: Growth Strategy'
   bullets:
   - Proposed a \textbf{viral growth strategy} driving \textbf{5-10% new organic user
@@ -176,6 +175,6 @@ products:
     in feature adoption} by designing a revamped \textbf{Clan Discovery engine} and
     transforming the feed by utilizing \textbf{data-driven insights}, metrics, and
     predictive UX patterns.
-  url: https://abhishekn.in/content/clash-of-clans-teardown
   id: coc_growth
   dates: null
+  url: https://abhishekn.in/content/clash-of-clans-teardown

@@ -1,0 +1,92 @@
+%----------------------------------------------------------------------------------------
+%   PREMIUM COVER LETTER TEMPLATE (Version 2.0)
+%----------------------------------------------------------------------------------------
+\documentclass[11pt,letterpaper]{article} % Font size 11pt for premium readability
+
+\usepackage[parfill]{parskip} % Remove paragraph indentation
+\usepackage{array} % Required for boldface
+\usepackage{xcolor}
+\usepackage[colorlinks=true, urlcolor=blue]{hyperref}
+\usepackage[left=1.0in,top=0.75in,right=1.0in,bottom=0.75in]{geometry}
+\usepackage{ifthen}
+\usepackage{setspace} % For line spacing adjustments
+
+\setstretch{1.15} % Slightly increased line spacing for an elegant feel
+\pagestyle{empty} % Suppress page numbers
+
+\makeatletter % Begin internal command redefinitions
+
+%----------------------------------------------------------------------------------------
+%	HEADINGS COMMANDS (Matches Resume Header Exactly)
+%----------------------------------------------------------------------------------------
+\def \name#1{\def\@name{#1}}
+\def \@name {}
+\def \addressSep {$\diamond$}
+\let \@addressone \relax
+\let \@addresstwo \relax
+\let \@addressthree \relax
+\def \address #1{
+  \@ifundefined{@addresstwo}{
+    \def \@addresstwo {#1}
+  }{
+  \@ifundefined{@addressthree}{
+  \def \@addressthree {#1}
+  }{
+     \def \@addressone {#1}
+  }}
+}
+\def \printaddress #1{
+  \begingroup
+    \def \\ {\addressSep\ }
+    \centerline{#1}
+  \endgroup
+  \par
+}
+\def \printname {
+  \begingroup
+    \hfil{{\namesize\bf \@name}}\hfil
+    \nameskip\break
+  \endgroup
+}
+\let\ori@document=\document
+\renewcommand{\document}{
+  \ori@document
+  \printname
+  \@ifundefined{@addressone}{}{
+    \printaddress{\@addressone}}
+  \@ifundefined{@addresstwo}{}{
+    \printaddress{\@addresstwo}}
+  \@ifundefined{@addressthree}{}{
+    \printaddress{\@addressthree}}
+}
+\def\namesize{\huge}
+\def\nameskip{\vspace{-0.5em}}
+\makeatother
+
+%----------------------------------------------------------------------------------------
+%   DOCUMENT DATA
+%----------------------------------------------------------------------------------------
+\name{Abhishek Nagaraja, {\fontsize{13}{9}\selectfont (CSPO, LSSGB)}\vspace{.2em} \hrule}
+
+\address{Arlington, Texas, USA - 76013 \textbullet\ work.abhishekn@gmail.com \textbullet\ \url{www.abhishekn.in} \textbullet\ {\href{https://www.linkedin.com/in/abhisheknagaraja/}{linkedin.com/in/abhisheknagaraja}} }
+
+\begin{document}
+\vspace{1.5em}
+
+\textbf{Hello Hiring Manager,}
+
+As a Certified Scrum Product Owner (CSPO) and Agile Practitioner with a Master's in Computer Science, I specialize in servant leadership, stakeholder networking, and process improvement to drive team velocity and deliver high-impact products.
+
+I am passionate about removing impediments and fostering a culture of continuous improvement. My approach integrates deep technical literacy with product storytelling, allowing me to align cross-functional teams and leverage generative AI for efficient backlog refinement and technical documentation.
+
+At the University of Texas at Arlington, I facilitated collaborative sprint planning sessions for \textbf{'MavMarket'}, achieving 90\\% sprint commitment attainment as the platform scaled to over 5,000 users. By managing seven parallel workstreams/daily stand-ups and implementing an AI-powered SOP that reduced cycle time by 40\\%, I resolved complex inter-departmental dependencies and improved team satisfaction by 35\\%.
+
+I am eager to bring my expertise in Agile frameworks and my builder mindset to your department. I thrive in high-velocity environments that demand deep ownership and proactive problem-solving, and I look forward to contributing to your team's success.
+
+\vspace{1.5em}
+Sincerely,
+
+\vspace{1.2em} % Strictly 1.2em per cover_letter_rules.md
+\textbf{Abhishek Nagaraja}
+
+\end{document}

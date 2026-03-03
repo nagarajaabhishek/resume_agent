@@ -36,3 +36,9 @@ description: The standard, strict workflow for creating or updating any resume. 
 
 ## Step 3: Final Output
 - Present the generated PDF/LaTeX file.
+
+## Step 4: Maintenance (Registry Update)
+**Objective:** Keep the global list of active resumes up to date.
+
+1. **Update Inventory:** Open `.agent/data/[PersonName]/resume_inventory.yaml`.
+2. **Add Entry:** Ensure the new role, its YAML path, and its TeX output path are registered.

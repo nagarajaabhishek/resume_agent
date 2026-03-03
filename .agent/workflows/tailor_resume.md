@@ -36,5 +36,9 @@ description: How to create a NEW, targeted resume from the Master Profile using 
     ```bash
     python3 .agent/scripts/generate_resume.py .agent/data/[PersonName]/role_[new_role].yaml
     ```
-2.  **Review:**
-    - Check the PDF. Does it "read" like the target role?
+## Step 5: Registration (Inventory Update)
+**Objective:** Track the new niche resume in the master inventory.
+
+1.  **Open Inventory:** `.agent/data/[PersonName]/resume_inventory.yaml`.
+2.  **Append Details:** Add the new role name, its YAML path, and the target TeX output path. 
+3.  **Verify:** Check that the `status` is set to `Active`.

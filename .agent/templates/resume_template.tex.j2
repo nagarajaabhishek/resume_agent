@@ -3,15 +3,15 @@
 %----------------------------------------------------------------------------------------
 \documentclass[9pt,letterpaper]{article} % Font size and paper type
 
-\usepackage[parskip]{parskip} % Remove paragraph indentation
+\usepackage[parfill]{parskip} % Remove paragraph indentation
 \usepackage{array} % Required for boldface (\bf and \bfseries) tabular columns
 \usepackage{ifthen} % Required for ifthenelse statements
 \usepackage{charter}
 \usepackage{enumitem}
-\usepackage{xcolor}
+\usepackage{xcolor} % Recommended for more color options
 \usepackage[colorlinks=true, urlcolor=blue]{hyperref}
-\usepackage[left=0.5in,top=0.25in,right=0.4in,bottom=0.2in, columnsep=0.5cm]{geometry}
-% \input{glyphtounicode} % Commented out to prevent errors
+\usepackage[left=0.5in,top=0.25in,right=0.4in,bottom=0.2in, columnsep=0.5cm]{geometry} % Tightened margins slightly
+\input{glyphtounicode}
 \usepackage[none]{hyphenat}
 \usepackage{multicol}
 
@@ -29,7 +29,7 @@
 
 \def \addressSep {$\diamond$} % Set default address separator to a diamond
 
-% One, two or three address lines can be specified
+% One, two or three address lines can be specified 
 \let \@addressone \relax
 \let \@addresstwo \relax
 \let \@addressthree \relax
@@ -106,12 +106,9 @@
  \ifthenelse{\equal{#3}{}}{}{ % If the third argument is not specified, don't print the job title and location line
   \\
   {\em #3} \hfill {\em #4} % Italic job title and location
-  }\smallskip
-  \begin{list}{$\cdot$}{\leftmargin=0em} % \cdot used for bullets, no indentation
-   \itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
-  }{
-  \end{list}
-  \vspace{0em} % Some space after the list of bullet points
+  }
+}{
+  \par \vspace{0.1em}
 }
 
 % The below commands define the whitespace after certain things in the document - they can be \smallskip, \medskip or \bigskip
@@ -126,122 +123,123 @@
 %----------------------------------------------------------------------------------------
 %   DOCUMENT START
 %----------------------------------------------------------------------------------------
-\name{ << name >> \vspace{.2em} \hrule}
+\name{<< name >> \vspace{.2em} \hrule} % Your name
 
-\address{ << contact.location >> \textbullet\ << contact.email >> \textbullet\ \href{ << contact.linkedin_url >> }{ << contact.linkedin_display >> } \textbullet\ \href{ << contact.website_url >> }{ << contact.website_display >> }}
-
-{% if personal_details %}
-\address{Nationality: << personal_details.nationality >> \textbullet\ Location: << personal_details.current_location >> \textbullet\ Visa: << personal_details.visa_status >>}
-{% endif %}
+\address{<< contact.location >> \textbullet\ << contact.email >> \textbullet\ {\href{<< contact.linkedin_url >>}{<< contact.linkedin_display >>}} \textbullet\ {\href{<< contact.website_url >>}{<< contact.website_display >>}}}
 
 \begin{document}
 
+{% if summary %}
 %----------------------------------------------------------------------------------------
 %   SUMMARY
 %----------------------------------------------------------------------------------------
 << summary >>
 
-%----------------------------------------------------------------------------------------
-%   EDUCATION SECTION
-%----------------------------------------------------------------------------------------
-%   EDUCATION SECTION
-%----------------------------------------------------------------------------------------
-\begin{rSection}{Education}
-{% for edu in education %}
-\begin{rSubsection}{ {% if edu.url %}\href{<< edu.url >>}{<< edu.school >>}{% else %}<< edu.school >>{% endif %} }{ << edu.location >> }{\textbf{ << edu.degree >> }}{ << edu.dates >> }
-{% if edu.multi_degree %}
-{% for degree in edu.multi_degree %}
-{\textbf{<< degree.degree >>}}\hfill{<< degree.dates >>}
-{% endfor %}
 {% endif %}
-{% if edu.details %}
-{% for detail in edu.details %}
-\item << detail >>
-{% endfor %}
-{% else %}
-{% if not edu.multi_degree %}
-\item[] \vspace{-1em}
-{% endif %}
-{% endif %}
-\end{rSubsection}
-{% endfor %}
-\end{rSection}
 
+{%- set order = section_order if section_order else ['education', 'experience', 'products', 'projects', 'skills', 'certifications'] -%}
+
+{%- for section in order -%}
+{%- if section == 'education' and education -%}
+%----------------------------------------------------------------------------------------
+%   EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Education \vspace{.1em}}
+{%- for edu in education %}
+\begin{rSubsection}{<< edu.school >>}{<< edu.location >>}{\textbf{<< edu.degree >>}}{<< edu.dates >>}
+{%- if edu.multi_degree %}
+{%- for item in edu.multi_degree %}
+{\\ \textbf{<< item.degree >>}} \hfill {<< item.dates >>}
+{%- endfor %}
+{%- endif %}
+{%- if edu.details %}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em, topsep=0pt]
+{%- for detail in edu.details %}
+\item << detail >>
+{%- endfor %}
+\end{itemize}
+{%- endif %}
+\end{rSubsection}
+{%- endfor %}
+\end{rSection}
+{%- endif %}
+
+{%- if section == 'experience' and experience -%}
 %----------------------------------------------------------------------------------------
 %   WORK EXPERIENCE SECTION
 %----------------------------------------------------------------------------------------
-%----------------------------------------------------------------------------------------
-%   MACROS FOR SECTIONS
-%----------------------------------------------------------------------------------------
-{% macro render_experience() %}
 \begin{rSection}{Work Experience}
-{% for exp in experience %}
-\begin{rSubsection}
-{ << exp.role >>, << exp.company >>, << exp.location >> }{ << exp.dates >> }{}{}
-\item[] \vspace{-0.5em}
-\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
-{% for bullet in exp.bullets %}
+{%- for exp in experience %}
+\begin{rSubsection}{<< exp.role >>, << exp.company >> - << exp.location >>}{<< exp.dates >>}{}{}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em, topsep=0pt]
+{%- for bullet in exp.bullets %}
 \item << bullet >>
-{% endfor %}
+{%- endfor %}
 \end{itemize}
 \end{rSubsection}
-{% endfor %}
+{%- endfor %}
 \end{rSection}
-{% endmacro %}
+{%- endif %}
 
-{% macro render_projects() %}
-\begin{rSection}{Projects}
-{% for project in projects %}
-{% if project.url %}
-\begin{rSubsection}{ \href{<< project.url >>}{<< project.name >>} }{}{}{}
-{% else %}
-\begin{rSubsection}{ << project.name >> }{}{}{}
-{% endif %}
-\item[] \vspace{-0.5em}
-\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
-{% for bullet in project.bullets %}
+{%- if section == 'products' and products -%}
+%----------------------------------------------------------------------------------------
+%   PRODUCTS / STRATEGIC PROJECTS
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Strategic Projects \& Analysis \vspace{.1em}}
+{%- for product in products %}
+\begin{rSubsection}{<< '\href{' + product.url + '}{' + product.name + '}' if product.url else product.name >>}{<< product.dates if product.dates else '' >>}{}{}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em, topsep=0pt]
+{%- for bullet in product.bullets %}
 \item << bullet >>
-{% endfor %}
+{%- endfor %}
 \end{itemize}
 \end{rSubsection}
-{% endfor %}
+{%- endfor %}
 \end{rSection}
-{% endmacro %}
+{%- endif %}
 
+{%- if section == 'projects' and projects -%}
 %----------------------------------------------------------------------------------------
-%   BODY SECTIONS (ORDERING)
+%   TECHNICAL PROJECTS
 %----------------------------------------------------------------------------------------
-{% if meta is defined and meta.projects_first %}
-    << render_projects() >>
-    << render_experience() >>
-{% else %}
-    << render_experience() >>
-    << render_projects() >>
-{% endif %}
+\begin{rSection}{Technical Projects \vspace{.1em}}
+{%- for project in projects %}
+\begin{rSubsection}{<< '\href{' + project.url + '}{' + project.name + '}' if project.url else project.name >>}{<< project.dates if project.dates else '' >>}{}{}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em, topsep=0pt]
+{%- for bullet in project.bullets %}
+\item << bullet >>
+{%- endfor %}
+\end{itemize}
+\end{rSubsection}
+{%- endfor %}
+\end{rSection}
+{%- endif %}
 
-
+{%- if section == 'skills' and skills -%}
 %----------------------------------------------------------------------------------------
-%   SKILLS
+%   SKILLS SECTION
 %----------------------------------------------------------------------------------------
-\begin{rSection}{Skills}
-\item[] \vspace{-0.5em}
-\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
-{% for skill_cat in skills %}
-    \item \textbf{ << skill_cat.category >>:} << skill_cat.skill_list >>
-{% endfor %}
+\begin{rSection}{Skills and Tools}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em, topsep=0pt]
+{%- for skill_group in skills %}
+\item \textbf{<< skill_group.category >>:} << skill_group.skill_list >>
+{%- endfor %}
 \end{itemize}
 \end{rSection}
+{%- endif %}
 
+{%- if section == 'certifications' and certifications -%}
 %----------------------------------------------------------------------------------------
-%   CERTIFICATIONS
+%   CERTIFICATIONS SECTION
 %----------------------------------------------------------------------------------------
 \begin{rSection}{Certifications}
-\item[] \vspace{-1em}
-\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em]
-{% for cert in certifications %}
-\item << cert.name >>
-{% endfor %}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em, topsep=0pt]
+{%- for cert in certifications %}
+\item << cert >>
+{%- endfor %}
 \end{itemize}
 \end{rSection}
+{%- endif %}
+{%- endfor %}
 
 \end{document}
