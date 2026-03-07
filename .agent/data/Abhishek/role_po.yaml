@@ -11,7 +11,7 @@ contact:
   website_display: www.abhishekn.in
 summary: Certified Product Owner (CSPO) with a track record of driving Agile Product Delivery and Backlog Management. Expert in translating business needs into actionable User Stories and technical requirements. Skilled in facilitating Scrum ceremonies and leveraging Agentic Workflows and Generative AI to accelerate product velocity
 education:
-- school: University of Texas at Dallas
+- school: University of Texas at Arlington
   location: Dallas, Texas, USA
   degree: Master of Science in Computer Science
   dates: August 2023 - May 2024
@@ -26,7 +26,7 @@ education:
   url: https://www.jntuh.ac.in/
 experience:
 - role: Program Manager Intern
-  company: University of Texas at Dallas
+  company: University of Texas at Arlington
   location: Texas, USA
   dates: October 2023 - October 2025
   bullets:
@@ -34,8 +34,6 @@ experience:
   - Improved stakeholder \textbf{Net Promoter Score (NPS)} by 35% and engagement by 25% by executing a high-fidelity feedback system for 100+ vendors and 200+ attendees, utilizing \textbf{user research} to identify and resolve key friction points.
   - Reduced event planning time by 40% by architecting a 50+ page, \textbf{AI-powered Standard Operating Procedure (SOP)} in Gemini that improved organizational efficiency and delivered a consistent and professional user experience for all MavMarket users.
   - "Grew the university\u2019s Entrepreneurship Club to 100+ active members by founding the organization, leading a 10-member executive board, and facilitating over 20 workshops by utilizing a \\textbf{peer-to-peer mentorship pipeline} to drive community growth."
-  - Enhanced community engagement for the local '1 Million Cups' chapter by successfully onboarding 24 local founders, utilizing targeted \textbf{go-to-market strategies} and high-value networking events to foster a thriving student builder brand.
-  - Demonstrated domain expertise as measured by zero launch delays, by utilizing complex physical infrastructure coordination and strictly executing on-site vendor pipelines to consistently align all business and strict operational requirements.
   id: uta_pm_intern
 - role: Founder and Community Lead
   company: e-DAM Community
@@ -86,15 +84,6 @@ products:
   id: coc_growth
   dates: null
 projects:
-- name: 'Thara: Multi-Agent AI Ecosystem'
-  bullets:
-  - Architected a scalable \textbf{Multi-Agent AI infrastructure} enabling \textbf{11 specialized autonomous agents} to orchestrate complex workflows by engineering a \textbf{LangGraph-based state machine} synchronized with a \textbf{FastAPI} backend and \textbf{PostgreSQL}.
-  - Revolutionized the productivity experience by automating tasks, habits, and \textbf{'Ikigai' alignment} via the \textbf{'Thara'} ecosystem that combine proactive \textbf{AI coaching} with real-time \textbf{behavioral recognition} to ensure goal attainment.
-  - Demonstrated domain expertise as measured by zero critical system failures, by utilizing complex system resilience architectures, proactive API security, and automated error handling workflows to heavily strengthen the entire product ecosystem.
-  - Optimized feature adoption rates by 20 percent by executing a robust user research methodology and rapidly iterating on core UI/UX designs based on iterative A/B testing results and high-fidelity predictive user heatmap analytics.
-  url: https://withthara.com/
-  id: thara_ai
-  dates: null
 - name: Resume Agent - AI Resume Engineering System
   bullets:
   - Orchestrated a 'Single Source of Truth' architecture using \textbf{YAML and Jinja2}, reducing resume tailoring time by \textbf{95%} for multiple job families (TPM, Product) by decoupling content from layout and utilizing modular data inheritance.
@@ -103,21 +92,13 @@ projects:
   id: resume_agent
   dates: February 2026 - Present
   url: https://github.com/nagarajaabhishek/resume_agent
-- name: 'Split-Wiser: AI Expense Tool'
-  bullets:
-  - Reduced splitting time by \textbf{76%} and validated app stability by monitoring the platform in a \textbf{secure pre-production environment}, isolating and troubleshooting all reported issues using strict \textbf{QA protocols} to guarantee zero critical defects.
-  - Enabled fair and precise expense splitting by applying \textbf{complex context engineering} to design a conversational AI agent, building a \textbf{custom OpenAI GPT} that parses unstructured data to guide users through a strict and robust verification workflow.
-  - Demonstrated domain expertise as measured by zero security breaches, by seamlessly leveraging financial reconciliation, user verification workflows, and strict KYC/AML compliance and ACH/SWIFT rules to securely align all business requirements.
-  id: splitwiser_ai
-  dates: null
-  url: https://abhishekn.in/content/splitwise-teardown
 skills:
 - category: Agile Product Ownership
   skill_list: Scrum, Kanban, SAFe, Linear, Jira, Confluence, User Story Mapping, Sprint Planning, Retrospectives, Aha!, Microsoft Project, Salesforce, HubSpot, Smartsheet, Microsoft Visio, Acceptance Criteria (AC) depth, Epic breakdown, Story Points estimation, User Journey Mapping, Backlog Grooming, Incident Management, Post-mortem leadership, Root Cause Analysis (RCA).
 - category: AI-Powered Discovery
   skill_list: AI Product Strategy (Gemini/GPT-4o), Automated PRD Generation, AI-Driven User Research Analysis, Agentic Workflows (n8n), Prompt Engineering, Context Engineering.
 - category: Technical & Analytics
-  skill_list: SQL, Python, AWS (S3, EC2, Lambda), Docker, API Integration, KPI Analysis, PostgreSQL, Tableau, Power BI, NPS improvement tracking, Cohort Analysis, Funnel Optimization, A/B Testing protocols, Conversion Rate optimization.
+  skill_list: SQL, Python, AWS (S3, EC2, Lambda), Docker, API Integration, KPI Analysis, PostgreSQL, Tableau, Power BI, Google Analytics, Amplitude, MermaidJS, NPS improvement tracking, Cohort Analysis, Funnel Optimization, A/B Testing protocols, Conversion Rate optimization.
 - category: Soft Skills & Governance
   skill_list: Cross-functional Alignment, Product Storytelling, Narrative Data, Conflict Resolution, Servant Leadership, Executive Presence.
 - category: Project & Agile Tools

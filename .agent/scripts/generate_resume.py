@@ -3,6 +3,8 @@ import jinja2
 import os
 import sys
 import re
+import subprocess
+import shutil
 
 # Configuration
 TEMPLATE_FILE = ".agent/templates/resume_template.tex.j2"
@@ -240,6 +242,45 @@ def main():
         f.write(rendered_tex)
         
     print("✅ Resume Generation COMPLETE.")
+    compile_to_pdf(output_file)
+
+def compile_to_pdf(tex_file):
+    """
+    Compiles a .tex file to PDF using pdflatex, then removes auxiliary files.
+    Skips silently if pdflatex is not installed.
+    """
+    if not shutil.which("pdflatex"):
+        print("⚠️  pdflatex not found on PATH — skipping PDF compilation.")
+        print("   Run: eval \"$(/usr/libexec/path_helper)\" to activate TeX Live.")
+        return
+
+    tex_dir = os.path.dirname(os.path.abspath(tex_file))
+    tex_name = os.path.basename(tex_file)
+    base_name = os.path.splitext(tex_name)[0]
+
+    print(f"Compiling {tex_name} to PDF...")
+    result = subprocess.run(
+        ["pdflatex", "-interaction=nonstopmode", tex_name],
+        cwd=tex_dir,
+        capture_output=True,
+        text=True
+    )
+
+    # Clean up auxiliary files
+    for ext in [".log", ".aux", ".out"]:
+        aux_file = os.path.join(tex_dir, base_name + ext)
+        if os.path.exists(aux_file):
+            os.remove(aux_file)
+
+    pdf_file = os.path.join(tex_dir, base_name + ".pdf")
+    if result.returncode == 0 and os.path.exists(pdf_file):
+        print(f"✅ PDF compiled: {pdf_file}")
+    else:
+        print("❌ PDF compilation failed. pdflatex output:")
+        # Show only error lines to keep output clean
+        for line in result.stdout.splitlines():
+            if line.startswith("!") or "Error" in line:
+                print(f"   {line}")
 
 if __name__ == "__main__":
     main()

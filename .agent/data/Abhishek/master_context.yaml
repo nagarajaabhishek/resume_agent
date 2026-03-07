@@ -15,7 +15,7 @@ basics:
     display: github.com/abhisheknagaraja
 education:
 - id: uta_ms_cs
-  school: University of Texas at Dallas
+  school: University of Texas at Arlington
   url: https://www.uta.edu/
   location: Dallas, Texas, USA
   degree: Master of Science in Computer Science
@@ -23,8 +23,8 @@ education:
   details:
   - 'Specialization: Artificial Intelligence & Database Systems'
 - id: uta_ms_em
-  school: University of Texas at Dallas
-  location: Dallas, Texas, USA
+  school: University of Texas at Arlington
+  location: Arlington, Texas, USA
   degree: Master of Science in Engineering Management
   dates: May 2024 - Current
   details: []
@@ -38,7 +38,7 @@ education:
 experience:
 - id: uta_pm_intern
   role: Program Manager Intern
-  company: University of Texas at Dallas
+  company: University of Texas at Arlington
   location: Texas, USA
   dates: October 2023 - October 2025
   tags:
@@ -267,7 +267,7 @@ skills:
     Planning, Retrospectives, Aha!, Microsoft Project, Salesforce, HubSpot, Smartsheet, Microsoft Visio, Acceptance Criteria (AC) depth, Epic breakdown, Story Points estimation, User Journey Mapping, Backlog Grooming, Salesforce (SFDC), CPQ platforms, Power Automate, Monday.com.
 - category: AI & Analytics
   skill_list: LLMs (GPT-4o, Claude, Gemini), RAG Architectures, LangChain/LangGraph,
-    Prompt Engineering, Power BI, Amplitude, TensorFlow, PyTorch, Hugging Face, Snowflake, Databricks, Microsoft Power Platform, RAG (Retrieval-Augmented Generation), LoRA, Vector Databases (NeonDB), LangChain/LlamaIndex.
+    Prompt Engineering, Power BI, Google Analytics, Amplitude, TensorFlow, PyTorch, Hugging Face, Snowflake, Databricks, Microsoft Power Platform, RAG (Retrieval-Augmented Generation), LoRA, Vector Databases (NeonDB), LangChain/LlamaIndex.
 - category: Prototyping & Vibe Coding
   skill_list: Antigravity, Cursor, Windsurf, Replit, v0, Bolt.new, Rapid Prototyping.
 - category: Frontend
