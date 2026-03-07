@@ -35,12 +35,12 @@ description: A strict protocol for Verifying Resume Quality (Content & Code).
 - [ ] **Keywords:** Does the resume contain the specific keywords from `role_guidelines.md` for this target role?
 - [ ] **Relevance:** detailed engineering projects should be brief for a "Product Manager" role, and vice versa.
 
-## Phase 3: Visual Audit (The Polish)
-**Manual Checklist:** Review the generated PDF.
+## Phase 3: Visual & Formatting Audit (The Polish)
+**Manual Checklist:** Review the generated `.tex` code or the rendered PDF (if compiled externally).
 
 ### 1. Line Efficiency
-- [ ] **The 2-Line Rule:** Are most bullets 2 full lines?
-- [ ] **The 80% Rule:** If a bullet wraps to a second line, does it fill at least 80% of that line?
+- [ ] **The 2-Line Rule:** Are most bullets 190-230 characters to ensure they occupy 2 full lines?
+- [ ] **The 80% Rule:** If a bullet wraps to a second line, does it fill at least 80% of that line visually?
 - [ ] **No Orphans:** Are there single words on a line? (Rewrite to fix).
 
 ### 2. Formatting & Links

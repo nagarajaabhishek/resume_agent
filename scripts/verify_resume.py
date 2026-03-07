@@ -55,7 +55,7 @@ def verify_latex_file(file_path):
                 issues.append("Missing premium line spacing (\\setstretch{1.15}).")
             
             # Check for consistent header (heuristic)
-            if "Abhishek Nagaraja" not in content or "Arlington, Texas" not in content:
+            if "Abhishek Nagaraja" not in content or "Dallas, Texas" not in content:
                  issues.append("Header seems inconsistent. Ensure it matches the Resume header exactly.")
 
         else:

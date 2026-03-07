@@ -35,10 +35,11 @@ description: The standard, strict workflow for creating or updating any resume. 
     - **Failure:** The script dumps errors (e.g., "Bullet 2 too short"). **Fix the YAML and re-run.**
 
 ## Step 3: Final Output
-- Present the generated PDF/LaTeX file.
+- The final output is the generated `.tex` file. Antigravity does **not** generate the final PDF.
 
-## Step 4: Maintenance (Registry Update)
-**Objective:** Keep the global list of active resumes up to date.
+## Step 4: Maintenance (Registry Update & Cleanup)
+**Objective:** Keep the global list of active resumes up to date and clean up old artifacts.
 
 1. **Update Inventory:** Open `.agent/data/[PersonName]/resume_inventory.yaml`.
 2. **Add Entry:** Ensure the new role, its YAML path, and its TeX output path are registered.
+3. **Cleanup:** Move any outdated `.tex` files for this role to an `Archive/` or `Old/` folder to prevent version confusion.

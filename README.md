@@ -19,9 +19,10 @@ This repository hosts a sophisticated **Resume Engineering System** designed to 
     /data/[PersonName]/        # Single Source of Truth (YAML)
       master_context.yaml      # All your history (DO NOT EDIT RESUMES DIRECTLY)
       role_tpm.yaml            # Tailored data for specific roles
+      learning_roadmap.md      # Auto-updating backlog of skills to acquire
     /skills/resume_generation  # The "Brain" (Rules & Logic)
       SKILL.md                 # The Master Index
-    /workflows                 # Process Documentation
+    /workflows                 # Process Documentation (Tailoring, Auditing, Cover Letters)
   /scripts                     # Auxiliary management scripts (verify, audit)
   /docs                        # Marketing and public content
   /Resume_Building             # LaTeX Generation Directory
@@ -39,9 +40,15 @@ This repository hosts a sophisticated **Resume Engineering System** designed to 
 **When:** Applying to a specific role.
 **Rule:** Fork from the Master, prune irrelevant experience, and tune keywords.
 
-### 3. [Audit & Quality Assurance](.agent/workflows/audit_resume.md)
+### 3. [Process JD Keywords](.agent/workflows/process_jd_keywords.md) & [Learning Roadmap](.agent/data/Abhishek/learning_roadmap.md)
+**When:** After extracting keyword gaps from a Job Description.
+**Rule:** Inject "Fits" strictly into the Master Context/Role YAML. Append "Discards" to the `learning_roadmap.md` for future skill acquisition.
+
+### 4. [Audit & Quality Assurance](.agent/workflows/audit_resume.md) | [Audit Cover Letter](.agent/workflows/audit_cover_letter.md)
 **When:** Before hitting "Submit".
-**Rule:** Run the 4-Phase Protocol: Automated Checks -> Content Audit (XYZ) -> Visual Audit -> Final PDF.
+**Rule:** Run the 4-Phase Protocol: Automated Checks -> Content Audit (XYZ) -> Visual Audit of the `.tex` -> Final Output.
+
+> **🚨 Note on Compilation:** Antigravity handles the YAML-to-LaTeX templating. It **does not** compile the final PDF. Users should compile the output `.tex` files using their preferred local TeX engine (e.g., `tectonic` or `pdflatex`).
 
 ## 🚀 Usage
 The entire system is driven by a single Python command.

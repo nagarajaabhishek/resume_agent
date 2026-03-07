@@ -6,7 +6,7 @@ DATA_DIR = ".agent/data"
 YAML_FILES = glob.glob(os.path.join(DATA_DIR, "*.yaml"))
 
 URL_MAP = {
-    "University of Texas at Arlington": "https://www.uta.edu/",
+    "University of Texas at Dallas": "https://www.uta.edu/",
     "Jawaharlal Nehru Technological University": "https://www.jntuh.ac.in/",
     "Thara": "https://withthara.com/",
     "Google Maps": "https://abhishekn.in/content/google-maps-teardown",

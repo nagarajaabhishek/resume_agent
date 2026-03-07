@@ -56,14 +56,19 @@ Use the [Master Agent Prompt](file:///Users/abhisheknagaraja/Documents/Resume_Ag
 - Follow [Create Resume](file:///Users/abhisheknagaraja/Documents/Resume_Agent/.agent/workflows/create_resume.md) for standard generation.
 - Follow [Tailor Resume](file:///Users/abhisheknagaraja/Documents/Resume_Agent/.agent/workflows/tailor_resume.md) when splitting a new niche resume from the Master.
     
-**3. Quality Assurance**:
+**3. Content Strategy (The Judge Agent)**:
+- Follow [Content Judge Workflow](file:///Users/abhisheknagaraja/Documents/Resume_Agent/.agent/workflows/judge_content.md) to evaluate experience, skills, and tools against the 8 quality pillars.
+- Ensure every bullet, skill category, and tool mention aligns with the [Content Judgment Pillars](file:///Users/abhisheknagaraja/Documents/Resume_Agent/.agent/skills/resume_generation/rules/content_judgment_pillars.md).
+
+**4. Quality Assurance**:
 - Follow [Resume Audit Protocol](file:///Users/abhisheknagaraja/Documents/Resume_Agent/.agent/workflows/audit_resume.md) for mandatory QC before any submission.
 
 ### 🚨 BEFORE Starting Any Resume Work:
 1.  **Check the Inventory**: Consult `.agent/data/[PersonName]/resume_inventory.yaml` to see the list of active resumes being worked on.
 2.  **Locate Data**: Verify the existing YAML path listed in the inventory.
-3.  **Run the Script**: `python3 .agent/scripts/generate_resume.py .agent/data/[PersonName]/[role_file].yaml` is the ONLY way to build.
-4.  **Do NOT Edit LaTeX Manually**: The `.tex` files are overwrite targets. Edit the YAML instead.
+3.  **Run the Script**: `python3 .agent/scripts/generate_resume.py .agent/data/[PersonName]/[role_file].yaml` is the ONLY way to build the `.tex` file.
+4.  **No PDF Generation**: Antigravity is NOT responsible for compiling the `.tex` to PDF. Do not attempt to run tools like `pdflatex` or `tectonic`.
+5.  **Do NOT Edit LaTeX Manually**: The `.tex` files are overwrite targets. Edit the YAML instead.
 
 ### 📋 INVENTORY MAINTENANCE
 - **Mandatory Update**: Whenever you create a NEW role file or change an output path, update `resume_inventory.yaml` immediately.

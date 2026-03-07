@@ -36,9 +36,15 @@ description: How to create a NEW, targeted resume from the Master Profile using 
     ```bash
     python3 .agent/scripts/generate_resume.py .agent/data/[PersonName]/role_[new_role].yaml
     ```
-## Step 5: Registration (Inventory Update)
-**Objective:** Track the new niche resume in the master inventory.
+## Step 5: Registration (Inventory Update & Cleanup)
+**Objective:** Track the new niche resume in the master inventory and manage files.
 
 1.  **Open Inventory:** `.agent/data/[PersonName]/resume_inventory.yaml`.
 2.  **Append Details:** Add the new role name, its YAML path, and the target TeX output path. 
 3.  **Verify:** Check that the `status` is set to `Active`.
+4.  **Cleanup:** Move any replaced/outdated `.tex` variants to an `Archive/` folder.
+
+## Step 6: Cover Letter Generation (Optional)
+**Objective:** Generate a targeted cover letter to accompany the new tailored resume.
+1. Use the appropriate prompt to generate a new cover letter targeting the specific `[new_role]`.
+2. Ensure the cover letter passes the [Cover Letter Audit Protocol](file:///Users/abhisheknagaraja/Documents/Resume_Agent/.agent/workflows/audit_cover_letter.md).

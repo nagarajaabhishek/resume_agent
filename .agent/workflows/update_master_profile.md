@@ -29,7 +29,8 @@ description: The Single Source of Truth protocol. ALWAYS start here when updatin
     - Paste it into the corresponding section of the role file.
 
 3.  **Regenerate**:
-    - Run `python3 .agent/scripts/generate_resume.py .agent/data/Abhishek/[role_file].yaml` to update the PDF.
+    - Run `python3 .agent/scripts/generate_resume.py .agent/data/Abhishek/[role_file].yaml` to generate the updated `.tex` file. Antigravity does **not** generate the final PDF.
 
-## Step 3: Consistency Check
-- Run a diff or visual check to ensure `master_context.yaml` and your key role files match on core facts (dates, titles).
+## Step 3: Consistency & Length Check
+1.  **Diff Check:** Run a diff or visual check to ensure `master_context.yaml` and your key role files match on core facts (dates, titles).
+2.  **Cascade Pruning Warning:** If propagating a new job or project pushes the role-specific resume over the strict 1-page limit, you MUST immediately prune or condense older, less relevant entries in that specific role file.

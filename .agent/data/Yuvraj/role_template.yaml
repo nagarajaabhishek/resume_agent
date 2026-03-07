@@ -1,6 +1,6 @@
 name: Abhishek Nagaraja
 contact:
-  location: Arlington, Texas, USA - 76013
+  location: Dallas, Texas, USA - 76013
   email: work.abhishekn@gmail.com
   linkedin_url: https://www.linkedin.com/in/abhisheknagaraja/
   linkedin_display: linkedin.com/in/abhisheknagaraja
@@ -8,9 +8,9 @@ contact:
   website_display: www.abhishekn.in
 summary: Technical Program Manager specializing in AI/ML Infrastructure and Scalable Systems with a background in Computer Science. Expert in architecting Multi-Agent Systems, reducing Operational Overhead, and driving Cross-Functional Alignment across engineering and business teams. Proficient in Cloud Architecture (AWS), API Design, and Agile Delivery to ship high-reliability products.
 education:
-  - school: University of Texas at Arlington
+  - school: University of Texas at Dallas
     url: https://www.uta.edu/
-    location: Arlington, Texas, USA
+    location: Dallas, Texas, USA
     degree: Master of Science in Computer Science
     dates: August 2023 - May 2024
     multi_degree:
@@ -25,7 +25,7 @@ education:
 experience:
   - role: Program Manager Intern
     company: MavMarket
-    location: Arlington, Texas, USA
+    location: Dallas, Texas, USA
     dates: October 2023 - October 2025
     bullets:
     - Founded and managed the end-to-end product lifecycle for 'MavMarket', scaling the event to 200+ vendors and 5,000+ attendees while generating $120,000 in revenue, by executing a comprehensive vendor acquisition strategy and operational roadmap.

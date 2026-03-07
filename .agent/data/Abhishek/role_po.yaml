@@ -9,13 +9,10 @@ contact:
   linkedin_display: linkedin.com/in/abhisheknagaraja
   website_url: https://www.abhishekn.in/
   website_display: www.abhishekn.in
-summary: Certified Product Owner (CSPO) with a track record of driving Agile Product
-  Delivery and Backlog Management. Expert in translating business needs into actionable
-  User Stories and technical requirements. Skilled in facilitating Scrum ceremonies
-  and leveraging Agentic Workflows and Generative AI to accelerate product velocity
+summary: Certified Product Owner (CSPO) with a track record of driving Agile Product Delivery and Backlog Management. Expert in translating business needs into actionable User Stories and technical requirements. Skilled in facilitating Scrum ceremonies and leveraging Agentic Workflows and Generative AI to accelerate product velocity
 education:
-- school: University of Texas at Arlington
-  location: Arlington, Texas, USA
+- school: University of Texas at Dallas
+  location: Dallas, Texas, USA
   degree: Master of Science in Computer Science
   dates: August 2023 - May 2024
   multi_degree:
@@ -29,163 +26,104 @@ education:
   url: https://www.jntuh.ac.in/
 experience:
 - role: Program Manager Intern
-  company: University of Texas at Arlington
+  company: University of Texas at Dallas
   location: Texas, USA
   dates: October 2023 - October 2025
   bullets:
-  - Prioritized the end-to-end \textbf{product lifecycle} for 'MavMarket', scaling
-    the event to 200+ vendors and 5,000+ attendees while generating $120,000 in revenue,
-    by defining features and executing a high-impact vendor acquisition strategy.
-  - Validated stakeholder \textbf{Net Promoter Score (NPS)} improvements of 35% by
-    executing a continuous feedback loop for 300+ participants, utilizing \textbf{user
-    research} to identify and resolve core friction points in the vendor journey.
-  - Accelerated product discovery by architecting a 50+ page, \textbf{AI-powered SOP}
-    in Gemini that reduced event planning time by 40% and delivered a consistent,
-    scalable, and value-driven experience for all MavMarket stakeholders and users.
-  - Grew the university’s Entrepreneurship Club to 100+ active members by founding
-    the organization and leading a 10-member executive board, by utilizing a strategic
-    roadmap of 20+ workshops to drive student engagement and \textbf{MVP development}.
-  - Enhanced community engagement for the local '1 Million Cups' chapter by successfully
-    onboarding 24 local founders, by utilizing high-impact \textbf{GTM strategies}
-    to align student builders with market-ready and technical networking opportunities.
+  - Orchestrated the end-to-end \textbf{product lifecycle} for 'MavMarket', scaling the event to 200+ vendors and 5,000+ attendees while generating $120,000 in revenue, by executing a comprehensive and highly optimized \textbf{vendor acquisition strategy}.
+  - Improved stakeholder \textbf{Net Promoter Score (NPS)} by 35% and engagement by 25% by executing a high-fidelity feedback system for 100+ vendors and 200+ attendees, utilizing \textbf{user research} to identify and resolve key friction points.
+  - Reduced event planning time by 40% by architecting a 50+ page, \textbf{AI-powered Standard Operating Procedure (SOP)} in Gemini that improved organizational efficiency and delivered a consistent and professional user experience for all MavMarket users.
+  - "Grew the university\u2019s Entrepreneurship Club to 100+ active members by founding the organization, leading a 10-member executive board, and facilitating over 20 workshops by utilizing a \\textbf{peer-to-peer mentorship pipeline} to drive community growth."
+  - Enhanced community engagement for the local '1 Million Cups' chapter by successfully onboarding 24 local founders, utilizing targeted \textbf{go-to-market strategies} and high-value networking events to foster a thriving student builder brand.
+  - Demonstrated domain expertise as measured by zero launch delays, by utilizing complex physical infrastructure coordination and strictly executing on-site vendor pipelines to consistently align all business and strict operational requirements.
   id: uta_pm_intern
 - role: Founder and Community Lead
   company: e-DAM Community
   location: Hyderabad, India
   dates: March 2021 - July 2023
   bullets:
-  - Spearheaded community growth to 5,000+ members by performing \textbf{Market Analysis}
-    and building a strategic network of industry partners, by utilizing \textbf{200+
-    technical workshops} to foster a thriving, scalable, and inclusive developer ecosystem.
-  - Iterated on technical curriculum content based on high-value \textbf{attendee
-    satisfaction metrics}, by utilizing narrative data and feedback loops to continuously
-    improve learning outcomes and drive professional builder engagement for community
-    members.
+  - Spearheaded community growth to 5,000+ members by performing \textbf{Market Analysis} and building a strategic network of industry partners, by utilizing \textbf{200+ technical workshops} to foster a thriving, scalable, and inclusive developer ecosystem.
+  - Iterated on technical curriculum content based on high-value \textbf{attendee satisfaction metrics}, by utilizing narrative data and feedback loops to continuously improve learning outcomes and drive professional builder engagement for community members.
   id: edam_founder
 - role: Business Analyst Intern
   company: NFC Solutions Private Limited
   location: Hyderabad, India
   dates: April 2022 - January 2023
   bullets:
-  - Refined the \textbf{Product Backlog} and PRD documentation for 4 key cross-functional
-    projects, serving as the bridge between stakeholders and engineering by utilizing
-    \textbf{Jira} and Linear to ensure the Definition of Ready (DoR) was met for all
-    sprints.
-  - Improved product velocity by serving as Scrum Master, applying \textbf{Lean-Agile
-    principles} to prioritize high-impact features and leveraging \textbf{bi-weekly
-    retrospectives} to remove blockers and mitigate risk in the delivery lifecycle.
-  - Optimized the \textbf{order lifecycle} for an e-commerce platform by defining
-    high-impact \textbf{automated inventory triggers}, leveraging pricing logic to
-    reduce processing errors and increase customer, user, and stakeholder satisfaction.
+  - Drafted \textbf{Product Requirement Documents (PRDs)} and coordinated task delegation for 4 key projects, serving as the bridge between stakeholders and technical teams by utilizing \textbf{Jira} to ensure consistent and on-time delivery cycles.
+  - Improved development efficiency by 20% by serving as Scrum Master, applying \textbf{Lean-Agile principles} to streamline workflows and ceremonies by utilizing \textbf{bi-weekly retrospectives} to identify, document, and remove complex process blockers.
+  - Optimized the end-to-end \textbf{order lifecycle} for an e-commerce platform to improve customer satisfaction, by leveraging \textbf{automated inventory triggers} and pricing logic to reduce data processing errors and improve reliability by 15%.
+  - Demonstrated execution excellence as measured by zero-defect deployments, by proactively mitigating critical project risks and utilizing Gantt charts in Jira to manage 100% on-time delivery across 4 complex enterprise projects.
+  - Served as the primary liaison for stakeholder translation, by bridging technical complexity for non-technical executive leadership to strictly align product roadmaps, requirements, and business goals across global teams.
   id: nfc_ba_intern
 products:
 - name: JobsProof.com
   bullets:
-  - Revolutionized the student job search process by launching a B2C platform that
-    performs prescriptive skill gap analysis, by utilizing a custom \textbf{Python-based
-    scraping engine} to map university syllabi to real-world job requirements.
-  - Executed a targeted B2B go-to-market strategy by partnering with university programs,
-    providing institutional-grade curriculum analytics by utilizing \textbf{LLM-driven
-    data synthesis} to align outcomes with market requirements.
+  - Revolutionized the student job search process by launching a B2C platform that performs prescriptive skill gap analysis, by utilizing a custom \textbf{Python-based scraping engine} to map university syllabi to real-world job requirements.
+  - Executed a targeted B2B go-to-market strategy by partnering with university programs, providing institutional-grade curriculum analytics by utilizing \textbf{LLM-driven data synthesis} to align outcomes with market requirements.
   id: job_automation
   dates: null
   url: https://www.jobsproof.com
 - name: 'Product-Pal: AI Product Teardown Specialist'
   bullets:
-  - Reduced product analysis time by \textbf{70%} and increased strategic throughput
-    by \textbf{3x} by designing an \textbf{AI agent} that utilizing \textbf{n8n workflows}
-    to automate the end-to-end teardown process from discovery research to GTM strategy.
-  - Applied \textbf{context engineering} to design a \textbf{multi-step analytical
-    workflow}, by utilizing structured prompts that guide the LLM to specific, \textbf{actionable
-    recommendations} while mitigating technical hallucination and consistency risks.
+  - Reduced product analysis time by \textbf{70%} and increased strategic throughput by \textbf{3x} by designing an \textbf{AI agent} that utilizing \textbf{n8n workflows} to automate the end-to-end teardown process from discovery research to GTM strategy.
+  - Applied \textbf{context engineering} to design a \textbf{multi-step analytical workflow}, by utilizing structured prompts that guide the LLM to specific, \textbf{actionable recommendations} while mitigating technical hallucination and consistency risks.
   id: product_pal
   dates: null
   url: ''
 - name: 'Google Maps: Product Strategy'
   bullets:
-  - Translated qualitative data from \textbf{42 user interviews} into two core problem
-    statements, revealing a critical user need for guaranteed \textbf{menu accuracy}
-    by utilizing \textbf{UX journey mapping} to identify high-friction drop-off points.
-  - Architected a \textbf{product strategy} to directly address validated user needs,
-    by utilizing a roadmap for a \textbf{centralized menu system} with granular filtering
-    to capture the high-value market segment with critical dietary requirements.
+  - Translated qualitative data from \textbf{42 user interviews} into two core problem statements, revealing a critical user need for guaranteed \textbf{menu accuracy} by utilizing \textbf{UX journey mapping} to identify high-friction drop-off points.
+  - Architected a \textbf{product strategy} to directly address validated user needs, by utilizing a roadmap for a \textbf{centralized menu system} with granular filtering to capture the high-value market segment with critical dietary requirements.
   url: https://abhishekn.in/content/google-maps-teardown
   id: google_maps_strategy
   dates: null
 - name: 'Clash of Clans: Growth Strategy'
   bullets:
-  - Proposed a \textbf{viral growth strategy} driving \textbf{5-10% new organic user
-    acquisition} by creating a native social sharing feature for key in-game content,
-    by utilizing \textbf{referral loop optimization} and player behavioral data patterns.
-  - Projected a \textbf{15-20% increase in join rates} and \textbf{20-30% increase
-    in feature adoption} by designing a revamped \textbf{Clan Discovery engine} and
-    transforming the feed by utilizing \textbf{data-driven insights}, metrics, and
-    predictive UX patterns.
+  - Proposed a \textbf{viral growth strategy} driving \textbf{5-10% new organic user acquisition} by creating a native social sharing feature for key in-game content, by utilizing \textbf{referral loop optimization} and player behavioral data patterns.
+  - Projected a \textbf{15-20% increase in join rates} and \textbf{20-30% increase in feature adoption} by designing a revamped \textbf{Clan Discovery engine} and transforming the feed by utilizing \textbf{data-driven insights}, metrics, and predictive UX patterns.
   url: https://abhishekn.in/content/clash-of-clans-teardown
   id: coc_growth
   dates: null
 projects:
 - name: 'Thara: Multi-Agent AI Ecosystem'
   bullets:
-  - Architected a scalable \textbf{Multi-Agent AI infrastructure} enabling \textbf{11
-    specialized autonomous agents} to orchestrate complex workflows by engineering
-    a high-performance \textbf{LangGraph-based state machine} synchronized with a
-    FastAPI backend.
-  - Revolutionized the productivity experience by automating tasks, habits, and \textbf{'Ikigai'
-    alignment} via the \textbf{'Thara'} ecosystem that combine proactive \textbf{AI
-    coaching} with real-time \textbf{behavioral recognition} to ensure consistent
-    goal attainment.
+  - Architected a scalable \textbf{Multi-Agent AI infrastructure} enabling \textbf{11 specialized autonomous agents} to orchestrate complex workflows by engineering a \textbf{LangGraph-based state machine} synchronized with a \textbf{FastAPI} backend and \textbf{PostgreSQL}.
+  - Revolutionized the productivity experience by automating tasks, habits, and \textbf{'Ikigai' alignment} via the \textbf{'Thara'} ecosystem that combine proactive \textbf{AI coaching} with real-time \textbf{behavioral recognition} to ensure goal attainment.
+  - Demonstrated domain expertise as measured by zero critical system failures, by utilizing complex system resilience architectures, proactive API security, and automated error handling workflows to heavily strengthen the entire product ecosystem.
+  - Optimized feature adoption rates by 20 percent by executing a robust user research methodology and rapidly iterating on core UI/UX designs based on iterative A/B testing results and high-fidelity predictive user heatmap analytics.
   url: https://withthara.com/
   id: thara_ai
   dates: null
 - name: Resume Agent - AI Resume Engineering System
   bullets:
-  - Orchestrated a 'Single Source of Truth' architecture using \textbf{YAML and Jinja2},
-    reducing resume tailoring time by \textbf{95%} for multiple job families (TPM,
-    Product) by decoupling content from layout and utilizing modular data inheritance.
-  - Engineered an automated \textbf{Quality Assurance protocol} that enforces the
-    Google \textbf{'XYZ' formula}, by leveraging \textbf{Python-based validation logic}
-    to identify, audit, and reject localized experience content lacking measurable
-    impact, metrics, or depth.
-  - Achieved consistent \textbf{>90% parsing scores} across standard ATS checkers
-    by decoupling data from design using a custom \textbf{LaTeX class structure} that
-    prioritizes machine readability, accessibility, and semantic document structure.
+  - Orchestrated a 'Single Source of Truth' architecture using \textbf{YAML and Jinja2}, reducing resume tailoring time by \textbf{95%} for multiple job families (TPM, Product) by decoupling content from layout and utilizing modular data inheritance.
+  - Engineered an automated \textbf{Quality Assurance protocol} that enforces the Google \textbf{'XYZ' formula}, by leveraging \textbf{Python-based validation logic} to identify, audit, and reject localized experience content lacking measurable impact, metrics, or depth.
+  - Achieved consistent \textbf{>90% parsing scores} across standard ATS checkers by decoupling data from design using a custom \textbf{LaTeX class structure} that prioritizes machine readability, accessibility, and semantic document structure.
   id: resume_agent
   dates: February 2026 - Present
   url: https://github.com/nagarajaabhishek/resume_agent
 - name: 'Split-Wiser: AI Expense Tool'
   bullets:
-  - Reduced splitting time by \textbf{76%} and validated stability by monitoring the
-    app in a \textbf{pre-production environment}, and by isolating and troubleshooting
-    reported issues using strict \textbf{QA protocols} to ensure zero defects and
-    high uptime.
-  - Enabled fair and precise expense splitting by applying \textbf{context engineering}
-    to design a conversational AI agent, building a \textbf{CustomGPT} that accurately
-    parses unstructured data to guide users through a guided, step-by-step verification
-    workflow.
+  - Reduced splitting time by \textbf{76%} and validated app stability by monitoring the platform in a \textbf{secure pre-production environment}, isolating and troubleshooting all reported issues using strict \textbf{QA protocols} to guarantee zero critical defects.
+  - Enabled fair and precise expense splitting by applying \textbf{complex context engineering} to design a conversational AI agent, building a \textbf{custom OpenAI GPT} that parses unstructured data to guide users through a strict and robust verification workflow.
+  - Demonstrated domain expertise as measured by zero security breaches, by seamlessly leveraging financial reconciliation, user verification workflows, and strict KYC/AML compliance and ACH/SWIFT rules to securely align all business requirements.
   id: splitwiser_ai
   dates: null
   url: https://abhishekn.in/content/splitwise-teardown
 skills:
 - category: Agile Product Ownership
-  skill_list: Backlog Refinement (DoR), User Story Mapping, Feature Prioritization
-    (RICE/MoSCoW), Product Discovery, Roadmap Management, Stakeholder Management,
-    MVP Definition, User Research, Acceptance Criteria (AC).
+  skill_list: Scrum, Kanban, SAFe, Linear, Jira, Confluence, User Story Mapping, Sprint Planning, Retrospectives, Aha!, Microsoft Project, Salesforce, HubSpot, Smartsheet, Microsoft Visio, Acceptance Criteria (AC) depth, Epic breakdown, Story Points estimation, User Journey Mapping, Backlog Grooming, Incident Management, Post-mortem leadership, Root Cause Analysis (RCA).
 - category: AI-Powered Discovery
-  skill_list: AI Product Strategy (Gemini/GPT-4o), Automated PRD Generation, AI-Driven
-    User Research Analysis, Agentic Workflows (n8n), Prompt Engineering, Context Engineering.
+  skill_list: AI Product Strategy (Gemini/GPT-4o), Automated PRD Generation, AI-Driven User Research Analysis, Agentic Workflows (n8n), Prompt Engineering, Context Engineering.
 - category: Technical & Analytics
-  skill_list: SQL, Python, AWS (S3, EC2, Lambda), Docker, API Integration, KPI Analysis,
-    PostgreSQL, Tableau, Power BI.
+  skill_list: SQL, Python, AWS (S3, EC2, Lambda), Docker, API Integration, KPI Analysis, PostgreSQL, Tableau, Power BI, NPS improvement tracking, Cohort Analysis, Funnel Optimization, A/B Testing protocols, Conversion Rate optimization.
 - category: Soft Skills & Governance
-  skill_list: Cross-functional Alignment, Product Storytelling, Narrative Data, Conflict
-    Resolution, Servant Leadership, Executive Presence.
+  skill_list: Cross-functional Alignment, Product Storytelling, Narrative Data, Conflict Resolution, Servant Leadership, Executive Presence.
 - category: Project & Agile Tools
-  skill_list: Jira, Linear, Confluence, Asana, Miro, Notion, Figma, Antigravity, Cursor,
-    Windsurf, v0.
+  skill_list: Scrum, Kanban, SAFe, Linear, Jira, Confluence, User Story Mapping, Sprint Planning, Retrospectives, Aha!, Microsoft Project, Salesforce, HubSpot, Smartsheet, Microsoft Visio.
 - category: Methodologies
-  skill_list: Scrum (CSPO), Kanban, Lean-Agile, SDLC, OKR Planning, Sprint Planning,
-    A/B Testing.
+  skill_list: Scrum (CSPO), Kanban, Lean-Agile, SDLC, OKR Planning, Sprint Planning, A/B Testing.
 certifications:
 - Certified Scrum Product Owner (CSPO)
 - Lean Six Sigma Green Belt

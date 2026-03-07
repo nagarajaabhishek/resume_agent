@@ -15,16 +15,16 @@ basics:
     display: github.com/abhisheknagaraja
 education:
 - id: uta_ms_cs
-  school: University of Texas at Arlington
+  school: University of Texas at Dallas
   url: https://www.uta.edu/
-  location: Arlington, Texas, USA
+  location: Dallas, Texas, USA
   degree: Master of Science in Computer Science
   dates: August 2023 - May 2024
   details:
   - 'Specialization: Artificial Intelligence & Database Systems'
 - id: uta_ms_em
-  school: University of Texas at Arlington
-  location: Arlington, Texas, USA
+  school: University of Texas at Dallas
+  location: Dallas, Texas, USA
   degree: Master of Science in Engineering Management
   dates: May 2024 - Current
   details: []
@@ -38,7 +38,7 @@ education:
 experience:
 - id: uta_pm_intern
   role: Program Manager Intern
-  company: University of Texas at Arlington
+  company: University of Texas at Dallas
   location: Texas, USA
   dates: October 2023 - October 2025
   tags:
@@ -59,8 +59,9 @@ experience:
     the organization, leading a 10-member executive board, and facilitating over 20
     workshops by utilizing a \textbf{peer-to-peer mentorship pipeline} to drive community growth.
   - Enhanced community engagement for the local '1 Million Cups' chapter by successfully
-    attracting and onboarding 24 local founders, by utilizing targeted \textbf{go-to-market
+    onboarding 24 local founders, utilizing targeted \textbf{go-to-market
     strategies} and high-value networking events to foster a thriving student builder brand.
+  - "Demonstrated domain expertise as measured by zero launch delays, by utilizing complex physical infrastructure coordination and strictly executing on-site vendor pipelines to consistently align all business and strict operational requirements."
 - id: aveha_md
   role: Managing Director
   company: Aveha Solutions Private Limited
@@ -96,6 +97,8 @@ experience:
   - Optimized the end-to-end \textbf{order lifecycle} for an e-commerce platform to
     improve customer satisfaction, by leveraging \textbf{automated inventory triggers}
     and pricing logic to reduce data processing errors and improve reliability by 15%.
+  - "Demonstrated execution excellence as measured by zero-defect deployments, by proactively mitigating critical project risks and utilizing Gantt charts in Jira to manage 100% on-time delivery across 4 complex enterprise projects."
+  - "Served as the primary liaison for stakeholder translation, by bridging technical complexity for non-technical executive leadership to strictly align product roadmaps, requirements, and business goals across global teams."
 - id: edam_founder
   role: Founder and Community Lead
   company: e-DAM Community
@@ -187,6 +190,8 @@ projects:
   - Revolutionized the productivity experience by automating tasks, habits, and \textbf{'Ikigai'
     alignment} via the \textbf{'Thara'} ecosystem that combine proactive \textbf{AI
     coaching} with real-time \textbf{behavioral recognition} to ensure goal attainment.
+  - "Demonstrated domain expertise as measured by zero critical system failures, by utilizing complex system resilience architectures, proactive API security, and automated error handling workflows to heavily strengthen the entire product ecosystem."
+  - "Optimized feature adoption rates by 20 percent by executing a robust user research methodology and rapidly iterating on core UI/UX designs based on iterative A/B testing results and high-fidelity predictive user heatmap analytics."
 - id: splitwiser_ai
   name: 'Split-Wiser: AI Expense Tool'
   url: https://abhishekn.in/content/splitwise-teardown
@@ -195,12 +200,13 @@ projects:
   - product
   - engineering
   bullets:
-  - Reduced splitting time by \textbf{76%} and validated stability by monitoring the
-    app in a \textbf{pre-production environment}, and by isolating and troubleshooting
-    reported issues using strict \textbf{QA protocols} to ensure zero defects.
-  - Enabled fair and precise expense splitting by applying \textbf{context engineering}
-    to design a conversational AI agent, building a \textbf{CustomGPT} that parses
-    unstructured data to guide users through a verification workflow.
+  - Reduced splitting time by \textbf{76%} and validated app stability by monitoring the
+    platform in a \textbf{secure pre-production environment}, isolating and troubleshooting
+    all reported issues using strict \textbf{QA protocols} to guarantee zero critical defects.
+  - Enabled fair and precise expense splitting by applying \textbf{complex context engineering}
+    to design a conversational AI agent, building a \textbf{custom OpenAI GPT} that parses
+    unstructured data to guide users through a strict and robust verification workflow.
+  - "Demonstrated domain expertise as measured by zero security breaches, by seamlessly leveraging financial reconciliation, user verification workflows, and strict KYC/AML compliance and ACH/SWIFT rules to securely align all business requirements."
 - id: product_pal
   name: 'Product-Pal: AI Product Teardown Specialist'
   url: ''
@@ -208,12 +214,12 @@ projects:
   - ai
   - product
   bullets:
-  - Reduced product analysis time by \textbf{70%} and increased strategic throughput
-    by \textbf{3x} by designing an \textbf{AI agent} that utilizing \textbf{n8n workflows}
-    to automate the end-to-end teardown process from research to strategy.
-  - Applied \textbf{context engineering} to design a \textbf{multi-step analytical
-    workflow}, by utilizing structured prompts that guide the LLM to specific, \textbf{actionable
-    recommendations} while mitigating hallucination risks.
+  - Reduced product analysis time by \textbf{70%} and successfully increased strategic throughput
+    by \textbf{3x} by designing an \textbf{AI agent} utilizing \textbf{n8n workflows}
+    to fully automate the end-to-end teardown process from discovery research to final GTM strategy.
+  - Applied \textbf{context engineering} to design a \textbf{complex multi-step analytical
+    workflow}, by utilizing structured prompts that accurately guide the LLM to highly specific, \textbf{actionable
+    results} while mitigating technical hallucination risks.
 - id: casablanca_cocktails
   name: Casablanca Cocktails
   url: ''
@@ -250,17 +256,18 @@ projects:
 skills:
 - category: Product Management
   skill_list: Product Strategy, Roadmap Development, Market Research, User Empathy,
-    Customer Satisfaction, A/B Testing, Feature Prioritization, PRDs, Go-to-Market
-    (GTM), Stakeholder Management, KPI Analysis, User Stories.
+    Customer Satisfaction, A/B Testing, Feature Prioritization (RICE/MOSCOW), PRDs,
+    Go-to-Market (GTM), Stakeholder Management, KPI Analysis, User Stories, Product-Led Growth (PLG), CAPEX/OPEX, Resource Allocation, Root Cause Analysis (RCA), Change Management, Work Breakdown Structure (WBS), Bill of Materials (BOM), Revenue Forecasting / ROI Analysis, UAT Coordination, Budget & Financial Tracking, PLM (Product Lifecycle Management), Incident Management, Post-mortem leadership, NPS improvement tracking, Cohort Analysis, Funnel Optimization, A/B Testing protocols, Conversion Rate optimization, TAM/SAM/SOM modeling, SaaS Revenue Forecasting, Pricing Realization Analysis, Churn Rate optimization, Market Entry Barriers, M&A Due Diligence, Competitive Counter-strategies, P&L Management.
 - category: Technical Skills
   skill_list: SDLC, API Design (REST), Cloud Architecture (AWS, Azure, GCP), System
-    Design, Data Modeling, Python, SQL, Tableau, JavaScript, TypeScript, Go, Rust.
+    Design, Data Modeling, Python, Advanced SQL (Window Functions), Tableau, JavaScript, TypeScript, Go, Rust,
+    CI/CD, Technical Subject Matter Expert (SME), Non-Functional Requirements (NFRs), Kubernetes (K8s), Docker orchestration, CI/CD for ML (DVC), Apache Spark, Kafka, dbt, Snowflake, BigQuery, Latency Optimization, Multi-GPU Training, Throughput metrics, Model Drift Detection, TorchServe, Triton Inference Server.
 - category: Agile & Methodologies
   skill_list: Scrum, Kanban, SAFe, Linear, Jira, Confluence, User Story Mapping, Sprint
-    Planning, Retrospectives.
+    Planning, Retrospectives, Aha!, Microsoft Project, Salesforce, HubSpot, Smartsheet, Microsoft Visio, Acceptance Criteria (AC) depth, Epic breakdown, Story Points estimation, User Journey Mapping, Backlog Grooming, Salesforce (SFDC), CPQ platforms, Power Automate, Monday.com.
 - category: AI & Analytics
   skill_list: LLMs (GPT-4o, Claude, Gemini), RAG Architectures, LangChain/LangGraph,
-    Prompt Engineering, Power BI, Amplitude, TensorFlow, PyTorch, Hugging Face.
+    Prompt Engineering, Power BI, Amplitude, TensorFlow, PyTorch, Hugging Face, Snowflake, Databricks, Microsoft Power Platform, RAG (Retrieval-Augmented Generation), LoRA, Vector Databases (NeonDB), LangChain/LlamaIndex.
 - category: Prototyping & Vibe Coding
   skill_list: Antigravity, Cursor, Windsurf, Replit, v0, Bolt.new, Rapid Prototyping.
 - category: Frontend
@@ -269,7 +276,7 @@ skills:
 - category: Backend
   skill_list: Node.js, Express, FastAPI, GraphQL, gRPC, Prisma ORM, Zod.
 - category: DevOps
-  skill_list: Docker, Kubernetes, Terraform, GitHub Actions.
+  skill_list: Docker, Kubernetes, Terraform, GitHub Actions, CI/CD Pipeline Management.
 certifications:
 - name: Certified Scrum Product Owner (CSPO)
   date: ''
