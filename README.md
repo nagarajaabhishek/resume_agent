@@ -37,14 +37,16 @@ This repository hosts a sophisticated **Resume Engineering System** designed to 
       resume_template.tex.j2    # Jinja2 → LaTeX template
   /scripts                      # Auxiliary management & audit scripts
   /docs                         # Marketing and public content
-  /Resume_Building/Abhishek     # Generated .tex and compiled .pdf outputs
-    /Business_Analyst/
-    /Dubai/
-    /GTM/
-    /Manager/
-    /Product/                   # TPM role
-    /Product_Owner/
-    /Scrum_Master/
+  /Resume_Building
+    gemini_JD_Validation.md     # LLM prompt for evaluating job postings
+    /Abhishek                   # Generated .tex and compiled .pdf outputs
+      /Business_Analyst/
+      /Dubai/
+      /GTM/
+      /Manager/
+      /Product/                   # TPM role
+      /Product_Owner/
+      /Scrum_Master/
 ```
 
 ---
@@ -68,6 +70,10 @@ This repository hosts a sophisticated **Resume Engineering System** designed to 
 ### 4. [Audit & QA](.agent/workflows/audit_resume.md) · [Audit Cover Letter](.agent/workflows/audit_cover_letter.md)
 **When:** Before submitting any application.
 **Rule:** Run the 4-Phase Protocol: Automated Checks → Content Audit (XYZ) → Visual Audit of `.tex` → Final Output.
+
+### 5. [JD Validation](Resume_Building/gemini_JD_Validation.md)
+**When:** Evaluating a new job posting before dedicating application effort.
+**Rule:** Use the provided prompt with Gemini to analyze job listings, ensure they fit constraints, and identify the exact recommended resume to use from the inventory.
 
 > **🚨 Compilation Note:** The agent handles YAML-to-LaTeX templating. It does **not** compile the final PDF. Compile `.tex` files locally using `tectonic` or `pdflatex`.
 
