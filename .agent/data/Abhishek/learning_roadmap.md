@@ -31,25 +31,44 @@ These skills frequently appear in "Ambitious" PM/BA roles on the business side.
 
 ---
 
+## 🛠️ Specialized Tools & Business Intelligence
+- **CRM & ERP**: **Microsoft Dynamics 365 (D365)**, **Oracle**.
+- **Business Intelligence**: **Looker**, **DAX (Data Analysis Expressions)**.
+- **Project Management**: **Workfront**, **Primavera P6**.
+- **Design & Creative Ops**: **Bluebeam Revu**, **Figma**, **Airtable**.
+
+---
+
 ## 🏢 Niche Industry Concepts (Learn if Target Sector)
 These are critical if you apply to specific verticals, but can be ignored if focusing purely on horizontal SaaS or AI infrastructure.
 
 ### 💳 FinTech & Payments
+- **Credit Markets** & **Fixed Income** basics
+- **Payment Processing** architecture
 - **PCI Compliance** standards
 - **Payment Gateways** (Stripe connect architecture, ACH/SWIFT rules)
 - LATAM payment trends (e.g., Pix)
 
 ### 📺 AdTech & Media
+- **Ad-serving Infrastructure**
+- **Web Traffic Analytics** & **CTR/CPC metric optimization**
 - **VAST/VMAP** standards (Video Ad Serving Template)
 - **OTT/CTV** pipelines (Over-The-Top / Connected TV)
 - **SSP/DSP operations** (Supply-Side / Demand-Side Platforms)
-- CPM/CPC metric optimization
 
 ### 🎒 EdTech
 - **FERPA compliance**
 - Human-centered design for younger learners
 
+### 🏥 Healthcare
+- **HIPAA Compliance**
+- **GCP (Good Clinical Practice)** guidelines
+- **Clinical Trial workflows**
+
 ---
+
+## 🛡️ Service Management
+- **ITIL Framework** & **ITSM (IT Service Management)** basics
 
 ## 🛠 Actionable Next Steps
 1. **Choose one Vector Database** (e.g., Pinecone) and build a mini-project (perhaps integrating it into Thara AI or Product-Pal).

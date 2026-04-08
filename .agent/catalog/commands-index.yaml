@@ -1,0 +1,25 @@
+# commands-index.yaml
+# Generative routing table for specific workflows and commands
+
+workflows:
+  - name: "Create Resume"
+    description: "The standard, strict workflow for creating or updating any resume."
+    path: "/Users/abhisheknagaraja/Documents/Resume_Agent/.agent/workflows/create_resume.md"
+  - name: "Tailor Resume"
+    description: "How to create a NEW, targeted resume from the Master Profile using Role Guidelines."
+    path: "/Users/abhisheknagaraja/Documents/Resume_Agent/.agent/workflows/tailor_resume.md"
+  - name: "Update Master Profile"
+    description: "The Single Source of Truth protocol. ALWAYS start here when updating biographical data."
+    path: "/Users/abhisheknagaraja/Documents/Resume_Agent/.agent/workflows/update_master_profile.md"
+  - name: "Audit Resume"
+    description: "A strict protocol for Verifying Resume Quality (Content & Code)."
+    path: "/Users/abhisheknagaraja/Documents/Resume_Agent/.agent/workflows/audit_resume.md"
+  - name: "Audit Cover Letter"
+    description: "A strict protocol for validating Cover Letter formatting"
+    path: "/Users/abhisheknagaraja/Documents/Resume_Agent/.agent/workflows/audit_cover_letter.md"
+  - name: "Judge Content"
+    description: "A protocol for evaluating resume content against the 'Hiring Bar'."
+    path: "/Users/abhisheknagaraja/Documents/Resume_Agent/.agent/workflows/judge_content.md"
+  - name: "Process JD Keywords"
+    description: "Process to evaluate new keywords/skills from a JD and safely inject them."
+    path: "/Users/abhisheknagaraja/Documents/Resume_Agent/.agent/workflows/process_jd_keywords.md"

@@ -4,12 +4,18 @@ contact:
   email: work.abhishekn@gmail.com
   linkedin_url: https://www.linkedin.com/in/abhisheknagaraja/
   linkedin_display: linkedin.com/in/abhisheknagaraja
-  website_url: https://www.abhishekn.in/
-  website_display: www.abhishekn.in
+  website_url: https://www.abhisheknagaraja.com/
+  website_display: www.abhisheknagaraja.com
 meta:
   filename: Resume_Building/Abhishek/Product/Abhishek_Nagaraja_TPM_Resume.tex
-  projects_first: true
-summary: Technical Product Manager specializing in \textbf{AI/ML Infrastructure} and \textbf{Scalable Systems} with a background in Computer Science. Expert in architecting \textbf{Multi-Agent Systems}, reducing \textbf{Operational Overhead}, and driving \textbf{Cross-Functional Alignment} across engineering and business teams.
+section_order:
+- education
+- products
+- experience
+- projects
+- skills
+- certifications
+summary: Technical Product Manager specializing in \textbf{AI/ML Infrastructure} and \textbf{Scalable Systems} with a background in Computer Science. Expert in leveraging deep \textbf{Problem Understanding} and rigorous \textbf{User Research} to architect \textbf{Multi-Agent Systems}, reducing \textbf{Operational Friction}, and driving \textbf{Cross-Functional Alignment} between engineering and business teams.
 education:
 - school: University of Texas at Arlington
   url: https://www.uta.edu/
@@ -55,44 +61,31 @@ experience:
   - Iterated on technical curriculum content based on high-value \textbf{attendee satisfaction metrics}, by utilizing narrative data and feedback loops to continuously improve learning outcomes and drive professional builder engagement for community members.
   id: edam_founder
 projects:
-- name: 'Thara: Multi-Agent AI Ecosystem'
-  url: https://withthara.com/
-  bullets:
-  - Architected a scalable \textbf{Multi-Agent AI infrastructure} enabling \textbf{11 specialized autonomous agents} to orchestrate complex workflows by engineering a \textbf{LangGraph-based state machine} synchronized with a \textbf{FastAPI} backend and \textbf{PostgreSQL}.
-  - Optimized feature adoption rates by 20 percent by executing a robust user research methodology and rapidly iterating on core UI/UX designs based on iterative A/B testing results and high-fidelity predictive user heatmap analytics.
-  id: thara_ai
-  dates: null
 - name: Resume Agent - AI Resume Engineering System
   bullets:
-  - Orchestrated a 'Single Source of Truth' architecture using \textbf{YAML and Jinja2}, reducing resume tailoring time by \textbf{95%} for multiple job families (TPM, Product) by decoupling content from layout and utilizing modular data inheritance.
-  - Engineered an automated \textbf{Quality Assurance protocol} that enforces the Google \textbf{'XYZ' formula}, by leveraging \textbf{Python-based validation logic} to identify, audit, and reject localized experience content lacking measurable impact, metrics, or depth.
-  - Achieved consistent \textbf{>90% parsing scores} across standard ATS checkers by decoupling data from design using a custom \textbf{LaTeX class structure} that prioritizes machine readability, accessibility, and semantic document structure.
+  - Architected an \textbf{AI-driven Resume Ecosystem} utilizing a strict single-source-of-truth semantic data core, reducing generation time by \textbf{95%} by leveraging \textbf{dynamic context injection} to aggressively align user parameters into targeted layouts.
+  - Engineered an \textbf{Agentic Validation Protocol} enforcing the \textbf{Google XYZ formula}, maximizing strategic impact by leveraging \textbf{LLM context logic} to deep-audit and dynamically validate localized user content against strict operational constraints.
+  - Solved systemic ATS rejection pipelines by designing an optimized \textbf{LaTeX parsing engine}, achieving \textbf{90%+ match rates} across enterprise scanners by decoupling product data from custom layouts to prioritize baseline ATS machine readability.
   id: resume_agent
   dates: February 2026 - Present
   url: https://github.com/nagarajaabhishek/resume_agent
 - name: 'Split-Wiser: AI Expense Tool'
-  url: https://abhishekn.in/content/splitwise-teardown
+  url: https://abhisheknagaraja.com/content/splitwise-teardown
   bullets:
-  - Identified the core problem of inaccurate expense attribution by designing a \textbf{custom OpenAI GPT} agent that parses unstructured bill data and guides users through a strict verification workflow, reducing splitting time by \textbf{76%}.
+  - Formulated a robust product strategy for complex expense attribution by engineering an \textbf{OpenAI GPT agent}, slashing manual splitting time by \textbf{76%} by utilizing conversational verification workflows to autonomously parse unstructured receipt data.
   id: splitwiser_ai
   dates: null
-- name: 'Product-Pal: AI Product Teardown Specialist'
-  bullets:
-  - Identified a high-friction manual research bottleneck and architected an \textbf{AI agent} utilizing \textbf{n8n workflows} to automate the full teardown pipeline, increasing strategic throughput by \textbf{3x} while mitigating LLM hallucination risks.
-  id: product_pal
-  dates: null
-  url: ''
 skills:
 - category: Technical Product Management
-  skill_list: Product Strategy, Roadmap Development, Market Research, User Empathy, Customer Satisfaction, A/B Testing, Feature Prioritization (RICE/MOSCOW), PRDs, Go-to-Market (GTM), Stakeholder Management, KPI Analysis, User Stories, Product-Led Growth (PLG), CAPEX/OPEX, Resource Allocation, Root Cause Analysis (RCA), Change Management, Work Breakdown Structure (WBS), Bill of Materials (BOM), Revenue Forecasting / ROI Analysis, UAT Coordination, Budget & Financial Tracking, PLM (Product Lifecycle Management).
+  skill_list: Product Strategy, Roadmap Development, Market Research, User Empathy, Customer Satisfaction, A/B Testing protocols, Feature Prioritization (RICE/MOSCOW), PRDs, Go-to-Market, Stakeholder Management, KPI Analysis, User Stories, Product-Led Growth (PLG), CAPEX/OPEX, Resource Allocation, Root Cause Analysis (RCA), Change Management, Work Breakdown Structure (WBS), Bill of Materials (BOM), Revenue Forecasting / ROI Analysis, UAT Coordination, Budget & Financial Tracking, Product Lifecycle Management, Strategic Planning, Opportunity Assessment, Organizational Excellence.
 - category: AI & System Architecture
-  skill_list: LLMs (GPT-4o, Claude, Gemini), RAG Architectures, LangChain/LangGraph, Prompt Engineering, Power BI, Amplitude, TensorFlow, PyTorch, Hugging Face, Snowflake, Databricks, Microsoft Power Platform, RAG (Retrieval-Augmented Generation), LoRA, Vector Databases (NeonDB), LangChain/LlamaIndex.
+  skill_list: LLMs (GPT-4o, Claude, Gemini), RAG Architectures, LangChain/LangGraph, Prompt Engineering, Power BI, Amplitude, TensorFlow, PyTorch, Hugging Face, Vector Databases (NeonDB), Agentic Workflow Architecture, Process Automation.
 - category: Technical Tooling & Vibe Coding
-  skill_list: SDLC, API Design (REST), Cloud Architecture (AWS, Azure, GCP), System Design, Data Modeling, Python, Advanced SQL (Window Functions), Tableau, JavaScript, TypeScript, Go, Rust, CI/CD, Technical Subject Matter Expert (SME), Non-Functional Requirements (NFRs), Kubernetes (K8s), Docker orchestration, CI/CD for ML (DVC), Apache Spark, Kafka, dbt, Snowflake, BigQuery, Latency Optimization, Multi-GPU Training, Throughput metrics, Model Drift Detection, TorchServe, Triton Inference Server.
+  skill_list: SDLC, API Design (REST), Cloud Architecture (AWS), System Design, Data Modeling, Python, Advanced SQL (Window Functions), Tableau, JavaScript, TypeScript, Go, Rust, CI/CD, Technical Subject Matter Expert (SME), Non-Functional Requirements (NFRs), Kubernetes (K8s), Docker orchestration, CI/CD for ML (DVC)
 - category: Agile & Project Execution
-  skill_list: Scrum, Kanban, SAFe, Linear, Jira, Confluence, User Story Mapping, Sprint Planning, Retrospectives, Aha!, Microsoft Project, Salesforce, HubSpot, Smartsheet, Microsoft Visio.
+  skill_list: Scrum, Kanban, SAFe, Linear, Jira, Confluence, User Story Mapping, Sprint Planning, Retrospectives, Microsoft Project, HubSpot, Smartsheet, Vendor Management, Process Re-engineering.
 - category: Soft Skills & Leadership
-  skill_list: Engineering-to-Business Translation, Conflict Resolution, Cross-functional Alignment, Mentorship Pipelines, Product Storytelling, Narrative Data.
+  skill_list: Engineering-to-Business Translation, Conflict Resolution, Cross-functional Alignment, Mentorship Pipelines, Product Storytelling, Narrative Data, Change Management.
 certifications:
 - Certified Scrum Product Owner (CSPO)
 - AWS Certified Cloud Practitioner (In Progress)
@@ -102,20 +95,27 @@ certifications:
 - McKinsey.org Forward Program
 - 'Google: Foundation of Project Management'
 cover_letter:
-  hook: As a Technical Product Manager with a strong engineering background and a Master's in Computer Science, I specialize in bridging the gap between complex engineering execution and business goals to deliver user-centric solutions.
-  bridge: I leverage deep technical expertise to drive product strategy and customer satisfaction. My experience spans architecting multi-agent AI infrastructures, executing technical market research, and designing AI-powered standard operating procedures that significantly reduce operational friction while maintaining high alignment with user needs.
-  evidence: I founded and orchestrated the end-to-end product lifecycle for \textbf{'MavMarket'}, scaling the platform to 200+ vendors and 5,000+ attendees while generating $120,000 in revenue. By architecting an AI-powered SOP in Gemini and implementing an empathy-driven feedback system, I reduced event planning time by 40% and improved stakeholder satisfaction (NPS) by 35%.
-  close: I am eager to apply my technical acumen and product leadership to help your team build the next generation of high-impact products. I look forward to discussing how my background in engineering and strategic product management can contribute to your team's innovative culture.
+  hook: As a Technical Product Manager with a foundation in Computer Science and Systems Architecture, I specialize in applying deep problem understanding and rigorous user research to bridge the gap between complex AI engineering execution and measurable product adoption.
+  bridge: My product philosophy is built on leveraging robust technical architectures to deliberately solve core user pain points and drive cross-functional alignment. My expertise spans executing highly iterative UX research methodologies, defining critical GTM metrics, and architecting scalable LLM infrastructures that directly mitigate operational friction and accelerate adoption across diverse stakeholder suites.
+  evidence: Recently, I architected \textbf{Thara}, a scalable LangGraph-based ecosystem of 11 autonomous AI agents, where I successfully orchestrated a 20% optimization in feature adoption rates utilizing A/B testing and predictive user heatmaps. Beyond purely technical builds, I previously orchestrated the full product lifecycle for \textbf{'MavMarket'}, aggressively scaling operations to 5,000+ attendees and generating $120,000 in revenue by designing AI-powered SOPs that objectively improved stakeholder Net Promoter Scores by 35%.
+  close: I am eager to apply this rigorous blend of systems engineering and iterative product leadership to help your highly technical cross-functional teams build the next generation of scalable infrastructure. I look forward to discussing how my strategic product experience can demonstrably accelerate your organization's innovation velocity.
 products:
+- name: 'Thara: Multi-Agent AI Ecosystem'
+  url: https://withthara.com/
+  bullets:
+  - Architected a scalable \textbf{Multi-Agent AI infrastructure} enabling \textbf{11 specialized autonomous agents} to orchestrate complex workflows by engineering a \textbf{LangGraph-based state machine} synchronized with a \textbf{FastAPI} backend and \textbf{PostgreSQL}.
+  - Optimized feature adoption rates by 20 percent by executing a robust user research methodology and rapidly iterating on core UI/UX designs based on iterative A/B testing results and high-fidelity predictive user heatmap analytics.
+  id: thara_ai
+  dates: null
 - name: 'Google Maps: Product Strategy'
-  url: https://abhishekn.in/content/google-maps-teardown
+  url: https://abhisheknagaraja.com/content/google-maps-teardown
   bullets:
   - Translated qualitative data from \textbf{42 user interviews} into two core problem statements, revealing a critical user need for guaranteed \textbf{menu accuracy} by utilizing \textbf{UX journey mapping} to identify high-friction drop-off points.
   - Architected a \textbf{product strategy} to directly address validated user needs, by utilizing a roadmap for a \textbf{centralized menu system} with granular filtering to capture the high-value market segment with critical dietary requirements.
   id: google_maps_strategy
   dates: null
 - name: 'Clash of Clans: Growth Strategy'
-  url: https://abhishekn.in/content/clash-of-clans-teardown
+  url: https://abhisheknagaraja.com/content/clash-of-clans-teardown
   bullets:
   - Proposed a \textbf{viral growth strategy} driving \textbf{5-10% new organic user acquisition} by creating a native social sharing feature for key in-game content, by utilizing \textbf{referral loop optimization} and player behavioral data patterns.
   - Projected a \textbf{15-20% increase in join rates} and \textbf{20-30% increase in feature adoption} by designing a revamped \textbf{Clan Discovery engine} and transforming the feed by utilizing \textbf{data-driven insights}, metrics, and predictive UX patterns.

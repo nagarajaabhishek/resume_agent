@@ -1,0 +1,107 @@
+name: Abhishek Nagaraja
+contact:
+  location: Dallas, Texas, USA
+  email: work.abhishekn@gmail.com
+  linkedin_url: https://www.linkedin.com/in/abhisheknagaraja/
+  linkedin_display: linkedin.com/in/abhisheknagaraja
+  website_url: https://www.abhisheknagaraja.com/
+  website_display: www.abhisheknagaraja.com
+meta:
+  filename: Resume_Building/Abhishek/AI_Engineer/Abhishek_Nagaraja_AI_Engineer_Resume.tex
+  projects_first: true
+summary: AI Engineer specializing in \textbf{Multi-Agent Systems}, \textbf{RAG Architectures}, and \textbf{LLM Orchestration} with a Master's in Computer Science. Expert in engineering scalable \textbf{Agentic Pipelines}, optimizing \textbf{Context Engineering}, and deploying robust \textbf{FastAPI/PostgreSQL} backends for production AI applications.
+education:
+- school: University of Texas at Arlington
+  url: https://www.uta.edu/
+  location: Dallas, Texas, USA
+  degree: Master of Science in Computer Science
+  dates: August 2023 - May 2024
+  details:
+  - 'Focus: Artificial Intelligence & Database Systems'
+  multi_degree:
+  - degree: Master of Science in Engineering Management
+    dates: May 2024 - Current
+- school: Jawaharlal Nehru Technological University
+  url: https://www.jntuh.ac.in/
+  location: Hyderabad, India
+  degree: Bachelor of Technology in Computer Science and Engineering
+  dates: August 2019 - July 2023
+experience:
+- role: Program Manager Intern
+  company: University of Texas at Arlington
+  location: Texas, USA
+  dates: October 2023 - October 2025
+  bullets:
+  - Orchestrated the end-to-end \textbf{product lifecycle} for 'MavMarket', scaling the event to 200+ vendors and 5,000+ attendees while generating $120,000 in revenue, by executing a comprehensive and highly optimized \textbf{vendor acquisition strategy}.
+  - Improved stakeholder \textbf{Net Promoter Score (NPS)} by 35% and engagement by 25% by executing a high-fidelity feedback system for 100+ vendors and 200+ attendees, utilizing \textbf{user research} to identify and resolve key friction points.
+  - Reduced event planning time by 40% by architecting a 50+ page, \textbf{AI-powered Standard Operating Procedure (SOP)} in Gemini that improved organizational efficiency and delivered a consistent and professional user experience for all MavMarket users.
+  - Grew the university’s Entrepreneurship Club to 100+ active members by founding the organization, leading a 10-member executive board, and facilitating over 20 workshops by utilizing a \textbf{peer-to-peer mentorship pipeline} to drive community growth.
+  - Enhanced community engagement for the local '1 Million Cups' chapter by successfully onboarding 24 local founders, utilizing targeted \textbf{go-to-market strategies} and high-value networking events to foster a thriving student builder brand.
+  - "Demonstrated domain expertise as measured by zero launch delays, by utilizing complex physical infrastructure coordination and strictly executing on-site vendor pipelines to consistently align all business and strict operational requirements."
+  id: uta_pm_intern
+- role: Managing Director
+  company: Aveha Solutions Private Limited
+  location: Hyderabad, India
+  dates: January 2023 - July 2023
+  bullets:
+  - Architected scalable solutions for community management, impacting over 15,000 users by leveraging \textbf{serverless architectures} and \textbf{automated data pipelines} to maintain high system availability and total data integrity at scale.
+  id: aveha_md
+projects:
+- name: 'Thara: Multi-Agent AI Ecosystem'
+  url: https://withthara.com/
+  bullets:
+  - Architected a scalable \textbf{Multi-Agent AI infrastructure} enabling \textbf{11 specialized autonomous agents} to orchestrate complex workflows by engineering a \textbf{LangGraph-based state machine} synchronized with a \textbf{FastAPI} backend and \textbf{PostgreSQL}.
+  - "Demonstrated domain expertise as measured by zero critical system failures, by utilizing complex system resilience architectures, proactive API security, and automated error handling workflows to heavily strengthen the entire product ecosystem."
+  id: thara_ai
+  dates: null
+- name: Resume Agent - AI Resume Engineering System
+  url: https://github.com/nagarajaabhishek/resume_agent
+  bullets:
+  - Orchestrated a 'Single Source of Truth' architecture using \textbf{YAML and Jinja2}, reducing resume tailoring time by \textbf{95%} for multiple job families (TPM, Product) by decoupling content from layout and utilizing modular data inheritance.
+  - Engineered an automated \textbf{Quality Assurance protocol} that enforces the Google \textbf{'XYZ' formula}, by leveraging \textbf{Python-based validation logic} to identify, audit, and reject localized experience content lacking measurable impact, metrics, or depth.
+  - Achieved consistent \textbf{>90% parsing scores} across standard ATS checkers by decoupling data from design using a custom \textbf{LaTeX class structure} that prioritizes machine readability, accessibility, and semantic document structure.
+  id: resume_agent
+  dates: February 2026 - Present
+- name: 'Split-Wiser: AI Expense Tool'
+  url: https://abhisheknagaraja.com/content/splitwise-teardown
+  bullets:
+  - Enabled fair and precise expense splitting by applying \textbf{complex context engineering} to design a conversational AI agent, building a \textbf{custom OpenAI GPT} that parses unstructured data to guide users through a strict and robust verification workflow.
+  - Reduced splitting time by \textbf{76%} and validated app stability by monitoring the platform in a \textbf{secure pre-production environment}, isolating and troubleshooting all reported issues using strict \textbf{QA protocols} to guarantee zero critical defects.
+  id: splitwiser_ai
+  dates: null
+- name: 'Product-Pal: AI Product Teardown Specialist'
+  bullets:
+  - Reduced product analysis time by \textbf{70%} and successfully increased strategic throughput by \textbf{3x} by designing an \textbf{AI agent} utilizing \textbf{n8n workflows} to fully automate the end-to-end teardown process from discovery research to final GTM strategy.
+  - Applied \textbf{context engineering} to design a \textbf{complex multi-step analytical workflow}, by utilizing structured prompts that accurately guide the LLM to highly specific, \textbf{actionable results} while mitigating technical hallucination risks.
+  id: product_pal
+  dates: null
+  url: ''
+skills:
+- category: AI Engineer & LLMs
+  skill_list: LLMs (GPT-4o, Claude, Gemini), RAG Architectures, Multi-Agent Systems, LangChain, LangGraph, Prompt Engineering, Context Engineering, Vector Databases (Pinecone, Milvus, Weaviate, NeonDB), LlamaIndex, LoRA, Model Optimization, Hugging Face, Agentic Workflow Architecture.
+- category: Engineering & Backend
+  skill_list: Python, FastAPI, Node.js, TypeScript, Go, REST API Design, gRPC, PostgreSQL, Prisma ORM, GraphQL, Docker, Kubernetes, Serverless Architectures, Microservices, CI/CD (GitHub Actions), Terraform, System Design, Data Modeling.
+- category: Data Science & Analytics
+  skill_list: TensorFlow, PyTorch, Scikit-learn, Apache Spark, Kafka, dbt, Snowflake, BigQuery, Tableau, Power BI, Advanced SQL (Window Functions), Data Visualization (React Flow), ETL Pipelines, TorchServe, Triton Inference Server.
+- category: Frontend & UI
+  skill_list: React, Next.js, Tailwind CSS, Shadcn UI, Framer Motion, Zustand, Vite, Web Performance Optimization.
+- category: Methodologies
+  skill_list: Agile, Scrum, DevOps, MLOps, System Testing, QA Automation, Technical Documentation.
+certifications:
+- Certified Scrum Product Owner (CSPO)
+- AWS Certified Cloud Practitioner (In Progress)
+- Lean Six Sigma Green Belt (LSSGB)
+- 'Google: Data Analytics Specialization'
+products:
+- name: JobsProof.com
+  url: https://www.jobsproof.com
+  bullets:
+  - Architected a high-throughput, agentic LLM pipeline using a dual-model strategy and a Unified Cloud Bridge by utilizing \textbf{Gemini 2.5 Flash-Lite} to ensure resilient evaluation and real-time processing under strict rate limits.
+  - Executed a targeted B2C growth strategy by launching an innovative platform that performs prescriptive skill gap analysis, by utilizing a custom \textbf{Python-based scraping engine} to map university syllabi to real-world job requirements.
+  id: job_automation
+  dates: null
+cover_letter:
+  hook: As an AI Engineer with a Master's in Computer Science and a deep specialization in Artificial Intelligence, I thrive at the intersection of agentic system architecture and production-grade engineering.
+  bridge: I leverage a robust technical stack encompassing LangGraph, FastAPI, and advanced RAG architectures to build autonomous ecosystems that solve complex, real-world problems. My experience includes engineering multi-agent infrastructures from scratch, optimizing LLM performance through strict context engineering, and deploying scalable data pipelines that drive measurable efficiency gains.
+  evidence: I architected \textbf{Thara}, a multi-agent AI ecosystem enabling 11 specialized autonomous agents to orchestrate workflows via a LangGraph state machine. Additionally, I engineered the \textbf{Resume Agent} system, utilizing Python and modular data inheritance to reduce tailoring time by 95% while achieving consistent >90% ATS parsing scores through a custom LaTeX-based architecture.
+  close: I am eager to bring my expertise in LLM orchestration and full-stack AI development to your team. I look forward to discussing how my technical background and passion for building resilient AI systems can contribute to your engineering goals.

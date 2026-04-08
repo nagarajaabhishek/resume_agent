@@ -1,5 +1,5 @@
 person: Abhishek Nagaraja
-last_updated: 2026-03-01
+last_updated: 2026-04-01
 active_resumes:
   - role: Technical Product Manager
     yaml_source: .agent/data/Abhishek/role_tpm.yaml
@@ -42,3 +42,10 @@ active_resumes:
     tex_output: Resume_Building/Abhishek/Dubai/Abhishek_Nagaraja_Dubai_Resume.tex
     domain: Regional
     status: Active
+
+  - role: AI Engineer
+    yaml_source: .agent/data/Abhishek/role_ai_engineer.yaml
+    tex_output: Resume_Building/Abhishek/AI_Engineer/Abhishek_Nagaraja_AI_Engineer_Resume.tex
+    domain: AI/ML
+    status: Active
+

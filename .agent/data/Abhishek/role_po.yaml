@@ -7,8 +7,8 @@ contact:
   email: work.abhishekn@gmail.com
   linkedin_url: https://www.linkedin.com/in/abhisheknagaraja/
   linkedin_display: linkedin.com/in/abhisheknagaraja
-  website_url: https://www.abhishekn.in/
-  website_display: www.abhishekn.in
+  website_url: https://www.abhisheknagaraja.com/
+  website_display: www.abhisheknagaraja.com
 summary: Certified Product Owner (CSPO) with a track record of driving Agile Product Delivery and Backlog Management. Expert in translating business needs into actionable User Stories and technical requirements. Skilled in facilitating Scrum ceremonies and leveraging Agentic Workflows and Generative AI to accelerate product velocity
 education:
 - school: University of Texas at Arlington
@@ -33,7 +33,9 @@ experience:
   - Orchestrated the end-to-end \textbf{product lifecycle} for 'MavMarket', scaling the event to 200+ vendors and 5,000+ attendees while generating $120,000 in revenue, by executing a comprehensive and highly optimized \textbf{vendor acquisition strategy}.
   - Improved stakeholder \textbf{Net Promoter Score (NPS)} by 35% and engagement by 25% by executing a high-fidelity feedback system for 100+ vendors and 200+ attendees, utilizing \textbf{user research} to identify and resolve key friction points.
   - Reduced event planning time by 40% by architecting a 50+ page, \textbf{AI-powered Standard Operating Procedure (SOP)} in Gemini that improved organizational efficiency and delivered a consistent and professional user experience for all MavMarket users.
-  - "Grew the university\u2019s Entrepreneurship Club to 100+ active members by founding the organization, leading a 10-member executive board, and facilitating over 20 workshops by utilizing a \\textbf{peer-to-peer mentorship pipeline} to drive community growth."
+  - Grew the university’s Entrepreneurship Club to 100+ active members by founding the organization, leading a 10-member executive board, and facilitating over 20 workshops by utilizing a \textbf{peer-to-peer mentorship pipeline} to drive community growth.
+  - Enhanced community engagement for the local '1 Million Cups' chapter by successfully onboarding 24 local founders, utilizing targeted \textbf{go-to-market strategies} and high-value networking events to foster a thriving student builder brand.
+  - "Demonstrated domain expertise as measured by zero launch delays, by utilizing complex physical infrastructure coordination and strictly executing on-site vendor pipelines to consistently align all business and strict operational requirements."
   id: uta_pm_intern
 - role: Founder and Community Lead
   company: e-DAM Community
@@ -73,38 +75,45 @@ products:
   bullets:
   - Translated qualitative data from \textbf{42 user interviews} into two core problem statements, revealing a critical user need for guaranteed \textbf{menu accuracy} by utilizing \textbf{UX journey mapping} to identify high-friction drop-off points.
   - Architected a \textbf{product strategy} to directly address validated user needs, by utilizing a roadmap for a \textbf{centralized menu system} with granular filtering to capture the high-value market segment with critical dietary requirements.
-  url: https://abhishekn.in/content/google-maps-teardown
+  url: https://abhisheknagaraja.com/content/google-maps-teardown
   id: google_maps_strategy
   dates: null
 - name: 'Clash of Clans: Growth Strategy'
   bullets:
   - Proposed a \textbf{viral growth strategy} driving \textbf{5-10% new organic user acquisition} by creating a native social sharing feature for key in-game content, by utilizing \textbf{referral loop optimization} and player behavioral data patterns.
   - Projected a \textbf{15-20% increase in join rates} and \textbf{20-30% increase in feature adoption} by designing a revamped \textbf{Clan Discovery engine} and transforming the feed by utilizing \textbf{data-driven insights}, metrics, and predictive UX patterns.
-  url: https://abhishekn.in/content/clash-of-clans-teardown
+  url: https://abhisheknagaraja.com/content/clash-of-clans-teardown
   id: coc_growth
   dates: null
 projects:
 - name: Resume Agent - AI Resume Engineering System
   bullets:
-  - Orchestrated a 'Single Source of Truth' architecture using \textbf{YAML and Jinja2}, reducing resume tailoring time by \textbf{95%} for multiple job families (TPM, Product) by decoupling content from layout and utilizing modular data inheritance.
-  - Engineered an automated \textbf{Quality Assurance protocol} that enforces the Google \textbf{'XYZ' formula}, by leveraging \textbf{Python-based validation logic} to identify, audit, and reject localized experience content lacking measurable impact, metrics, or depth.
-  - Achieved consistent \textbf{>90% parsing scores} across standard ATS checkers by decoupling data from design using a custom \textbf{LaTeX class structure} that prioritizes machine readability, accessibility, and semantic document structure.
+  - Architected an \textbf{AI-driven Resume Ecosystem} utilizing a strict single-source-of-truth semantic data core, reducing generation time by \textbf{95%} by leveraging \textbf{dynamic context injection} to aggressively align user parameters into targeted layouts.
+  - Engineered an \textbf{Agentic Validation Protocol} enforcing the \textbf{Google XYZ formula}, maximizing strategic impact by leveraging \textbf{LLM context logic} to deep-audit and dynamically validate localized user content against strict operational constraints.
+  - Solved systemic ATS rejection pipelines by designing an optimized \textbf{LaTeX parsing engine}, achieving \textbf{>90 % match rates} across enterprise scanners by decoupling product data from custom layouts to prioritize baseline ATS machine readability.
   id: resume_agent
   dates: February 2026 - Present
   url: https://github.com/nagarajaabhishek/resume_agent
+- name: 'Thara: Multi-Agent AI Ecosystem'
+  url: https://withthara.com/
+  bullets:
+  - Architected a scalable \textbf{Multi-Agent AI infrastructure} enabling \textbf{11 specialized autonomous agents} to orchestrate complex workflows by engineering a \textbf{LangGraph-based state machine} synchronized with a \textbf{FastAPI} backend and \textbf{PostgreSQL}.
+  - Optimized feature adoption rates by 20 percent by executing a robust user research methodology and rapidly iterating on core UI/UX designs based on iterative A/B testing results and high-fidelity predictive user heatmap analytics.
+  id: thara_ai
+  dates: null
 skills:
 - category: Agile Product Ownership
-  skill_list: Scrum, Kanban, SAFe, Linear, Jira, Confluence, User Story Mapping, Sprint Planning, Retrospectives, Aha!, Microsoft Project, Salesforce, HubSpot, Smartsheet, Microsoft Visio, Acceptance Criteria (AC) depth, Epic breakdown, Story Points estimation, User Journey Mapping, Backlog Grooming, Incident Management, Post-mortem leadership, Root Cause Analysis (RCA).
+  skill_list: Scrum, Kanban, SAFe, Linear, Jira, Confluence, User Story Mapping, Sprint Planning, Retrospectives, Aha!, Microsoft Project, Salesforce, HubSpot, Smartsheet, Microsoft Visio, Acceptance Criteria (AC) depth, Epic breakdown, Story Points estimation, User Journey Mapping, Backlog Grooming, Incident Management, Post-mortem leadership, Root Cause Analysis (RCA), LeSS (Large-Scale Scrum), ITSM, RAID Logs, Vendor Management, Process Re-engineering.
 - category: AI-Powered Discovery
-  skill_list: AI Product Strategy (Gemini/GPT-4o), Automated PRD Generation, AI-Driven User Research Analysis, Agentic Workflows (n8n), Prompt Engineering, Context Engineering.
+  skill_list: AI Product Strategy (Gemini/GPT-4o), Automated PRD Generation, AI-Driven User Research Analysis, Agentic Workflows (n8n), Prompt Engineering, Context Engineering, Agentic Workflow Architecture, Process Automation, Product Discovery.
 - category: Technical & Analytics
-  skill_list: SQL, Python, AWS (S3, EC2, Lambda), Docker, API Integration, KPI Analysis, PostgreSQL, Tableau, Power BI, Google Analytics, Amplitude, MermaidJS, NPS improvement tracking, Cohort Analysis, Funnel Optimization, A/B Testing protocols, Conversion Rate optimization.
+  skill_list: SQL, Python, AWS (S3, EC2, Lambda), Docker, API Integration, KPI Analysis, PostgreSQL, Tableau, Power BI, Google Analytics, Amplitude, MermaidJS, NPS improvement tracking, Cohort Analysis, Funnel Optimization, A/B Testing protocols, Conversion Rate optimization, Variance Analysis, Trend Analysis, Predictive Analytics.
 - category: Soft Skills & Governance
-  skill_list: Cross-functional Alignment, Product Storytelling, Narrative Data, Conflict Resolution, Servant Leadership, Executive Presence.
+  skill_list: Cross-functional Alignment, Product Storytelling, Narrative Data, Conflict Resolution, Servant Leadership, Executive Presence, Strategic Planning, Opportunity Assessment, Organizational Excellence.
 - category: Project & Agile Tools
   skill_list: Scrum, Kanban, SAFe, Linear, Jira, Confluence, User Story Mapping, Sprint Planning, Retrospectives, Aha!, Microsoft Project, Salesforce, HubSpot, Smartsheet, Microsoft Visio.
 - category: Methodologies
-  skill_list: Scrum (CSPO), Kanban, Lean-Agile, SDLC, OKR Planning, Sprint Planning, A/B Testing.
+  skill_list: Scrum (CSPO), Kanban, Lean-Agile, SDLC, OKR Planning, Sprint Planning, A/B Testing protocols.
 certifications:
 - Certified Scrum Product Owner (CSPO)
 - Lean Six Sigma Green Belt

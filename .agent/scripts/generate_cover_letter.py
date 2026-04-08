@@ -119,33 +119,60 @@ def main():
         if output_dir:
             os.makedirs(output_dir, exist_ok=True)
     else:
-        os.makedirs(OUTPUT_DIR, exist_ok=True)
         filename = data.get("meta", {}).get("filename")
         if not filename:
-            # Try to get role name
-            # Check experience[0].role
             exp0 = data.get("experience", [{}])[0]
             role_name = exp0.get("role", "Generated")
-            filename = f"Abhishek_Nagaraja_{role_name.replace(' ', '_')}_Cover_Letter"
-        
-        if "_Resume" in filename:
-            filename = filename.replace("_Resume", "_Cover_Letter")
-        elif "_Generated_Resume" in filename:
-            filename = filename.replace("_Generated_Resume", "_Cover_Letter")
-        elif ".tex" in filename:
-             filename = filename.replace(".tex", "_Cover_Letter")
-        elif "_Cover_Letter" not in filename:
-            filename += "_Cover_Letter"
+            filename = f"Abhishek_Nagaraja_{role_name.replace(' ', '_')}_Cover_Letter.tex"
+            output_file = os.path.join(OUTPUT_DIR, filename)
+        else:
+            if "_Resume" in filename:
+                filename = filename.replace("_Resume", "_Cover_Letter")
+            elif ".tex" in filename:
+                 filename = filename.replace(".tex", "_Cover_Letter.tex")
+            output_file = filename
             
-        if not filename.endswith(".tex"):
-            filename += ".tex"
-        output_file = os.path.join(OUTPUT_DIR, filename)
+        output_dir = os.path.dirname(output_file)
+        if output_dir:
+            os.makedirs(output_dir, exist_ok=True)
     
     print(f"Writing to {output_file}...")
     with open(output_file, 'w') as f:
         f.write(rendered_tex)
         
     print("✅ Cover Letter Generation COMPLETE.")
+    compile_to_pdf(output_file)
+
+import subprocess
+import shutil
+
+def compile_to_pdf(tex_file):
+    if not shutil.which("pdflatex"):
+        print("⚠️  pdflatex not found on PATH — skipping PDF compilation.")
+        return
+
+    tex_dir = os.path.dirname(os.path.abspath(tex_file))
+    tex_name = os.path.basename(tex_file)
+    base_name = os.path.splitext(tex_name)[0]
+
+    print(f"Compiling {tex_name} to PDF...")
+    result = subprocess.run(
+        ["pdflatex", "-interaction=nonstopmode", tex_name],
+        cwd=tex_dir,
+        capture_output=True,
+        text=True
+    )
+
+    for ext in [".log", ".aux", ".out"]:
+        aux_file = os.path.join(tex_dir, base_name + ext)
+        if os.path.exists(aux_file):
+            os.remove(aux_file)
+
+    pdf_file = os.path.join(tex_dir, base_name + ".pdf")
+    if result.returncode == 0 and os.path.exists(pdf_file):
+        print(f"✅ PDF compiled: {pdf_file}")
+    else:
+        print("❌ PDF compilation failed.")
 
 if __name__ == "__main__":
     main()
