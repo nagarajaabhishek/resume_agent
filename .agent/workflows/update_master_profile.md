@@ -40,7 +40,7 @@ These biographical fields are **immutable ground truth**. Never change them with
 
 ## Step 3: Consistency & Length Check
 1.  **Diff Check:** Run a diff or visual check to ensure `master_context.yaml` and your key role files match on core facts (dates, titles).
-2.  **Cascade Pruning Warning:** If propagating a new job or project pushes the role-specific resume over the strict 1-page limit, you MUST immediately prune or condense older, less relevant entries in that specific role file.
+2.  **Cascade Pruning Warning:** If propagating a new job or project pushes the role-specific resume beyond the role rubric (typically 1-2 pages, with 2 pages as baseline), you MUST prune or condense older, less relevant entries in that specific role file.
 
 ## Step 4: Integrity Check (Run after every edit)
 Run the following to assert frozen facts were not accidentally changed:

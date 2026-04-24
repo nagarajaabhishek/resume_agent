@@ -2,9 +2,14 @@
 description: How to create a NEW, targeted resume from the Master Profile using Role Guidelines.
 ---
 
-# Tailor Resume Workflow (Role-Specific)
+# Tailor Resume Workflow (Job-Specific Injection)
 
-> **Goal:** Create a high-impact, targeted resume for a specific job family (e.g., "AI Product Manager" vs "Technical Program Manager").
+> **🚨 CRITICAL ARCHITECTURE RULE:** 
+> Do not confuse Resume TAILORING with Resume BUILDING.
+> - **Tailor Agent (`tailor.py`)**: Used AUTOMATICALLY in the data pipeline to inject a specific Job Description onto a pre-existing baseline profile (e.g. transforming `role_tpm.yaml` into `JD_123.yaml` mapping to a specific company).
+> - **Builder Agent (`builder.py`)**: Used MANUALLY for the *FIRST-TIME CREATION* of a baseline career profile.
+
+> **Goal:** Create a high-impact, targeted resume for a specific Job Description utilizing a pre-built base role.
 
 ## Step 1: Analysis & Strategy
 1.  **Consult Role Guidelines:**
@@ -13,13 +18,11 @@ description: How to create a NEW, targeted resume from the Master Profile using 
     - *Example (TPM):* Focus on "Orchestrated", "Aligned", "Delivered", "Risk Management".
     - *Example (Product):* Focus on "Strategized", "Roadmapped", "User Research", "GTM".
 
-## Step 2: Fork from Master
-1.  **Create New File:**
-    - **Naming:** `role_[target_role].yaml` (e.g., `role_ai_engineer.yaml`).
-    - **Command:** `cp .agent/data/[PersonName]/master_context.yaml .agent/data/[PersonName]/role_[new_role].yaml`
-2.  **Prune Content:**
-    - Remove projects/experience that are *irrelevant* to this specific role.
-    - *Rule:* Keep it to 1 page (approx. 3-4 roles, 3-4 projects).
+## Step 2: Clone from Base Role (Tailor Action)
+1.  **Clone Data File:**
+    - The `tailor.py` bridge executes cloning logic on a high-scoring job.
+    - **Naming:** `JD_[ID].yaml` (e.g., `JD_1241.yaml`).
+    - **Command:** `shutil.copy(.agent/data/[PersonName]/role_[base_role].yaml, .agent/data/[PersonName]/tailored/JD_[ID].yaml)`
 
 ## Step 3: Tune the Content (The Tailoring)
 1.  **Rewrite Bullets (XYZ):**
@@ -42,9 +45,9 @@ description: How to create a NEW, targeted resume from the Master Profile using 
 1.  **Open Inventory:** `.agent/data/[PersonName]/resume_inventory.yaml`.
 2.  **Append Details:** Add the new role name, its YAML path, and the target TeX output path. 
 3.  **Verify:** Check that the `status` is set to `Active`.
-4.  **Cleanup:** Move any replaced/outdated `.tex` variants to an `Archive/` folder.
+4.  **Cleanup:** Move any replaced/outdated `.tex` variants to an `Archive/` folder only after creating a timestamped backup folder and confirming exact target filenames.
 
 ## Step 6: Cover Letter Generation (Optional)
 **Objective:** Generate a targeted cover letter to accompany the new tailored resume.
 1. Use the appropriate prompt to generate a new cover letter targeting the specific `[new_role]`.
-2. Ensure the cover letter passes the [Cover Letter Audit Protocol](file:///Users/abhisheknagaraja/Documents/Resume_Agent/.agent/workflows/audit_cover_letter.md).
+2. Ensure the cover letter passes the [Cover Letter Audit Protocol](./audit_cover_letter.md).

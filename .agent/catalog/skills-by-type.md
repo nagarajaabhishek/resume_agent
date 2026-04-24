@@ -7,4 +7,4 @@ Skills focused on content creation, tailoring, and LaTeX compilation logic.
 
 | Skill Name | Description | Path |
 |---|---|---|
-| **Resume Generation** | A modular skill for generating high-impact, ATS-optimized resumes using the XYZ strategy and LaTeX templates. | [`/.agent/skills/resume_generation/SKILL.md`](file:///Users/abhisheknagaraja/Documents/Resume_Agent/.agent/skills/resume_generation/SKILL.md) |
+| **Resume Generation** | A modular skill for generating high-impact, ATS-optimized resumes using the XYZ strategy and LaTeX templates. | [`.agent/skills/resume_generation/SKILL.md`](../skills/resume_generation/SKILL.md) |

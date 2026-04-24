@@ -80,15 +80,15 @@ projects:
   dates: null
 skills:
 - category: Business Analysis & Strategy
-  skill_list: Requirements Elicitation, Gap Analysis, PRD/BRD Documentation, Process Modeling (BPMN), Stakeholder Translation, Data Storytelling, Market Research, UAT Coordination, TAM/SAM/SOM modeling, SaaS Revenue Forecasting, Pricing Realization Analysis, Churn Rate optimization, Market Entry Barriers, M&A Due Diligence, Competitive Counter-strategies, P&L Management, Strategic Planning, Opportunity Assessment, Organizational Excellence.
+  skill_list: Requirements Elicitation, Author BRDs/FRDs, Gap Analysis, Feasibility Analysis, Competitive Analysis, As-Is/To-Be Process Mapping, Process Modeling (BPMN), User Stories, Backlog Management, Facilitate Stakeholder Workshops, Translate Business Needs, Data Storytelling, Analytical Techniques, Market Research, UAT Coordination, Test Case Creation, Presentations, Findings Documentation, TAM/SAM/SOM Modeling, Strategic Planning, Opportunity Assessment, Organizational Excellence.
 - category: AI & Data Analysis
-  skill_list: Predictive Data Modeling, SQL-to-Insights (LLMs), Automated Reporting, Predictive Analytics, Generative AI (Gemini/GPT-4o), Prompt Engineering, n8n Automation, Variance Analysis, Trend Analysis.
+  skill_list: Predictive Data Modeling, SQL-to-Insights (LLMs), Automated Reporting, Predictive Analytics, Generative AI (ChatGPT, Gemini, GPT-4o, Claude), Prompt Engineering, n8n Automation, User Surveys, Interview Sessions, Variance Analysis, Trend Analysis, Data Visualization.
 - category: Technical Tools & Platforms
-  skill_list: Power BI, Tableau, SQL, Python, Excel (Advanced), Jira, Visio, Lucidchart, Asana, Notion, GitHub, AWS (Basic), Salesforce (SFDC), CPQ platforms, Power Automate, Smartsheet, Monday.com, Agentic Workflow Architecture, Process Automation.
+  skill_list: Power BI, Tableau, SQL, Python, Excel (Advanced), Jira, Confluence, Visio, Lucidchart, Asana, Notion, GitHub, AWS (Basic), Salesforce (SFDC), CPQ platforms, Power Automate, Smartsheet, Monday.com, Executive Dashboards, Reporting Dashboards, Agentic Workflow Architecture, Process Automation.
 - category: Soft Skills & Collaboration
   skill_list: Cross-functional Alignment, Conflict Resolution, Product Storytelling, Strategic Communication, Agile Facilitation, Mentorship.
 - category: Methodologies
-  skill_list: Agile, Scrum, Lean-Agile, SDLC, SOP Architecture, Waterfall, Process Improvement, LeSS (Large-Scale Scrum), ITSM, RAID Logs, Vendor Management, Process Re-engineering.
+  skill_list: Agile, Scrum, Waterfall, Lean-Agile, SDLC, Continuous Improvement, SOP Architecture, Sprint Planning, Backlog Refinement, Process Improvement, Requirements Traceability, Root Cause Analysis, KPI Tracking, LeSS, ITSM, RAID Logs, Vendor Management, CSPO Certified.
 certifications:
 - Certified Scrum Product Owner (CSPO)
 - Lean Six Sigma Green Belt (LSSGB)

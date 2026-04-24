@@ -149,6 +149,7 @@ def main():
     parser = argparse.ArgumentParser(description="Generate a resume from YAML data.")
     parser.add_argument("input_file", nargs="?", default=".agent/data/Abhishek/role_tpm.yaml", help="Path to the YAML data file")
     parser.add_argument("--output", "-o", help="Path to the output LaTeX file")
+    parser.add_argument("--template", "-t", help="Path to a custom Jinja2 template file (overrides TEMPLATE_FILE and meta.template)")
     args = parser.parse_args()
 
     # Use the provided input file
@@ -194,7 +195,16 @@ def main():
 
     escaped_data = recursive_escape(data)
 
-    print(f"Loading template from {TEMPLATE_FILE}...")
+    # Resolve template: CLI arg > meta.template in YAML > default TEMPLATE_FILE
+    template_file = TEMPLATE_FILE
+    if args.template:
+        template_file = args.template
+        print(f"Using custom template (CLI): {template_file}")
+    elif data.get("meta", {}).get("template"):
+        template_file = data["meta"]["template"]
+        print(f"Using custom template (meta.yaml): {template_file}")
+
+    print(f"Loading template from {template_file}...")
     try:
         env = jinja2.Environment(
             block_start_string='{%',
@@ -203,10 +213,10 @@ def main():
             variable_end_string='>>',
             comment_start_string='((#',
             comment_end_string='#))',
-            loader=jinja2.FileSystemLoader(os.path.dirname(TEMPLATE_FILE)),
+            loader=jinja2.FileSystemLoader(os.path.dirname(template_file)),
             autoescape=False # We handle escaping manually
         )
-        template = env.get_template(os.path.basename(TEMPLATE_FILE))
+        template = env.get_template(os.path.basename(template_file))
     except jinja2.TemplateNotFound:
         print(f"Error: Template not found at {TEMPLATE_FILE}")
         sys.exit(1)

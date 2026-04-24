@@ -4,14 +4,18 @@ description: The standard, strict workflow for creating or updating any resume. 
 
 # Resume Creation/Update Workflow (Python-Based)
 
-> **🚨 CRITICAL:** We no longer write LaTeX manually. We edit Data (YAML) and Generate Code (Python).
+> **🚨 CRITICAL ARCHITECTURE RULE:** 
+> Do not confuse Resume BUILDING with Resume TAILORING.
+> - **Builder Agent (`builder.py`)**: Used MANUALLY for the *FIRST-TIME CREATION* of a baseline career profile (e.g. creating `role_tpm.yaml` from `master_context.yaml`).
+> - **Tailor Agent (`tailor.py`)**: Used AUTOMATICALLY in the data pipeline to inject a specific Job Description onto a pre-existing baseline profile (e.g. transforming `role_tpm.yaml` into `JD_123.yaml`).
 
-## Step 1: Career Profile (The Source of Truth)
-**Objective:** Define the content in structured data.
+## Step 1: Career Profile Extraction (Builder Agent)
+**Objective:** Define the baseline content in structured data.
 **File:** `.agent/data/resume_data.yaml`
 
-1.  **Select/Create Data File:**
-    - Create a new YAML file for the specific role (e.g., `.agent/data/Abhishek/role_tpm.yaml`).
+1.  **Extract Data via Builder:**
+    - The Builder Agent (`builder.py`) forks `master_context.yaml` based on a requested track.
+    - Alternatively, manually create a new YAML file for the specific role (e.g., `.agent/data/Abhishek/role_tpm.yaml`).
     - **Naming Convention:** `role_[job_title_snake_case].yaml` (e.g., `role_product_manager.yaml`).
     - **Location:** MUST be in `.agent/data/[PersonName]/`.
     - Copy structure from `master_context.yaml` or existing role file.

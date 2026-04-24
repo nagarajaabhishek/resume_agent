@@ -74,17 +74,17 @@ projects:
   url: https://github.com/nagarajaabhishek/resume_agent
 skills:
 - category: Program & Operations Management
-  skill_list: Program Lifecycle Management, Risk Mitigation, Stakeholder Alignment, Strategic Planning, Resource Allocation, SOP Architecture, GTM Strategy, Operational Efficiency, Budgeting, Change Management, TAM/SAM/SOM modeling, SaaS Revenue Forecasting, Pricing Realization Analysis, Churn Rate optimization, Market Entry Barriers, M&A Due Diligence, Competitive Counter-strategies, P&L Management, Opportunity Assessment, Organizational Excellence, Process Re-engineering, RAID Logs, Vendor Management.
+  skill_list: Program Lifecycle Management, Risk Mitigation, Risk Registers, Stakeholder Alignment, Strategic Planning, Resource Allocation, SOP Architecture, Operational Playbooks, GTM Strategy, Operational Efficiency, Budgeting, Change Management, Program Closure, Critical Path Management, Concurrent Workstream Management, Milestone Tracking, Program Health Metrics, Dependency Management, Monitoring Progress, Scope Definition, Executive Briefings, Bottleneck Removal, Root Cause Analysis, P&L Management, Opportunity Assessment, Organizational Excellence, Process Re-engineering, RAID Logs, Vendor Management.
 - category: Leadership & Strategy
-  skill_list: Cross-functional Leadership, Conflict Resolution, Mentorship Pipelines, Executive Presence, Startup Operations, Business Development, Product Storytelling, Strategic Communication, Strategic Planning.
+  skill_list: Cross-functional Leadership, Conflict Resolution, Mentorship Pipelines, Executive Presence, Startup Operations, Business Development, Partnerships Management, Funding Proposals, Product Storytelling, Strategic Communication, Strategic Planning.
 - category: AI-Powered Operations
   skill_list: Agentic Workfows (n8n, LangGraph), AI-Powered SOPs, Generative AI (Gemini, GPT-4o), Prompt Engineering, Automated Reporting, Predictive Analytics, AI Governance & Ethics, Agentic Workflow Architecture, Process Automation.
 - category: Technical Systems
   skill_list: Python, SQL, REST APIs, AWS (EC2, S3), CI/CD Pipelines, Docker, System Design Concepts, Database Management, Variance Analysis, Trend Analysis.
 - category: Project Mastery Tools
-  skill_list: Jira, Asana, Notion, Microsoft Project, Power BI, Excel (Advanced), Google Analytics, Figma, Antigravity, Cursor, Salesforce (SFDC), CPQ platforms, Power Automate, Monday.com.
+  skill_list: Jira, Asana, Notion, Microsoft Project, Power BI, Excel (Advanced), Google Analytics, Figma, Antigravity, Cursor, Salesforce (SFDC), CPQ platforms, Power Automate, Monday.com, Executive Dashboards, Reporting Dashboards.
 - category: Agile & Lean Frameworks
-  skill_list: Scrum, Kanban, SAFe, Linear, Jira, Confluence, User Story Mapping, Sprint Planning, Retrospectives, Aha!, Microsoft Project, Salesforce, HubSpot, Smartsheet, Microsoft Visio, LeSS (Large-Scale Scrum), ITSM.
+  skill_list: Scrum, Kanban, SAFe, Waterfall, LeSS, Linear, Jira, Confluence, User Story Mapping, Sprint Planning, Retrospectives, Sprint Velocity, Burndown Charts, Backlog Refinement, Facilitate Ceremonies, Continuous Improvement, Negotiations, OKRs/Objectives, Release Planning, Stakeholder Relationships, Ideation Workshops, Aha!, Microsoft Project, Salesforce, Smartsheet, Microsoft Visio, ITSM.
 certifications:
 - Certified Scrum Product Owner (CSPO)
 - Lean Six Sigma Green Belt (LSSGB)

@@ -72,15 +72,15 @@ projects:
   url: https://github.com/nagarajaabhishek/resume_agent
 skills:
 - category: Scrum Mastery & Agile Facilitation
-  skill_list: Scrum, Kanban, SAFe, Linear, Jira, Confluence, User Story Mapping, Sprint Planning, Retrospectives, Aha!, Microsoft Project, Salesforce, HubSpot, Smartsheet, Microsoft Visio.
+  skill_list: Scrum, Kanban, SAFe, LeSS, Linear, Jira, Confluence, User Story Mapping, Sprint Planning, Daily Standups, Sprint Reviews, Retrospectives, Facilitate Scrum Ceremonies, Impediment Removal, Scope Creep Prevention, Burndown Charts, Velocity Tracking, Capacity Planning, Backlog Refinement, Acceptance Criteria, Definition of Ready (DoR), Definition of Done (DoD), Action Items Tracking, Transparent Reporting, Microsoft Project, Smartsheet, Miro, Mural.
 - category: Leadership & Communication
-  skill_list: Stakeholder Management, Conflict Resolution, Product Storytelling, Strategic Communication, Team Coaching, Executive Presence, Cross-functional Aligment.
+  skill_list: Stakeholder Management, Conflict Resolution, Product Storytelling, Strategic Communication, Team Coaching, Servant Leadership, Team Leader, Psychological Safety, Foster Collaboration, External Stakeholders Management, Hiring Support, Cross-functional Alignment, Maximize Team Velocity, Continuous Improvement Practices.
 - category: AI-Powered Productivity
-  skill_list: AI-Driven Backlog Refinement, Automated Sprint Recaps, Agentic Workflows (n8n), Generative AI (GPT-4o, Gemini), Prompt Engineering, RAG Architectures.
+  skill_list: AI-Driven Backlog Refinement, Automated Sprint Recaps, Agentic Workflows (n8n), Generative AI (GPT-4o, Gemini, ChatGPT), Prompt Engineering, RAG Architectures.
 - category: Technical Tools & Platforms
-  skill_list: Jira, Confluence, Linear, Trello, Asana, Mural, Miro, Python, SQL, Git/GitHub, AWS Concepts, CI/CD, Cursor, Windsurf.
+  skill_list: Jira, Confluence, Linear, Trello, Asana, Mural, Miro, Python, SQL, Git/GitHub, AWS Concepts, Software Delivery, Technical Writing, Sprint Visibility, CI/CD, Cursor, Windsurf.
 - category: Analysis & Operations
-  skill_list: Requirements Elicitation, Gap Analysis, SDLC Management, KPI Tracking, SOP Architecture, Data-Driven Decision Making.
+  skill_list: Requirements Elicitation, Gap Analysis, SDLC Management, KPI Tracking, SOP Architecture, Sprint Documentation, Automated Sprint Recaps, Data-Driven Decision Making, Reporting Dashboards, MoSCoW Prioritization, Progress Monitoring, Leverage Agile Frameworks.
 certifications:
 - Certified Scrum Product Owner (CSPO)
 - 'Google: Project Management Professional Certificate'

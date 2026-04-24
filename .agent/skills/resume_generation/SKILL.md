@@ -15,7 +15,7 @@ scenarios:
 > **🚨 AGENT PROTOCOL:** This skill is modular. Before any generation or analysis, you MUST consult this Master Index and refer to the specific rule files in the `rules/` directory as needed.
 
 ## Purpose
-To ensure every generated resume passes automated ATS scanners and human review by enforcing the XYZ Strategy, a strict 2-page limit, and dense, metrics-driven bullet points formatted precisely in LaTeX.
+To ensure every generated resume passes automated ATS scanners and human review by enforcing the XYZ strategy, a baseline 2-page cap (with role-driven 1-2 page flexibility), and dense, metrics-driven bullet points formatted precisely in LaTeX.
 
 ## Key Concepts
 
@@ -29,11 +29,11 @@ To ensure every generated resume passes automated ATS scanners and human review 
 
 ### Modular Rule Components
 Consult these sub-documents for specific implementation details:
-- **[LaTeX Formatting](file:///Users/abhisheknagaraja/Documents/Resume_Agent/.agent/skills/resume_generation/rules/latex_formatting.md):** Font (Charter), spacing, bolding syntax (`\textbf{}`), and ATS-safe layout.
-- **[Content Strategy (XYZ)](file:///Users/abhisheknagaraja/Documents/Resume_Agent/.agent/skills/resume_generation/rules/content_strategy.md):** XYZ formula, keyword engineering, metric estimation, and anti-patterns.
-- **[Line Efficiency](file:///Users/abhisheknagaraja/Documents/Resume_Agent/.agent/skills/resume_generation/rules/line_efficiency.md):** Real estate optimization, 215-245 character rule, and visual symmetry.
-- **[Role-Based Guidelines](file:///Users/abhisheknagaraja/Documents/Resume_Agent/.agent/skills/resume_generation/rules/role_guidelines.md):** Tuning vocabulary, focus, and AI Enhancement strategies.
-- **[Cover Letter Rules](file:///Users/abhisheknagaraja/Documents/Resume_Agent/.agent/skills/resume_generation/rules/cover_letter_rules.md):** Timelessness, 4-paragraph structure, and branding consistency.
+- **[LaTeX Formatting](./rules/latex_formatting.md):** Font (Charter), spacing, bolding syntax (`\textbf{}`), and ATS-safe layout.
+- **[Content Strategy (XYZ)](./rules/content_strategy.md):** XYZ formula, keyword engineering, metric estimation, and anti-patterns.
+- **[Line Efficiency](./rules/line_efficiency.md):** Real estate optimization, 215-245 character rule, and visual symmetry.
+- **[Role-Based Guidelines](./rules/role_guidelines.md):** Tuning vocabulary, focus, and AI Enhancement strategies.
+- **[Cover Letter Rules](./rules/cover_letter_rules.md):** Timelessness, 4-paragraph structure, and branding consistency.
 
 ## Application
 
@@ -56,7 +56,7 @@ To ensure high-impact resumes, follow this specific order of operations during a
 5.  **Do NOT Edit LaTeX Manually**: The `.tex` files are overwrite targets. Edit the YAML instead.
 
 ## Examples
-Use the [Master Agent Prompt](file:///Users/abhisheknagaraja/Documents/Resume_Agent/.agent/skills/resume_generation/rules/content_strategy.md#master-agent-prompt) logic when using external AI tools to rewrite content. Ensure you look at `.agent/data/Abhishek/master_context.yaml` as the prime example of data structure.
+Use the [Master Agent Prompt](./rules/content_strategy.md#master-agent-prompt) logic when using external AI tools to rewrite content. Ensure you look at `.agent/data/Abhishek/master_context.yaml` as the prime example of data structure.
 
 ## Common Pitfalls
 

@@ -39,7 +39,7 @@ description: A strict protocol for Verifying Resume Quality (Content & Code).
 **Manual Checklist:** Review the generated `.tex` code or the rendered PDF (if compiled externally).
 
 ### 1. Line Efficiency
-- [ ] **The 2-Line Rule:** Are most bullets 190-230 characters to ensure they occupy 2 full lines?
+- [ ] **The 2-Line Rule:** Are most bullets 215-245 characters to ensure they occupy 2 full lines?
 - [ ] **The 80% Rule:** If a bullet wraps to a second line, does it fill at least 80% of that line visually?
 - [ ] **No Orphans:** Are there single words on a line? (Rewrite to fix).
 
