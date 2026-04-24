@@ -23,7 +23,7 @@ python3 .agent/scripts/generate_resume.py .agent/data/Abhishek/<role_file>.yaml
 python3 .agent/scripts/generate_resume.py .agent/data/Abhishek/role_tpm.yaml
 ```
 
-Output `.tex` files land in `Resume_Building/Abhishek/<RoleName>/`. Compile `.tex` files locally using `tectonic` or `pdflatex`.
+Output `.tex` files land in `Resume_Building/Abhishek/<RoleName>/` when `meta.filename` includes that path; bare filenames go to `Resume_Building/Abhishek/Generated/`. **PDFs are always written next to the `.tex`** (`pdflatex -output-directory` / `tectonic --outdir` under the person folder).
 
 ---
 

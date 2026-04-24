@@ -28,10 +28,9 @@ find Resume_Building/Abhishek -name "*.tex" | while read -r tex_file; do
         rm "$pdf_file"
     fi
 
-    # Run tectonic
-    # We use --keep-intermediates just in case debug is needed, but default is fine.
-    # tectonic handles multiple runs automatically.
-    if tectonic "$tex_file"; then
+    tex_dir=$(dirname "$tex_file")
+    # Force PDF next to the .tex under the person folder (Resume_Building/<Person>/...).
+    if tectonic --outdir "$tex_dir" "$tex_file"; then
         echo "✅ Successfully generated PDF for $tex_file"
     else
         echo "❌ Failed to generate PDF for $tex_file"

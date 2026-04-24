@@ -24,8 +24,8 @@ find Resume_Building/Yuvraj -name "*.tex" | while read -r tex_file; do
         rm "$pdf_file"
     fi
 
-    # Run tectonic
-    if tectonic "$tex_file"; then
+    tex_dir=$(dirname "$tex_file")
+    if tectonic --outdir "$tex_dir" "$tex_file"; then
         echo "✅ Successfully generated PDF for $tex_file"
     else
         echo "❌ Failed to generate PDF for $tex_file"

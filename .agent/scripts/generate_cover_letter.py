@@ -7,7 +7,20 @@ import argparse
 
 # Configuration
 TEMPLATE_FILE = ".agent/templates/cover_letter_template.tex.j2"
-OUTPUT_DIR = "Resume_Building/Generated"
+
+
+def _person_generated_dir(data: dict) -> str:
+    """Bare-filename outputs go under Resume_Building/<Person>/Generated/ (see generate_resume.py)."""
+    meta = (data.get("meta") or {}) if isinstance(data, dict) else {}
+    fn = str(meta.get("filename") or "").replace("\\", "/").strip()
+    if fn.startswith("Resume_Building/"):
+        segs = [s for s in fn.split("/") if s]
+        if len(segs) >= 2 and segs[1] != "Generated":
+            return os.path.join("Resume_Building", segs[1], "Generated")
+    profile = str(meta.get("profile") or "").strip()
+    if profile:
+        return os.path.join("Resume_Building", profile, "Generated")
+    return os.path.join("Resume_Building", "Abhishek", "Generated")
 
 def escape_latex(text):
     """
@@ -124,7 +137,7 @@ def main():
             exp0 = data.get("experience", [{}])[0]
             role_name = exp0.get("role", "Generated")
             filename = f"Abhishek_Nagaraja_{role_name.replace(' ', '_')}_Cover_Letter.tex"
-            output_file = os.path.join(OUTPUT_DIR, filename)
+            output_file = os.path.join(_person_generated_dir(data), filename)
         else:
             if "_Resume" in filename:
                 filename = filename.replace("_Resume", "_Cover_Letter")
@@ -157,10 +170,16 @@ def compile_to_pdf(tex_file):
 
     print(f"Compiling {tex_name} to PDF...")
     result = subprocess.run(
-        ["pdflatex", "-interaction=nonstopmode", tex_name],
+        [
+            "pdflatex",
+            "-interaction=nonstopmode",
+            "-output-directory",
+            tex_dir,
+            tex_name,
+        ],
         cwd=tex_dir,
         capture_output=True,
-        text=True
+        text=True,
     )
 
     for ext in [".log", ".aux", ".out"]:

@@ -17,6 +17,7 @@ raw_resume_input.txt
 Chandranna/
 Resume_Building/Chandranna/
 Resume_Building/Tailored/
+Resume_Building/*/Generated/
 .agent/data/Chandranna/
 .agent/data/Abhishek/tailored/
 .agent/overlays/

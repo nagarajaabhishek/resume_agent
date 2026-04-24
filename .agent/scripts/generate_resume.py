@@ -8,7 +8,23 @@ import shutil
 
 # Configuration
 TEMPLATE_FILE = ".agent/templates/resume_template.tex.j2"
-OUTPUT_DIR = "Resume_Building/Generated"
+
+
+def _person_generated_dir(data: dict) -> str:
+    """
+    Default directory for bare meta.filename outputs: Resume_Building/<Person>/Generated/
+    Person is inferred from meta.filename path, meta.profile, or Abhishek.
+    """
+    meta = (data.get("meta") or {}) if isinstance(data, dict) else {}
+    fn = str(meta.get("filename") or "").replace("\\", "/").strip()
+    if fn.startswith("Resume_Building/"):
+        segs = [s for s in fn.split("/") if s]
+        if len(segs) >= 2 and segs[1] != "Generated":
+            return os.path.join("Resume_Building", segs[1], "Generated")
+    profile = str(meta.get("profile") or "").strip()
+    if profile:
+        return os.path.join("Resume_Building", profile, "Generated")
+    return os.path.join("Resume_Building", "Abhishek", "Generated")
 
 # Validation Rules (Strict SKILL.md Compliance)
 MIN_BULLET_LENGTH = 215 
@@ -241,11 +257,11 @@ def main():
             if output_dir:
                 os.makedirs(output_dir, exist_ok=True)
         else:
-            # Fallback to default OUTPUT_DIR if it's just a filename
-            os.makedirs(OUTPUT_DIR, exist_ok=True)
+            out_dir = _person_generated_dir(data)
+            os.makedirs(out_dir, exist_ok=True)
             if not output_path.endswith(".tex"):
                 output_path += ".tex"
-            output_file = os.path.join(OUTPUT_DIR, output_path)
+            output_file = os.path.join(out_dir, output_path)
     
     print(f"Writing to {output_file}...")
     with open(output_file, 'w') as f:
@@ -270,10 +286,16 @@ def compile_to_pdf(tex_file):
 
     print(f"Compiling {tex_name} to PDF...")
     result = subprocess.run(
-        ["pdflatex", "-interaction=nonstopmode", tex_name],
+        [
+            "pdflatex",
+            "-interaction=nonstopmode",
+            "-output-directory",
+            tex_dir,
+            tex_name,
+        ],
         cwd=tex_dir,
         capture_output=True,
-        text=True
+        text=True,
     )
 
     # Clean up auxiliary files

@@ -35,7 +35,7 @@ description: The standard, strict workflow for creating or updating any resume. 
     ```
     
 2.  **Outcome:**
-    - **Success:** A perfect `.tex` file is created in `Resume_Building/Generated/`.
+    - **Success:** A `.tex` is written to `meta.filename` when it includes a path (typically `Resume_Building/<Person>/<Role>/...`). If `meta.filename` is only a basename, the script uses `Resume_Building/<Person>/Generated/` (default person: Abhishek, or `meta.profile`). PDFs compile into the same directory as the `.tex`.
     - **Failure:** The script dumps errors (e.g., "Bullet 2 too short"). **Fix the YAML and re-run.**
 
 ## Step 3: Final Output
