@@ -1,3 +1,6 @@
+# Bytecode
+__pycache__/
+**/__pycache__/
 
 # System Files
 .DS_Store
@@ -11,6 +14,19 @@ Sneha/
 khachitri/
 yuvraj/
 raw_resume_input.txt
+Chandranna/
+Resume_Building/Chandranna/
+Resume_Building/Tailored/
+.agent/data/Chandranna/
+.agent/data/Abhishek/tailored/
+.agent/overlays/
+
+# Local scratch scripts / one-off exports
+tailor.py
+builder.py
+.agent/data/Abhishek/*.pdf
+.agent/data/Abhishek/*.png
+.agent/templates/chandranna_resume_template.tex.j2
 
 # LaTeX Generated Files
 *.synctex.gz

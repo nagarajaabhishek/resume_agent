@@ -1,0 +1,138 @@
+name: Abhishek Nagaraja
+contact:
+  location: Dallas, Texas, USA
+  email: work.abhishekn@gmail.com
+  linkedin_url: https://www.linkedin.com/in/abhisheknagaraja/
+  linkedin_display: linkedin.com/in/abhisheknagaraja
+  website_url: https://www.abhisheknagaraja.com/
+  website_display: www.abhisheknagaraja.com
+meta:
+  filename: Resume_Building/Abhishek/Master/Abhishek_Nagaraja_Master_Resume.tex
+section_order:
+- education
+- experience
+- projects
+- products
+- skills
+- certifications
+summary: Tech-first product and AI builder with cross-functional leadership across software engineering, operations, and go-to-market execution. Proven ability to scale complex systems and communities by translating user pain points into measurable technical outcomes while driving organizational alignment and execution rigor.
+education:
+- school: University of Texas at Arlington
+  url: https://www.uta.edu/
+  location: Dallas, Texas, USA
+  degree: Master of Science in Computer Science
+  dates: August 2023 - May 2024
+  multi_degree:
+  - degree: Master of Science in Engineering Management
+    dates: May 2024 - Current
+- school: Jawaharlal Nehru Technological University
+  url: https://www.jntuh.ac.in/
+  location: Hyderabad, India
+  degree: Bachelor of Technology in Computer Science and Engineering
+  dates: August 2019 - July 2023
+experience:
+- role: Program Manager Intern
+  company: University of Texas at Arlington
+  location: Texas, USA
+  dates: October 2023 - October 2025
+  bullets:
+  - Orchestrated the end-to-end \textbf{product lifecycle} for 'MavMarket', scaling the event to 200+ vendors and 5,000+ attendees while generating $120,000 in revenue, by executing a comprehensive and highly optimized \textbf{vendor acquisition strategy}.
+  - Improved stakeholder \textbf{Net Promoter Score (NPS)} by 35% and engagement by 25% by executing a high-fidelity feedback system for 100+ vendors and 200+ attendees, utilizing \textbf{user research} to identify and resolve key friction points.
+  - Reduced event planning time by 40% by architecting a 50+ page, \textbf{AI-powered Standard Operating Procedure (SOP)} in Gemini that improved organizational efficiency and delivered a consistent and professional user experience for all MavMarket users.
+  - Enhanced community engagement for the local '1 Million Cups' chapter by successfully onboarding 24 local founders, utilizing targeted \textbf{go-to-market strategies} and high-value networking events to foster a thriving student builder brand.
+  id: uta_pm_intern
+- role: Business Analyst Intern
+  company: NFC Solutions Private Limited
+  location: Hyderabad, India
+  dates: April 2022 - January 2023
+  bullets:
+  - Drafted \textbf{Product Requirement Documents (PRDs)} and coordinated task delegation for 4 key projects, serving as the bridge between stakeholders and technical teams by utilizing \textbf{Jira} to ensure consistent and on-time delivery cycles.
+  - Improved development efficiency by 20% by serving as Scrum Master, applying \textbf{Lean-Agile principles} to streamline workflows and ceremonies by utilizing \textbf{bi-weekly retrospectives} to identify, document, and remove complex process blockers.
+  - Optimized the end-to-end \textbf{order lifecycle} for an e-commerce platform to improve customer satisfaction, by leveraging \textbf{automated inventory triggers} and pricing logic to reduce data processing errors and improve reliability by 15%.
+  id: nfc_ba_intern
+- role: Founder and Managing Director
+  company: e-DAM Community
+  location: Hyderabad, India
+  dates: March 2021 - January 2025
+  bullets:
+  - Spearheaded community growth to 5,000+ members by performing \textbf{Market Analysis} and building a strategic network of industry partners, by utilizing \textbf{200+ technical workshops} to foster a thriving, scalable, and inclusive developer ecosystem.
+  - Directed venture execution across \textbf{e-DAM}, \textbf{e-DAM Spotlight}, and \textbf{e-DAM CMS} by defining technical roadmaps and delivery priorities, by leveraging cross-functional execution cadences to align engineering throughput with evolving market requirements.
+  - Architected scalable community management systems impacting \textbf{15,000+ users} by designing resilient platform workflows and operational controls, by utilizing iterative release cycles and stakeholder feedback to stabilize reliability during growth.
+  - Iterated on technical curriculum content based on high-value \textbf{attendee satisfaction metrics}, by utilizing narrative data and feedback loops to continuously improve learning outcomes and drive professional builder engagement for community members.
+  id: edam_founder
+products:
+- name: 'JobsProof.com: AI-Powered Career Intelligence Platform'
+  url: https://www.jobsproof.com
+  dates: null
+  bullets:
+  - Revolutionized the student job search process by launching a B2C platform that performs prescriptive skill gap analysis, by utilizing a custom \textbf{Python-based scraping engine} to map university syllabi to real-world job requirements.
+  - Architected a high-throughput, agentic LLM pipeline using a dual-model strategy and a Unified Cloud Bridge by utilizing \textbf{Gemini 2.5 Flash-Lite} to ensure resilient evaluation and real-time processing under strict rate limits.
+  id: job_automation
+- name: 'Google Maps: Product Strategy'
+  url: https://abhisheknagaraja.com/content/google-maps-teardown
+  dates: null
+  bullets:
+  - Translated qualitative data from \textbf{42 user interviews} into two core problem statements, revealing a critical user need for guaranteed \textbf{menu accuracy} by utilizing \textbf{UX journey mapping} to identify high-friction drop-off points.
+  - Architected a \textbf{product strategy} to directly address validated user needs, by utilizing a roadmap for a \textbf{centralized menu system} with granular filtering to capture the high-value market segment with critical dietary requirements.
+  id: google_maps_strategy
+- name: 'Clash of Clans: Growth Strategy'
+  url: https://abhisheknagaraja.com/content/clash-of-clans-teardown
+  dates: null
+  bullets:
+  - Proposed a \textbf{viral growth strategy} driving \textbf{5-10% new organic user acquisition} by creating a native social sharing feature for key in-game content, by utilizing \textbf{referral loop optimization} and player behavioral data patterns.
+  - Projected a \textbf{15-20% increase in join rates} and \textbf{20-30% increase in feature adoption} by designing a revamped \textbf{Clan Discovery engine} and transforming the feed by utilizing \textbf{data-driven insights}, metrics, and predictive UX patterns.
+  id: coc_growth
+projects:
+- name: Resume Agent - AI Resume Engineering System
+  url: https://github.com/nagarajaabhishek/resume_agent
+  dates: February 2026 - Present
+  bullets:
+  - Architected an \textbf{AI-driven Resume Ecosystem} utilizing a strict single-source-of-truth semantic data core, reducing generation time by \textbf{95%} by leveraging \textbf{dynamic context injection} to aggressively align user parameters into targeted layouts.
+  - Engineered an \textbf{Agentic Validation Protocol} enforcing the \textbf{Google XYZ formula}, maximizing strategic impact by leveraging \textbf{LLM context logic} to deep-audit and dynamically validate localized user content against strict operational constraints.
+  - Solved systemic ATS rejection pipelines by designing an optimized \textbf{LaTeX parsing engine}, achieving \textbf{>90 % match rates} across enterprise scanners by decoupling product data from custom layouts to prioritize baseline ATS machine readability.
+  id: resume_agent
+- name: 'Thara: Multi-Agent AI Ecosystem'
+  url: https://withthara.com/
+  dates: null
+  bullets:
+  - Architected a scalable \textbf{Multi-Agent AI infrastructure} enabling \textbf{11 specialized autonomous agents} to orchestrate complex workflows by engineering a \textbf{LangGraph-based state machine} synchronized with a \textbf{FastAPI} backend and \textbf{PostgreSQL}.
+  - Optimized feature adoption rates by 20 percent by executing a robust user research methodology and rapidly iterating on core UI/UX designs based on iterative A/B testing results and high-fidelity predictive user heatmap analytics.
+  id: thara_ai
+- name: 'Split-Wiser: AI Expense Tool'
+  url: https://ai-splitwiser.vercel.app/
+  dates: null
+  bullets:
+  - Formulated a robust product strategy for complex expense attribution by engineering an \textbf{OpenAI GPT agent}, slashing manual splitting time by \textbf{76%} by utilizing conversational verification workflows to autonomously parse unstructured receipt data.
+  - Enabled fair and precise expense allocation across shared transactions by designing conversational validation controls, by leveraging structured prompt flows and deterministic checks to preserve user trust and reduce reconciliation errors.
+  id: splitwiser_ai
+skills:
+- category: Product Management
+  skill_list: Product Strategy, Roadmap Development, Market Research, User Empathy, Customer Satisfaction, A/B Testing, Feature Prioritization (RICE/MoSCoW), PRDs, BRDs, FRDs, Author BRDs/FRDs, Requirements Elicitation, Go-to-Market (GTM), Stakeholder Management, Stakeholder Liaison, KPI Analysis, User Stories, Sprint Velocity, Burndown Charts, Backlog Refinement, Acceptance Criteria, Capacity Planning, Funnel Optimization, Product Launches, Communication Plans, Executive Dashboards, Reporting Dashboards, Initiative Tracking, Continuous Improvement, Requirements Gathering, Decision Frameworks, Product Initiatives, Product Leader, Product Storytelling, Program Health Metrics, Analytical Techniques, Test Case Creation, Defect Tracking, Document Findings, Technical Specifications, Strategic Goals.
+- category: Technical Skills
+  skill_list: SDLC, API Design (REST), Cloud Architecture (AWS, Azure, GCP), System Design, Data Modeling, Python, SQL, Tableau, JavaScript, TypeScript, Go, Rust, MongoDB, DevOps, Quality Metrics, Monitoring Dashboards, Asana, Notion, Microsoft Project, Lucidchart, Figma, Continuous Deployment.
+- category: Agile & Methodologies
+  skill_list: Scrum, Kanban, SAFe, Waterfall, LeSS, Linear, Jira, Confluence, User Story Mapping, Sprint Planning, Daily Standups, Sprint Reviews, Retrospectives, Facilitate Scrum Ceremonies, Impediment Removal, Epic Management, Scope Creep Prevention, Backlog Grooming, Definition of Ready (DoR), Definition of Done (DoD), Velocity Tracking, Risk Registers, Risk Mitigation, Change Management, Operational Playbooks, Program Closure, Milestone Trackers, Action Items Tracking, Negotiations, Release Planning, Stakeholder Relationships, Conflict Resolution, Servant Leadership, Team Coaching, Psychological Safety, Team Collaboration, Team Culture, External Stakeholders, Transparent Reporting, Hiring Support, Agile Practices, Kanban Boards, Software Delivery, Technical Writing, Sprint Visibility, MoSCoW Prioritization, Priority Management, Product Vision, Workshop Facilitation.
+- category: AI & Analytics
+  skill_list: LLMs (GPT-4o, Claude, Gemini, ChatGPT), RAG Architectures, LangChain, LangGraph, Prompt Engineering, Power BI, Google Analytics, Amplitude, TensorFlow, PyTorch, Hugging Face, Reporting Dashboards, Predictive Analytics, Cohort Analysis, NPS Tracking, Variance Analysis, Trend Analysis, User Surveys, Interview Sessions.
+- category: GTM & Growth
+  skill_list: Campaign Management, Multi-Channel Strategy, Target Personas, Competitive Battlecards, Community-Led Growth, Sales Enablement, Influencer Partnerships, Co-marketing Agreements, Marketing Collateral, Messaging Frameworks, Blogs/Podcasts Content, Technical Whitepapers, Demo Scripts, Value Propositions, Product Positioning, Developer Relations (DevRel), Event Logistics, Zapier, Commercial Adoption, Competitive Analysis, Case Studies, GTM Frameworks, Initiatives Tracking, Market Opportunities, Feasibility Analysis, Partnerships Management, Sponsorship Management, Business Development, Funding Proposals, Innovation, TAM/SAM/SOM Modeling.
+- category: Program & Operations Management
+  skill_list: Program Lifecycle Management, Critical Path Management, Scope Definition, Concurrent Workstream Management, Operational Efficiency, OKRs/Objectives, Ideation Workshops, Schedule Management, Dependency Management, Bottleneck Removal, Budget Management, Executive Briefings, Operational Playbooks, SOP Architecture, P&L Management, Root Cause Analysis, Process Re-engineering, Organizational Excellence.
+- category: Prototyping & Vibe Coding
+  skill_list: Antigravity, Cursor, Windsurf, Replit, v0, Bolt.new, Rapid Prototyping.
+- category: Frontend
+  skill_list: React, Next.js, Vue.js, Angular, Svelte, Tailwind CSS.
+- category: Backend
+  skill_list: Node.js, Express, FastAPI, GraphQL, gRPC.
+- category: DevOps
+  skill_list: Docker, Kubernetes, Terraform, GitHub Actions.
+certifications:
+- Certified Scrum Product Owner (CSPO)
+- AWS Certified Cloud Practitioner (In Progress)
+- 'Google: Agile Project Management'
+- Lean Six Sigma Green Belt (LSSGB)
+- 'Google: Data Analytics Specialization'
+- McKinsey.org Forward Program
+- 'Google: Foundation of Project Management'
+- 'Google: Project Initiation: Starting a Successful Project'
+- 'Google: Project Planning: Putting It All Together'

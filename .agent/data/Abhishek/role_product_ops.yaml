@@ -1,0 +1,253 @@
+basics:
+  name: Abhishek Nagaraja
+  label: Product Operations Analyst | Agile Strategist
+  location: Dallas, Texas, USA
+  email: work.abhishekn@gmail.com
+  phone: ''
+  website:
+    url: https://www.abhisheknagaraja.com/
+    display: www.abhisheknagaraja.com
+  linkedin:
+    url: https://www.linkedin.com/in/abhisheknagaraja/
+    display: linkedin.com/in/abhisheknagaraja
+  github:
+    url: https://github.com/abhisheknagaraja
+    display: github.com/abhisheknagaraja
+education:
+- id: uta_ms_cs
+  school: University of Texas at Arlington
+  url: https://www.uta.edu/
+  location: Dallas, Texas, USA
+  degree: Master of Science in Computer Science
+  dates: August 2023 - May 2024
+  details:
+  - 'Specialization: Artificial Intelligence & Database Systems'
+- id: uta_ms_em
+  school: University of Texas at Arlington
+  location: Arlington, Texas, USA
+  degree: Master of Science in Engineering Management
+  dates: May 2024 - Current
+  details: []
+- id: jntuh_btech
+  school: Jawaharlal Nehru Technological University
+  url: https://www.jntuh.ac.in/
+  location: Hyderabad, India
+  degree: Bachelor of Technology in Computer Science and Engineering
+  dates: August 2019 - July 2023
+  details: []
+experience:
+- id: uta_pm_intern
+  role: Program Manager Intern
+  company: University of Texas at Arlington
+  location: Texas, USA
+  dates: October 2023 - October 2025
+  tags:
+  - product
+  - management
+  - operations
+  bullets:
+  - Standardized the end-to-end \textbf{operational lifecycle} for 'MavMarket' as
+    measured by \$120,000 in revenue and 5,000+ attendees, by executing a highly optimized
+    \textbf{vendor onboarding strategy} to streamline cross-functional delivery.
+  - Improved stakeholder \textbf{Net Promoter Score (NPS)} by 35% and engagement by
+    25%, by executing a high-fidelity feedback system for 300+ users utilizing \textbf{user
+    research} to identify and permanently resolve key operational friction points.
+  - Reduced event planning time by 40% as measured by team velocity, by architecting
+    a 50+ page, \textbf{AI-powered Standard Operating Procedure (SOP)} that improved
+    organizational efficiency and delivered a consistent user experience.
+  - Demonstrated domain expertise as measured by zero launch delays, by utilizing
+    complex physical infrastructure coordination and strictly executing on-site \textbf{vendor
+    pipelines} to consistently align all strict operational requirements.
+- id: aveha_md
+  role: Managing Director
+  company: Aveha Solutions Private Limited
+  location: Hyderabad, India
+  dates: January 2023 - July 2023
+  tags:
+  - entrepreneurship
+  - leadership
+  - technical
+  bullets:
+  - Directed ventures including **e-DAM**, **e-DAM Spotlight**, and **e-DAM CMS**,
+    driving product strategy and technical execution by utilizing \textbf{Agile methodologies}
+    to ensure rapid iteration and consistent user feedback integration across all
+    platforms.
+  - Architected scalable solutions for community management, impacting over 15,000
+    users by leveraging \textbf{serverless architectures} and \textbf{automated data
+    pipelines} to maintain high system availability and total data integrity at scale.
+- id: nfc_ba_intern
+  role: Business Analyst Intern
+  company: NFC Solutions Private Limited
+  location: Hyderabad, India
+  dates: April 2022 - January 2023
+  tags:
+  - analyst
+  - scrum
+  - product
+  bullets:
+  - Drafted \textbf{Product Requirement Documents (PRDs)} and coordinated task delegation
+    for 4 key projects, serving as the bridge between stakeholders and technical teams
+    by utilizing \textbf{Jira} to ensure consistent delivery cycles.
+  - Improved development efficiency by 20% as measured by sprint velocity, by serving
+    as Scrum Master and applying \textbf{Lean-Agile principles} to streamline workflows
+    utilizing \textbf{bi-weekly retrospectives} to remove process blockers.
+  - Optimized the end-to-end \textbf{order lifecycle} for an e-commerce platform as
+    measured by a 15% improvement in reliability, by leveraging \textbf{automated
+    inventory triggers} and pricing logic to reduce data processing errors.
+  - Served as the primary liaison for stakeholder translation as measured by zero-defect
+    deployments, by bridging technical complexity for non-technical executive leadership
+    to strictly align agile roadmaps, requirements, and business goals.
+products:
+- id: job_automation
+  name: JobsProof.com
+  url: https://www.jobsproof.com
+  description: An automated system for sourcing, filtering, and evaluating job postings
+    using Gemini 1.5 Pro and OpenRouter.
+  bullets:
+  - Revolutionized the student job search process by launching a B2C platform that
+    performs prescriptive skill gap analysis, by utilizing a custom \textbf{Python-based
+    scraping engine} to map university syllabi to real-world job requirements.
+  - Executed a targeted B2B go-to-market strategy by partnering with university programs,
+    providing institutional-grade curriculum analytics by utilizing \textbf{LLM-driven
+    data synthesis} to align academic outcomes with market demands.
+  - Architected a high-throughput, agentic LLM pipeline using a dual-model strategy
+    and a Unified Cloud Bridge by utilizing \textbf{Gemini 2.5 Flash-Lite} to ensure
+    resilient evaluation and real-time processing under strict rate limits.
+- id: google_maps_strategy
+  name: 'Google Maps: Product Strategy'
+  url: https://abhisheknagaraja.com/content/google-maps-teardown
+  tags:
+  - product
+  - strategy
+  - case_study
+  bullets:
+  - Translated qualitative data from \textbf{42 user interviews} into two core problem
+    statements, revealing a critical user need for guaranteed \textbf{menu accuracy}
+    by utilizing \textbf{UX journey mapping} to identify high-friction drop-off points.
+  - Architected a \textbf{product strategy} to directly address validated user needs,
+    by utilizing a roadmap for a \textbf{centralized menu system} with granular filtering
+    to capture the high-value market segment with critical dietary requirements.
+- id: coc_growth
+  name: 'Clash of Clans: Growth Strategy'
+  url: https://abhisheknagaraja.com/content/clash-of-clans-teardown
+  tags:
+  - product
+  - growth
+  - gaming
+  bullets:
+  - Proposed a \textbf{viral growth strategy} driving \textbf{5-10% new organic user
+    acquisition} by creating a native social sharing feature for key in-game content,
+    by utilizing \textbf{referral loop optimization} and player behavioral data patterns.
+  - Projected a \textbf{15-20% increase in join rates} and \textbf{20-30% increase
+    in feature adoption} by designing a revamped \textbf{Clan Discovery engine} and
+    transforming the feed by utilizing \textbf{data-driven insights}, metrics, and
+    predictive UX patterns.
+projects:
+- id: resume_agent
+  name: Resume Agent - AI Resume Engineering System
+  url: https://github.com/nagarajaabhishek/resume_agent
+  date: February 2026 - Present
+  description: Architected a Python-based resume generation system that achieves >90%
+    ATS optimization scores.
+  bullets:
+  - Orchestrated a 'Single Source of Truth' architecture as measured by a \textbf{95%}
+    reduction in resume tailoring time, by decoupling content from layout utilizing
+    \textbf{YAML and Jinja2} for modular data inheritance.
+  - Engineered an automated \textbf{Quality Assurance protocol} as measured by zero
+    syntax rejections, by leveraging \textbf{Python-based validation logic} to enforce
+    the Google \textbf{'XYZ' formula} and audit localized experience content.
+  - Solved systemic ATS rejection pipelines as measured by \textbf{>90% match rates}
+    across enterprise scanners, by decoupling product data from custom layouts utilizing
+    an optimized \textbf{LaTeX parsing engine} to prioritize machine readability.
+- id: thara_ai
+  name: 'Thara: Multi-Agent AI Ecosystem'
+  url: https://withthara.com/
+  tags:
+  - ai
+  - engineering
+  - startup
+  bullets:
+  - Architected a scalable \textbf{Multi-Agent AI infrastructure} enabling \textbf{11
+    specialized autonomous agents} to orchestrate complex workflows by engineering
+    a \textbf{LangGraph-based state machine} synchronized with a \textbf{FastAPI}
+    backend and \textbf{PostgreSQL}.
+  - Revolutionized the productivity experience by automating tasks, habits, and \textbf{'Ikigai'
+    alignment} via the \textbf{'Thara'} ecosystem that combine proactive \textbf{AI
+    coaching} with real-time \textbf{behavioral recognition} to ensure goal attainment.
+  - Demonstrated domain expertise as measured by zero critical system failures, by
+    utilizing complex system resilience architectures, proactive API security, and
+    automated error handling workflows to heavily strengthen the entire product ecosystem.
+  - Optimized feature adoption rates by 20 percent by executing a robust user research
+    methodology and rapidly iterating on core UI/UX designs based on iterative A/B
+    testing results and high-fidelity predictive user heatmap analytics.
+- id: product_pal
+  name: 'Product-Pal: AI Product Teardown Specialist'
+  url: ''
+  tags:
+  - ai
+  - product
+  bullets:
+  - Reduced product analysis time by \textbf{70%} and successfully increased strategic
+    throughput by \textbf{3x} by designing an \textbf{AI agent} utilizing \textbf{n8n
+    workflows} to fully automate the end-to-end teardown process from discovery research
+    to final GTM strategy.
+  - Applied \textbf{context engineering} to design a \textbf{complex multi-step analytical
+    workflow}, by utilizing structured prompts that accurately guide the LLM to highly
+    specific, \textbf{actionable results} while mitigating technical hallucination
+    risks.
+skills:
+- category: Product Management
+  skill_list: Product Strategy, Roadmap Development, Market Research, User Empathy,
+    Customer Satisfaction, A/B Testing protocols, Feature Prioritization (RICE/MOSCOW),
+    PRDs, Go-to-Market (GTM), Stakeholder Management, KPI Analysis, User Stories,
+    Product-Led Growth (PLG), CAPEX/OPEX, Resource Allocation, Root Cause Analysis
+    (RCA), Change Management, Work Breakdown Structure (WBS), Bill of Materials (BOM),
+    Revenue Forecasting / ROI Analysis, UAT Coordination, Budget & Financial Tracking,
+    PLM (Product Lifecycle Management), Incident Management, Post-mortem leadership,
+    NPS improvement tracking, Cohort Analysis, Funnel Optimization, A/B Testing protocols,
+    Conversion Rate optimization, TAM/SAM/SOM modeling, SaaS Revenue Forecasting,
+    Pricing Realization Analysis, Churn Rate optimization, Market Entry Barriers,
+    M&A Due Diligence, Competitive Counter-strategies, P&L Management, Strategic Planning,
+    Opportunity Assessment, Organizational Excellence, Product Discovery, User Story
+    Mapping.
+- category: Technical Skills
+  skill_list: SDLC, API Design (REST), Cloud Architecture (AWS, Azure, GCP), System
+    Design, Data Modeling, Python, Advanced SQL (Window Functions), Tableau, JavaScript,
+    TypeScript, Go, Rust, CI/CD, Technical Subject Matter Expert (SME), Non-Functional
+    Requirements (NFRs), Kubernetes (K8s), Docker orchestration, CI/CD for ML (DVC),
+    Apache Spark, Kafka, dbt, Snowflake, BigQuery, Latency Optimization, Multi-GPU
+    Training, Throughput metrics, Model Drift Detection, TorchServe, Triton Inference
+    Server, Agentic Workflow Architecture, Process Automation, SAP, Oracle ERP.
+- category: Agile & Methodologies
+  skill_list: Scrum, Kanban, SAFe, Linear, Jira, Confluence, User Story Mapping, Sprint
+    Planning, Retrospectives, Aha!, Microsoft Project, Salesforce, HubSpot, Smartsheet,
+    Microsoft Visio, Acceptance Criteria (AC) depth, Epic breakdown, Story Points
+    estimation, User Journey Mapping, Backlog Grooming, Salesforce (SFDC), CPQ platforms,
+    Power Automate, Monday.com, LeSS (Large-Scale Scrum), ITSM.
+- category: AI & Analytics
+  skill_list: LLMs (GPT-4o, Claude, Gemini), RAG Architectures, LangChain/LangGraph,
+    Prompt Engineering, Power BI, Google Analytics, Amplitude, TensorFlow, PyTorch,
+    Hugging Face, Snowflake, Databricks, Microsoft Power Platform, RAG (Retrieval-Augmented
+    Generation), LoRA, Vector Databases (Pinecone, Milvus, Weaviate, NeonDB), LangChain/LlamaIndex,
+    Variance Analysis, Trend Analysis, Predictive Analytics.
+certifications:
+- name: Certified Scrum Product Owner (CSPO)
+  date: ''
+- name: AWS Certified Cloud Practitioner (In Progress)
+  date: ''
+- name: 'Google: Agile Project Management'
+  date: ''
+- name: Lean Six Sigma Green Belt (LSSGB)
+  date: ''
+- name: 'Google: Data Analytics Specialization'
+  date: ''
+- name: McKinsey.org Forward Program
+  date: ''
+- name: 'Google: Foundation of Project Management'
+  date: ''
+- name: 'Google: Project Initiation: Starting a Successful Project'
+  date: ''
+- name: 'Google: Project Planning: Putting It All Together'
+  date: ''
+awards: []
+publications: []
