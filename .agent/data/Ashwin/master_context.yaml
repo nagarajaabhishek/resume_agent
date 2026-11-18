@@ -1,0 +1,253 @@
+# MASTER CONTEXT — SINGLE SOURCE OF TRUTH FOR ASHWIN SANGAREDDYPETA
+# Contains the complete biographical, professional, technical, and educational record.
+# There is no cap on lines, bullets, sections, or field length in this file.
+# Role YAMLs and generated resumes are derived from this single source of truth.
+
+basics:
+  name: "Ashwin Kumar Sangareddypeta"
+  label: "AI Engineer | Applied AI & Agentic Systems | Healthcare AI"
+  location: "Dallas, Texas, 75252, USA"
+  email: "ashwinsang.work@gmail.com"
+  phone: "+1 9455271712"
+  website:
+    url: "https://linktr.ee/ashwin_srdy"
+    display: "linktr.ee/ashwin_srdy"
+  linkedin:
+    url: "https://www.linkedin.com/in/ashwin-srdy/"
+    display: "linkedin.com/in/ashwin-srdy"
+  github:
+    url: "https://github.com/ashwin-srdy"
+    display: "github.com/ashwin-srdy"
+
+summary: >-
+  AI Engineer with 3+ years of experience building, evaluating, and maintaining production agentic AI systems in
+  healthcare. Core engineer for SmarterNotes and SmarterUtilization using LangGraph, RAG, MCP, AWS Bedrock, and
+  OpenSearch, partnering with clinicians to translate EHR workflows into reliable AI.
+
+education:
+  - id: "utd_ms_itm"
+    school: "The University of Texas at Dallas"
+    url: "https://www.utdallas.edu/"
+    location: "Richardson, Texas, USA"
+    degree: "Master of Science in Information Technology and Management"
+    dates: "August 2023 - May 2025"
+    gpa: "3.58"
+    achievements:
+      - "Dean's Excellence Scholarship Recipient"
+      - "Graduate Student Assembly - Student Representative"
+    coursework:
+      - "Database Foundations for Business Analytics"
+      - "Advanced Statistics"
+      - "Business Data Warehousing"
+      - "Data Visualization"
+
+  - id: "iare_btech_cse"
+    school: "Institute of Aeronautical Engineering"
+    url: "https://www.iare.ac.in/"
+    location: "Hyderabad, India"
+    degree: "Bachelor of Technology in Computer Science and Engineering"
+    dates: "August 2019 - July 2023"
+    gpa: "3.5"
+    achievements:
+      - "2022 Interdisciplinary Project Expo Winner"
+      - "Secured seed funding for 2 startup initiatives"
+    coursework:
+      - "Machine Learning"
+      - "Artificial Intelligence"
+      - "Data Structures"
+      - "Data Warehousing & Data Mining"
+      - "Business Analytics"
+
+experience:
+  - id: "smarter_technologies_swe"
+    role: "Software Engineer – ML/AI Engineering"
+    company: "Smarter Technologies"
+    url: "https://www.smarterdx.com/"
+    location: "Dallas, Texas, USA"
+    dates: "January 2026 - November 2026"
+    tags: ["agentic-ai", "healthcare", "langgraph", "clinical-agents", "evaluation", "airflow", "aws-bedrock", "mcp"]
+    products_worked_on:
+      - name: "SmarterNotes"
+        url: "https://www.smarterdx.com/solution/smarternotes"
+        role: "Core Agentic AI Engineer"
+        description: "EHR-embedded clinical documentation generation system reasoning across patient history, labs, medications, vitals, and flowsheets."
+      - name: "SmarterUtilization"
+        url: "https://www.smarterdx.com/solution/smarterutilization"
+        role: "Core Agentic AI Engineer"
+        description: "Point-of-care clinical evidence extraction and medical necessity justification platform matching patient details against inpatient criteria."
+    bullets:
+      - "Engineered and maintained production LangGraph agents as a core engineer for SmarterNotes, synthesizing labs, meds, vitals, and flowsheets into grounded EHR notes by leveraging stateful multi-agent orchestration."
+      - "Built and maintained production SmarterUtilization agents as a core engineer, retrieving clinical evidence against inpatient medical necessity criteria for utilization review by utilizing LangGraph and OpenSearch."
+      - "Created custom MCP connectors for internal engineering workflows, accelerating hallucination detection and diagnostic tracing for production clinical agents by utilizing standardized Model Context Protocol tooling."
+      - "Architected DAG-based clinical data pre-generation pipelines to extract, structure, and index patient chart context, enabling low-latency production agent execution by leveraging Apache Airflow and vector search."
+      - "Partnered with clinicians, CDI specialists, and utilization reviewers to translate complex clinical workflows into deterministic agent logic, tools, and safety guardrails by leveraging human-in-the-loop review checkpoints."
+      - "Built a scalable agent evaluation framework supporting model swapping, benchmarking, semantic similarity, and LLM-as-judge scoring, slashing prompt evaluation workload by 60% by utilizing automated batch testing pipelines."
+      - "Optimized Apache Airflow DAGs integrating OpenSearch and LLM pipelines for CDI query generation, reducing workflow execution time by 30% across 5+ client applications by leveraging query parallelization."
+      - "Optimized AWS Bedrock inference infrastructure through caching, model evaluation, and routing, reducing inference latency by 50% for real-time clinical decision support by utilizing distributed foundation models."
+      - "Maintained high-throughput production AI systems in live hospital workflows, diagnosing runtime regressions and safeguarding 99.9% reliability by utilizing automated continuous telemetry."
+
+  - id: "pieces_technologies_ai_eng"
+    role: "AI Engineer"
+    company: "Pieces Technologies"
+    url: "https://piecestech.com/"
+    location: "Irving, Texas, USA"
+    dates: "June 2025 - December 2025"
+    tags: ["generative-ai", "aws-bedrock", "agentic-ai", "clinical-ai", "epic", "voice-agent", "c-level"]
+    bullets:
+      - "Architected a clinical voice agent for QA documentation and an Epic-integrated QA bot for physician workflows, streamlining after-hours charting and clinical queries by leveraging AWS Bedrock and real-time audio pipelines."
+      - "Engineered a modular, multi-tenant agentic AI platform that served as the architectural foundation for SmarterNotes, cutting inference latency by 50% across hospital deployments by leveraging reusable tool-calling modules."
+      - "Partnered with C-level executives and clinical leaders on strategic AI prototypes, accelerating go-to-market delivery for enterprise health systems from concept to pilot deployment by leveraging rapid agentic prototyping."
+
+  - id: "pieces_technologies_quant"
+    role: "Quantitative Scientist"
+    company: "Pieces Technologies"
+    url: "https://piecestech.com/"
+    location: "Irving, Texas, USA"
+    dates: "August 2024 - May 2025"
+    tags: ["fhir", "clinical-simulation", "hl7", "nih", "guardrails", "epic", "ehr"]
+    bullets:
+      - "Revamped a Python patient data simulation framework using LLMs to generate realistic HL7 FHIR datasets across 50+ clinical conditions for NIH cancer research, accelerating clinical testing by utilizing synthetic data pipelines."
+      - "Designed safety guardrails and conversational workflows for 'Pieces in Your Pocket' clinical AI inside Epic EHR workflows, enabling seamless chart updates and rapid Q&A while preserving trust by utilizing deterministic checks."
+
+  - id: "spotflock_data_science"
+    role: "Data Science Engineer"
+    company: "Spotflock Technologies"
+    url: "https://spotflock.com/"
+    location: "Hyderabad, Telangana, India"
+    dates: "May 2023 - September 2023"
+    tags: ["rag", "legal-ai", "transformers", "computervision", "fastapi", "docker"]
+    products_worked_on:
+      - name: "Neo Legal AI"
+        url: "https://spotflock.com/"
+        role: "RAG & Pipeline Engineer"
+        description: "AI-powered legal intelligence, contract analysis, and legal research automation platform."
+      - name: "GolfGPT (SportTech AI)"
+        url: "https://spotflock.com/"
+        role: "Computer Vision Engineer"
+        description: "Real-time swing posture estimation using MediaPipe keypoint detection and joint-angle calculations."
+    bullets:
+      - "Designed and prototyped a RAG-based legal intelligence agent for Spotflock's AI platform, implementing document ingestion, semantic search, and LLM-powered summarization for contract analysis by leveraging LangChain and vector databases."
+      - "Built automated data pipelines for legal research workflows and translated client insights into product features, reducing manual legal research effort by 40% for early adopters by utilizing asynchronous FastAPI endpoints."
+      - "Fine-tuned transformer models (BERT, GPT variants) on enterprise client datasets, improving contextual classification accuracy by 25% by leveraging PyTorch and custom domain-specific tokenization pipelines."
+      - "Engineered golf posture estimation features using MediaPipe pose keypoint detection and joint-angle calculations to deliver real-time swing feedback, applying computer vision to personalized sports coaching by leveraging OpenCV."
+      - "Constructed and deployed containerized RESTful APIs using FastAPI, Flask, and Docker on AWS cloud infrastructure, optimizing data exchange latency by 25% by utilizing connection pooling and asynchronous request handling."
+
+  - id: "smartbridge_ml"
+    role: "Machine Learning Engineer"
+    company: "The SmartBridge"
+    url: "https://thesmartbridge.com/"
+    location: "Hyderabad, Telangana, India"
+    dates: "February 2023 - June 2023"
+    tags: ["machine-learning", "tableau", "time-series", "bootcamps"]
+    bullets:
+      - "Collaborated with business stakeholders to define client predictive analytics requirements, developing time-series forecasting models that increased course sales by 20% by utilizing Scikit-learn and Facebook Prophet."
+      - "Built machine learning models and interactive Tableau visualizations from learner analytics and client feedback, improving business profitability by 30% by leveraging data-driven strategic curriculum decision-making."
+      - "Led advanced ML bootcamps for 80+ learners on Python, SQL, and deep learning architectures, mentoring engineers through real-world end-to-end industry implementations by utilizing hands-on project labs."
+
+  - id: "digx_data_analyst"
+    role: "Data Analyst"
+    company: "DIGX Tech Solutions"
+    url: "https://digixindia.com/"
+    location: "Hyderabad, Telangana, India"
+    dates: "December 2021 - June 2022"
+    tags: ["data-analyst", "sql", "tableau", "web-crawler", "computer-vision"]
+    bullets:
+      - "Automated Excel macros and SQL data extraction routines, cutting manual reporting time by 40% and enhancing data processing efficiency by 20% by leveraging optimized relational queries and Python scripts."
+      - "Built large-scale web crawlers and scraping pipelines using BeautifulSoup, Selenium, and Scrapy, accelerating automated data collection efficiency by 30% by utilizing distributed extraction routines."
+      - "Trained object recognition models on agricultural datasets using ResNet50, YOLO, and U-Net architectures, improving detection precision by leveraging custom convolutional neural network transfer learning."
+
+  - id: "spatialhawk_ds"
+    role: "Data Science Engineer"
+    company: "SpatialHawk"
+    url: "https://spatialhawk.com/"
+    location: "Hyderabad, Telangana, India"
+    dates: "March 2022 - May 2022"
+    tags: ["computervision", "facenet", "fastapi"]
+    bullets:
+      - "Developed a high-performance biometric attendance system using FaceNet and MTCNN facial landmark detection, improving identification accuracy by 50% by leveraging vector clustering and FastAPI microservices."
+
+  - id: "smartinternz_ml"
+    role: "Machine Learning Engineer"
+    company: "SmartInternz"
+    url: "https://smartinternz.com/"
+    location: "Hyderabad, Telangana, India"
+    dates: "April 2021 - May 2021"
+    tags: ["machine-learning", "flask"]
+    bullets:
+      - "Trained supervised and unsupervised machine learning algorithms using Scikit-learn and TensorFlow, deploying predictive university admission models by utilizing Flask web microservices."
+
+projects:
+  - id: "openclaw_marketing_automation"
+    name: "OpenClaw Marketing Automation Platform"
+    url: "https://github.com/ashwin-srdy"
+    dates: "June 2025 - August 2025"
+    tags: ["agentic-ai", "gcp", "automation", "llms", "fde"]
+    bullets:
+      - "Architected an autonomous marketing operations agent using OpenClaw and Google Cloud Platform, automating end-to-end email outreach, lead qualification, and meeting scheduling by leveraging tool-calling LLM workflows."
+      - "Accelerated business development pipeline generation by deploying the system directly for the Chief Marketing Officer (CMO), cutting manual marketing coordination overhead by utilizing automated webhook integrations."
+
+  - id: "agentic_virtual_travel_assistant"
+    name: "Agentic Virtual Travel Assistant"
+    url: "https://github.com/ashwin-srdy"
+    dates: "May 2025 - July 2025"
+    tags: ["langgraph", "deep-agent", "livekit", "voice-ai", "open-webui"]
+    bullets:
+      - "Built a LangGraph-based Deep Agent capable of planning multi-day travel itineraries by dynamically querying live web sources, flight APIs, and hotel listings by leveraging autonomous tool selection and stateful reasoning."
+      - "Integrated Open-WebUI frontend with streaming response support and LiveKit for bi-directional voice-to-voice interaction, reducing conversational response latency by utilizing real-time audio WebSockets."
+      - "Engineered multi-criteria preference adaptation algorithms, autonomously optimizing activities, budgets, and transport constraints to personalize itineraries by utilizing constrained agentic graph state transitions."
+
+  - id: "robinhood_case_study"
+    name: "Product Strategy & UI Redesign: Robinhood Case Study"
+    url: "https://robinhood.com/"
+    dates: "October 2023 - January 2024"
+    tags: ["product-strategy", "ux-redesign", "fintech"]
+    bullets:
+      - "Conducted an in-depth product teardown and competitive analysis of Robinhood's mobile application, identifying critical UX drop-off friction points by utilizing user journey mapping and behavioral analytics."
+      - "Formulated UX trade-flow improvements and advanced risk management feature specifications, projecting a 30% increase in active user retention by leveraging streamlined transaction architectures."
+
+  - id: "neo_legal_ai"
+    name: "Neo Legal AI — Legal Intelligence & Contract Analysis"
+    url: "https://spotflock.com/"
+    dates: "August 2023 - September 2023"
+    tags: ["rag", "legal-tech", "contract-analysis", "semantic-search"]
+    bullets:
+      - "Designed and prototyped a Retrieval-Augmented Generation (RAG) agent for legal intelligence, automating document indexing, semantic search, and clause summarization by leveraging LangChain and dense vector indexing."
+      - "Constructed scalable data ingestion pipelines that automated legal research workflows and converted client requirements into production features, reducing manual research time by 40% by utilizing asynchronous workers."
+
+  - id: "atrial_fibrillation_detection"
+    name: "Atrial Fibrillation Detection — Clinical Predictive Analytics"
+    url: "https://github.com/ashwin-srdy/AFib-detection-comparitive-study"
+    dates: "January 2023 - July 2023"
+    tags: ["healthcare", "cardiology", "cuml", "cuda", "docker", "aws-ec2"]
+    bullets:
+      - "Designed and deployed a clinical predictive analytics solution for Atrial Fibrillation detection, improving early diagnosis accuracy by 15% through close collaboration with clinicians by leveraging ECG feature engineering."
+      - "Trained Random Forest and Extra Trees models to detect cardiac arrhythmias with 95% accuracy using CuDA ML for GPU acceleration, boosting efficiency by 400% and cutting training time from 13 hours to 13 minutes by leveraging GPU pipelines."
+      - "Automated deployment workflows using Docker containers and AWS EC2 instances, cutting production release cycles from 6 hours to 1 hour and accelerating delivery velocity by utilizing continuous integration scripts."
+
+skills:
+  - category: "Agentic AI & LLMs"
+    skill_list: "LangGraph, LangChain, Deep Agents, Multi-Agent Systems, Model Context Protocol (MCP), Retrieval-Augmented Generation (RAG), Tool Calling, Function Calling, LLM Evaluation (LLM-as-a-Judge, Semantic Similarity), Prompt Engineering, Guardrails, Hugging Face, Anthropic Claude Code, Codex"
+
+  - category: "Healthcare Technology & AI"
+    skill_list: "HL7 FHIR, Clinical Data Simulation, EHR Workflows (Epic/Cerner Integration Concepts), Clinical Documentation Improvement (CDI), Utilization Management (UM), Medical Necessity Guidelines, Clinical Decision Support (CDS), HIPAA-Compliant Architecture, Medical Safety Guardrails"
+
+  - category: "AI Infrastructure & Cloud"
+    skill_list: "AWS Bedrock, Google Cloud Platform (GCP), Apache Airflow (DAGs), OpenSearch, Vector Databases (Pinecone, Chroma, Milvus), MLflow, Docker, Kubernetes, AWS EC2, S3, IAM, Streamlit"
+
+  - category: "Programming & Backend"
+    skill_list: "Python (Expert), SQL (PostgreSQL, MySQL), Java, C++, C, R, FastAPI, Flask, RESTful APIs, Asynchronous Programming, Git, GitHub Actions, CI/CD, Microservices Architecture, Bash/Shell"
+
+  - category: "Machine Learning & Data Science"
+    skill_list: "PyTorch, TensorFlow, Scikit-learn, CuML, XGBoost, Predictive Modeling, Time-Series Analysis, Natural Language Processing (NLP), Computer Vision (MediaPipe, OpenCV, YOLO, ResNet), Tableau, Power BI, Pandas, NumPy"
+
+certifications:
+  - "Programming for Everybody (Getting Started with Python) — University of Michigan"
+  - "Foundation of AI and Machine Learning"
+  - "AWS Machine Learning Foundations"
+  - "Build a Face Recognition Application using Python"
+  - "Six Sigma Yellow Belt"
+
+publications:
+  - title: "From Weak to Mighty: Empowering Classification with AdaBoost and python"
+    url: "https://medium.com/@ashwinsang.work"
+    description: "Published research analyzing boosting methodologies, hyperparameter tuning, and performance boundaries in ensemble classification."

@@ -94,11 +94,13 @@
   \sectionskip
  \textbf{\Large #1} % Section title
   \sectionlineskip
-  \hrule % Horizontal line
+  \hrule\nopagebreak[4] % Horizontal line
   \begin{list}{}{ % List for each individual item in the section
     \setlength{\leftmargin}{-0em} % Margin within the section
+    \@beginparpenalty=10000
+    \@itempenalty=10000
   }
-  \item[]
+  \item[]\nopagebreak[4]
 }{
   \end{list}
 }
@@ -108,10 +110,10 @@
 %----------------------------------------------------------------------------------------
 
 \newenvironment{rSubsection}[4]{ % 4 input arguments - company name, year(s) employed, job title and location
- {\bf #1} \hfill {#2} % Bold company name and date on the right
+ {\bf #1} \hfill {#2}\nopagebreak[4] % Bold company name and date on the right
  \ifthenelse{\equal{#3}{}}{}{ % If the third argument is not specified, don't print the job title and location line
   \\
-  {\em #3} \hfill {\em #4} % Italic job title and location
+  {\em #3} \hfill {\em #4}\nopagebreak[4] % Italic job title and location
   }
 }{
   \par \vspace{0.1em}
@@ -152,7 +154,7 @@
 %----------------------------------------------------------------------------------------
 \begin{rSection}{Education \vspace{.1em}}
 {%- for edu in education %}
-\begin{rSubsection}{<< edu.school >>}{<< edu.location >>}{\textbf{<< edu.degree >>}}{<< edu.dates >>}
+\begin{rSubsection}{<< '\href{' + edu.url + '}{' + edu.school + '}' if edu.url else edu.school >>}{<< edu.location >>}{\textbf{<< edu.degree >>}}{<< edu.dates >>}
 {%- if edu.multi_degree %}
 {%- for item in edu.multi_degree %}
 {\\ \textbf{<< item.degree >>}} \hfill {<< item.dates >>}
@@ -176,7 +178,7 @@
 %----------------------------------------------------------------------------------------
 \begin{rSection}{Work Experience}
 {%- for exp in experience %}
-\begin{rSubsection}{<< exp.role >>, << exp.company >> - << exp.location >>}{<< exp.dates >>}{}{}
+\begin{rSubsection}{<< exp.role >>, << '\href{' + exp.url + '}{' + exp.company + '}' if exp.url else exp.company >> - << exp.location >>}{<< exp.dates >>}{}{}
 \begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em, topsep=0pt]
 {%- for bullet in exp.bullets %}
 \item << bullet >>

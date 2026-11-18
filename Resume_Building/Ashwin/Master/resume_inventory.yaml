@@ -1,0 +1,8 @@
+person: Ashwin Sangareddypeta
+last_updated: 2026-11-18
+active_resumes:
+  - role: Master Resume
+    yaml_source: .agent/data/Ashwin/role_master.yaml
+    tex_output: Resume_Building/Ashwin/Master/Ashwin_Sangareddypeta_Master_Resume.tex
+    domain: Master
+    status: Active

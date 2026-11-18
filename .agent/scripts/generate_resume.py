@@ -1,7 +1,13 @@
-import yaml
-import jinja2
 import os
 import sys
+
+# Ensure local venv site-packages is in sys.path if present
+_venv_site = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", ".venv", "lib", "python3.12", "site-packages"))
+if os.path.exists(_venv_site) and _venv_site not in sys.path:
+    sys.path.insert(0, _venv_site)
+
+import yaml
+import jinja2
 import re
 import subprocess
 import shutil

@@ -1,6 +1,7 @@
 # Bytecode
 __pycache__/
 **/__pycache__/
+.venv/
 
 # System Files
 .DS_Store
