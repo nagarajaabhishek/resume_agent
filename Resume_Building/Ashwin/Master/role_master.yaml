@@ -15,7 +15,7 @@ section_order:
   - education
   - skills
   - certifications
-summary: "AI Engineer with 3+ years of experience building, evaluating, and maintaining production agentic AI systems in healthcare. Core engineer for SmarterNotes and SmarterUtilization using LangGraph, RAG, MCP, AWS Bedrock, and OpenSearch, partnering with clinicians to translate EHR workflows into reliable AI."
+summary: "AI Engineer with 3+ years of experience building, evaluating, and maintaining production ambient and agentic AI systems in healthcare. Core engineer for SmarterNotes and SmarterUtilization using LangGraph, RAG, MCP, AWS Bedrock, and OpenSearch, partnering with clinicians inside Epic EHR workflows."
 experience:
   - role: "Software Engineer – ML/AI Engineering"
     company: "Smarter Technologies"
@@ -24,10 +24,10 @@ experience:
     dates: "January 2026 - November 2026"
     id: "smarter_technologies_swe"
     bullets:
-      - "Engineered and maintained production \\textbf{LangGraph} clinical agents as a core engineer for \\textbf{SmarterNotes}, synthesizing labs, medications, vitals, and flowsheets into grounded EHR notes by leveraging stateful multi-agent orchestration."
+      - "Architected and maintained a production \\textbf{ambient backend} as a core engineer for \\textbf{SmarterNotes} and ambient apps inside \\textbf{Epic} EHR, fusing live transcripts with labs, meds, vitals, and flowsheets by leveraging \\textbf{LangGraph} agents."
       - "Built and maintained production \\textbf{SmarterUtilization} clinical agents as a core engineer, retrieving patient evidence against inpatient medical necessity criteria for utilization review by utilizing \\textbf{LangGraph} and \\textbf{OpenSearch}."
       - "Created custom \\textbf{MCP} tool connectors for internal engineering workflows, accelerating automated \\textbf{hallucination detection} and diagnostic tracing for production clinical agents by utilizing Model Context Protocol tooling."
-      - "Architected DAG-based clinical data pre-generation pipelines to extract, structure, and index longitudinal patient chart context, enabling low-latency production agent execution by leveraging \\textbf{Apache Airflow} and vector search."
+      - "Architected DAG-based clinical data pre-generation pipelines to extract, structure, and index longitudinal patient chart context, enabling low-latency production agent execution by leveraging \\textbf{Apache Airflow} data orchestrations."
       - "Partnered with clinicians, CDI specialists, and utilization reviewers to translate complex clinical workflows into deterministic agent logic, tools, and safety guardrails by leveraging human-in-the-loop review checkpoints."
       - "Built a scalable \\textbf{agent evaluation framework} supporting model swapping, benchmarking, semantic similarity, and LLM-as-judge scoring, slashing prompt evaluation workload by 60% by utilizing automated batch testing pipelines."
       - "Optimized \\textbf{AWS Bedrock} inference infrastructure through context caching, candidate model evaluation, and routing, reducing inference latency by 50% for real-time clinical decision support by utilizing distributed foundation models."
@@ -40,6 +40,7 @@ experience:
     id: "pieces_technologies_ai_eng"
     bullets:
       - "Architected a clinical \\textbf{voice agent} for QA documentation and an \\textbf{Epic}-integrated QA bot for physician workflows, streamlining after-hours charting and clinical queries by leveraging \\textbf{AWS Bedrock} and real-time audio pipelines."
+      - "Integrated \\textbf{Open-WebUI} frontend with streaming response support and \\textbf{LiveKit} for bi-directional voice-to-voice interaction, optimizing conversational response latency by utilizing real-time asynchronous WebSockets channels."
       - "Engineered a modular, multi-tenant agentic AI platform that served as the architectural foundation for SmarterNotes, cutting inference latency by 50% across hospital deployments by leveraging reusable tool-calling modules."
       - "Partnered with C-level executives and clinical leaders on strategic AI prototypes, accelerating go-to-market delivery for enterprise health systems from concept to pilot deployment by leveraging rapid agentic prototyping."
 
@@ -73,7 +74,6 @@ experience:
     bullets:
       - "Collaborated with cross-functional educational stakeholders to define predictive modeling requirements, increasing course sales by 20% and identifying high-propensity cohorts by utilizing \\textbf{Scikit-learn} predictive models."
       - "Constructed predictive machine learning models and interactive \\textbf{Tableau dashboards} from customer analytics, improving program profitability by 30% and optimizing resource allocation by leveraging data-driven decision trees."
-      - "Orchestrated advanced machine learning bootcamps for \\textbf{80+ engineers} on Python, SQL, and deep learning, accelerating participant real-world engineering readiness by leveraging hands-on end-to-end applied project labs."
 
 projects:
   - name: "OpenClaw Marketing Automation Platform"
@@ -83,14 +83,6 @@ projects:
     bullets:
       - "Architected an autonomous marketing operations agent using \\textbf{OpenClaw} and Google Cloud Platform, automating email outreach, lead finding, and scheduling for the CMO by leveraging tool-calling multi-agent execution graphs."
       - "Streamlined enterprise outbound marketing workflows and CRM data synchronization, eliminating 15+ hours of manual weekly outreach overhead for growth teams by leveraging \\textbf{FastAPI} microservices and webhook architectures."
-
-  - name: "Agentic Virtual Travel Assistant"
-    url: "https://github.com/ashwin-srdy"
-    dates: null
-    id: "agentic_virtual_travel_assistant"
-    bullets:
-      - "Built a \\textbf{LangGraph Deep Agent} capable of planning complex multi-day travel itineraries by dynamically querying live web sources, flight APIs, and hotel listings by leveraging autonomous tool selection and stateful memory."
-      - "Integrated \\textbf{Open-WebUI} frontend with streaming response support and \\textbf{LiveKit} for bi-directional voice-to-voice interaction, optimizing conversational response latency by utilizing real-time asynchronous WebSockets channels."
 
   - name: "Atrial Fibrillation Detection — Clinical Predictive Analytics"
     url: "https://github.com/ashwin-srdy/AFib-detection-comparitive-study"
@@ -134,4 +126,3 @@ certifications:
   - "Foundation of AI and Machine Learning"
   - "AWS Machine Learning Foundations"
   - "Six Sigma Yellow Belt"
-  - "Build a Face Recognition Application using Python"

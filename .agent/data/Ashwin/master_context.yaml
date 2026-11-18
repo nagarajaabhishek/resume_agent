@@ -20,9 +20,9 @@ basics:
     display: "github.com/ashwin-srdy"
 
 summary: >-
-  AI Engineer with 3+ years of experience building, evaluating, and maintaining production agentic AI systems in
-  healthcare. Core engineer for SmarterNotes and SmarterUtilization using LangGraph, RAG, MCP, AWS Bedrock, and
-  OpenSearch, partnering with clinicians to translate EHR workflows into reliable AI.
+  AI Engineer with 3+ years of experience building, evaluating, and maintaining production ambient and agentic AI systems
+  in healthcare. Core engineer for SmarterNotes and SmarterUtilization using LangGraph, RAG, MCP, AWS Bedrock, and
+  OpenSearch, partnering with clinicians inside Epic EHR workflows.
 
 education:
   - id: "utd_ms_itm"
@@ -76,14 +76,14 @@ experience:
         role: "Core Agentic AI Engineer"
         description: "Point-of-care clinical evidence extraction and medical necessity justification platform matching patient details against inpatient criteria."
     bullets:
-      - "Engineered and maintained production LangGraph agents as a core engineer for SmarterNotes, synthesizing labs, meds, vitals, and flowsheets into grounded EHR notes by leveraging stateful multi-agent orchestration."
-      - "Built and maintained production SmarterUtilization agents as a core engineer, retrieving clinical evidence against inpatient medical necessity criteria for utilization review by utilizing LangGraph and OpenSearch."
-      - "Created custom MCP connectors for internal engineering workflows, accelerating hallucination detection and diagnostic tracing for production clinical agents by utilizing standardized Model Context Protocol tooling."
-      - "Architected DAG-based clinical data pre-generation pipelines to extract, structure, and index patient chart context, enabling low-latency production agent execution by leveraging Apache Airflow and vector search."
+      - "Architected and maintained a production ambient backend as a core engineer for SmarterNotes and ambient clinical documentation apps inside Epic EHR, fusing live transcripts with patient charts by leveraging LangGraph agents."
+      - "Built and maintained production SmarterUtilization clinical agents as a core engineer, retrieving patient evidence against inpatient medical necessity criteria for utilization review by utilizing LangGraph and OpenSearch."
+      - "Created custom MCP tool connectors for internal engineering workflows, accelerating automated hallucination detection and diagnostic tracing for production clinical agents by utilizing Model Context Protocol tooling."
+      - "Architected DAG-based clinical data pre-generation pipelines to extract, structure, and index longitudinal patient chart context, enabling low-latency production agent execution by leveraging Apache Airflow data orchestrations."
       - "Partnered with clinicians, CDI specialists, and utilization reviewers to translate complex clinical workflows into deterministic agent logic, tools, and safety guardrails by leveraging human-in-the-loop review checkpoints."
       - "Built a scalable agent evaluation framework supporting model swapping, benchmarking, semantic similarity, and LLM-as-judge scoring, slashing prompt evaluation workload by 60% by utilizing automated batch testing pipelines."
       - "Optimized Apache Airflow DAGs integrating OpenSearch and LLM pipelines for CDI query generation, reducing workflow execution time by 30% across 5+ client applications by leveraging query parallelization."
-      - "Optimized AWS Bedrock inference infrastructure through caching, model evaluation, and routing, reducing inference latency by 50% for real-time clinical decision support by utilizing distributed foundation models."
+      - "Optimized AWS Bedrock inference infrastructure through context caching, candidate model evaluation, and routing, reducing inference latency by 50% for real-time clinical decision support by utilizing distributed foundation models."
       - "Maintained high-throughput production AI systems in live hospital workflows, diagnosing runtime regressions and safeguarding 99.9% reliability by utilizing automated continuous telemetry."
 
   - id: "pieces_technologies_ai_eng"
@@ -92,9 +92,10 @@ experience:
     url: "https://piecestech.com/"
     location: "Irving, Texas, USA"
     dates: "June 2025 - December 2025"
-    tags: ["generative-ai", "aws-bedrock", "agentic-ai", "clinical-ai", "epic", "voice-agent", "c-level"]
+    tags: ["generative-ai", "aws-bedrock", "agentic-ai", "clinical-ai", "epic", "voice-agent", "livekit", "c-level"]
     bullets:
       - "Architected a clinical voice agent for QA documentation and an Epic-integrated QA bot for physician workflows, streamlining after-hours charting and clinical queries by leveraging AWS Bedrock and real-time audio pipelines."
+      - "Integrated Open-WebUI frontend with streaming response support and LiveKit for bi-directional voice-to-voice interaction, optimizing conversational response latency by utilizing real-time asynchronous WebSockets channels."
       - "Engineered a modular, multi-tenant agentic AI platform that served as the architectural foundation for SmarterNotes, cutting inference latency by 50% across hospital deployments by leveraging reusable tool-calling modules."
       - "Partnered with C-level executives and clinical leaders on strategic AI prototypes, accelerating go-to-market delivery for enterprise health systems from concept to pilot deployment by leveraging rapid agentic prototyping."
 
@@ -241,10 +242,9 @@ skills:
     skill_list: "PyTorch, TensorFlow, Scikit-learn, CuML, XGBoost, Predictive Modeling, Time-Series Analysis, Natural Language Processing (NLP), Computer Vision (MediaPipe, OpenCV, YOLO, ResNet), Tableau, Power BI, Pandas, NumPy"
 
 certifications:
-  - "Programming for Everybody (Getting Started with Python) — University of Michigan"
+  - "Programming for Everybody (Getting Started with Python)"
   - "Foundation of AI and Machine Learning"
   - "AWS Machine Learning Foundations"
-  - "Build a Face Recognition Application using Python"
   - "Six Sigma Yellow Belt"
 
 publications:
