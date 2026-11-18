@@ -25,7 +25,16 @@
 \usepackage[parfill]{parskip} % Remove paragraph indentation
 \usepackage{array} % Required for boldface (\bf and \bfseries) tabular columns
 \usepackage{ifthen} % Required for ifthenelse statements
+\usepackage[T1]{fontenc}
 \usepackage{charter}
+\usepackage{newunicodechar}
+\newunicodechar{—}{---}
+\newunicodechar{–}{--}
+\usepackage{iftex}
+\ifpdftex
+  \input{glyphtounicode}
+  \pdfgentounicode=1
+\fi
 \usepackage{enumitem}
 \pagestyle{empty} % Suppress page numbers
 

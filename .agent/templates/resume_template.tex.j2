@@ -6,16 +6,22 @@
 \usepackage[parfill]{parskip} % Remove paragraph indentation
 \usepackage{array} % Required for boldface (\bf and \bfseries) tabular columns
 \usepackage{ifthen} % Required for ifthenelse statements
+\usepackage[T1]{fontenc}
 \usepackage{charter}
+\usepackage{newunicodechar}
+\newunicodechar{—}{---}
+\newunicodechar{–}{--}
 \usepackage{enumitem}
 \usepackage{xcolor} % Recommended for more color options
 \usepackage[colorlinks=true, urlcolor=blue]{hyperref}
 \usepackage[left=0.5in,top=0.25in,right=0.4in,bottom=0.2in, columnsep=0.5cm]{geometry} % Tightened margins slightly
-\input{glyphtounicode}
+\usepackage{iftex}
+\ifpdftex
+  \input{glyphtounicode}
+  \pdfgentounicode=1
+\fi
 \usepackage[none]{hyphenat}
 \usepackage{multicol}
-
-\pdfgentounicode=1
 \pagestyle{empty} % Suppress page numbers
 
 \makeatletter % Begin internal command redefinitions

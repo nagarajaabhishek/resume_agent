@@ -1,0 +1,595 @@
+# MASTER CONTEXT — SINGLE SOURCE OF TRUTH FOR THIS PERSON
+# Contain the full record here: every role, project, and detail you may ever need.
+# There is no cap on lines, bullets, sections, or field length in this file—add as much
+# information as you want. Resumes, role YAMLs, and compiled matrices are derived
+# artifacts; they may summarize or trim, but the master context stays complete.
+# Optional: use tooling (e.g. generate_role_yaml) to pull subsets for a specific output.
+
+basics:
+  name: "Abhishek Nagaraja"
+  label: "Technical Product Manager | Solutions Architect | Tech Entrepreneur"
+  location: "Dallas, Texas - 75252"
+  email: "work.abhishekn@gmail.com"
+  phone: "+18175014060"
+  website: 
+    url: "https://www.abhisheknagaraja.com/"
+    display: "www.abhisheknagaraja.com"
+  linkedin:
+    url: "https://www.linkedin.com/in/abhisheknagaraja/"
+    display: "linkedin.com/in/abhisheknagaraja"
+  github:
+    url: "https://github.com/abhisheknagaraja" # Inferred/Placeholder
+    display: "github.com/abhisheknagaraja"
+
+education:
+  - id: "uta_ms_cs"
+    school: "University of Texas at Arlington"
+    url: "https://www.uta.edu/"
+    location: "Arlington, Texas, USA"
+    degree: "Master of Science in Computer Science"
+    dates: "Aug 2023 - May 2024"
+  
+  - id: "uta_ms_em"
+    school: "University of Texas at Arlington"
+    location: "Arlington, Texas, USA"
+    degree: "Master of Science in Engineering Management"
+    dates: "May 2024 - May 2026"
+    details: []
+
+  - id: "jntuh_btech"
+    school: "Jawaharlal Nehru Technological University"
+    url: "https://www.jntuh.ac.in/"
+    location: "Hyderabad, India"
+    degree: "Bachelor of Technology in Computer Science and Engineering"
+    dates: "Aug 2019 - July 2023"
+    details: []
+
+experience:
+  - id: "uta_pm_intern"
+    role: "Program Manager Intern"
+    company: "University of Texas at Arlington"
+    location: "Texas, USA"
+    dates: "October 2023 - October 2025"
+    tags: ["product", "management", "operations"]
+    bullets:
+      - "Founded and managed the end-to-end \\textbf{product lifecycle} for 'MavMarket', scaling the event to 200+ vendors and 5,000+ attendees while generating $120,000 in revenue, by executing a comprehensive \\textbf{vendor acquisition strategy} and operational roadmap."
+      - "Improved stakeholder NPS by 35% and engagement by 25% by designing and executing a feedback system for 100+ vendors and 200+ attendees, utilizing \\textbf{empathy-driven user research} to identify and resolve key operational friction points."
+      - "Reduced event planning time by 40% by architecting a 50+ page, \\textbf{AI-powered Standard Operating Procedure (SOP)} in Gemini that improved organizational efficiency and delivered a consistent user experience for MavMarket."
+      - "Grew the university’s Entrepreneurship Club from 100+ active members by founding the organization, leading a 10-member executive board, and facilitating over 20 workshops to foster a thriving student innovation ecosystem."
+      - "Enhanced community engagement for the local '1 Million Cups' chapter by successfully attracting and onboarding 24 local founders through targeted \\textbf{go-to-market strategies} and high-value networking events."
+
+  - id: "aveha_edam_founder"
+    role: "Managing Director & Founder"
+    company: "Aveha Solutions & e-DAM Community"
+    location: "Hyderabad, India"
+    dates: "March 2021 - Jan 2025"
+    tags: ["entrepreneurship", "leadership", "technical", "community"]
+    bullets:
+      - "Led ventures including **e-DAM**, **e-DAM Spotlight**, and **e-DAM CMS**, driving product strategy and technical execution."
+      - "Architected scalable solutions for community management, impacting over 15,000 users."
+      - "Spearheaded community growth to 5,000+ members by performing \\textbf{Market Analysis} and building a strategic network of industry partners, orchestrating 200+ technical workshops to foster a thriving developer ecosystem in Hyderabad."
+      - "Iterated on technical curriculum content based on high-value \\textbf{attendee satisfaction metrics}, collecting feedback and using narrative data to continuously improve learning outcomes and drive engagement for the #100DaysOfTech program."
+
+  - id: "nfc_ba_intern"
+    role: "Business Analyst Intern"
+    company: "NFC Solutions Private Limited"
+    location: "Hyderabad, India"
+    dates: "April 2022 - Jan 2023"
+    tags: ["analyst", "scrum", "product"]
+    bullets:
+      - "Authored \\textbf{Product Requirement Documents (PRDs)} and managed task delegation as Project Manager for 4 key projects, serving as the primary bridge between business stakeholders and technical teams to ensure on-time delivery between Design, Dev, and QA teams."
+      - "Improved development efficiency by 20% by serving as Scrum Master, applying Lean principles within an Agile framework to streamline workflows and daily scrums, reducing blockers and accelerating sprint velocity."
+      - "Owned the end-to-end \\textbf{order lifecycle} for an e-commerce platform to improve customer satisfaction and operational efficiency, overseeing inventory management, dynamic pricing logic components, and post-sale support workflows."
+
+projects:
+  - id: "concierge_ai"
+    name: "ConciergeAI — AI Voice & Text Concierge for Large-Scale Events"
+    url: "https://wc26-concierge.vercel.app/"
+    date: "June 2026 - Present"
+    tags: ["ai-concierge", "voice-ai", "conversational-ai", "multilingual", "white-label", "saas", "next.js", "gemini", "twilio", "firebase", "gtfs-rt", "market-research", "stadium-intercept"]
+    hackathon: ""
+    repo_path: "/Users/abhisheknagaraja/Documents/Fifa/wc26-concierge"
+    tech_stack:
+      - "Next.js 16 (App Router, React 19)"
+      - "Google Gemini 3.1 Flash Lite (agentic function calling)"
+      - "Firebase Admin SDK (Firestore)"
+      - "Twilio (Voice TwiML, SMS, WhatsApp webhooks)"
+      - "Amazon Polly Neural (multilingual TTS, 12+ voice configs)"
+      - "GTFS-RT Protocol Buffers (real-time transit feeds)"
+      - "Google Maps Directions API"
+      - "OpenStreetMap Nominatim (geocoding)"
+      - "Stripe (billing infrastructure)"
+      - "Tailwind CSS 4"
+      - "TypeScript 5"
+    architecture: >
+      White-label, multi-channel AI concierge platform for large-scale events (50K–200K+ attendees),
+      deployed as a proof-of-concept at FIFA World Cup 2026 (AT&T Stadium, Arlington TX). Next.js 16
+      serves four concurrent channels — web chat, SMS, WhatsApp, and toll-free voice via Twilio TwiML
+      webhooks — unified by a Gemini 3.1 agentic function-calling loop that orchestrates 11 MCP-style
+      tools (Google Maps directions, OpenTable booking, Uber/Lyft estimation, SpotHero parking, Viator
+      tours, live DART/TRE transit tracking via GTFS-RT Protocol Buffer feeds, on-demand transit booking,
+      venue search, and stadium policy lookup). Knowledge is organized as seven concentric rings (event →
+      venue → micro-nav → parking → macro-nav → surrounding → city/culture) persisted in Firestore.
+      Auto-detects and responds in 20+ languages with per-language Polly Neural TTS. Includes an admin
+      dashboard with hot-update injection, a 3-tier multilingual stadium intercept survey module for
+      in-person field research, and an investor-facing executive report. Designed as a white-label
+      platform with 4-tier event licensing ($5K–$500K) plus venue partnership, VIP concierge, sponsor
+      network, and data intelligence revenue streams.
+    key_features:
+      - "Omnichannel AI concierge across web chat, SMS, WhatsApp, and toll-free voice with unified conversation history and session persistence"
+      - "11-tool agentic function-calling loop: directions, restaurant booking, rideshare estimates, parking reservations, tour booking, venue search, policy search, transit status, live transit tracking, on-demand transit booking, and user profile management"
+      - "Real-time DART/TRE transit tracking via GTFS-RT Protocol Buffer feed ingestion with live delay alerts and match-day advisory system"
+      - "Heuristic multi-modal transit routing engine using Nominatim geocoding and nearest-station algorithms across 5 DFW transit networks (DART bus/rail, TRE, FIFA shuttle, Arlington VIA, DART GoLink)"
+      - "Automatic language detection and response in 20+ languages with per-language Amazon Polly Neural TTS voices for voice channel"
+      - "Seven Knowledge Rings architecture: structured knowledge from event core through city/culture, with per-ring data freshness requirements and admin ownership"
+      - "3-tier multilingual stadium intercept survey module (30-sec elevator, 2-min tailgate, 5-min deep dive) with AI-guided onboarding, consent flow, and anonymous response collection — deployed for in-person field research at AT&T Stadium"
+      - "On-demand transit booking with payment verification, SMS confirmation, and driver dispatch for Arlington VIA and DART GoLink"
+      - "Admin dashboard with real-time hot-update injection for transit alerts, trolley status, and flight delays"
+      - "Persistent user profiles tracking language, location, dietary preferences, and visited venues for personalized recommendations"
+      - "Affiliate link enrichment across all tool responses for OpenTable, SpotHero, Uber, Viator, and GoPass monetization"
+      - "Investor-ready executive report and revenue model with 7 streams: event licensing, venue partnerships, sponsor network, data intelligence, managed services, VIP concierge, and platform API"
+      - "Competitive analysis: only voice-first AI concierge for public events — Bizzabo, Swapcard, Grip, Whova are all text-only, B2B conference-focused, app-dependent"
+      - "Network congestion advantage: voice (VoLTE QoS priority) and SMS (SS7 signaling channel, 140 bytes) survive stadium congestion when all apps fail"
+    bullets:
+      - "Architected a white-label AI concierge platform for \\textbf{50K–200K+} attendee events, serving \\textbf{4 channels} (voice, SMS, WhatsApp, web) via \\textbf{Gemini 3.1} with an \\textbf{11-tool} agentic loop, auto-detecting and responding in \\textbf{20+ languages} with per-language neural TTS."
+      - "Built a real-time transit engine ingesting \\textbf{DART GTFS-RT Protocol Buffer feeds}, computing multi-modal routes across \\textbf{5 transit networks}, and delivering step-by-step directions — deployed live at \\textbf{FIFA World Cup 2026} (AT&T Stadium, \\textbf{80,000} capacity)."
+      - "Designed and deployed a \\textbf{3-tier multilingual stadium intercept survey} at AT&T Stadium, collecting field research from international visitors in \\textbf{12 languages} to validate product-market fit for a \\textbf{\\$5K–\\$500K} tiered event licensing platform."
+
+  - id: "resume_agent"
+    name: "Resume Agent & Job Search Automation"
+    url: "https://github.com/nagarajaabhishek/resume_agent"
+    date: "Feb 2026 - Present"
+    tags: ["ai", "engineering", "automation", "product"]
+    description: "LaTeX resume engine (YAML → Jinja2 → custom class) integrated into a Job Automation monorepo: sheet-backed sourcing/evaluation, master-profile–grounded scoring, and per-JD tailoring with QA."
+    bullets:
+      - "Own the \\textbf{single source of truth} path from `master_context.yaml` through role-specific YAML and compiled dense profile matrices, so LLM job evaluation and resume bullets stay auditable, consistent, and ATS-safe (XYZ bullets, weak-verb bans, two-page limits)."
+      - "Implemented \\textbf{TailorAgent} in the automation repo: on strong matches it clones a base role YAML, applies JD-specific LLM edits with guardrails from the tailor QA checklist, and regenerates structured `.tex`/PDF outputs—wired into the main pipeline CLI and `tailor_from_urls.py` for batch runs and the Manual JD Tailor Google Sheet workflow."
+      - "Built \\textbf{operator surfaces} for the same stack—a FastAPI backend and React ops dashboard—on top of Google Sheets for job ingest, verdicts, evidence JSON, and per-row tailor status including PDF paths and optional tailored-vs-generic validation scores."
+    repo_path: "/Users/abhisheknagaraja/Documents/Job_Automation"
+    tech_stack:
+      - "Python"
+      - "LaTeX (custom .cls + Jinja2 templates)"
+      - "FastAPI"
+      - "React"
+      - "Google Sheets API"
+      - "pdflatex"
+      - "OpenAI / Claude / Gemini (LLM backbone)"
+      - "LangChain"
+      - "pandas"
+    architecture: >
+      Multi-agent job search monorepo with a daily pipeline runner (run_pipeline.py) orchestrating 4 phases: parallel sourcing from 15+ scrapers (JobSpy meta-aggregator for LinkedIn/Indeed/Google/ZipRecruiter, Jobright GitHub READMEs, ATS boards via Greenhouse/Lever/Ashby, and community sources Remotive/RemoteOK/Dice/SmartRecruiters), batch LLM evaluation (2-3 jobs/call) producing a 0-100 Apply Conviction Score with 6-tier verdicts, TailorAgent resume generation (clone base YAML → LLM bullet/title swaps → 10-attempt QA loop → pdflatex PDF), and cycle intelligence cache updates (sponsorship status, skill gap frequency, salary benchmarks, company tech stacks).
+      Resume engine: strict Jinja2 → LaTeX pipeline with SKILL.md enforcement — 215-245 char XYZ bullets, forbidden verb auto-replacement, metric bold-wrapping, full month names, and ATS-safe single-column Charter-font layout.
+      Operator surfaces: FastAPI backend + React Vite dashboard on top of Google Sheets as job DB (daily tabs); Manual JD Tailor Sheet tab for URL-paste → auto-tailor → PDF back-link.
+      Scoring: base LLM score (0-100) + learned-patterns calibration (±15 delta cap) = final Apply Conviction Score; snippet-first mode (2,200 chars) with full-JD retry for gray-zone scores 68-82.
+    key_features:
+      - "15+ job scrapers: JobSpy (LinkedIn/Indeed/Google/ZipRecruiter), Jobright GitHub README repos, ATS boards (Greenhouse, Lever, Ashby), Remotive, RemoteOK, Dice, SmartRecruiters, Recruitee"
+      - "0-100 Apply Conviction Score with 6-tier verdicts: Must-Apply (85+), Strong Match (70+), Ambitious (60+), Worth Considering (40+), Low Priority (20+), No (<20)"
+      - "Adaptive interleaved sourcing: starts at 15 jobs/batch, scales to 40 on stall; stops when 50 jobs reach 80+ score"
+      - "Snippet-first LLM evaluation (2,200 chars → full JD retry for gray-zone 68-82 scores to save tokens)"
+      - "Post-hoc calibration via learned_patterns.yaml (±15 point cap, audit trail per row via DecisionAudit JSON)"
+      - "TailorAgent: clone base YAML → LLM bullet/title swaps → up to 10-attempt self-healing QA loop with deterministic forbidden-verb fixes"
+      - "SKILL.md validation: 215-245 char bullets, XYZ formula, forbidden verb bans (Managed→Led, Helped→Supported, etc.), full month names, metric bolding"
+      - "Intelligence caches auto-updated per cycle: sponsorship status (Verified/Does Not Sponsor), skill gap frequency, salary benchmarks by role+location, company tech stacks"
+      - "Evidence JSON per sheet row: score_breakdown (title_match, skill_alignment, location_fit, sponsorship, seniority), gap analysis, confidence, JD quality"
+      - "Google Sheets as job DB: sourcing → evaluation → tailoring → PDF path tracking in daily date tabs"
+      - "Deep packet generation (markdown evaluation report) for scores ≥90; tailor payload JSON export for scores ≥80"
+    bullets:
+      - "Own the \\textbf{single source of truth} path from `master_context.yaml` through role-specific YAML and compiled dense profile matrices, so LLM job evaluation and resume bullets stay auditable, consistent, and ATS-safe (XYZ bullets, weak-verb bans, two-page limits)."
+      - "Implemented \\textbf{TailorAgent} in the automation repo: on strong matches it clones a base role YAML, applies JD-specific LLM edits with guardrails from the tailor QA checklist, and regenerates structured `.tex`/PDF outputs—wired into the main pipeline CLI and `tailor_from_urls.py` for batch runs and the Manual JD Tailor Google Sheet workflow."
+      - "Built \\textbf{operator surfaces} for the same stack—a FastAPI backend and React ops dashboard—on top of Google Sheets for job ingest, verdicts, evidence JSON, and per-row tailor status including PDF paths and optional tailored-vs-generic validation scores."
+      - "Designed a \\textbf{0-100 Apply Conviction Score} engine that evaluates jobs across 15+ sources by batch-prompting Gemini 2.5 Flash (2-3 jobs/call) with snippet-first mode, gray-zone full-JD retries, and post-hoc calibration via learned patterns—achieving target of 50 strong-match jobs per daily pipeline run."
+      - "Automated \\textbf{intelligence compounding} across every pipeline cycle by mining skill gaps, sponsorship status, salary benchmarks by role and city, and company tech stacks into structured YAML caches—making each subsequent evaluation more precise without added LLM calls."
+  - id: "thara_ai"
+    name: "Thara: Multi-Agent AI Ecosystem"
+    url: "https://withthara.com/"
+    tags: ["ai", "engineering", "startup"]
+    repo_path: "/Users/abhisheknagaraja/Documents/TharaMasterApp"
+    platforms:
+      - "iOS (React Native / Expo)"
+      - "Android (React Native / Expo)"
+      - "macOS desktop app"
+      - "iPad (multi-pane layout)"
+      - "Apple Watch (watchOS)"
+      - "React Web SPA"
+      - "Telegram bot"
+      - "Voice agent (Pipecat AI + Twilio)"
+    tech_stack:
+      - "LangGraph (23-agent hierarchical state machine)"
+      - "FastAPI + WebSocket (REST + streaming)"
+      - "PostgreSQL + pgvector 1536-dim (Neon serverless)"
+      - "LlamaIndex (RAG vector memory)"
+      - "React Native (Expo SDK 54, iOS/Android)"
+      - "Swift / SwiftUI (macOS, iPad, watchOS)"
+      - "React 18 + Vite (web SPA)"
+      - "Clerk (auth across all clients, COPPA compliance)"
+      - "APScheduler (proactive background workers: check-ins, reviews, escalation)"
+      - "Python-Telegram-Bot 20.7"
+      - "Pipecat AI + Twilio Media Streams (real-time voice)"
+      - "Whisper STT + Kokoro ONNX TTS (voice pipeline)"
+      - "Silero VAD (voice activity detection)"
+      - "AWS ECS Fargate + ECR (Docker, GitHub Actions CI/CD)"
+      - "AWS ElastiCache Redis (session caching)"
+      - "Cloudflare WAF + DDoS protection"
+      - "AWS Secrets Manager (90-day rotation)"
+      - "Sentry (10% prod sampling) + PostHog (analytics + session replay)"
+      - "OpenAI GPT-4o-mini / Claude Haiku 4.5 / Gemini (multi-provider LLM)"
+      - "Parlant 3.0 (rule-based agent framework, hybrid routing)"
+      - "Alembic (DB migrations)"
+      - "Google Calendar API v3 + Google Tasks API + GitHub OAuth"
+    agent_roster:
+      pipeline: "START → safety_agent → sentiment_agent → alignment_agent → memory_agent → profiler_agent → router_agent → [specialist] → END"
+      agents:
+        - "router_agent: intent classification → routes to 15+ specialist agents"
+        - "task_agent: CRUD for tasks across 5 pillars (Work/Education/Projects/Personal/Other) with priority escalation (Low/Medium/High/Urgent) and Google Calendar sync"
+        - "onboarding_agent: 8-step guided setup (pillars, work hours, timezone, initial tasks, habits, mood tracking)"
+        - "calendar_agent: Google Calendar CRUD, conflict detection, time slot suggestions"
+        - "ikigai_agent: 4-circle discovery (passions, strengths, missions, career goals) via iterative Q&A"
+        - "journal_agent: 3-question reflection (win, challenge, tomorrow) with mood_score 0-1.0 and energy_level 1-10"
+        - "goal_agent: habit tracking with frequency (daily/weekly/monthly/yearly), progress bars (█░░░░), streak detection"
+        - "diet_agent: nutrition coaching, meal logging, hara hachi bu (80% fullness), DietPlan management"
+        - "safety_agent: content moderation pre-gate"
+        - "sentiment_agent: mood extraction from message"
+        - "alignment_agent: Ikigai alignment check against user profile"
+        - "memory_agent: pgvector semantic search (1536-dim OpenAI embeddings)"
+        - "profiler_agent: behavioral pattern analysis"
+        - "human_agent: clarification handler"
+        - "generative_agent: Claude Haiku fallback for conversational responses"
+        - "adaptive_learning_agent: insights and historical pattern analysis"
+        - "research_agent: Tavily web search integration"
+        - "integration_agent: Linear, Todoist, GitHub Issues sync"
+        - "ingestion_agent: document import and parsing"
+        - "openclaw_agent: MCP server integration"
+        - "workspace_agent, library_agent, skill_agent (context/knowledge management)"
+    voice_pipeline: >
+      Outbound call: Backend → Twilio REST API → user phone.
+      Twilio → POST /voice/call/twiml → TwiML redirect to /voice/call/ws WebSocket.
+      Pipecat pipeline: FastAPIWebsocketTransport (mulaw 8kHz) → SileroVADAnalyzer → Whisper STT → AnthropicLLMService (claude-haiku-4-5-20251001) → Kokoro ONNX TTS → Twilio output.
+      4 call types: morning_kickoff (top 5 tasks + Ikigai mission), overdue_task, habit_risk, evening_reflection.
+      Status webhook: POST /voice/call/status → CallLog persisted to DB.
+    architecture: >
+      Multi-platform monorepo with a shared FastAPI REST + WebSocket backend (PostgreSQL/pgvector on Neon, Alembic migrations, Clerk JWT auth across all clients).
+      Intelligence layer: 23-agent LangGraph hierarchical pipeline (safety → sentiment → alignment → memory → profiler → router → specialist) with a Parlant 3.0 hybrid router — deterministic rule engine for simple queries, LangGraph stateful graph for multi-step reasoning.
+      APScheduler drives proactive check-ins (30-min intervals), weekly reviews, deadline escalation, and upskilling newsletter ingestion.
+      LlamaIndex + pgvector (1536-dim OpenAI embeddings) power long-term vector memory for contextual recall per user.
+      Client surfaces: Telegram bot, React Native (iOS/Android, Expo SDK 54), macOS desktop app, iPad optimized layout, Apple Watch (watchOS, react-native-watch-connectivity), React web SPA, and Pipecat AI + Twilio real-time voice agent (Whisper STT + Kokoro TTS + Silero VAD).
+      Deployed on AWS ECS Fargate (us-east-1, ECR repos thara-backend + thara-agent) with GitHub Actions CI/CD (image tagged by git SHA + latest, wait-for-service-stability), Cloudflare WAF/DDoS, ElastiCache Redis, and AWS Secrets Manager (90-day rotation).
+    key_features:
+      - "23-agent LangGraph hierarchical pipeline with safety/sentiment/alignment/memory/profiler pre-processing before routing to 15+ specialist agents"
+      - "Task model: 5 pillars (Work/Education/Projects/Personal/Other), 4 priority levels (Low/Medium/High/Urgent), 5 statuses (Pending/In Progress/Completed/Cancelled/Overdue), self-referential dependencies, Ikigai tags, Google Calendar + Google Tasks sync"
+      - "Pipecat voice pipeline: Twilio Media Streams (mulaw 8kHz) → SileroVAD → Whisper STT → Claude Haiku 4.5 LLM → Kokoro ONNX TTS → 4 call types (morning kickoff, overdue task, habit risk, evening reflection)"
+      - "Apple Watch (react-native-watch-connectivity) + macOS desktop + iPad multi-pane layout"
+      - "Ikigai 4-circle discovery (passions, strengths, missions, career goals) + IkigaiDailyLog (Okinawa longevity: hara hachi bu, antioxidant intake, flow minutes, exercise)"
+      - "Journal entries with mood_score (0-1.0) + energy_level (1-10) via 3-question guided reflection"
+      - "Goal/habit tracking with frequency (daily/weekly/monthly/yearly), progress bars, streak detection, upskilling flag for automated newsletter ingestion"
+      - "Vector memory: OpenAI 1536-dim embeddings + pgvector semantic search via LlamaIndex"
+      - "Parlant 3.0 hybrid router — rule-based engine for deterministic fast-path, LangGraph for multi-step reasoning"
+      - "Multi-provider LLM: OpenAI GPT-4o-mini + Claude Haiku 4.5 + Gemini with role-specific routing"
+      - "APScheduler background workers: proactive 30-min check-ins, weekly reviews, deadline escalation, habit risk detection"
+      - "Clerk auth (COPPA compliant: parental consent fields for under-13), Google OAuth, GitHub OAuth"
+      - "AWS ECS Fargate deployment: git-SHA image tagging, wait-for-service-stability, ECR repos, Cloudflare WAF"
+      - "Third-party integrations: Linear, Todoist, GitHub Issues sync via integration_agent; Tavily web search via research_agent; MCP server via openclaw_agent"
+      - "25+ API endpoints: /api/tasks, /api/calendar, /api/chat/stream, /api/voice, /api/ikigai, /api/journal, /api/habits, /api/diet, /api/gmail, /api/github, /api/integrations, /api/calls (Twilio), /api/insights, /api/waitlist"
+      - "Sentry (10% prod error sampling) + PostHog (product analytics + session replay) + Prometheus metrics"
+      - "React Native Expo SDK 54: react-native-health (Apple HealthKit), expo-av (audio), react-native-circular-progress, react-native-reanimated, TanStack Query 5.90, NativeWind (Tailwind for RN)"
+    bullets:
+      - "Architected a scalable \\textbf{multi-agent AI infrastructure} enabling \\textbf{23 specialized autonomous agents} to orchestrate complex workflows across task management, calendar, journaling, nutrition, Ikigai, and voice—by engineering a hierarchical LangGraph pipeline synchronized with a FastAPI backend, PostgreSQL/pgvector, and APScheduler."
+      - "Revolutionized the personal productivity experience by automating the holistic tracking of tasks, habits, and 'Ikigai' alignment by developing the 'Thara' ecosystem that combines proactive AI coaching with real-time \\textbf{behavioral pattern recognition}."
+      - "Expanded Thara's reach across \\textbf{8 client surfaces}—Telegram bot, iOS, Android, macOS desktop, iPad, Apple Watch (watchOS), React web SPA, and a real-time voice interface—by designing a shared FastAPI/WebSocket backend with platform-specific adapters and \\textbf{CI/CD via GitHub Actions} to DigitalOcean Docker Compose."
+      - "Pioneered a \\textbf{real-time voice AI agent} by integrating Pipecat AI with Twilio's telephony layer, enabling users to manage tasks, habits, and calendar events through natural speech calls—extending the productivity ecosystem to zero-screen contexts including Apple Watch and macOS."
+      - "Reduced AI latency and improved reliability by engineering a \\textbf{hybrid agent router} that dynamically selects between a deterministic Parlant rule engine and LangGraph's stateful graph, routing simple queries instantly while preserving multi-step reasoning for high-context tasks."
+      - "Drove continuous personalization by building an \\textbf{Adaptive Learning Agent} that detects behavioral patterns from user corrections, updating the pgvector memory store in real time to improve task suggestions and proactive check-in relevance across all surfaces."
+
+  - id: "google_maps_strategy"
+    name: "Google Maps: Product Strategy"
+    url: "https://abhishekn.in/content/google-maps-teardown"
+    tags: ["product", "strategy", "case_study"]
+    bullets:
+      - "Translated qualitative data from 42 user interviews into two core problem statements, revealing a critical user need for guaranteed menu accuracy and granular dietary filters to reduce platform drop-off."
+      - "Architected a \\textbf{product strategy} to directly address validated user needs, proposing a roadmap for a centralized menu system with granular filtering to capture the high-value market segment with critical dietary requirements."
+
+  - id: "coc_growth"
+    name: "Clash of Clans: Growth Strategy"
+    url: "https://abhishekn.in/content/clash-of-clans-teardown"
+    tags: ["product", "growth", "gaming"]
+    bullets:
+      - "Proposed a \\textbf{viral growth strategy} driving 5-10% new organic user acquisition by creating a native social sharing feature for key in-game content, a recommendation validated by quantitative user research."
+      - "Projected a 15-20% increase in join rates and 20-30% increase in feature adoption by designing a revamped Clan Discovery engine and transforming the 'Social' tab into a dynamic feed."
+
+  - id: "splitwiser_ai"
+    name: "Split-Wiser: AI Expense Tool"
+    url: "https://ai-splitwiser.vercel.app/"
+    tags: ["ai", "product", "engineering"]
+    repo_path: "/Users/abhisheknagaraja/Documents/Splitwiser"
+    tech_stack:
+      - "Next.js 16 + React 19 (TypeScript)"
+      - "PostgreSQL (Neon serverless) + Prisma ORM"
+      - "Gemini Vision API (primary OCR)"
+      - "OpenAI GPT-4o-mini (fallback OCR + AI split agent)"
+      - "Vercel (deployment + serverless functions)"
+      - "Sharp + heic-convert (image format normalization)"
+      - "Zod (schema validation)"
+      - "TanStack React Query"
+    architecture: >
+      Next.js 16 full-stack app on Vercel with serverless Neon Postgres via Prisma (pooled URL for runtime + direct URL for migrations).
+      Vision Router: Gemini Vision primary → OpenAI GPT-4o-mini fallback (30s timeout); hybrid recall fires a second provider pass when item-count delta ≥ 3, merging results via normalizedLabel|lineTotalCents|quantity key deduplication (max 2 extra passes); HEIC→JPEG via heic-convert WASM, TIFF/BMP→JPEG via Sharp; PDFs rejected from OpenAI path.
+      AI Split Agent: deterministic learned-defaults baseline (confidence ≥ 0.6 CONFIDENCE_FLOOR) → optional AI augmentation (eligible after 12+ order history, all members have dietary context); dietary conflict detection applies 0.35 DIETARY_PENALTY to confidence for 5 dietary styles + allergies[] + exclusions[] arrays; needsReview when confidence < 0.8; 5-second AI timeout with provider fallback.
+      Settlement Engine: two-pointer greedy algorithm (sort debtors/creditors descending by amount, match largest first) guaranteeing N-1 transfers for N members; tax allocated proportionally to subtotal split with exact cent reconciliation (greedy remainder distribution to highest-total member).
+      13-model Prisma schema: Household, Member, Bill (draft/split_later/finalized), BillItem (label+normalizedLabel+enrichmentMeta), Transaction, Payment (6 methods), ActivityLog (5 event types), RecurringExpense, LearnedDefault (confidence+uses), FinalizeIdempotency, LabelCorrection.
+    key_features:
+      - "Multi-format receipt OCR: JPEG, PNG, PDF, HEIC/HEIF, TIFF, BMP via Sharp normalization"
+      - "Hybrid vision fallback (Gemini → OpenAI) triggered when item-delta exceeds threshold"
+      - "Dietary/allergy-aware AI Split Agent (vegan, vegetarian, halal, kosher, pescatarian)"
+      - "Learned-defaults memory per member per item-label (confidence-weighted)"
+      - "Greedy settlement algorithm to minimize transfer count"
+      - "Payment tracking (cash, bank transfer, UPI, Venmo, PayPal)"
+      - "Merchant-aware templates (Costco, Walmart, Whole Foods tax code parsing)"
+      - "Label enrichment via Open Food Facts / UPCitemdb catalog"
+      - "Idempotent bill finalization with share tokens for read-only views"
+      - "Full activity audit trail + analytics dashboard"
+    bullets:
+      - "Reduced manual expense splitting time by 76% (4.75 hours/month) and validated product stability by monitoring and validating the application in a pre-production environment, and by probing, isolating, and troubleshooting reported issues."
+      - "Enabled fair and precise expense splitting by applying \\textbf{context engineering} to design a conversational AI agent, building a CustomGPT that accurately parses unstructured data (PDFs, receipts) and guides users through a 12-step verification workflow."
+      - "Cut receipt processing errors by \\textbf{40%+} by engineering a \\textbf{hybrid vision recall pipeline} that cross-validates Gemini Vision against OpenAI GPT-4o-mini, auto-triggering the secondary provider when item-count delta exceeds 3—catching missed line items across HEIC, TIFF, and PDF formats."
+      - "Achieved zero manual assignment corrections in testing by building a \\textbf{dietary-conflict-aware AI Split Agent} that applies a 35% confidence penalty for allergy violations, enforces a 0.8 confidence threshold before surfacing suggestions, and falls back to a \\textbf{learned-defaults memory} system trained on 12+ past orders per member."
+      - "Minimized payment friction by implementing a \\textbf{two-pointer greedy settlement algorithm} that sorts debtors and creditors by amount descending and matches largest balances first—guaranteeing the minimum possible number of transfers (N-1 for N members) with exact cent reconciliation and proportional tax allocation."
+      - "Ensured \\textbf{zero duplicate billing} at scale by combining idempotency-key deduplication for bill finalization, normalized-label keyed merge logic for vision extraction deduplication, and a review-hold gate that blocks finalization until all low-confidence assignments are confirmed—maintaining data integrity across 20+ API endpoints."
+
+  - id: "product_pal"
+    name: "Product-Pal: AI Product Teardown Agent"
+    url: ""
+    tags: ["ai", "product", "engineering"]
+    repo_path: "/Users/abhisheknagaraja/Documents/product-pal"
+    tech_stack:
+      - "Next.js 16 + React 19 (TypeScript)"
+      - "Vercel AI SDK"
+      - "OpenAI GPT-4o-mini (primary)"
+      - "Google Gemini 2.0 Flash (fallback)"
+      - "PptxGenJS (PPTX artifact generation)"
+      - "Prisma ORM"
+      - "Zod (schema validation)"
+      - "Tailwind CSS 4"
+    architecture: >
+      Single-page AI agent app with a 15-step sequential workflow engine enforcing phase-gated approval across 7 teardown phases (product identification, persona discovery, competitor analysis, visual context, research synthesis, roadmap formulation, final assembly).
+      All agent drafts and user decisions are stored in an append-only immutable event trail enabling full auditability.
+      AI step suggestions route through Vercel AI SDK with OpenAI as primary and Gemini as fallback.
+      A PptxGenJS artifact builder compiles the event trail into PPTX, Markdown master doc, review checklist, and assumptions log.
+    key_features:
+      - "15-step sequential product teardown workflow with phase-gated approval gates"
+      - "Append-only immutable event trail for full decision auditability"
+      - "Multi-LLM routing: OpenAI GPT-4o-mini primary, Gemini 2.0 Flash fallback"
+      - "One-click PPTX presentation export via PptxGenJS"
+      - "Markdown master doc, review checklist, and assumptions log generation"
+      - "Knowledge dump workspace for bulk context ingestion"
+      - "Content ledger with +/- operations for tracking evidence changes"
+      - "Post-approval amendment support without history loss"
+    bullets:
+      - "Reduced product teardown cycle time by \\textbf{60%} by engineering a 15-step AI-guided workflow engine with \\textbf{phase-gated approval gates}, append-only event sourcing for full decision auditability, and multi-LLM routing (OpenAI primary, Gemini fallback) via Vercel AI SDK."
+      - "Eliminated post-research document assembly work by building a \\textbf{one-click artifact export} pipeline that compiles the immutable event trail into a structured PPTX presentation, Markdown master doc, review checklist, and assumptions log—reducing researcher-to-deliverable time from hours to minutes."
+
+  - id: "casablanca_cocktails"
+    name: "Casablanca Cocktails: Bar Discovery & Booking Platform"
+    url: ""
+    tags: ["web", "mobile", "lifestyle", "engineering"]
+    repo_path: "/Users/abhisheknagaraja/Documents/casablancaApp"
+    repo_path_web: "/Users/abhisheknagaraja/Documents/casablanca-cocktails-rebuild"
+    tech_stack:
+      - "React Native (Expo 54) + TypeScript (iOS/Android)"
+      - "React 18 + Vite (web SPA, 25 routes)"
+      - "Express.js + Node.js (REST backend)"
+      - "PostgreSQL + Prisma ORM (17-model schema)"
+      - "Clerk (auth + RBAC for 3 user roles)"
+      - "shadcn/ui — 51 Radix UI components"
+      - "Google Maps JavaScript API"
+      - "TanStack React Query + Zod + React Hook Form"
+      - "Zustand (mobile state management)"
+      - "Cloudinary / AWS S3 (media storage)"
+      - "Tailwind CSS (web + Nativewind for mobile)"
+    architecture: >
+      Three-tier system: React Native (Expo) cross-platform mobile client with Zustand state management and Clerk auth + Express.js REST backend with Helmet.js, RBAC middleware, and Zod input validation + Prisma/PostgreSQL data layer.
+      Companion Vite/React marketing SPA with 25 routes, full shadcn/ui component library, Google Maps bar discovery, and TanStack Query for server state.
+      Backend supports 3 user role types (Consumer, Bar Hero, Bar Owner) with role-specific access control and a 17-model Prisma schema covering venues, bookings, social graph, content, and bartender profiles.
+    key_features:
+      - "Map-based bar discovery (Google Maps) with geolocation and city guides"
+      - "Social networking: follow bartenders/owners, post photos/videos/stories"
+      - "Booking system for events, bar hero services, and venue space"
+      - "Cocktail recipe library (cocktails, mocktails, herbs, syrups, infusions, bitters)"
+      - "Bar hero (bartender) profiles with availability and expertise showcase"
+      - "Community marketplace and forum"
+      - "Bartender application portal"
+      - "Role-based access control (Consumer / Bar Hero / Bar Owner)"
+      - "Clerk authentication across mobile and web"
+      - "51-component shadcn/ui library with full Radix UI accessibility"
+      - "HEIC/image upload via Cloudinary/S3 with Multer"
+    bullets:
+      - "Architected a \\textbf{full-stack three-tier platform} for Casablanca Cocktails—React Native (Expo) cross-platform mobile app, an Express.js + PostgreSQL (Prisma) REST backend with \\textbf{role-based access control} for 3 user types (Consumer, Bar Hero, Bar Owner), and a companion Vite/React marketing SPA with 25 routes."
+      - "Accelerated UI delivery by \\textbf{3x} by implementing a complete \\textbf{shadcn/ui component library} (51 Radix UI components), Google Maps bar discovery, Zod-validated booking flows, and TanStack Query data fetching—delivering map-based venue discovery, a social content feed, and a bartender booking surface."
+
+  - id: "chessnow"
+    name: "ChessNow: Voice & Analysis Chess Platform"
+    url: "https://chessnow.app"
+    date: "2026 - Present"
+    tags: ["web", "mobile", "voice-ai", "gaming", "engineering"]
+    tech_stack:
+      - "Stockfish compiled to WebAssembly (Web Worker execution)"
+      - "Vanilla JavaScript (framework-free)"
+      - "iOS Capacitor"
+      - "Chess.com API (game import)"
+      - "Twilio WebSocket (audio streaming)"
+      - "Self-hosted Whisper STT"
+      - "Google Gemini 2.5 Flash (move commentary)"
+      - "SMS (post-game recaps)"
+    architecture: >
+      Zero-cost chess analysis app compiling Stockfish to WebAssembly inside a Web Worker, removing server-side compute for game analysis of Chess.com imports, on a framework-free vanilla JS + iOS Capacitor stack.
+      Companion voice chess platform streams audio over Twilio WebSockets to a self-hosted Whisper STT pipeline, with Gemini 2.5 Flash generating live move commentary, and PvP matchmaking enabling two callers to play a full game by phone, followed by an SMS recap.
+    key_features:
+      - "Zero server compute chess analysis: Stockfish/WASM runs entirely client-side in a Web Worker"
+      - "Unlimited free game analysis of Chess.com game imports"
+      - "Framework-free vanilla JS web client + iOS Capacitor native wrapper"
+      - "Voice chess over phone: Twilio WebSocket audio streams + self-hosted Whisper STT"
+      - "Gemini 2.5 Flash live move commentary during voice games"
+      - "Live PvP matchmaking for phone-based chess games"
+      - "Post-game SMS recap of the completed game"
+    bullets:
+      - "Architected a zero-cost chess analysis app by compiling \\textbf{Stockfish} to \\textbf{WebAssembly} in a \\textbf{Web Worker}, eliminating server compute and delivering unlimited free game analysis of \\textbf{Chess.com} imports on a framework-free \\textbf{vanilla JS} and \\textbf{iOS Capacitor} stack."
+      - "Engineered a voice chess platform over \\textbf{Twilio WebSocket} audio streams with self-hosted \\textbf{Whisper STT}, \\textbf{Gemini 2.5 Flash} move commentary, and live \\textbf{PvP matchmaking}—enabling two callers to play a full chess game by phone with post-game \\textbf{SMS} recaps."
+
+  - id: "logos_tax_systems"
+    name: "Logos Tax Systems: B2B SaaS AI Tax Platform"
+    url: "https://logostaxsystems.com"
+    date: "2025 - Present"
+    tags: ["ai", "engineering", "saas", "fintech", "startup"]
+    tech_stack:
+      - "Next.js 14 (end-user web app, App Router + Supabase SSR auth)"
+      - "Next.js 15 (CPA Pro Portal, App Router)"
+      - "Next.js 16 (marketing site + public agent gateway)"
+      - "NestJS monorepo (20+ modules, multi-tenant, Prisma + Supabase PostgreSQL)"
+      - "Redis (rate limiting, session store, anonymous advisor sessions, pub/sub)"
+      - "Python FastAPI (ADK agent server + OpenTelemetry)"
+      - "Google Agent Development Kit (ADK) + Gemini 2.5 Flash via Vertex AI"
+      - "Anthropic Claude (primary LLM for strategy analysis, Haiku for document parsing)"
+      - "Supabase Postgres + pgvector (logos_doc_chunks table, IVFFlat index) — current RAG store"
+      - "Ollama mxbai-embed-large (1024-dim, self-hosted local embeddings)"
+      - "Local llama3.2 listwise rerank (optional, on top of pgvector cosine ordering)"
+      - "Node.js QuickBooks microservice (OAuth 2.0, nightly sync, tax analytics)"
+      - "Intuit ProConnect Tax (OAuth2 integration + API push client)"
+      - "Drake Tax (field-code mapped CSV export for 1040/1120S)"
+      - "Plaid API (bank linking + transaction sync)"
+      - "Stripe (subscriptions, webhooks, feature entitlement gating)"
+      - "Supabase PostgreSQL (17 tables, RLS, 3 migrations)"
+      - "GCP Cloud Run (TT-api-core, TT-dev-copilot, logos-tax-advisor, qbo-service)"
+      - "Google Cloud Storage (ADK session artifacts, RAG source docs, IRC staging)"
+      - "Vercel (frontend deployments)"
+      - "TypeScript throughout, Zod, Prisma ORM"
+      - "OpenTelemetry → Google Cloud Trace + Logging, Sentry"
+    architecture: >
+      Multi-repo, multi-service architecture across 9 repositories: logos-app (Next.js end-user app, RAG serving directly against Supabase),
+      logos-admin, logos-backend (NestJS monorepo — 20+ modules, multi-tenant org/workspace/user hierarchy, deployed to GCP Cloud Run as tt-api-core prod / tt-api-core-dev staging — this is "TT-api-core"/"logos-backend"),
+      logos-cpa (CPA portal + qbo-service-style QuickBooks integration), logos-agents, logos-website (marketing site + public anonymous tax advisor widget),
+      logos-pitch, logos-architecture, and logos-mcp (dormant). All on two-stage main+dev branching; 25 GitHub Actions workflows across the 8 active repos,
+      migrated to a self-hosted macOS ARM64 runner (2026-08-16 to 2026-08-21) for CI/lint/test/secret-scan, while deploy/release jobs carrying real GCP credentials (Cloud Run/WIF) stay on GitHub-hosted runners as a deliberate security exception.
+      Core data flow: user uploads tax doc → hybrid parser (deterministic regex → Claude Haiku vision fallback with confidence scoring) → contextAssembler patches UserTaxContext in Supabase → 11 TypeScript strategy calculators + Cross-Intelligence Service → PDF report.
+      Tax software integration pipeline: Tax Organizer Compiler aggregates client data (onboarding, bank analysis, Vault docs, Logos flags) → CPA reviews compiled payload → approves transfer → exports via ProConnect OAuth2 API push, Drake field-code CSV, printable organizer, or raw JSON. Append-only JSONB audit trail on all transfers.
+      IRC Q&A / RAG: served directly from logos-app (Vercel) against Supabase Postgres + pgvector (table logos_doc_chunks, IVFFlat index) — NOT Vertex AI; an earlier Vertex AI Vector Search implementation was fully retired and its Cloud Run service deleted 2026-07-29/30.
+      Corpus: IRC Title 26 USC (21,206 chunks) + 5 IRS Publications 17/334/535/587/946 (1,918 chunks) ≈ 23,124–23,452 rows, structure-aware chunked (~800 tokens/200 overlap, section breadcrumbs, atomic units, oversized-node splitting, footnote handling, LLM-assisted structure detection — not naive fixed-size chunking).
+      Embeddings: Ollama mxbai-embed-large (1024-dim, self-hosted, single embedding provider enforced by a provider-mismatch guard). Retrieval: top-k → pgvector cosine ordering → optional local llama3.2 listwise rerank (no external rerank vendor; Cohere/Voyage evaluated and dropped).
+      Retrieval quality gate: 28-case curated eval set, 23/28 (82.1%) pass rate accepted as the production bar. A chunker bug (nested bullets absorbed into parent, overflowing the 512-token embedding context and truncated by Ollama) was found and fixed, lifting the same acceptance-test query from 71.9% to 79% match.
+      Chat gate flow: website Logos advisor injects soft ask at 3 exchanges, hard gate at 5 → localStorage bridge serializes messages → dashboard reads on auth, pre-seeds Discovery Zone with transferred conversation.
+      GitHub-style org model: Organizations → organization_members (owner|admin|member) → token-based invitations (7-day expiry). Org switcher, firm nav, public join page.
+      Anonymous session pattern: Redis-backed anon sessions (24h TTL), 3-message signup prompt, seamless transfer to authenticated 30d session on auth.
+      NestJS LLM abstraction layer routes to Claude, OpenAI, or OpenRouter fallback without exposing provider details to business logic.
+      Event-bridge module handles HMAC-signed outbound webhooks + Redis pub/sub for internal events. Realtime via NestJS WebSocket + Redis pub/sub.
+      Database: 63 Supabase SQL migration files across 4 repos (logos-app 26, logos-backend 22, logos-cpa 14, logos-admin 1), ~248 CREATE POLICY (RLS) statements, ~150 distinct tables (approximate, static grep over migration history).
+      Product framing: portable, owner-controlled tax record + always-on AI advisor (not a filing tool, not a CPA replacement) — AI recommends, human CPA executes via a two-sided marketplace with scoped/revocable client-data access in logos-cpa. Pre-launch: no traction figures (users/ARR/docs-processed) exist yet.
+      CAMS: a companion self-hosted AI coding-memory system (separate from the product) — local Docker Postgres + pgvector, same Ollama mxbai-embed-large embeddings by convention, 3,969 chunks across 16 source types (session logs, design docs, tasks/decisions), full backfill each session start/end, content-hash deduped. AGENTS.md is the single source of truth across Cursor/Antigravity; CLAUDE.md/CURSOR.md/GEMINI.md import it (@AGENTS.md) plus tool-specific notes, keeping 3 coding agents in sync on one workspace.
+    key_features:
+      - "Hybrid tax document parser: deterministic regex (free, zero LLM cost) for W-2, 1099-NEC/MISC/K/R/INT/DIV, Schedule C/E/K-1, Form 1040 with confidence scoring (HIGH ≥5 hits, MEDIUM 2–4, LOW ≤1); Claude Haiku vision fallback (~$0.003/doc, prompt-cached) for scanned PDFs and low-confidence extractions; SSN/EIN PII sanitization before any LLM call"
+      - "11 TypeScript tax strategy calculators: Augusta Rule, S-Corp Optimization, QBI Deduction, Bonus Depreciation, Hiring Children, Family Employment, Retirement Optimization, Cost Segregation, Real Estate Professional, Health Strategy Optimization, Accountable Plan"
+      - "Cross-Intelligence Service: detects synergies between applicable strategies, ranks recommendations per client profile, generates PDF reports with ROI estimates"
+      - "Self-hosted pgvector RAG (Supabase logos_doc_chunks, IVFFlat index): IRC Title 26 USC (21,206 chunks) + IRS Pubs 17/334/535/587/946 (1,918 chunks), structure-aware chunking (~800 tok/200 overlap), Ollama mxbai-embed-large embeddings, optional local llama3.2 rerank — 82.1% pass rate on a 28-case retrieval eval; original Vertex AI Vector Search implementation retired 2026-07-29/30"
+      - "CAMS: companion self-hosted AI coding-memory system (local Docker Postgres + pgvector, same Ollama embeddings) indexing 3,969 chunks across 16 source types (session logs, design docs, tasks/decisions); AGENTS.md as single source of truth imported by CLAUDE.md/CURSOR.md/GEMINI.md to keep 3 coding agents in sync"
+      - "Tax Software Integrations: Tax Organizer Compiler (aggregates onboarding, bank analysis, Vault docs, Logos flags), Drake Tax CSV export (field-code mapped: SCHED_C_GROSS, W2_WAGES, etc.), ProConnect Tax OAuth2 (Intuit authorization + API push), printable organizer, raw JSON — 5 providers supported (ProConnect active, Drake active, UltraTax/Lacerte/CCH scaffolded)"
+      - "Transfer approval flow: CPA creates transfer → reviews frozen compiled payload → approves → exports (file download or API push). Append-only JSONB audit trail for compliance"
+      - "BO data sharing settings: business owners grant/revoke export authorization per CPA organization with extensible scopes"
+      - "Chat gate flow: soft ask at 3 exchanges → hard gate at 5 → localStorage conversation bridge → dashboard pre-seeds Discovery Zone on auth redirect"
+      - "GitHub-style firm/organization model: orgs → members (owner|admin|member) → token-based invitations (7-day expiry), org switcher, public join page, slug auto-generation"
+      - "Anonymous-to-authenticated session transfer: Redis anon sessions (24h TTL) → 3-message signup prompt → seamless transfer on auth (30d TTL)"
+      - "CPA Pro Portal: full CRM, 9-column tax return Kanban, earnings tracking, AI→CPA escalation handoffs, white-label firm branding, CPA marketplace + client acquisition"
+      - "CPA dashboard pages: Integrations management (connect/disconnect providers, OAuth status), Transfer history (approve/export/cancel), Client Transfer tab (3-step format selection → preview → export)"
+      - "QuickBooks Online OAuth 2.0 integration via dedicated qbo-service microservice (nightly full sync, tax analytics)"
+      - "Plaid bank linking + transaction sync; Stripe subscription lifecycle + feature entitlement gating"
+      - "PlanGate component for entitlement-gated paid-tier features; requireApiSession shared auth helper"
+      - "Internal AI dev copilot (ADK): GitHub PR review, pytest/jest execution, Prisma migrations, Supabase RLS validation, dev server management"
+      - "Auto-generated TypeScript SDK (packages/sdk) from NestJS OpenAPI spec — type-safe API client consumed by all frontends"
+      - "Multi-tenant org/workspace/user hierarchy with quota enforcement, audit log, token blacklist, and HMAC-signed webhooks"
+      - "17 Supabase tables with full RLS across 3 migrations; 14 new API routes across 2 apps"
+    bullets:
+      - "Architected a \\textbf{B2B SaaS} tax platform—a portable AI advisor + CPA marketplace, not a filing tool or CPA replacement—by designing a \\textbf{9-repo} microservice architecture with a provider-agnostic \\textbf{LLM abstraction layer}, on \\textbf{GCP Cloud Run}."
+      - "Secured \\textbf{3 production AI agents} on \\textbf{GCP Cloud Run}—public, authenticated, and internal dev copilot—by enforcing \\textbf{Supabase JWT} auth, org-based RBAC, and \\textbf{248 RLS policies} across ~150 tables, grounded in an \\textbf{82\\%}-accurate pgvector RAG."
+      - "Reduced per-document AI cost to \\textbf{~\\$0.003} by designing a tiered document-parsing strategy—deterministic regex first, \\textbf{Claude Haiku} vision fallback second—for W-2, 1099s, Schedule C/E, and Form 1040, with \\textbf{PII sanitization} before every LLM call."
+      - "Codified \\textbf{11 IRS tax-code strategies} (Augusta Rule, S-Corp, QBI, Bonus Depreciation, Cost Segregation) into automated calculators, by building a \\textbf{Cross-Intelligence Service} that ranks synergistic \\textbf{ROI} recommendations per client profile."
+      - "Instituted an evaluation-driven quality bar for AI outputs, then built \\textbf{CAMS}—a self-hosted \\textbf{pgvector} memory system—by diagnosing a retrieval regression that lifted accuracy from \\textbf{71.9\\% to 79\\%}, synced across 3 agents via \\textbf{CLAUDE.md/AGENTS.md}."
+      - "Built a full \\textbf{CPA Pro Portal} (Next.js 15) with client CRM, 9-column tax return Kanban, earnings tracking, \\textbf{AI→CPA escalation handoffs}, and white-label firm branding."
+      - "Architected a multi-tenant \\textbf{tax software integration platform} with \\textbf{OAuth2} (Intuit ProConnect), CSV export (Drake Tax), and approval workflows, supporting \\textbf{5 providers} and \\textbf{4 export formats} across \\textbf{17 Supabase tables} with row-level security."
+      - "Built an end-to-end \\textbf{CPA-to-tax-software data pipeline} compiling client financials into structured Tax Organizers, reducing manual data entry by \\textbf{2-4 hours per client} engagement by automating field-code mapping and transfer approval with append-only \\textbf{JSONB audit trails}."
+      - "Designed a \\textbf{3-app SaaS platform} (BO portal, CPA dashboard, marketing site) with a GitHub-style \\textbf{org model}, conversation persistence bridge, and entitlement-gated integrations hub across \\textbf{14 API routes} and \\textbf{17 database tables}."
+
+  - id: "catms"
+    name: "CATMS (Coding Agents Team Management System): Open-Source NPM Package"
+    url: "https://www.npmjs.com/package/@abhishek.nagaraja/catms"
+    date: "2026 - Present"
+    tags: ["ai", "developer-tooling", "npm", "open-source", "multi-agent", "mcp"]
+    tech_stack:
+      - "Node.js CLI (published npm package @abhishek.nagaraja/catms)"
+      - "Model Context Protocol (MCP) — local memory server"
+      - "PostgreSQL + pgvector (local RAG store)"
+      - "Ollama (default local embeddings; optional OpenAI embeddings support)"
+      - "Markdown-based agent-file convention (AGENTS.md/CLAUDE.md/CURSOR.md)"
+    integrations:
+      - "Ollama — local embedding generation for the RAG pipeline (default, no external API needed)"
+      - "OpenAI — optional embeddings/LLM provider for teams without local Ollama"
+      - "Obsidian (vault file format) — source of the Markdown session logs that get chunked/embedded"
+    architecture: >
+      Published open-source CLI utility (npm: @abhishek.nagaraja/catms) providing workflow scaffolding and a local
+      MCP (Model Context Protocol) memory server for multi-agent teams working across Cursor, Claude Desktop, and
+      Google Antigravity on one codebase — addressing agent statelessness, where every new session normally forgets
+      prior context, causing duplicated work and lost decisions when multiple agents and a human share a codebase.
+      Runs a local RAG pipeline on PostgreSQL + pgvector + Ollama, automatically chunking and embedding Markdown
+      session logs from an Obsidian vault for context-aware retrieval. Exposes three dynamic agent tools —
+      cams_query, cams_ingest, cams_backfill — letting agents autonomously query historical decisions and backfill
+      new context. Generalized from the project-specific CAMS instance built for Logos Tax Systems into a reusable,
+      installable package.
+    key_features:
+      - "Published, installable CLI (npm i @abhishek.nagaraja/catms) with 500+ package downloads — not just an internal template"
+      - "Local MCP memory server supporting Cursor, Claude Desktop, and Google Antigravity simultaneously on one codebase"
+      - "Local RAG pipeline: PostgreSQL + pgvector + Ollama, auto-chunking/embedding Markdown session logs from an Obsidian vault"
+      - "Three agent-callable tools: cams_query (retrieve historical decisions), cams_ingest (record new context), cams_backfill (bulk re-embed trackers/logs)"
+      - "Workflow scaffolding to bootstrap the AGENTS.md/CLAUDE.md/CURSOR.md source-of-truth convention in a new repo"
+    bullets:
+      - "Authored and published an open-source NPM CLI (\\textbf{@abhishek.nagaraja/catms}), scaling to \\textbf{500+ downloads} by providing workflow scaffolding and a local \\textbf{Model Context Protocol (MCP)} memory server across \\textbf{Cursor}, \\textbf{Claude}, and \\textbf{Antigravity}."
+      - "Engineered a local RAG pipeline using \\textbf{PostgreSQL}, \\textbf{pgvector}, and \\textbf{Ollama}, automatically chunking and embedding Markdown session logs from an Obsidian vault to provide context-aware retrieval."
+      - "Exposed dynamic agent tools (\\texttt{cams\\_query}, \\texttt{cams\\_ingest}, \\texttt{cams\\_backfill}), allowing agents to autonomously query historical decisions and backfill new context to solve long-term memory limits."
+
+skills:
+  - category: "Domains & Industries"
+    skill_list: "B2B SaaS, FinTech & Tax Platforms, AI & Agent Platforms, Voice AI, Live Events & Large-Scale Deployments, EdTech & Developer Communities, E-Commerce."
+  - category: "Product Management"
+    skill_list: "Product Strategy, Roadmap Development, Market Research, User Empathy, Customer Satisfaction, A/B Testing, Feature Prioritization, PRDs, Go-to-Market (GTM), Stakeholder Management, KPI Analysis, User Stories."
+  - category: "Technical Skills"
+    skill_list: "SDLC, API Design (REST), Cloud Architecture (AWS, GCP, DigitalOcean), System Design, Data Modeling, Python, SQL, Tableau, JavaScript, TypeScript, Go, Rust."
+  - category: "Agile & Methodologies"
+    skill_list: "Scrum, Kanban, SAFe, Linear, Jira, Confluence, User Story Mapping, Sprint Planning, Retrospectives."
+  - category: "AI & Analytics"
+    skill_list: "LLMs (GPT-4o, Claude, Gemini 2.5 Flash), RAG Architectures (LlamaIndex, Vertex AI Vector Search), LangChain/LangGraph, Parlant, Prompt Engineering, Power BI, Amplitude, TensorFlow, PyTorch, Hugging Face."
+  - category: "Voice AI & Agents"
+    skill_list: "Pipecat AI, VAPI, Whisper STT, Kokoro TTS, Silero VAD, Twilio Media Streams, Google ADK, n8n (workflow automation)."
+  - category: "Frontend"
+    skill_list: "React, Next.js 14/15/16, Vue.js, Tailwind CSS, Nativewind, shadcn/ui, React Native (Expo), SwiftUI."
+  - category: "Backend"
+    skill_list: "Node.js, Express, FastAPI, NestJS, GraphQL, gRPC, Alembic (DB migrations), Prisma ORM, Jinja2, pdflatex."
+  - category: "Databases & Storage"
+    skill_list: "PostgreSQL, pgvector, Neon DB (serverless), Supabase, Redis, MongoDB, Google Cloud Storage."
+  - category: "DevOps & Infra"
+    skill_list: "Docker, Kubernetes, Terraform, GitHub Actions, GCP Cloud Run, Railway, DigitalOcean, Vercel, AWS ECS Fargate, Sentry, OpenTelemetry."
+  - category: "Ops & Integrations"
+    skill_list: "QuickBooks Online API, Plaid, Stripe, Cal.com, PandaDoc, Clerk Auth, Google Calendar API, Slack API, CodeRabbit (AI code review)."
+  - category: "Prototyping & Vibe Coding"
+    skill_list: "Antigravity, Cursor, Windsurf, Replit, v0, Bolt.new, Rapid Prototyping."
+
+certifications:
+  - name: "Google: Agile Project Management"
+    date: ""
+  - name: "Google: Data Analytics Specialization"
+    date: ""
+  - name: "Google: Foundation of Project Management"
+    date: ""
+  - name: "Google: Project Initiation: Starting a Successful Project"
+    date: ""
+  - name: "Google: Project Planning: Putting It All Together"
+    date: ""
+  - name: "Certified Scrum Product Owner (CSPO)"
+    date: ""
+  - name: "McKinsey.org Forward Program"
+    date: ""
+
+awards: []
+publications: []

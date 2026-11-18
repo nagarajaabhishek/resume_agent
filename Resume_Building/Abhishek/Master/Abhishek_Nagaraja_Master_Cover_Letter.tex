@@ -1,0 +1,92 @@
+%----------------------------------------------------------------------------------------
+%   PREMIUM COVER LETTER TEMPLATE (Version 2.0)
+%----------------------------------------------------------------------------------------
+\documentclass[11pt,letterpaper]{article} % Font size 11pt for premium readability
+
+\usepackage[parfill]{parskip} % Remove paragraph indentation
+\usepackage{array} % Required for boldface
+\usepackage{xcolor}
+\usepackage[colorlinks=true, urlcolor=blue]{hyperref}
+\usepackage[left=1.0in,top=0.75in,right=1.0in,bottom=0.75in]{geometry}
+\usepackage{ifthen}
+\usepackage{setspace} % For line spacing adjustments
+
+\setstretch{1.15} % Slightly increased line spacing for an elegant feel
+\pagestyle{empty} % Suppress page numbers
+
+\makeatletter % Begin internal command redefinitions
+
+%----------------------------------------------------------------------------------------
+%	HEADINGS COMMANDS (Matches Resume Header Exactly)
+%----------------------------------------------------------------------------------------
+\def \name#1{\def\@name{#1}}
+\def \@name {}
+\def \addressSep {$\diamond$}
+\let \@addressone \relax
+\let \@addresstwo \relax
+\let \@addressthree \relax
+\def \address #1{
+  \@ifundefined{@addresstwo}{
+    \def \@addresstwo {#1}
+  }{
+  \@ifundefined{@addressthree}{
+  \def \@addressthree {#1}
+  }{
+     \def \@addressone {#1}
+  }}
+}
+\def \printaddress #1{
+  \begingroup
+    \def \\ {\addressSep\ }
+    \centerline{#1}
+  \endgroup
+  \par
+}
+\def \printname {
+  \begingroup
+    \hfil{{\namesize\bf \@name}}\hfil
+    \nameskip\break
+  \endgroup
+}
+\let\ori@document=\document
+\renewcommand{\document}{
+  \ori@document
+  \printname
+  \@ifundefined{@addressone}{}{
+    \printaddress{\@addressone}}
+  \@ifundefined{@addresstwo}{}{
+    \printaddress{\@addresstwo}}
+  \@ifundefined{@addressthree}{}{
+    \printaddress{\@addressthree}}
+}
+\def\namesize{\huge}
+\def\nameskip{\vspace{-0.5em}}
+\makeatother
+
+%----------------------------------------------------------------------------------------
+%   DOCUMENT DATA
+%----------------------------------------------------------------------------------------
+\name{Abhishek Nagaraja, {\fontsize{13}{9}\selectfont (CSPO, Google PM)}\vspace{.2em} \hrule}
+
+\address{Dallas, Texas, USA \textbullet\ work.abhishekn@gmail.com \textbullet\ \url{www.abhisheknagaraja.com} \textbullet\ {\href{https://www.linkedin.com/in/abhisheknagaraja/}{linkedin.com/in/abhisheknagaraja}} }
+
+\begin{document}
+\vspace{1.5em}
+
+\textbf{Hello Hiring Manager,}
+
+As a product and engineering professional with dual Master's degrees in Computer Science and Engineering Management, I specialize in translating deep technical systems thinking into measurable product outcomes — for teams building complex software, scaling AI products, or executing go-to-market strategy. My core differentiator is the ability to move fluidly between architecting AI infrastructure and owning end-to-end product strategy: building what users need, scaling what works, and aligning the teams that make it happen.
+
+I operate by leading with user empathy and closing with engineering rigor. Whether I am authoring PRDs and aligning cross-functional stakeholders, facilitating Agile ceremonies to unlock team velocity, or architecting multi-agent LLM workflows from first principles, my approach is consistent: identify the core user problem, build stakeholder clarity around the solution, and execute with full ownership. I thrive in ambiguous, high-stakes environments where systems thinking and human collaboration are required in equal measure.
+
+That philosophy is best demonstrated through my work on \textbf{MavMarket}, where I owned the complete product lifecycle — scaling the platform to 200+ vendors and 5,000+ attendees while generating \$120,000 in revenue. By architecting an AI-powered 50+ page Standard Operating Procedure and implementing an empathy-driven feedback system for 100+ vendors, I reduced event planning time by 40\% and improved stakeholder NPS by 35\%. In parallel, I architected \textbf{Thara} — a LangGraph-based ecosystem of 11 autonomous AI agents — where structured UX research and rapid iteration drove a 20\% improvement in feature adoption. The same disciplined product instincts that scale a marketplace scale an AI platform.
+
+I am drawn to roles where deep technical ownership, cross-functional leadership, and user-centric execution converge. I would welcome the opportunity to discuss how my background in product strategy, AI engineering, and operational excellence can contribute meaningfully to your team's mission.
+
+\vspace{1.5em}
+Sincerely,
+
+\vspace{1.2em} % Strictly 1.2em per cover_letter_rules.md
+\textbf{Abhishek Nagaraja}
+
+\end{document}

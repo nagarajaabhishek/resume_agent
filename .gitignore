@@ -33,4 +33,7 @@ builder.py
 *.synctex.gz
 *.fls
 *.fdb_latexmk
+*.aux
+*.log
+*.out
 tmp/

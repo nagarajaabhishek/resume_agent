@@ -1,0 +1,249 @@
+%----------------------------------------------------------------------------------------
+%   CLASS DEFINITIONS (EMBEDDED RESUME.CLS)
+%----------------------------------------------------------------------------------------
+\documentclass[9pt,letterpaper]{article} % Font size and paper type
+
+\usepackage[parfill]{parskip} % Remove paragraph indentation
+\usepackage{array} % Required for boldface (\bf and \bfseries) tabular columns
+\usepackage{ifthen} % Required for ifthenelse statements
+\usepackage[T1]{fontenc}
+\usepackage{charter}
+\usepackage{newunicodechar}
+\newunicodechar{—}{---}
+\newunicodechar{–}{--}
+\usepackage{enumitem}
+\usepackage{xcolor} % Recommended for more color options
+\usepackage[colorlinks=true, urlcolor=blue]{hyperref}
+\usepackage[left=0.5in,top=0.25in,right=0.4in,bottom=0.2in, columnsep=0.5cm]{geometry} % Tightened margins slightly
+\usepackage{iftex}
+\ifpdftex
+  \input{glyphtounicode}
+  \pdfgentounicode=1
+\fi
+\usepackage[none]{hyphenat}
+\usepackage{multicol}
+\pagestyle{empty} % Suppress page numbers
+
+\makeatletter % Begin internal command redefinitions
+
+%----------------------------------------------------------------------------------------
+%	HEADINGS COMMANDS: Commands for printing name and address
+%----------------------------------------------------------------------------------------
+
+\def \name#1{\def\@name{#1}} % Defines the \name command to set name
+\def \@name {} % Sets \@name to empty by default
+
+\def \addressSep {$\diamond$} % Set default address separator to a diamond
+
+% One, two or three address lines can be specified 
+\let \@addressone \relax
+\let \@addresstwo \relax
+\let \@addressthree \relax
+
+% \address command can be used to set the first, second, and third address (last 2 optional)
+\def \address #1{
+  \@ifundefined{@addresstwo}{
+    \def \@addresstwo {#1}
+  }{
+  \@ifundefined{@addressthree}{
+  \def \@addressthree {#1}
+  }{
+     \def \@addressone {#1}
+  }}
+}
+
+% \printaddress is used to style an address line (given as input)
+\def \printaddress #1{
+  \begingroup
+    \def \\ {\addressSep\ }
+    \centerline{#1}
+  \endgroup
+  \par
+}
+
+% \printname is used to print the name as a page header
+\def \printname {
+  \begingroup
+    \hfil{{\namesize\bf \@name}}\hfil
+    \nameskip\break
+  \endgroup
+}
+
+%----------------------------------------------------------------------------------------
+%	PRINT THE HEADING LINES
+%----------------------------------------------------------------------------------------
+
+\let\ori@document=\document
+\renewcommand{\document}{
+  \ori@document  % Begin document
+  \printname % Print the name specified with \name
+  \@ifundefined{@addressone}{}{ % Print the first address if specified
+    \printaddress{\@addressone}}
+  \@ifundefined{@addresstwo}{}{ % Print the second address if specified
+    \printaddress{\@addresstwo}}
+     \@ifundefined{@addressthree}{}{ % Print the third address if specified
+    \printaddress{\@addressthree}}
+}
+
+%----------------------------------------------------------------------------------------
+%	SECTION FORMATTING
+%----------------------------------------------------------------------------------------
+
+% Defines the rSection environment for the large sections within the CV
+\newenvironment{rSection}[1]{ % 1 input argument - section name
+  \sectionskip
+ \textbf{\Large #1} % Section title
+  \sectionlineskip
+  \hrule % Horizontal line
+  \begin{list}{}{ % List for each individual item in the section
+    \setlength{\leftmargin}{-0em} % Margin within the section
+  }
+  \item[]
+}{
+  \end{list}
+}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE FORMATTING
+%----------------------------------------------------------------------------------------
+
+\newenvironment{rSubsection}[4]{ % 4 input arguments - company name, year(s) employed, job title and location
+ {\bf #1} \hfill {#2} % Bold company name and date on the right
+ \ifthenelse{\equal{#3}{}}{}{ % If the third argument is not specified, don't print the job title and location line
+  \\
+  {\em #3} \hfill {\em #4} % Italic job title and location
+  }
+}{
+  \par \vspace{0.1em}
+}
+
+% The below commands define the whitespace after certain things in the document - they can be \smallskip, \medskip or \bigskip
+\def\namesize{\huge} % Size of the name at the top of the document
+\def\addressskip{} % The space between the two address (or phone/email) lines
+\def\sectionlineskip{\smallskip} % The space above the horizontal line for each section 
+\def\nameskip{\vspace{-0.5em}} % The space after your name at the top
+\def\sectionskip{} % The space after the heading section
+
+\makeatother % End internal command redefinitions
+
+%----------------------------------------------------------------------------------------
+%   DOCUMENT START
+%----------------------------------------------------------------------------------------
+\name{Abhishek Nagaraja \vspace{.2em} \hrule} % Your name
+
+\address{Dallas, Texas \textbullet\ work.abhishekn@gmail.com \textbullet\ {\href{https://www.linkedin.com/in/abhisheknagaraja/}{linkedin.com/in/abhisheknagaraja}} \textbullet\ {\href{https://www.abhisheknagaraja.com/}{www.abhisheknagaraja.com}}}
+
+\begin{document}
+
+
+%----------------------------------------------------------------------------------------
+%   SUMMARY
+%----------------------------------------------------------------------------------------
+Technical product leader, AI systems builder, and forward-deployed engineer who architects multi-service platforms, ships agentic workflows, and embeds directly with customers and live deployments to turn ambiguous requirements into production systems—driving measurable outcomes across B2B SaaS, real-world event deployments, and automation. Experienced in LangGraph, RAG architectures, voice AI, product strategy, and stakeholder alignment.
+
+%----------------------------------------------------------------------------------------
+%   EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Education \vspace{.1em}}
+\begin{rSubsection}{University of Texas at Arlington}{Arlington, Texas, USA}{\textbf{Master of Science in Computer Science}}{August 2023 - May 2024}
+{\\ \textbf{Master of Science in Engineering Management}} \hfill {May 2024 - May 2026}
+\end{rSubsection}
+\begin{rSubsection}{Jawaharlal Nehru Technological University}{Hyderabad, India}{\textbf{Bachelor of Technology in Computer Science and Engineering}}{August 2019 - July 2023}
+\end{rSubsection}
+\end{rSection}%----------------------------------------------------------------------------------------
+%   TECHNICAL PROJECTS
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Technical Products and Projects \vspace{.1em}}
+\begin{rSubsection}{\href{https://logostaxsystems.com}{Logos Tax Systems: B2B SaaS AI Tax Platform}}{2025 - Present}{}{}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em, topsep=0pt]
+\item Architected a \textbf{B2B SaaS} tax platform—a portable AI advisor + CPA marketplace, not a filing tool or CPA replacement—by designing a \textbf{9-repo} microservice architecture with a provider-agnostic \textbf{LLM abstraction layer}, on \textbf{GCP Cloud Run}.
+\item Secured \textbf{3 production AI agents} on \textbf{GCP Cloud Run}—public, authenticated, and internal dev copilot—by enforcing \textbf{Supabase JWT} auth, org-based RBAC, and \textbf{248 RLS policies} across ~150 tables, grounded in an \textbf{82\%}-accurate pgvector RAG.
+\item Reduced per-document AI cost to \textbf{~\$0.003} by designing a tiered document-parsing strategy—deterministic regex first, \textbf{Claude Haiku} vision fallback second—for W-2, 1099s, Schedule C/E, and Form 1040, with \textbf{PII sanitization} before every LLM call.
+\item Codified \textbf{11 IRS tax-code strategies} (Augusta Rule, S-Corp, QBI, Bonus Depreciation, Cost Segregation) into automated calculators, by building a \textbf{Cross-Intelligence Service} that ranks synergistic \textbf{ROI} recommendations per client profile.
+\item Integrated a multi-tenant tax-software platform with \textbf{OAuth2} (Intuit ProConnect) and CSV export (Drake Tax), by building CPA approval workflows across \textbf{5 providers} and \textbf{4 export formats} on \textbf{17 Supabase tables} with row-level security.
+\end{itemize}
+\end{rSubsection}
+\begin{rSubsection}{\href{https://abhisheknagaraja.com/content/google-maps-teardown}{Google Maps: Product Strategy}}{}{}{}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em, topsep=0pt]
+\item Translated qualitative data from \textbf{42 user interviews} into two core problem statements, revealing a critical user need for guaranteed \textbf{menu accuracy} by utilizing \textbf{UX journey mapping} to identify high-friction drop-off points.
+\item Architected a \textbf{product strategy} to directly address validated user needs, by utilizing a roadmap for a \textbf{centralized menu system} with granular filtering to capture the high-value market segment with critical dietary requirements.
+\end{itemize}
+\end{rSubsection}
+\begin{rSubsection}{\href{https://abhisheknagaraja.com/content/clash-of-clans-teardown}{Clash of Clans: Growth Strategy}}{}{}{}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em, topsep=0pt]
+\item Proposed a \textbf{viral growth strategy} driving \textbf{5-10\% new organic user acquisition} by creating a native social sharing feature for key in-game content, by utilizing \textbf{referral loop optimization} and player behavioral data patterns.
+\item Projected a \textbf{15-20\% increase in join rates} and \textbf{20-30\% increase in feature adoption} by designing a revamped \textbf{Clan Discovery engine} and transforming the feed by utilizing \textbf{data-driven insights}, metrics, and predictive UX patterns.
+\end{itemize}
+\end{rSubsection}
+\end{rSection}%----------------------------------------------------------------------------------------
+%   WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Work Experience}
+\begin{rSubsection}{Program Manager Intern, University of Texas at Arlington - Texas, USA}{October 2023 - October 2025}{}{}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em, topsep=0pt]
+\item Orchestrated the end-to-end \textbf{product lifecycle} for 'MavMarket', scaling to \textbf{200+ vendors} and \textbf{5,000+ attendees} while generating \textbf{\$120,000} in revenue, by executing a comprehensive \textbf{vendor acquisition strategy} and a 50+ page \textbf{AI-powered SOP} in Gemini.
+\item Improved stakeholder \textbf{NPS by 35\%} and engagement by \textbf{25\%} by executing a high-fidelity feedback system for 100+ vendors and 200+ attendees, utilizing \textbf{user research} and data analytics to identify and resolve key operational friction points.
+\item Founded the university's \textbf{Entrepreneurship Club} and co-founded \textbf{1 Million Cups Arlington} with City Govt and the local community, by building a startup network through 20+ workshops and connecting founders with local mentors and resources.
+\end{itemize}
+\end{rSubsection}
+\begin{rSubsection}{Business Analyst Intern, NFC Solutions Private Limited - Hyderabad, India}{April 2022 - January 2023}{}{}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em, topsep=0pt]
+\item Drafted \textbf{Product Requirement Documents (PRDs)} and coordinated task delegation for 4 key projects, serving as the bridge between stakeholders and technical teams by utilizing \textbf{Jira} to ensure consistent and on-time delivery cycles.
+\item Improved development efficiency by 20\% by serving as Scrum Master, applying \textbf{Lean-Agile principles} to streamline workflows and ceremonies by utilizing \textbf{bi-weekly retrospectives} to identify, document, and remove complex process blockers.
+\item Optimized the end-to-end \textbf{order lifecycle} for an e-commerce platform to improve customer satisfaction, by leveraging \textbf{automated inventory triggers} and pricing logic to reduce data processing errors and improve reliability by 15\%.
+\item Demonstrated execution excellence as measured by zero-defect deployments, by proactively mitigating critical project risks and utilizing Gantt charts in Jira to manage 100\% on-time delivery across 4 complex enterprise projects.
+\end{itemize}
+\end{rSubsection}
+\begin{rSubsection}{Founder and Managing Director, e-DAM Community - Hyderabad, India}{March 2021 - July 2023}{}{}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em, topsep=0pt]
+\item Architected scalable solutions for community management, impacting over 15,000 users by leveraging \textbf{serverless architectures} and \textbf{automated data pipelines} to maintain high system availability and total data integrity at scale.
+\item Directed \textbf{e-DAM}, \textbf{e-DAM Spotlight}, and \textbf{e-DAM CMS} by owning roadmaps, release governance, and stakeholder alignment, by utilizing \textbf{Agile methodologies}, sprint prioritization, and user-feedback loops to accelerate iteration across all three ventures.
+\item Spearheaded community growth to 5,000+ members by performing \textbf{Market Analysis} and building a strategic network of industry partners, by utilizing \textbf{200+ technical workshops} to foster a thriving, scalable, and inclusive developer ecosystem.
+\end{itemize}
+\end{rSubsection}
+\end{rSection}%----------------------------------------------------------------------------------------
+%   OTHER PROJECTS
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Other Projects \vspace{.1em}}
+\begin{rSubsection}{\href{https://www.npmjs.com/package/@abhishek.nagaraja/catms}{CATMS (Coding Agents Team Management System): Open-Source NPM Package}}{}{}{}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em, topsep=0pt]
+\item Authored and published an open-source NPM CLI (\textbf{@abhishek.nagaraja/catms}), scaling to \textbf{500+ downloads} by providing workflow scaffolding and a local \textbf{Model Context Protocol (MCP)} memory server across \textbf{Cursor}, \textbf{Claude}, and \textbf{Antigravity}.
+\item Engineered a local RAG pipeline using \textbf{PostgreSQL}, \textbf{pgvector}, and \textbf{Ollama}, automatically chunking and embedding Markdown session logs from an Obsidian vault to provide context-aware retrieval.
+\item Exposed dynamic agent tools (\texttt{cams\_query}, \texttt{cams\_ingest}, \texttt{cams\_backfill}), allowing agents to autonomously query historical decisions and backfill new context to solve long-term memory limits.
+\end{itemize}
+\end{rSubsection}
+
+\begin{rSubsection}{\href{https://withthara.com/}{Thara: Multi-Agent AI Ecosystem}}{}{}{}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em, topsep=0pt]
+\item Architected production \textbf{multi-agent orchestration} across \textbf{23 specialized agents} for tasks, calendar, journaling, and voice workflows, by engineering \textbf{LangGraph} on \textbf{FastAPI} with \textbf{PostgreSQL/pgvector} and \textbf{LlamaIndex}-backed semantic memory.
+\item Expanded Thara across \textbf{8 client surfaces}—Telegram, iOS, Android, macOS, iPad, watchOS, React web, and voice—by shipping one \textbf{FastAPI/WebSocket} core with native adapters and \textbf{GitHub Actions CI/CD} deployed to \textbf{AWS ECS Fargate} with Docker.
+\item Pioneered a \textbf{Pipecat + Twilio} voice stack with \textbf{Whisper STT}, \textbf{Kokoro TTS}, and \textbf{Silero VAD} on \textbf{FastAPI WebSockets}, by routing morning kickoff, overdue, habit-risk, and evening flows through the same task and calendar agents as mobile and desktop.
+\end{itemize}
+\end{rSubsection}
+\end{rSection}%----------------------------------------------------------------------------------------
+%   SKILLS SECTION
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Skills and Tools}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em, topsep=0pt]
+\item \textbf{Full-Stack \& AI Engineering:} Next.js, React, NestJS, FastAPI, Node.js, TypeScript, Python, PostgreSQL/pgvector, Supabase, LangGraph, RAG architectures, Twilio, GCP Cloud Run, AWS ECS Fargate, Vercel, Docker, GitHub Actions CI/CD.
+\item \textbf{Data Platforms \& Reliability:} Snowflake, BigQuery, streaming ingestion patterns, data quality SLAs, anomaly detection, capacity planning for data services, FinOps awareness, lineage documentation, replayable pipelines, cost guardrails, batch versus streaming tradeoffs.
+\item \textbf{Strategy, Finance \& GTM Analytics:} TAM/SAM/SOM modeling, unit economics, pricing elasticity, packaging strategy, competitive battlecards, sales enablement briefs, executive QBR storytelling, partnership term sheets, co-marketing governance, win-loss analysis, pipeline hygiene, discount governance, scenario planning.
+\item \textbf{Program Operations \& Delivery:} Cross-functional program governance, written stakeholder communications, dependency mapping, CI/CD release coordination, software delivery sequencing, LLM evaluation guardrails, steering committee facilitation, executive readouts, quarterly business review preparation, design partnership rituals, launch readiness reviews, incident retrospectives, operational metrics scorecards.
+\end{itemize}
+\end{rSection}%----------------------------------------------------------------------------------------
+%   CERTIFICATIONS SECTION
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Certifications}
+\begin{multicols}{2}
+\begin{itemize}[left=-1.5em, labelsep=.1cm, labelwidth=.2cm, itemsep=0.0em, topsep=0pt]
+\item Google: Agile Project Management
+\item Google: Data Analytics Specialization
+\item Google: Foundation of Project Management
+\item Google: Project Initiation: Starting a Successful Project
+\item Certified Scrum Product Owner (CSPO)
+\item McKinsey.org Forward Program
+\end{itemize}
+\end{multicols}
+\end{rSection}
+
+\end{document}
