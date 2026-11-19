@@ -1,0 +1,91 @@
+# MASTER CONTEXT — SINGLE SOURCE OF TRUTH FOR <PERSON_NAME>
+# ==============================================================================
+# Contains the COMPLETE biographical, professional, academic, and project record.
+# There is NO cap on lines, bullets, or fields here — keep every role, metric,
+# product detail, and URL preserved in this file.
+#
+# Derived role YAMLs (e.g., role_master.yaml, role_fde.yaml) pull and prune
+# subsets from this file to hit the 2-page resume limit.
+#
+# RECOMMENDED INTAKE SOURCES BEFORE POPULATING:
+# 1. Existing Resume PDF (baseline bullets, metrics, and projects)
+# 2. LinkedIn Profile Export PDF (complete timeline, certifications, publications)
+# 3. Official/Legal Chronology Docs (offer letters, H-1B/visa filings, acquisitions)
+# 4. Target Job Descriptions & Positioning Notes (keywords & narrative framing)
+# 5. Verified URLs (employer websites, product solution pages, GitHub repos)
+
+basics:
+  name: "Full Name"
+  label: "Primary Role | Specialization | Domain Focus"
+  location: "City, State, Country"
+  email: "you@example.com"
+  phone: "+1 0000000000"
+  website:
+    url: "https://yourportfolio.com/"
+    display: "yourportfolio.com"
+  linkedin:
+    url: "https://www.linkedin.com/in/your-handle/"
+    display: "linkedin.com/in/your-handle"
+  github:
+    url: "https://github.com/your-handle"
+    display: "github.com/your-handle"
+
+summary: >-
+  Role Title with X+ years of experience building and deploying production systems in [Domain].
+  Core engineer/contributor for [Flagship Product(s)] using [Top 4-5 Technologies], partnering
+  with [Key Stakeholders] to deliver measurable impact. (Keep derived resume summary <= 3 lines.)
+
+education:
+  - id: "grad_degree"
+    school: "University Name"
+    url: "https://www.university.edu/"
+    location: "City, State, Country"
+    degree: "Master of Science in Computer Science"
+    dates: "August 2023 - May 2025"  # ALWAYS use full month names
+    gpa: "3.80/4.0"
+    achievements:
+      - "Scholarship or Honor"
+    coursework:
+      - "Relevant Course 1"
+      - "Relevant Course 2"
+
+experience:
+  - id: "current_role"
+    role: "Exact Job Title"  # Avoid 'Intern' if positioning for experienced roles unless required
+    company: "Legal Employer Name"
+    url: "https://company-website.com/"
+    location: "City, State, Country"
+    dates: "January 2025 - Present"  # Full month names only (never Jan, Feb, Aug)
+    tags: ["domain-tag", "core-skill"]
+    products_worked_on:
+      - name: "Product Name"
+        url: "https://company-website.com/product"
+        role: "Your Scope"
+        description: "One-line context of what the product does in production."
+    bullets:
+      - "Store every substantiated achievement here using Google XYZ: [Power Verb] + [Impact/Result] + [Metric] + by/utilizing/leveraging [Method/Tools]."
+
+projects:
+  - id: "flagship_project"
+    name: "Project Name — Domain Focus"
+    url: "https://github.com/your-handle/project-repo"
+    dates: "January 2025 - March 2025"
+    tags: ["tag1", "tag2"]
+    bullets:
+      - "Detail architecture, measurable results, and technologies used."
+
+skills:
+  - category: "Core Domain & Frameworks"
+    skill_list: "Skill 1, Skill 2, Skill 3"
+  - category: "Infrastructure & Cloud"
+    skill_list: "Tool 1, Tool 2, Tool 3"
+  - category: "Programming & Backend"
+    skill_list: "Language 1, Language 2, Framework 1"
+
+certifications:
+  - "Certification Name"
+
+publications:
+  - title: "Article or Paper Title"
+    url: "https://publication-url.com/"
+    description: "Brief summary."

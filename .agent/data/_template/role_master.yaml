@@ -1,0 +1,71 @@
+# ROLE MASTER RESUME — 2-PAGE GENERATED RESUME SOURCE
+# ==============================================================================
+# Copy this folder (.agent/data/_template/) to .agent/data/<PersonName>/
+# Then run:
+#   python3 .agent/scripts/generate_resume.py .agent/data/<PersonName>/role_master.yaml
+#
+# ENFORCED VALIDATION RULES (checked by generate_resume.py):
+# 1. Bullet length: 215 - 245 characters (stripped of \textbf{} markup) -> 2 full lines
+# 2. XYZ Strategy: Must contain "by", "utilizing", or "leveraging" + concrete metric
+# 3. Forbidden words banned: Accomplished, Responsible for, Tasked with, Helped,
+#    Managed, Participated, Worked on, Involved in, Assisted
+# 4. Dates: Full month names only (January, February, ..., December, Present)
+# 5. Summary: Keep <= 3 lines (~290-330 chars) with NO repeated metrics from bullets
+
+name: "Full Name"
+contact:
+  location: "City, State, Country"
+  email: "you@example.com"
+  linkedin_url: "https://www.linkedin.com/in/your-handle/"
+  linkedin_display: "linkedin.com/in/your-handle"
+  website_url: "https://yourportfolio.com/"
+  website_display: "yourportfolio.com"
+meta:
+  filename: "Resume_Building/<PersonName>/Master/<Full_Name>_Master_Resume.tex"
+  profile: "<PersonName>"
+section_order:
+  - experience
+  - projects
+  - education
+  - skills
+  - certifications
+summary: "Role Title with X+ years of experience building and deploying production systems in [Domain]. Core engineer for [Flagship Product(s)] using [Top Technologies], partnering with [Key Stakeholders] to deliver reliable, scalable workflows."
+
+experience:
+  - role: "Exact Job Title"
+    company: "Company Name"
+    url: "https://company-website.com/"
+    location: "City, State, Country"
+    dates: "January 2025 - Present"
+    id: "current_role"
+    bullets:
+      - "Engineered and maintained production \\textbf{System/Product} workflows for [domain/platform], processing [scale/data] and cutting [bottleneck] by 50% for end users by leveraging \\textbf{Framework}, \\textbf{Cloud Tool}, and automated CI/CD pipelines."
+
+projects:
+  - name: "Flagship Project — Domain Focus"
+    url: "https://github.com/your-handle/project-repo"
+    dates: null  # Set null to omit dates on technical projects, or use "Month Year - Month Year"
+    id: "flagship_project"
+    bullets:
+      - "Architected an end-to-end \\textbf{Project System} solving [specific problem], improving [metric] by 40% across benchmark evaluations by utilizing \\textbf{Python}, \\textbf{FastAPI}, and containerized cloud deployment pipelines with automated QA."
+
+education:
+  - school: "University Name"
+    url: "https://www.university.edu/"
+    location: "City, State, Country"
+    degree: "Master of Science in Computer Science"
+    dates: "August 2023 - May 2025"
+    details:
+      - "\\textbf{GPA: 3.80/4.0} \\textbullet\\ Merit Scholarship Recipient \\textbullet\\ Relevant Coursework"
+
+skills:
+  - category: "Core Domain & Frameworks"
+    skill_list: "Framework 1, Framework 2, Concept 1, Concept 2."
+  - category: "Infrastructure & Cloud"
+    skill_list: "AWS, Docker, Kubernetes, CI/CD, PostgreSQL."
+  - category: "Programming & Backend"
+    skill_list: "Python, SQL, TypeScript, FastAPI, RESTful APIs, Git."
+
+certifications:
+  - "Certification 1"
+  - "Certification 2"

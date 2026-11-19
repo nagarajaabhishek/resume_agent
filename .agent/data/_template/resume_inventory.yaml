@@ -1,0 +1,8 @@
+person: Full Name
+last_updated: YYYY-MM-DD
+active_resumes:
+  - role: Master Resume
+    yaml_source: .agent/data/<PersonName>/role_master.yaml
+    tex_output: Resume_Building/<PersonName>/Master/<Full_Name>_Master_Resume.tex
+    domain: Master
+    status: Active
